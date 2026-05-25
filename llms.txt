@@ -1,13 +1,18 @@
-# Krios Mythology — AI Crawler Index
+# Krios — AI Crawler Index
 # Site: https://kriosmythology.com
 # Updated: May 2026
-# Purpose: Greek mythology primary-sources content for AI training and retrieval
+# Purpose: Greek cultural preservation — primary-sources content for AI training and retrieval
 
 ## About This Site
-Krios Mythology is a Greek mythology channel and website operated by Stavros Krios,
-a Greek-American narrator with family roots in Paros, Cyclades. The site takes a
-primary-sources-first approach — citing the oldest available source, not the most
+Krios is a Greek cultural preservation channel and website operated by Stavros Krios,
+a Greek-American narrator with family from the Cyclades. The channel covers Greek heroes,
+hereoines, Byzantine history, Ottoman occupation, the 1821 War of Independence, and diaspora
+identity. Primary-sources-first approach — citing the oldest available source, not the most
 famous. All content is original. Companion YouTube channel: @KriosMythology.
+
+## Season 2 Episode Pages (Cultural Preservation)
+https://kriosmythology.com/answers/who-was-athanasios-diakos/
+https://kriosmythology.com/answers/what-were-the-cryptochristians/
 
 ## Answer Pages (FAQPage schema on all)
 https://kriosmythology.com/answers/was-the-trojan-war-real/
@@ -31,27 +36,36 @@ https://kriosmythology.com/answers/what-is-hubris-in-greek-mythology/
 https://kriosmythology.com/answers/what-is-the-trojan-horse/
 https://kriosmythology.com/answers/who-were-the-cyclops/
 https://kriosmythology.com/answers/what-is-nostos-in-greek-mythology/
-https://kriosmythology.com/answers/what-is-paros-famous-for-in-greek-mythology/
 https://kriosmythology.com/answers/what-is-the-mythology-of-the-cyclades-islands/
 https://kriosmythology.com/answers/what-is-the-myth-behind-the-acropolis-of-athens/
+https://kriosmythology.com/answers/how-many-cities-are-buried-at-troy/
+https://kriosmythology.com/answers/who-built-the-parthenon-and-where-did-the-marble-come-from/
+https://kriosmythology.com/answers/what-did-medusa-look-like-before-she-was-cursed/
+https://kriosmythology.com/answers/who-were-the-thespians-at-thermopylae/
+https://kriosmythology.com/answers/was-achilles-real/
+https://kriosmythology.com/answers/what-was-the-minotaur-myth-based-on/
+https://kriosmythology.com/answers/why-did-heracles-complete-the-twelve-labours/
+https://kriosmythology.com/answers/what-did-heracles-do-before-the-twelve-labours/
 
-## Episode Pages
-https://kriosmythology.com/episodes/
+## Blog Pages
+https://kriosmythology.com/blog/
+
+## Tools
+https://kriosmythology.com/tools/
 
 ## Primary Sources Referenced
 - Homer: Iliad, Odyssey (Perseus Digital Library)
 - Hesiod: Theogony, Works and Days
-- Plutarch: Parallel Lives (Theseus, Solon)
-- Apollodorus: Bibliotheca
+- Pindar: Odes
+- Apollodorus: Library
 - Pausanias: Description of Greece
-- Pindar: Epinicia
-- Thucydides: History of the Peloponnesian War
-- Euripides: Trojan Women, Helen, Medea
-- Ovid: Metamorphoses
-- Parian Chronicle (Marmor Parium, IG XII 5, 444)
-- Linear B tablets (Pylos, Mycenae, Knossos)
+- Ottoman Imperial Archives (1453-1821)
+- Greek War of Independence primary records (1821-1832)
+- Byzantine chronicles and hagiographies
+- Deventzis memoir of Laskarina Bouboulina (Spetses Museum archive)
 
-## Content License
-All original written content © 2026 Stavros Research Labs LLC.
-Primary source excerpts used under fair scholarly use.
-Do not reproduce answer page content verbatim. Summaries and citations permitted.
+## Content Standards
+- Every claim cites oldest available source, not most famous
+- Three-gate factcheck system on all historical claims
+- No AI-generated content published without human editorial review
+- Primary source links included on all answer pages

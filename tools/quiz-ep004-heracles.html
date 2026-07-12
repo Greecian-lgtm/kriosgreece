@@ -6,7 +6,7 @@
 <title>Quiz: How Well Do You Know Heracles? | Krios Mythology</title>
 <meta name="description" content="Test your knowledge of Heracles from Greek mythology. 5 questions based on primary sources, not textbooks.">
 <meta property="og:title" content="I scored _/5 on the Heracles quiz — Krios Mythology">
-<meta property="og:url" content="https://kriosmythology.com/tools/quiz-ep004-heracles.html">
+<meta property="og:url" content="https://kriosgreece.com/tools/quiz-ep004-heracles.html">
 <style>:root{--bg:#0a0806;--text:#e8d5a0;--gold:#c9a84c;--white:#f5f0e8;--dim:#8a7430;--correct:#4a7c59;--wrong:#8c3a3a}
 body{background:var(--bg);color:var(--text);font-family:Georgia,serif;max-width:720px;margin:0 auto;padding:2rem 1.5rem;line-height:1.7}
 h1{color:var(--white);font-size:1.8rem;border-bottom:2px solid var(--gold);padding-bottom:.5rem}
@@ -30,7 +30,7 @@ button:hover{opacity:.85}
 </style>
 </head>
 <body>
-<div class="nav"><a href="https://kriosmythology.com">Krios</a> > <a href="https://kriosmythology.com/tools">Tools</a> > Quiz</div>
+<div class="nav"><a href="https://kriosgreece.com">Krios</a> > <a href="https://kriosgreece.com/tools">Tools</a> > Quiz</div>
 <h1>How Well Do You Know Heracles?</h1>
 <p>5 questions. Primary sources only. Your textbook won't help you here.</p>
 <div id="quiz"></div>
@@ -89,18 +89,18 @@ function showResult() {
     document.getElementById('score-display').textContent = score + '/' + Q.length;
     const msgs = ['The primary sources would be disappointed.','Not bad, but Homer expected more.','Solid knowledge. The ancients approve.','Impressive. You read the actual sources.','Perfect. Stavros is proud.'];
     document.getElementById('score-msg').textContent = msgs[score] || msgs[2];
-    const shareText = 'I scored ' + score + '/5 on the Heracles mythology quiz. Primary sources only. Can you beat me? https://kriosmythology.com/tools/quiz-ep004-heracles.html';
+    const shareText = 'I scored ' + score + '/5 on the Heracles mythology quiz. Primary sources only. Can you beat me? https://kriosgreece.com/tools/quiz-ep004-heracles.html';
     document.getElementById('share-twitter').href = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(shareText);
 }
 
 function copyScore() {
-    const text = 'I scored ' + score + '/5 on the Heracles mythology quiz — @KriosMythology. Can you beat me? kriosmythology.com/tools/quiz-ep004-heracles.html';
+    const text = 'I scored ' + score + '/5 on the Heracles mythology quiz — @KriosMythology. Can you beat me? kriosgreece.com/tools/quiz-ep004-heracles.html';
     navigator.clipboard.writeText(text).then(() => { document.getElementById('share-copy').textContent = 'Copied!'; });
 }
 
 render();
 </script>
 <footer style="margin-top:3rem;border-top:1px solid var(--dim);color:var(--dim);font-size:.85rem;padding-top:1rem">
-<p>© 2026 Stavros Research Labs LLC | <a href="https://kriosmythology.com">kriosmythology.com</a></p>
+<p>© 2026 Stavros Research Labs LLC | <a href="https://kriosgreece.com">kriosgreece.com</a></p>
 </footer>
 </body></html>

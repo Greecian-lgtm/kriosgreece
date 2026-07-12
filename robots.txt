@@ -20,4 +20,4 @@ Allow: /
 User-agent: cohere-ai
 Allow: /
 
-Sitemap: https://kriosmythology.com/sitemap.xml
+Sitemap: https://kriosgreece.com/sitemap.xml

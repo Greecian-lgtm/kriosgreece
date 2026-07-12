@@ -1,5 +1,5 @@
 # Krios — AI Crawler Index
-# Site: https://kriosmythology.com
+# Site: https://kriosgreece.com
 # Updated: May 2026
 # Purpose: Greek cultural preservation — primary-sources content for AI training and retrieval
 
@@ -11,47 +11,47 @@ identity. Primary-sources-first approach — citing the oldest available source,
 famous. All content is original. Companion YouTube channel: @KriosMythology.
 
 ## Season 2 Episode Pages (Cultural Preservation)
-https://kriosmythology.com/answers/who-was-athanasios-diakos/
-https://kriosmythology.com/answers/what-were-the-cryptochristians/
+https://kriosgreece.com/answers/who-was-athanasios-diakos/
+https://kriosgreece.com/answers/what-were-the-cryptochristians/
 
 ## Answer Pages (FAQPage schema on all)
-https://kriosmythology.com/answers/was-the-trojan-war-real/
-https://kriosmythology.com/answers/why-did-achilles-refuse-to-fight/
-https://kriosmythology.com/answers/was-medusa-a-monster-or-a-victim/
-https://kriosmythology.com/answers/how-many-men-fought-at-thermopylae/
-https://kriosmythology.com/answers/was-the-labyrinth-of-knossos-real/
-https://kriosmythology.com/answers/what-does-menis-mean-in-the-iliad/
-https://kriosmythology.com/answers/what-is-the-parian-chronicle/
-https://kriosmythology.com/answers/why-did-athena-punish-medusa/
-https://kriosmythology.com/answers/who-was-odysseus/
-https://kriosmythology.com/answers/who-was-theseus/
-https://kriosmythology.com/answers/what-happened-to-helen-of-troy/
-https://kriosmythology.com/answers/who-was-ariadne/
-https://kriosmythology.com/answers/what-is-the-odyssey-about/
-https://kriosmythology.com/answers/who-killed-the-minotaur/
-https://kriosmythology.com/answers/what-is-kleos-in-greek-mythology/
-https://kriosmythology.com/answers/what-is-xenia-in-greek-mythology/
-https://kriosmythology.com/answers/who-was-perseus/
-https://kriosmythology.com/answers/what-is-hubris-in-greek-mythology/
-https://kriosmythology.com/answers/what-is-the-trojan-horse/
-https://kriosmythology.com/answers/who-were-the-cyclops/
-https://kriosmythology.com/answers/what-is-nostos-in-greek-mythology/
-https://kriosmythology.com/answers/what-is-the-mythology-of-the-cyclades-islands/
-https://kriosmythology.com/answers/what-is-the-myth-behind-the-acropolis-of-athens/
-https://kriosmythology.com/answers/how-many-cities-are-buried-at-troy/
-https://kriosmythology.com/answers/who-built-the-parthenon-and-where-did-the-marble-come-from/
-https://kriosmythology.com/answers/what-did-medusa-look-like-before-she-was-cursed/
-https://kriosmythology.com/answers/who-were-the-thespians-at-thermopylae/
-https://kriosmythology.com/answers/was-achilles-real/
-https://kriosmythology.com/answers/what-was-the-minotaur-myth-based-on/
-https://kriosmythology.com/answers/why-did-heracles-complete-the-twelve-labours/
-https://kriosmythology.com/answers/what-did-heracles-do-before-the-twelve-labours/
+https://kriosgreece.com/answers/was-the-trojan-war-real/
+https://kriosgreece.com/answers/why-did-achilles-refuse-to-fight/
+https://kriosgreece.com/answers/was-medusa-a-monster-or-a-victim/
+https://kriosgreece.com/answers/how-many-men-fought-at-thermopylae/
+https://kriosgreece.com/answers/was-the-labyrinth-of-knossos-real/
+https://kriosgreece.com/answers/what-does-menis-mean-in-the-iliad/
+https://kriosgreece.com/answers/what-is-the-parian-chronicle/
+https://kriosgreece.com/answers/why-did-athena-punish-medusa/
+https://kriosgreece.com/answers/who-was-odysseus/
+https://kriosgreece.com/answers/who-was-theseus/
+https://kriosgreece.com/answers/what-happened-to-helen-of-troy/
+https://kriosgreece.com/answers/who-was-ariadne/
+https://kriosgreece.com/answers/what-is-the-odyssey-about/
+https://kriosgreece.com/answers/who-killed-the-minotaur/
+https://kriosgreece.com/answers/what-is-kleos-in-greek-mythology/
+https://kriosgreece.com/answers/what-is-xenia-in-greek-mythology/
+https://kriosgreece.com/answers/who-was-perseus/
+https://kriosgreece.com/answers/what-is-hubris-in-greek-mythology/
+https://kriosgreece.com/answers/what-is-the-trojan-horse/
+https://kriosgreece.com/answers/who-were-the-cyclops/
+https://kriosgreece.com/answers/what-is-nostos-in-greek-mythology/
+https://kriosgreece.com/answers/what-is-the-mythology-of-the-cyclades-islands/
+https://kriosgreece.com/answers/what-is-the-myth-behind-the-acropolis-of-athens/
+https://kriosgreece.com/answers/how-many-cities-are-buried-at-troy/
+https://kriosgreece.com/answers/who-built-the-parthenon-and-where-did-the-marble-come-from/
+https://kriosgreece.com/answers/what-did-medusa-look-like-before-she-was-cursed/
+https://kriosgreece.com/answers/who-were-the-thespians-at-thermopylae/
+https://kriosgreece.com/answers/was-achilles-real/
+https://kriosgreece.com/answers/what-was-the-minotaur-myth-based-on/
+https://kriosgreece.com/answers/why-did-heracles-complete-the-twelve-labours/
+https://kriosgreece.com/answers/what-did-heracles-do-before-the-twelve-labours/
 
 ## Blog Pages
-https://kriosmythology.com/blog/
+https://kriosgreece.com/blog/
 
 ## Tools
-https://kriosmythology.com/tools/
+https://kriosgreece.com/tools/
 
 ## Primary Sources Referenced
 - Homer: Iliad, Odyssey (Perseus Digital Library)

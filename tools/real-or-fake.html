@@ -34,7 +34,7 @@ button:hover{opacity:.85}
 </style>
 </head>
 <body>
-<div class="nav"><a href="https://kriosmythology.com">Krios</a> > <a href="https://kriosmythology.com/tools">Tools</a> > Real or Fake</div>
+<div class="nav"><a href="https://kriosgreece.com">Krios</a> > <a href="https://kriosgreece.com/tools">Tools</a> > Real or Fake</div>
 <h1>Is This Myth Real or Fake?</h1>
 <p>15 statements about Greek mythology. Some are what the primary sources actually say. Some are what your textbook made up. Can you tell the difference?</p>
 <div id="game"></div>
@@ -89,16 +89,16 @@ function showRF() {
     const msgs = {0:'Homer is disappointed.',20:'Your textbook taught you well. Unfortunately it was wrong.',40:'Getting there. The primary sources are tricky.',60:'Not bad. You can tell myth from misconception.',80:'Impressive. You read the actual sources.',100:'Perfect. Stavros approves.'};
     const tier = Math.floor(pct/20)*20;
     document.getElementById('rf-msg').textContent = msgs[tier] || msgs[60];
-    document.getElementById('rf-share').href = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent('I got ' + sc + '/15 on the Real or Fake mythology quiz by @KriosMythology. Primary sources decide. Can you beat me? kriosmythology.com/tools/real-or-fake.html');
+    document.getElementById('rf-share').href = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent('I got ' + sc + '/15 on the Real or Fake mythology quiz by @KriosMythology. Primary sources decide. Can you beat me? kriosgreece.com/tools/real-or-fake.html');
 }
 
 function copyRF() {
-    navigator.clipboard.writeText('I got ' + sc + '/15 on the Real or Fake mythology quiz — @KriosMythology kriosmythology.com/tools/real-or-fake.html').then(() => { document.getElementById('rf-copy').textContent = 'Copied!'; });
+    navigator.clipboard.writeText('I got ' + sc + '/15 on the Real or Fake mythology quiz — @KriosMythology kriosgreece.com/tools/real-or-fake.html').then(() => { document.getElementById('rf-copy').textContent = 'Copied!'; });
 }
 
 render();
 </script>
 <footer style="margin-top:3rem;border-top:1px solid var(--dim);color:var(--dim);font-size:.85rem;padding-top:1rem">
-<p>© 2026 Stavros Research Labs LLC | <a href="https://kriosmythology.com">kriosmythology.com</a></p>
+<p>© 2026 Stavros Research Labs LLC | <a href="https://kriosgreece.com">kriosgreece.com</a></p>
 </footer>
 </body></html>

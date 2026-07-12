@@ -40,7 +40,7 @@ generate_page() {
   <meta name="description" content="${META_DESC}">
   <meta property="og:title" content="${TITLE}">
   <meta property="og:description" content="${META_DESC}">
-  <meta property="og:url" content="https://kriosmythology.com/answers/${SLUG}/">
+  <meta property="og:url" content="https://kriosgreece.com/answers/${SLUG}/">
   <meta property="og:type" content="article">
   <script type="application/ld+json">
   {
@@ -54,8 +54,8 @@ generate_page() {
     "@context": "https://schema.org",
     "@type": "Article",
     "headline": "${TITLE}",
-    "author": {"@type": "Person", "name": "Stavros Krios", "url": "https://kriosmythology.com/about"},
-    "publisher": {"@type": "Organization", "name": "Krios Mythology", "url": "https://kriosmythology.com"},
+    "author": {"@type": "Person", "name": "Stavros Krios", "url": "https://kriosgreece.com/about"},
+    "publisher": {"@type": "Organization", "name": "Krios Mythology", "url": "https://kriosgreece.com"},
     "datePublished": "2026-04-03",
     "dateModified": "2026-04-03"
   }
@@ -97,13 +97,13 @@ generate_page() {
 </head>
 <body>
 <header>
-  <a href="https://kriosmythology.com">KRIOS</a>
+  <a href="https://kriosgreece.com">KRIOS</a>
   <span>/ Greek Mythology from Primary Sources</span>
 </header>
 <div class="container">
   <nav class="breadcrumb">
-    <a href="https://kriosmythology.com">Home</a> ›
-    <a href="https://kriosmythology.com/answers/">Answers</a> ›
+    <a href="https://kriosgreece.com">Home</a> ›
+    <a href="https://kriosgreece.com/answers/">Answers</a> ›
     ${H1}
   </nav>
   <h1>${H1}</h1>
@@ -123,11 +123,11 @@ generate_page() {
   </div>
   <div class="related-links">
     <h2>Related Questions</h2>
-    <ul>${RELATED}<li><a href="https://kriosmythology.com/answers/">All mythology answers →</a></li></ul>
+    <ul>${RELATED}<li><a href="https://kriosgreece.com/answers/">All mythology answers →</a></li></ul>
   </div>
 </div>
 <footer>
-  <p><a href="https://kriosmythology.com">kriosmythology.com</a> · Greek mythology from primary sources · <a href="https://www.youtube.com/@KriosMythology">YouTube</a></p>
+  <p><a href="https://kriosgreece.com">kriosgreece.com</a> · Greek mythology from primary sources · <a href="https://www.youtube.com/@KriosMythology">YouTube</a></p>
 </footer>
 </body>
 </html>
@@ -151,7 +151,7 @@ generate_page \
   "The 12 Olympians: What the Primary Sources Actually Say" \
   "The full episode covers every Olympian god from primary sources — what Homer, Hesiod, and the Homeric Hymns actually say, not the popular retelling." \
   "https://www.youtube.com/@KriosMythology" \
-  '<li><a href="https://kriosmythology.com/answers/what-is-the-real-story-of-odysseus/">What is the real story of Odysseus?</a></li><li><a href="https://kriosmythology.com/answers/who-is-zeus-in-greek-mythology/">Who is Zeus in Greek mythology?</a></li>'
+  '<li><a href="https://kriosgreece.com/answers/what-is-the-real-story-of-odysseus/">What is the real story of Odysseus?</a></li><li><a href="https://kriosgreece.com/answers/who-is-zeus-in-greek-mythology/">Who is Zeus in Greek mythology?</a></li>'
 
 # ─── EP002: ODYSSEUS ─────────────────────────────────────────────────────────
 generate_page \
@@ -168,7 +168,7 @@ generate_page \
   "Odysseus: What Homer Actually Wrote" \
   "The full episode covers the real Odyssey from the primary source — what Homer wrote, what gets changed in modern retellings, and what the ancient Greeks thought of Odysseus." \
   "https://www.youtube.com/@KriosMythology" \
-  '<li><a href="https://kriosmythology.com/answers/who-are-the-12-olympian-gods/">Who are the 12 Olympian gods?</a></li><li><a href="https://kriosmythology.com/answers/what-is-the-trojan-war-about/">What is the Trojan War about?</a></li>'
+  '<li><a href="https://kriosgreece.com/answers/who-are-the-12-olympian-gods/">Who are the 12 Olympian gods?</a></li><li><a href="https://kriosgreece.com/answers/what-is-the-trojan-war-about/">What is the Trojan War about?</a></li>'
 
 # ─── EP003: HERCULES ─────────────────────────────────────────────────────────
 generate_page \
@@ -185,7 +185,7 @@ generate_page \
   "Heracles: The Labours from Primary Sources" \
   "The full episode covers the real 12 Labours from Apollodorus, Pindar, and Euripides — including what the ancient sources say that modern retellings leave out." \
   "https://www.youtube.com/@KriosMythology" \
-  '<li><a href="https://kriosmythology.com/answers/who-are-the-12-olympian-gods/">Who are the 12 Olympian gods?</a></li><li><a href="https://kriosmythology.com/answers/what-is-the-real-story-of-odysseus/">What is the real story of Odysseus?</a></li>'
+  '<li><a href="https://kriosgreece.com/answers/who-are-the-12-olympian-gods/">Who are the 12 Olympian gods?</a></li><li><a href="https://kriosgreece.com/answers/what-is-the-real-story-of-odysseus/">What is the real story of Odysseus?</a></li>'
 
 # ─── EP004: ACHILLES ─────────────────────────────────────────────────────────
 generate_page \
@@ -202,7 +202,7 @@ generate_page \
   "Achilles: What Homer Actually Wrote" \
   "The full episode covers Achilles from the Iliad — the rage, Patroclus, Hector, and what the primary source says that modern versions change." \
   "https://www.youtube.com/@KriosMythology" \
-  '<li><a href="https://kriosmythology.com/answers/what-is-the-trojan-war-about/">What is the Trojan War about?</a></li><li><a href="https://kriosmythology.com/answers/what-is-the-real-story-of-odysseus/">What is the real story of Odysseus?</a></li>'
+  '<li><a href="https://kriosgreece.com/answers/what-is-the-trojan-war-about/">What is the Trojan War about?</a></li><li><a href="https://kriosgreece.com/answers/what-is-the-real-story-of-odysseus/">What is the real story of Odysseus?</a></li>'
 
 # ─── EP005: MEDUSA ───────────────────────────────────────────────────────────
 generate_page \
@@ -219,7 +219,7 @@ generate_page \
   "Medusa: What the Greek Sources Actually Say" \
   "The full episode covers the real Medusa myth — what Hesiod and Pindar wrote versus what Ovid added 700 years later, and why the difference matters." \
   "https://www.youtube.com/@KriosMythology" \
-  '<li><a href="https://kriosmythology.com/answers/who-are-the-12-olympian-gods/">Who are the 12 Olympian gods?</a></li><li><a href="https://kriosmythology.com/answers/what-is-the-story-of-achilles-in-greek-mythology/">What is the story of Achilles?</a></li>'
+  '<li><a href="https://kriosgreece.com/answers/who-are-the-12-olympian-gods/">Who are the 12 Olympian gods?</a></li><li><a href="https://kriosgreece.com/answers/what-is-the-story-of-achilles-in-greek-mythology/">What is the story of Achilles?</a></li>'
 
 # ─── EP006: TROY ─────────────────────────────────────────────────────────────
 generate_page \
@@ -236,7 +236,7 @@ generate_page \
   "Troy: What Homer and Archaeology Actually Say" \
   "The full episode covers the Trojan War from primary sources — what Homer wrote, what Thucydides thought, and what modern archaeology found at Hisarlik." \
   "https://youtu.be/2rg3tPOXz9Y" \
-  '<li><a href="https://kriosmythology.com/answers/what-is-the-story-of-achilles-in-greek-mythology/">What is the story of Achilles?</a></li><li><a href="https://kriosmythology.com/answers/what-is-the-real-story-of-odysseus/">What is the real story of Odysseus?</a></li>'
+  '<li><a href="https://kriosgreece.com/answers/what-is-the-story-of-achilles-in-greek-mythology/">What is the story of Achilles?</a></li><li><a href="https://kriosgreece.com/answers/what-is-the-real-story-of-odysseus/">What is the real story of Odysseus?</a></li>'
 
 # ─── EP007: THESEUS ──────────────────────────────────────────────────────────
 generate_page \
@@ -253,7 +253,7 @@ generate_page \
   "Theseus: The Myth the Primary Sources Tell" \
   "The full episode covers Theseus and the Minotaur from Plutarch and Apollodorus — including the forgotten detail about the sails that changes everything about the story." \
   "https://youtu.be/AvdqOQHR2W4" \
-  '<li><a href="https://kriosmythology.com/answers/which-god-is-associated-with-the-cyclades/">Which god is associated with the Cyclades?</a></li><li><a href="https://kriosmythology.com/answers/what-is-the-real-myth-of-medusa/">What is the real myth of Medusa?</a></li>'
+  '<li><a href="https://kriosgreece.com/answers/which-god-is-associated-with-the-cyclades/">Which god is associated with the Cyclades?</a></li><li><a href="https://kriosgreece.com/answers/what-is-the-real-myth-of-medusa/">What is the real myth of Medusa?</a></li>'
 
 # ─── EP008: CYCLADES ─────────────────────────────────────────────────────────
 generate_page \
@@ -270,7 +270,7 @@ generate_page \
   "The Cyclades: What Tourists Walk Past Without Seeing" \
   "The full episode covers the mythology of the Cyclades from primary sources — Delos, Naxos, the Portara, and the gods embedded in the exact geography of the islands." \
   "https://www.youtube.com/@KriosMythology" \
-  '<li><a href="https://kriosmythology.com/answers/which-god-is-associated-with-the-cyclades/">Which god is associated with the Cyclades?</a></li><li><a href="https://kriosmythology.com/answers/what-is-the-real-myth-of-theseus-and-the-minotaur/">What is the myth of Theseus and the Minotaur?</a></li>'
+  '<li><a href="https://kriosgreece.com/answers/which-god-is-associated-with-the-cyclades/">Which god is associated with the Cyclades?</a></li><li><a href="https://kriosgreece.com/answers/what-is-the-real-myth-of-theseus-and-the-minotaur/">What is the myth of Theseus and the Minotaur?</a></li>'
 
 # ─── EP009: PAROS ────────────────────────────────────────────────────────────
 generate_page \
@@ -287,7 +287,7 @@ generate_page \
   "Paros: The Island the Ancient Sources Remember" \
   "The full episode covers the mythology and ancient history of Paros — the Parian Marble, Archilochus, and Heracles — from the primary sources." \
   "https://www.youtube.com/@KriosMythology" \
-  '<li><a href="https://kriosmythology.com/answers/what-is-the-mythology-of-the-cyclades-islands/">What is the mythology of the Cyclades?</a></li><li><a href="https://kriosmythology.com/answers/which-god-is-associated-with-the-cyclades/">Which god is associated with the Cyclades?</a></li>'
+  '<li><a href="https://kriosgreece.com/answers/what-is-the-mythology-of-the-cyclades-islands/">What is the mythology of the Cyclades?</a></li><li><a href="https://kriosgreece.com/answers/which-god-is-associated-with-the-cyclades/">Which god is associated with the Cyclades?</a></li>'
 
 # ─── EP010: ACROPOLIS ────────────────────────────────────────────────────────
 generate_page \
@@ -304,7 +304,7 @@ generate_page \
   "The Acropolis: The Myth Beneath the Marble" \
   "The full episode covers the mythology of the Acropolis from primary sources — the contest of Athena and Poseidon, the Erechtheion, the olive tree, and what Pausanias saw when he visited." \
   "https://www.youtube.com/@KriosMythology" \
-  '<li><a href="https://kriosmythology.com/answers/which-god-is-associated-with-the-cyclades/">Which god is associated with the Cyclades?</a></li><li><a href="https://kriosmythology.com/answers/what-is-the-trojan-war-about/">What is the Trojan War about?</a></li>'
+  '<li><a href="https://kriosgreece.com/answers/which-god-is-associated-with-the-cyclades/">Which god is associated with the Cyclades?</a></li><li><a href="https://kriosgreece.com/answers/what-is-the-trojan-war-about/">What is the Trojan War about?</a></li>'
 
 # ─── UPDATE SITEMAP ──────────────────────────────────────────────────────────
 echo ""
@@ -325,7 +325,7 @@ PAGES=(
 
 SITEMAP_ENTRIES=""
 for PAGE in "${PAGES[@]}"; do
-  SITEMAP_ENTRIES="${SITEMAP_ENTRIES}  <url>\n    <loc>https://kriosmythology.com/answers/${PAGE}/</loc>\n    <lastmod>2026-04-03</lastmod>\n    <priority>0.8</priority>\n  </url>\n"
+  SITEMAP_ENTRIES="${SITEMAP_ENTRIES}  <url>\n    <loc>https://kriosgreece.com/answers/${PAGE}/</loc>\n    <lastmod>2026-04-03</lastmod>\n    <priority>0.8</priority>\n  </url>\n"
 done
 
 sed -i "s|</urlset>|${SITEMAP_ENTRIES}</urlset>|" sitemap.xml

@@ -65,6 +65,40 @@ def tease_from(desc):
     return ""
 
 
+def watch_details(vid):
+    html = get(f"https://www.youtube.com/watch?v={vid}").read().decode("utf-8", "replace")
+    m = re.search(r"ytInitialPlayerResponse\s*=\s*(\{.+?\});(?:var |</script>)", html, re.S)
+    if not m:
+        return None
+    p = json.loads(m.group(1)); v = p.get("videoDetails", {}); mf = p.get("microformat", {}).get("playerMicroformatRenderer", {})
+    return dict(id=vid, title=v.get("title", ""), published=(mf.get("publishDate") or mf.get("uploadDate") or "")[:10],
+                desc=v.get("shortDescription", ""), mins=max(1, round(int(v.get("lengthSeconds", "600")) / 60)))
+
+
+def fetch_videos():
+    """Try the uploads-playlist feed, then the channel feed, then the channel's Videos tab."""
+    errors = []
+    for name, url in (("playlist-feed", f"https://www.youtube.com/feeds/videos.xml?playlist_id=UU{CHANNEL_ID[2:]}"),
+                      ("channel-feed", FEED)):
+        for attempt in range(2):
+            try:
+                return parse_feed(get(url).read().decode("utf-8")), name
+            except Exception as ex:
+                errors.append(f"{name}: {ex!r}"); import time; time.sleep(4)
+    try:
+        html = get(f"https://www.youtube.com/channel/{CHANNEL_ID}/videos").read().decode("utf-8", "replace")
+        ids = []
+        for vid in re.findall(r'"videoId":"([\w-]{11})"', html):
+            if vid not in ids:
+                ids.append(vid)
+        if ids:
+            return [dict(id=i, title="", published="", desc="", lazy=True) for i in ids[:30]], "videos-page"
+        errors.append("videos-page: no video ids found")
+    except Exception as ex:
+        errors.append(f"videos-page: {ex!r}")
+    raise RuntimeError("YouTube unreachable: " + " ; ".join(errors))
+
+
 def parse_feed(xml_text):
     root = ET.fromstring(xml_text)
     out = []
@@ -82,33 +116,33 @@ def main():
     ap.add_argument("--feed", help="read the feed from a local file instead of YouTube")
     a = ap.parse_args()
 
+    source = "file"
     if a.feed:
-        xml_text = open(a.feed, encoding="utf-8").read()
+        videos = parse_feed(open(a.feed, encoding="utf-8").read())
     else:
-        last = None
-        for attempt in range(3):
-            try:
-                xml_text = get(FEED).read().decode("utf-8"); break
-            except Exception as ex:
-                last = ex; import time; time.sleep(5 * (attempt + 1))
-        else:
-            raise RuntimeError(f"YouTube feed unreachable: {last!r}")
+        videos, source = fetch_videos()
+    print("source:", source, "videos:", len(videos))
     data = json.load(open("data/episodes.json", encoding="utf-8"))
     up = json.load(open("data/upcoming.json", encoding="utf-8"))
     known = {x["id"] for x in data["episodes"]} | {x["id"] for x in data["season1"]}
     known |= set(data.get("skipped", []))
 
     added, released = [], []
-    for v in sorted(parse_feed(xml_text), key=lambda v: v["published"]):
+    for i, v in enumerate(videos):
+        if v.get("lazy") and v["id"] not in known:
+            d = watch_details(v["id"])
+            if d: videos[i] = d
+    videos = [v for v in videos if v.get("published")]
+    for v in sorted(videos, key=lambda v: v["published"]):
         if v["id"] in known:
             continue
-        short = None if a.feed else is_short(v["id"])
+        short = False if (a.feed or source == "videos-page") else is_short(v["id"])
         if short:
             data.setdefault("skipped", []).append(v["id"]); continue
         if short is None and not a.feed:
             print("could not classify", v["id"], "- will retry next run"); continue
         match = next((u for u in up["upcoming"] if u["match"].lower() in v["title"].lower()), None)
-        ep = dict(id=v["id"], date=v["published"], mins=(None if a.feed else minutes(v["id"])) or 10,
+        ep = dict(id=v["id"], date=v["published"], mins=v.get("mins") or (None if a.feed else minutes(v["id"])) or 10,
                   label=(match or {}).get("label") or "New",
                   title=(match or {}).get("title") or clean_title(v["title"]),
                   tease=(match or {}).get("tease") or tease_from(v["desc"]),

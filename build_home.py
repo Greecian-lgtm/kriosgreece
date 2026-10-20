@@ -59,7 +59,7 @@ def card_list(xs): return "\n".join(f"""
       <li class="ep">
         <a class="ep-link" href="{watch(x['id'])}" rel="noopener">
           <span class="ep-img"><img src="{thumb(x['id'],'hqdefault')}" alt="" loading="lazy" width="480" height="360"></span>
-          <span class="ep-meta"><span class="ep-num">S{3 if x['n']>=20 else 2} · EP{x['n']:03d}</span><span>{e(x['label'])}</span><span>{x['mins']} min</span></span>
+          <span class="ep-meta"><span class="ep-num">{e(x['label'])}</span><span>{nice(x['date'])}</span><span>{x['mins']} min</span></span>
           <span class="ep-title">{e(x['title'])}</span>
           <span class="ep-tease">{e(x['tease'])}</span>
         </a>
@@ -293,7 +293,7 @@ footer a{{text-decoration:none}} footer a:hover{{color:var(--gold)}}
         <span class="play">▶ Watch · {latest['mins']} min</span>
       </span>
       <span class="body">
-        <span class="meta label"><span>Season 3 · EP{latest['n']:03d}</span><span>{e(latest['label'])}</span><span>{nice(latest['date'])}</span></span>
+        <span class="meta label"><span>{e(latest['label'])}</span><span>{nice(latest['date'])}</span></span>
         <h2>{e(latest['title'])}</h2>
         <p>{e(latest['tease'])}</p>
       </span>
@@ -327,16 +327,16 @@ footer a{{text-decoration:none}} footer a:hover{{color:var(--gold)}}
       <div><span class="label">The documentaries</span><h2>Every episode, newest first</h2></div>
       <a class="more" href="{YT}/videos" rel="noopener">Watch on YouTube ↗</a>
     </div>
-    <h3 class="season">Season 3 · The living story <span>EP020 onward</span></h3>
-    <p class="season-note">From EP020 the films follow Greek life as it is lived now: what families carried when they left, and how it survives.</p>
+    <h3 class="season">Season 3 · The living story</h3>
+    <p class="season-note">Since October 2026 the films follow Greek life as it is lived now: what families carried when they left, and how it survives.</p>
     <ul class="grid">{s3}
     </ul>
-    <h3 class="season">Season 2 · Heroes, heroines and forgotten history <span>EP011 to EP019</span></h3>
+    <h3 class="season">Season 2 · Heroes, heroines and forgotten history</h3>
     <ul class="grid">{s2}
     </ul>
     <div class="began">
       <div>
-        <span class="label" style="color:var(--gold-ink)">Season 1 · EP001 to EP010</span>
+        <span class="label" style="color:var(--gold-ink)">Season 1</span>
         <h3>Where KRIOS began</h3>
         <p>The first season told the ancient stories. Everything since has followed those stories into the lives of the people who inherited them.</p>
       </div>
@@ -355,7 +355,7 @@ footer a{{text-decoration:none}} footer a:hover{{color:var(--gold)}}
         <span class="gr">Ρίζες</span>
         <h3>Living Roots</h3>
         <p>Where Greek families came from, what they carried when they left, and how it survives abroad. It begins with the dance the world thinks is Greek and the Greeks who left home.</p>
-        <a class="more" href="{watch(latest['id'])}" rel="noopener">Watch EP021</a>
+        <a class="more" href="{watch(latest['id'])}" rel="noopener">Watch the newest film</a>
       </article>
       <article>
         <span class="gr">Γιορτές</span>

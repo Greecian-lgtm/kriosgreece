@@ -121,7 +121,7 @@ def main():
         videos = parse_feed(open(a.feed, encoding="utf-8").read())
     else:
         videos, source = fetch_videos()
-    print("source:", source, "videos:", len(videos))
+    print(f"::notice title=site sync::source={source} videos={len(videos)}")
     data = json.load(open("data/episodes.json", encoding="utf-8"))
     up = json.load(open("data/upcoming.json", encoding="utf-8"))
     known = {x["id"] for x in data["episodes"]} | {x["id"] for x in data["season1"]}
@@ -154,7 +154,7 @@ def main():
         added.append(ep)
 
     if not added:
-        print("no new videos"); return
+        print("::notice title=site sync::no new videos"); return
     for ep in added:
         print("added:", ep["date"], ep["id"], ep["title"])
     if a.dry_run:

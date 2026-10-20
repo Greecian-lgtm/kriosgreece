@@ -1,0 +1,198 @@
+{
+ "films": [
+  {
+   "match": {
+    "id": "8cu1S1DVFDI"
+   },
+   "quiz": {
+    "slug": "the-greek-dance",
+    "title": "How well do you know the Greek dance story?",
+    "intro": "Five questions from the film. Every answer comes from what the film says.",
+    "questions": [
+     {
+      "q": "Sirtaki was created for which film?",
+      "options": [
+       "Never on Sunday (1960)",
+       "Zorba the Greek (1964)",
+       "Mamma Mia! (2008)"
+      ],
+      "correct": 1,
+      "explain": "The film says Sirtaki was created for Zorba the Greek in 1964, drawing on existing Greek dance traditions."
+     },
+     {
+      "q": "By Anthony Quinn's own later account, why does the dance look the way it does?",
+      "options": [
+       "He hurt his foot and could drag it, but not jump",
+       "The director wanted a slow ancient dance",
+       "It copied a dance he saw in Crete"
+      ],
+      "correct": 0,
+      "explain": "Quinn later recalled that an injured foot left him unable to jump and hop, but he could drag the injured foot."
+     },
+     {
+      "q": "How is zeibekiko usually described?",
+      "options": [
+       "A line dance with a fixed sequence",
+       "A dance for couples",
+       "A solo, improvised dance"
+      ],
+      "correct": 2,
+      "explain": "Zeibekiko is usually described as a solo improvisational dance that leaves much more to the individual dancer."
+     },
+     {
+      "q": "Where do zeibekiko's roots reach?",
+      "options": [
+       "It began in Athens in 1922",
+       "The Zeybek traditions of western Anatolia, before 1922",
+       "It was invented for films in the 1960s"
+      ],
+      "correct": 1,
+      "explain": "Zeibekiko didn't begin with the 1922 Asia Minor Catastrophe. Its history reaches further east, into the Zeybek traditions of western Anatolia. Refugees carried it into Greece after 1922."
+     },
+     {
+      "q": "What happened to Mikis Theodorakis's music after the military took power in 1967?",
+      "options": [
+       "It was banned inside Greece",
+       "It became the national anthem",
+       "It was only played on the radio"
+      ],
+      "correct": 0,
+      "explain": "Three years after Zorba the Greek, the military dictatorship took power and banned his music inside Greece itself."
+     }
+    ]
+   },
+   "qa": [
+    {
+     "slug": "is-sirtaki-a-traditional-greek-dance",
+     "title": "Is sirtaki a traditional Greek dance?",
+     "answer": [
+      "Not in the way most people think. Sirtaki was created for the film Zorba the Greek (1964). Giorgos Provias handled the choreography, drawing on Greek dances that already existed.",
+      "Anthony Quinn later recalled that an injured foot left him unable to do the jumping steps, so he dragged the foot instead. The dance became famous with the film and its music by Mikis Theodorakis.",
+      "Sirtaki isn't ancient, but it has become part of Greece's international cultural identity. Greece itself has many older regional dances, from tsamiko on the mainland to pentozali in Crete and sousta on the islands."
+     ],
+     "sources": [
+      {
+       "cite": "Wikipedia: Sirtaki",
+       "url": "https://en.wikipedia.org/wiki/Sirtaki"
+      }
+     ]
+    },
+    {
+     "slug": "what-is-zeibekiko",
+     "title": "What is zeibekiko?",
+     "answer": [
+      "Zeibekiko is usually described as a solo, improvised Greek dance. There is no fixed sequence that everybody copies, so it leaves much more to the individual dancer.",
+      "Its history reaches back into the Zeybek traditions of western Anatolia. After the 1922 Asia Minor Catastrophe, Greek refugees carried it into Greece, where it became closely tied to rebetiko music."
+     ],
+     "sources": [
+      {
+       "cite": "Wikipedia: Zeybek (dance)",
+       "url": "https://en.wikipedia.org/wiki/Zeybek_(dance)"
+      }
+     ]
+    },
+    {
+     "slug": "why-was-rebetiko-censored",
+     "title": "Why was rebetiko censored?",
+     "answer": [
+      "Rebetiko grew up in the ports, working-class neighbourhoods and refugee communities of early twentieth-century Greece. Its songs were about love, hardship, prison, drugs, poverty and longing.",
+      "In the 1930s the dictatorship of Ioannis Metaxas imposed censorship on Greek music. Lyrics and recordings could be censored, and elements the authorities linked to an eastern or underworld identity came under pressure. Musicians adapted, and the music survived."
+     ],
+     "sources": [
+      {
+       "cite": "The Metaxas Project: censorship under the 4th of August regime",
+       "url": "https://metaxas-project.com/censorship-metaxas-regime-4th-of-august-state/"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "match": {
+    "id": "vpQUH4lBkiU"
+   },
+   "quiz": {
+    "slug": "the-greeks-who-left",
+    "title": "How well do you know the story of the Greeks who left?",
+    "intro": "Five questions from the film. Every answer comes from what the film says.",
+    "questions": [
+     {
+      "q": "What does the Greek word ξενιτιά mean?",
+      "options": [
+       "A homecoming festival",
+       "Life far from home",
+       "A village square"
+      ],
+      "correct": 1,
+      "explain": "ξενιτιά means life far from home: the distance between the person who leaves and the people who stay."
+     },
+     {
+      "q": "The traditional song Ξενιτεμένο μου πουλί comes from which region?",
+      "options": [
+       "Epirus",
+       "Crete",
+       "The Ionian Islands"
+      ],
+      "correct": 0,
+      "explain": "The film says traditional songs in Epirus spoke of that separation. The title means, roughly, my bird, far from home."
+     },
+     {
+      "q": "In the late nineteenth and early twentieth centuries, why did many Greeks leave?",
+      "options": [
+       "A gold rush in America",
+       "Work was scarce and they hoped for a more secure future",
+       "Everyone was forced to leave"
+      ],
+      "correct": 1,
+      "explain": "There isn't one answer, but many left because work was scarce and they hoped to build a more secure future."
+     },
+     {
+      "q": "Many who crossed the Atlantic to the United States planned to...",
+      "options": [
+       "earn money and return",
+       "never come back",
+       "start farms in the West"
+      ],
+      "correct": 0,
+      "explain": "Some planned to earn money and return. Some did return. Others expected to and never did."
+     },
+     {
+      "q": "What does an old passenger list usually record?",
+      "options": [
+       "Photographs and fingerprints",
+       "A name, an age, a place of origin and a destination",
+       "A full family tree"
+      ],
+      "correct": 1,
+      "explain": "A name. An age. A place of origin. A destination. It tells you where a person was going, not what happened when they got there."
+     }
+    ]
+   },
+   "qa": [
+    {
+     "slug": "why-did-so-many-greeks-emigrate",
+     "title": "Why did so many Greeks emigrate?",
+     "answer": [
+      "There isn't one answer. In the late nineteenth and early twentieth centuries, many Greeks left because work was scarce. The first wave followed the economic crisis of 1893, when currant export prices collapsed. Most went to the United States and Egypt, and many planned to earn money and return.",
+      "A second wave, mainly between 1950 and 1974, followed the hardship of the Second World War and the Greek Civil War. More than a million Greeks left, most to Western Europe, the United States, Canada and Australia. Almost half of them had returned to Greece by 1985."
+     ],
+     "sources": [
+      {
+       "cite": "Migration Policy Institute, Greece: A History of Migration (Kasimis and Kassimi, 2004)",
+       "url": "https://www.migrationpolicy.org/journal/country-profile/greece-history-migration"
+      }
+     ]
+    },
+    {
+     "slug": "what-does-xenitia-mean",
+     "title": "What does ξενιτιά (xenitia) mean?",
+     "answer": [
+      "ξενιτιά is the Greek word for life far from home. It is more than a place on a map. It is the distance between the person who leaves and the people who stay behind, waiting for news, a letter or the next visit.",
+      "Traditional songs from Epirus spoke of that separation. One is called Ξενιτεμένο μου πουλί, which means, roughly, my bird, far from home."
+     ],
+     "sources": []
+    }
+   ]
+  }
+ ]
+}

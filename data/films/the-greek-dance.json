@@ -1,0 +1,82 @@
+{
+ "approved": true,
+ "approved_by": "director (Peter)",
+ "approved_on": "2026-10-19",
+ "approval_note": "Gate C plan v1.1 approved; film pages, openings from narration masters and ChatGPT family questions approved 21:16 to 21:17 CT.",
+ "slug": "the-greek-dance",
+ "match": {
+  "id": "8cu1S1DVFDI"
+ },
+ "kicker": "Living Roots · Documentary",
+ "opening": {
+  "text": [
+   "You know this dance, even if you've never been to Greece.",
+   "Arms across the shoulders. Slow steps. The music builds, the steps get faster, and suddenly everybody thinks they're Greek.",
+   "There's just one problem: that dance wasn't waiting in some ancient Greek village to be discovered. It was created for a movie."
+  ],
+  "from": "EP020 recorded narration (final captions, Oct 10, 2026)"
+ },
+ "story_from": "Quoted from the film's recorded narration.",
+ "story": [
+  "In 1964, Zorba the Greek gave audiences around the world an image of Greece that would become almost impossible to separate from the country itself.",
+  "Greece already had more dances than Hollywood could ever fit into one film. Greek dance isn't decoration sitting on top of a Greek culture. It's one of the places culture was stored.",
+  "And nobody packs a dance into a suitcase. People carried it another way. They remember it. They teach it. A child watches a parent. A grandchild watches a grandparent.",
+  "Something invented can become tradition. Something old can change. And something genuinely ancient can disappear completely if nobody teaches it. Age doesn't guarantee survival. People do."
+ ],
+ "family_questions": [
+  "What Greek dances did you learn growing up, and who taught you?",
+  "Do you remember the first time you heard the music from Zorba the Greek?",
+  "Was there a dance everyone in your family knew, even without being taught?"
+ ],
+ "sources": {
+  "established": [
+   {
+    "text": "Sirtaki was choreographed for Zorba the Greek (1964) by Giorgos Provias, drawing on existing Greek dances rather than surviving from antiquity.",
+    "cite": "Wikipedia: Sirtaki",
+    "url": "https://en.wikipedia.org/wiki/Sirtaki"
+   },
+   {
+    "text": "Zeibekiko is a solo, improvised dance whose roots reach into the Zeybek traditions of western Anatolia, before the 1922 Asia Minor Catastrophe. Refugees carried it into Greece.",
+    "cite": "Wikipedia: Zeybek (dance)",
+    "url": "https://en.wikipedia.org/wiki/Zeybek_(dance)"
+   },
+   {
+    "text": "The Metaxas dictatorship of the 1930s censored Greek music, including rebetiko lyrics and recordings.",
+    "cite": "The Metaxas Project",
+    "url": "https://metaxas-project.com/censorship-metaxas-regime-4th-of-august-state/"
+   },
+   {
+    "text": "The music of Mikis Theodorakis was banned inside Greece by the 1967 to 1974 military dictatorship.",
+    "cite": "Greek Reporter",
+    "url": "https://greekreporter.com/2022/08/27/my-afternoon-with-zorba-when-mikis-theodorakis-was-banned-in-greece/"
+   },
+   {
+    "text": "The Orpheus Hellenic Folklore Society in the Chicago area teaches dances from across Greece to adults and younger generations.",
+    "cite": "Orpheus Hellenic Folklore Society",
+    "url": "https://ohfs.org/about/"
+   }
+  ],
+  "interpretation": [
+   {
+    "text": "The story of Anthony Quinn's injured foot shaping the dance comes from Quinn's own later account. It is widely repeated, but it is his recollection.",
+    "cite": "Wikipedia: Sirtaki",
+    "url": "https://en.wikipedia.org/wiki/Sirtaki"
+   }
+  ],
+  "open": []
+ },
+ "sources_note": "Several sources are general references. KRIOS lists them as the film relied on them.",
+ "credits": [
+  "Archive images: Library of Congress (stereographs published before 1931, and Farm Security Administration photographs by Carl Mydans and Arthur Rothstein, public domain); Nationaal Archief / Anefo (CC0, photographer Bert Verhoeff, including Mikis Theodorakis, the Netherlands, 1972); Wikimedia Commons CC0 contributions; a U.S. Navy photograph; the Australian War Memorial (D. Parer); an Anthony Quinn portrait (U.S. EEOC); the Greek Government Gazette (FEK), 1936.",
+  "Credit lines appear on screen beside each archive image. Where no footage of an event survives, the film uses a contextual archive photograph, which does not document the event being narrated.",
+  "Some visuals are AI-generated illustrations of dancers, musicians and community scenes, labelled on screen. They do not depict real events or real people."
+ ],
+ "related": [
+  {
+   "id": "vpQUH4lBkiU"
+  },
+  {
+   "label": "Music"
+  }
+ ]
+}

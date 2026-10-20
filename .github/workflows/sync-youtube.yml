@@ -20,11 +20,11 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           ref: main
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
 
@@ -35,6 +35,11 @@ jobs:
 
       - name: Check YouTube and rebuild pages
         run: python3 scripts/sync_youtube.py
+
+      - name: Publishing safeguards (blocks the push on release-critical problems)
+        env:
+          KRIOS_PRIVATE_TERMS: ${{ secrets.KRIOS_PRIVATE_TERMS }}
+        run: python3 scripts/check_site.py --sync
 
       - name: Commit and publish if anything changed
         env:

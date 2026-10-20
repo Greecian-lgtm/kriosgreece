@@ -1,0 +1,69 @@
+{
+ "approved": true,
+ "approved_by": "director (Peter)",
+ "approved_on": "2026-10-19",
+ "approval_note": "Gate C plan v1.1 approved; film pages, openings from narration masters and ChatGPT family questions approved 21:16 to 21:17 CT.",
+ "slug": "the-greeks-who-left",
+ "match": {
+  "id": "vpQUH4lBkiU"
+ },
+ "kicker": "Living Roots · Documentary",
+ "hero_image": {
+  "src": "/images/films/the-greeks-who-left-harbour.jpg",
+  "alt": "A man in a long coat stands at a harbour railing beside his suitcases.",
+  "caption": "Illustration from the film."
+ },
+ "opening": {
+  "text": [
+   "Have you ever heard someone in your family mention a village in Greece, or an island, and realized you never asked what life there was really like?",
+   "Maybe you were young. Maybe you thought there would always be time.",
+   "And then one day, there wasn't."
+  ],
+  "from": "EP021 narration v0.14 (approved recording master, Oct 15, 2026)"
+ },
+ "story_from": "Quoted from the film's approved narration.",
+ "story": [
+  "In the late nineteenth and early twentieth centuries, many Greeks left because work was scarce and they hoped to build a more secure future. Some crossed the Atlantic to the United States, planning to earn money and return.",
+  "In Greek, there's a word for life far from home: ξενιτιά. It's more than a destination on a map. It's the distance between the person who leaves and the people who stay.",
+  "The Greece people remembered didn't stay frozen exactly as they'd left it. It changed with their new lives.",
+  "The people who left Greece didn't carry an entire country with them in a suitcase. They carried pieces of a life, and built something new from them."
+ ],
+ "family_questions": [
+  "What did our family bring with them when they left Greece?",
+  "What did our grandparents miss most about home?",
+  "Which traditions did our family keep after arriving in a new country?"
+ ],
+ "sources": {
+  "established": [
+   {
+    "text": "The first wave of emigration followed the economic crisis of 1893, when currant export prices collapsed. From 1890 to 1914 almost a sixth of Greece's population emigrated, mostly to the United States and Egypt.",
+    "cite": "Migration Policy Institute, Greece: A History of Migration (Kasimis and Kassimi, 2004)",
+    "url": "https://www.migrationpolicy.org/journal/country-profile/greece-history-migration"
+   },
+   {
+    "text": "More than one million Greeks emigrated in a second wave, mainly between 1950 and 1974, most to Western Europe, the United States, Canada and Australia. Between 1974 and 1985 almost half of them returned to Greece.",
+    "cite": "Migration Policy Institute, Greece: A History of Migration (Kasimis and Kassimi, 2004)",
+    "url": "https://www.migrationpolicy.org/journal/country-profile/greece-history-migration"
+   }
+  ],
+  "interpretation": [],
+  "open": [
+   {
+    "text": "How many Greeks reached the United States in the first wave. Published histories give figures from about 430,000 to more than 600,000, so the film says \"hundreds of thousands\".",
+    "cite": "KRIOS research notes"
+   }
+  ]
+ },
+ "credits": [
+  "Most images in this film are illustrations made for KRIOS and labelled as illustrations. Archival photographs are credited on screen.",
+  "The song Ξενιτεμένο μου πουλί is mentioned in the narration only. No recording is used."
+ ],
+ "related": [
+  {
+   "id": "8cu1S1DVFDI"
+  },
+  {
+   "id": "uzqERcTIqS0"
+  }
+ ]
+}

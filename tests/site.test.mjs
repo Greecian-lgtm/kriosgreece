@@ -5,7 +5,7 @@ import { AxeBuilder } from '@axe-core/playwright';
 const BASE = process.argv[2] || 'http://localhost:8000';
 const SHOTS = process.argv[3] || '';
 const PAGES = ['/', '/films/', '/sacred-days/', '/how-we-work/', '/blog/', '/answers/', '/tools/',
-  '/blog/ep014-rebetiko.html', '/answers/who-was-theseus/', '/tools/quiz-ep001-achilles.html'];
+  '/blog/ep014-rebetiko.html', '/films/the-greek-dance/', '/films/the-greeks-who-left/', '/films/saint-demetrios/', '/tools/quiz-the-greeks-who-left.html', '/answers/is-sirtaki-a-traditional-greek-dance/', '/answers/who-was-theseus/', '/tools/quiz-ep001-achilles.html'];
 const WIDTHS = [320, 390, 768, 1440];
 const opts = { headless: true };
 if (process.env.CHROMIUM_PATH) Object.assign(opts, { executablePath: process.env.CHROMIUM_PATH, args: ['--headless=new'], ignoreDefaultArgs: ['--headless=old'] });
@@ -60,6 +60,25 @@ for (const path of PAGES) {
   const all = await q.evaluate(() => [...document.querySelectorAll('.m-films [data-tags]')].filter((x) => !x.hidden).length);
   if (all < 15) fail(`films without JS lists only ${all}`);
   await ctx.close();
+}
+// quiz: keyboard answer, feedback, score
+{
+  const p = await b.newPage({ viewport: { width: 390, height: 900 } });
+  await p.goto(BASE + '/tools/quiz-the-greek-dance.html');
+  for (let n = 0; n < 5; n++) {
+    await p.locator('.m-opts button').first().focus(); await p.keyboard.press('Enter');
+    const ex = await p.locator('.m-explain').textContent();
+    if (!ex || ex.length < 10) fail('quiz: no explanation after answering');
+    await p.keyboard.press('Enter');
+  }
+  if (!(await p.locator('#quiz-result').isVisible())) fail('quiz: score not shown after 5 answers');
+  await p.close();
+}
+// lite video: loads YouTube only on click
+{
+  const p = await b.newPage(); await p.goto(BASE + '/films/the-greek-dance/');
+  if (await p.locator('iframe').count() !== 0) fail('film page: iframe loaded before play');
+  await p.close();
 }
 // reduced motion: reveal content visible without animation
 {

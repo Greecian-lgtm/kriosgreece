@@ -11,6 +11,46 @@ UP = load("data/upcoming.json")["upcoming"]
 SUBJ = load("data/subjects.json")
 SD = load("data/sacred_days.json")
 TODAY = datetime.date.today().isoformat()
+import glob as _glob
+
+
+def _matches(m, x):
+    return ("id" in m and m["id"] == x.get("id")) or ("title" in m and m["title"].lower() in x.get("title", "").lower())
+
+
+def released(m):
+    """The published episode matching m (by id or title text), else None."""
+    return next((x for x in EP if _matches(m, x)), None)
+
+
+# Film pages: director-approved content in data/films/<slug>.json. Held parts arrive with the release
+# branch as data/films/<slug>.release.json and are merged only once present.
+FILMS = []
+for _p in sorted(_glob.glob(os.path.join(ROOT, "data/films/*.json"))):
+    if _p.endswith(".release.json"):
+        continue
+    _d = json.load(open(_p, encoding="utf-8"))
+    if not _d.get("approved"):
+        continue
+    _r = _p[:-5] + ".release.json"
+    if os.path.exists(_r):
+        _d.update(json.load(open(_r, encoding="utf-8")))
+    FILMS.append(_d)
+
+
+def film_page_for(x):
+    f = next((f for f in FILMS if _matches(f["match"], x)), None)
+    return f"/films/{f['slug']}/" if f else None
+
+
+# Quizzes and Q&A for the newer films (data/extras/*.json); only for films already published.
+EXTRAS = []
+for _p in sorted(_glob.glob(os.path.join(ROOT, "data/extras/*.json"))):
+    for _f in json.load(open(_p, encoding="utf-8"))["films"]:
+        _x = released(_f["match"])
+        if _x:
+            EXTRAS.append(dict(_f, episode=_x))
+EXTRA_QA_SLUGS = {q["slug"] for f in EXTRAS for q in f.get("qa", [])}
 
 MONTHS = "January February March April May June July August September October November December".split()
 e = lambda s: html.escape(str(s), quote=True)
@@ -36,7 +76,10 @@ def tags(x):
 def card(x, d=0.0, compact=False):
     meta = f'{e(x["label"])} · {short(x["date"])} · {x["mins"]} min'
     tease = "" if compact else f'<span class="m-ctext">{e(x.get("tease", ""))}</span>'
-    return (f'<a class="m-card reveal" style="--d:{d:.2f}s" href="{watch(x["id"])}" rel="noopener" data-tags="{tags(x)}">'
+    page = film_page_for(x)
+    href = page or watch(x["id"])
+    rel = "" if page else ' rel="noopener"'
+    return (f'<a class="m-card reveal" style="--d:{d:.2f}s" href="{href}"{rel} data-tags="{tags(x)}">'
             f'<span class="m-thumb"><img src="{thumb(x["id"])}" alt="" loading="lazy" width="480" height="270"></span>'
             f'<span class="m-cbody"><span class="label m-kick">{meta}</span><span class="m-ctitle">{e(x["title"])}</span>{tease}</span></a>')
 
@@ -48,7 +91,7 @@ def s1card(x):
 
 
 def upcoming_card(u):
-    return (f'<a class="m-card m-card--soon reveal" href="/sacred-days/" data-tags="{tags(u)}">'
+    return (f'<a class="m-card m-card--soon reveal" href="{film_page_for(u) or "/sacred-days/"}" data-tags="{tags(u)}">'
             f'<span class="m-thumb"><img src="{u["image"]}" alt="" width="480" height="270"><span class="m-badge">Premieres {short(u["date"])}</span></span>'
             f'<span class="m-cbody"><span class="label m-kick">{e(u["label"])} · {nice(u["date"])}</span><span class="m-ctitle">{e(u["title"])}</span>'
             f'<span class="m-ctext">{e(u.get("tease", ""))}</span></span></a>')
@@ -59,7 +102,9 @@ def featured_film():
 
 
 def featured(x):
-    return (f'<a class="m-feat reveal" href="{watch(x["id"])}" rel="noopener" data-tags="{tags(x)}"><span class="m-feat-img">'
+    page = film_page_for(x)
+    href, rel = (page, "") if page else (watch(x["id"]), ' rel="noopener"')
+    return (f'<a class="m-feat reveal" href="{href}"{rel} data-tags="{tags(x)}"><span class="m-feat-img">'
             f'<img src="{thumb(x["id"], "maxresdefault")}" onerror="this.onerror=null;this.src=\'{thumb(x["id"])}\'" alt="" width="960" height="540">'
             f'<span class="m-play">▶ {x["mins"]} min</span></span><span class="m-feat-body"><span class="label m-kick">Featured · {e(x["label"])} · {nice(x["date"])}</span>'
             f'<span class="m-feat-title">{e(x["title"])}</span><span class="m-feat-text">{e(x.get("tease", ""))}</span>'

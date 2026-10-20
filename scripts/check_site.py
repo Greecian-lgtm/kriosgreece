@@ -12,12 +12,19 @@ os.chdir(ROOT)
 sys.path.insert(0, ROOT)
 from site_lib import DEDICATION_LINES  # noqa: E402
 
+SYNC = "--sync" in sys.argv          # inside the YouTube sync: only release-critical problems block the push
 errors, warnings = [], []
-err = lambda m: errors.append(m)
+err = lambda m: errors.append(m)          # always blocking
 warn = lambda m: warnings.append(m)
+style = (lambda m: warnings.append("style: " + m)) if SYNC else err   # blocking on pushes and PRs, warning in the sync
 
 GENERATED = ["index.html", "films/index.html", "sacred-days/index.html", "how-we-work/index.html",
              "blog/index.html", "answers/index.html", "tools/index.html"]
+GENERATED += [p for p in glob.glob("films/*/index.html")]
+for _x in glob.glob("data/extras/*.json"):
+    for _f in json.load(open(_x, encoding="utf-8"))["films"]:
+        GENERATED += [f"tools/quiz-{_f['quiz']['slug']}.html"] + [f"answers/{q['slug']}/index.html" for q in _f.get("qa", [])]
+GENERATED = [p for p in GENERATED if os.path.exists(p)]
 PUBLIC = sorted(set(GENERATED + glob.glob("blog/**/*.html", recursive=True) + glob.glob("answers/**/*.html", recursive=True)
                     + glob.glob("tools/**/*.html", recursive=True) + ["links.html", "links/index.html"]))
 PUBLIC = [p for p in PUBLIC if os.path.exists(p)]
@@ -59,7 +66,7 @@ for line in DEDICATION_LINES:
         err(f"dedication line missing or changed on the homepage: {line!r}")
 if '<p class="dgr" lang="el">Αἰωνία σου ἡ μνήμη.</p>' not in home:
     err("Greek dedication line changed (exact text and lang attribute required)")
-for p in GENERATED + glob.glob("blog/**/*.html", recursive=True) + glob.glob("answers/**/*.html", recursive=True):
+for p in set(GENERATED + glob.glob("blog/**/*.html", recursive=True) + glob.glob("answers/**/*.html", recursive=True)):
     if os.path.exists(p):
         s = open(p, encoding="utf-8").read()
         if 'http-equiv="refresh"' not in s and "For my father, Peter (Πέτρος)." not in s:
@@ -71,9 +78,9 @@ for p in PUBLIC:
     t = visible_text(s)
     hits = number_hits(t)
     if hits:
-        (err if p in GENERATED else warn)(f"episode/season number in {p}: {sorted(set(hits))[:5]}")
+        (style if p in GENERATED else warn)(f"episode/season number in {p}: {sorted(set(hits))[:5]}")
     if p in GENERATED and "—" in t:
-        err(f"em dash in generated public copy: {p}")
+        style(f"em dash in generated public copy: {p}")
 
 # 5/6. Held content and release gates
 up = json.load(open("data/upcoming.json", encoding="utf-8"))["upcoming"]
@@ -106,7 +113,7 @@ cal = open("sacred-days/index.html", encoding="utf-8").read() if os.path.exists(
 for li in re.findall(r"<li class=\"reveal\"><div class=\"m-feast\">.*?</li>", cal, re.S):
     t = visible_text(li)
     if "No KRIOS film scheduled" not in t and "premieres" not in t.lower() and "Watch the KRIOS film" not in t:
-        err(f"calendar row has no clear film status: {t[:80]}")
+        style(f"calendar row has no clear film status: {t[:80]}")
 
 # 8. Privacy blocklist (kept out of the code; supplied as a secret)
 terms = [t.strip() for t in os.environ.get("KRIOS_PRIVATE_TERMS", "").split(",") if t.strip()]
@@ -126,7 +133,7 @@ for p in GENERATED:
         target = href.lstrip("/")
         cands = [target, os.path.join(target, "index.html")] if target else ["index.html"]
         if not any(os.path.isfile(c) for c in cands):
-            err(f"broken internal link in {p}: {href}")
+            style(f"broken internal link in {p}: {href}")
 
 # 10. Data integrity
 eps = json.load(open("data/episodes.json", encoding="utf-8"))
@@ -146,5 +153,5 @@ for w in warnings:
     print("WARNING:", w)
 for m in errors:
     print("::error title=site check::" + m if os.environ.get("GITHUB_ACTIONS") else "ERROR: " + m)
-print(f"site check: {len(errors)} blocking, {len(warnings)} warnings, {len(PUBLIC)} pages")
+print(f"site check{' (sync mode)' if SYNC else ''}: {len(errors)} blocking, {len(warnings)} warnings, {len(PUBLIC)} pages")
 sys.exit(1 if errors else 0)

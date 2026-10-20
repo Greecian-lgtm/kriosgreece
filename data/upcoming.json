@@ -11,7 +11,9 @@
    "release_branch": "release/stdemetrios-credits",
    "credits": "/credits/saint-demetrios.html",
    "release_files": [
-    "credits/saint-demetrios.html"
+    "credits/saint-demetrios.html",
+    "data/films/saint-demetrios.release.json",
+    "data/extras/saint-demetrios.json"
    ],
    "image_is_illustration": true
   }

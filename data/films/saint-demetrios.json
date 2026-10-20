@@ -1,0 +1,28 @@
+{
+ "approved": true,
+ "approved_by": "director (Peter)",
+ "approved_on": "2026-10-19",
+ "approval_note": "Gate C plan v1.1 approved; film pages, openings from narration masters and ChatGPT family questions approved 21:16 to 21:17 CT.",
+ "slug": "saint-demetrios",
+ "match": {
+  "title": "Saint Demetrios"
+ },
+ "kicker": "Sacred Days · Documentary",
+ "held_until_release": true,
+ "family_questions": [
+  "Whose name day did our family celebrate, and what did we do?",
+  "Did our parents or grandparents tell us stories about Saint Demetrios?",
+  "How did celebrating a name day differ from celebrating a birthday?"
+ ],
+ "related": [
+  {
+   "page": "/sacred-days/",
+   "title": "Sacred Days calendar",
+   "kick": "Series",
+   "cta": "See the year ahead"
+  },
+  {
+   "label": "Faith"
+  }
+ ]
+}

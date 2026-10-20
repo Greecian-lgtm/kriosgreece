@@ -162,6 +162,11 @@ for f in cands:
     t = t[0].upper() + t[1:]
     qs.append(dict(t=t, href=href))
 
+import sys as _sys
+_sys.path.insert(0, ROOT)
+from site_lib import EXTRAS as _EXTRAS, EXTRA_QA_SLUGS as _XQ
+new_qs = [q for q in qs if q["href"].strip("/").split("/")[-1] in _XQ]
+qs_old = [q for q in qs if q not in new_qs]
 TOPICS = [
     ("words", "Greek words and ideas", r"\b(kleos|xenia|ate|hubris|leitourgia|menis|nostos)\b"),
     ("thermopylae", "Thermopylae and the Persian Wars", r"thermopyl|anopaea|leonidas|thespian|marathon|plataea|persian"),
@@ -174,10 +179,12 @@ TOPICS = [
     ("gods", "Gods, myths and mysteries", r"."),
 ]
 groups = {k: [] for k, _, _ in TOPICS}
-for q in qs:
+for q in qs_old:
     for k, _, rx in TOPICS:
         if re.search(rx, q["t"].lower()):
             groups[k].append(q); break
+TOPICS = [("newest", "From the newest films", None)] + TOPICS
+groups["newest"] = new_qs
 chips = "".join(f'<a href="#{k}">{e(n)} <small>{len(groups[k])}</small></a>' for k, n, _ in TOPICS if groups[k])
 secs = ""
 for k, n, _ in TOPICS:
@@ -187,22 +194,22 @@ for k, n, _ in TOPICS:
     secs += f'<section class="k-topic reveal" id="{k}"><h2>{e(n)}</h2><ul class="k-qlist">{items}</ul></section>\n'
 ans_body = f"""<header class="k-hero reveal">
   <span class="k-kick">Q&amp;A</span>
-  <h1>Questions about ancient Greece, answered</h1>
-  <p class="k-lead">Short answers to {len(qs)} questions about Greek myth and ancient history, written alongside the first KRIOS films.</p>
+  <h1>Questions about Greece, answered</h1>
+  <p class="k-lead">Short answers to {len(qs)} questions, from the newest KRIOS films on dance, migration and faith to the ancient stories of the first films.</p>
   <div class="k-find"><label for="qfind">Find a question</label><input id="qfind" type="search" placeholder="Try Medusa, kleos or Thermopylae" autocomplete="off"><span id="qcount" aria-live="polite"></span></div>
   <nav class="k-chips" aria-label="Topics">{chips}</nav>
 </header>
 <div class="k-topics">
 {secs}</div>
 <p class="k-empty" id="qempty" hidden>No question matches that yet. <a href="{YT}" rel="noopener">Ask it in the comments on YouTube</a>.</p>
-<div class="k-note reveal">The newer KRIOS films (heroes, faith, music, food and family) are on <a href="{YT}" rel="noopener">YouTube</a>, with <a href="/blog/">articles</a> for several of them.</div>
+<div class="k-note reveal">More questions from the newer films are added as each film is released. <a href="/films/">See every film</a>.</div>
 """
 FIND_JS = """<script>(function(){var i=document.getElementById('qfind');if(!i)return;var c=document.getElementById('qcount'),em=document.getElementById('qempty');
 i.addEventListener('input',function(){var v=i.value.trim().toLowerCase(),n=0;
 [].forEach.call(document.querySelectorAll('.k-topic'),function(sec){var m=0;[].forEach.call(sec.querySelectorAll('li'),function(li){var ok=!v||li.textContent.toLowerCase().indexOf(v)>-1;li.hidden=!ok;if(ok)m++});sec.hidden=!m;sec.classList.add('in');n+=m});
 c.textContent=v?(n+(n===1?' question':' questions')):'';em.hidden=n>0;});})();</script>"""
 page("answers/index.html", "Greek history and myth Q&A · KRIOS",
-     f"Short answers to {len(qs)} questions about ancient Greek myth and history, from Achilles and Thermopylae to Delos and the Eleusinian Mysteries.",
+     f"Short answers to {len(qs)} questions about Greek history, faith, music and myth, from the newest KRIOS films to Achilles and Thermopylae.",
      "/answers/", "Q&amp;A", ans_body, FIND_JS)
 
 # ---------- /tools/ ----------
@@ -214,12 +221,16 @@ for f in sorted(glob.glob("tools/quiz-ep*.html")):
     t = first(r"<h1[^>]*>(.*?)</h1>", s)
     nq = s.count('"question"')
     quizzes.append(dict(href="/" + f, t=t, nq=nq, vid=S1[quiz_vid[n]]["id"] if n in quiz_vid else None))
+new_quizzes = [dict(href=f"/tools/quiz-{t['quiz']['slug']}.html", t=t["quiz"]["title"], nq=len(t["quiz"]["questions"]), vid=t["episode"]["id"], label=t["episode"]["label"]) for t in _EXTRAS]
+new_quiz_html = ('<section class="k-sec"><div class="k-sechead reveal"><h2>From the newest films</h2><p>Watch the film, then see how much stayed with you.</p></div>'
+                 + grid(new_quizzes, lambda q, i: card(q['href'], thumb(q['vid']), f"{e(q['label'])} · {q['nq']} questions", q['t'], '', 'Take the quiz', False, (i % 3) * .08))
+                 + '</section>') if new_quizzes else ""
 rf = open("tools/real-or-fake.html", encoding="utf-8").read()
 rf_n = len(re.findall(r'"statement"\s*:', rf)) or 15
 tools_body = f"""<header class="k-hero reveal">
   <span class="k-kick">Quizzes</span>
   <h1>Test what you know</h1>
-  <p class="k-lead">Short quizzes from the first KRIOS films. A few minutes each, and you can share your score.</p>
+  <p class="k-lead">Short quizzes from the KRIOS films. A few minutes each, and every answer comes from the film.</p>
 </header>
 <a class="k-feature reveal" href="/tools/real-or-fake.html">
   <span class="k-kick">The game</span>
@@ -227,11 +238,12 @@ tools_body = f"""<header class="k-hero reveal">
   <p>{rf_n} statements about Greek mythology. Some come from the ancient sources, some were made up much later. Can you tell which is which?</p>
   <span class="k-cta">Play Real or Fake</span>
 </a>
+{new_quiz_html}
 <section class="k-sec">
-  <div class="k-sechead reveal"><h2>Episode quizzes</h2><p>Watch the film, then see how much stayed with you.</p></div>
+  <div class="k-sechead reveal"><h2>Where KRIOS began</h2><p>Quizzes from the first films, which told the ancient stories.</p></div>
   {grid(quizzes, lambda q, i: card(q['href'], thumb(q['vid']) if q['vid'] else '', f"{q['nq']} questions", q['t'], '', 'Take the quiz', False, (i % 3) * .08))}
 </section>
-<div class="k-note reveal">More quizzes are coming for the newer films. <a href="{YT}?sub_confirmation=1" rel="noopener">Subscribe on YouTube</a> to see them first.</div>
+<div class="k-note reveal">A new quiz is added as each new film is released. <a href="{YT}?sub_confirmation=1" rel="noopener">Subscribe on YouTube</a> to see them first.</div>
 """
 page("tools/index.html", "Greek history quizzes · KRIOS",
      "Quick quizzes on Greek heroes, myths and history from the KRIOS films, plus Real or Fake: can you tell ancient myth from modern invention?",

@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Greek Mythology Quiz — Real or Fake? | Krios Mythology</title>
-  <meta name="description" content="Test your Greek mythology knowledge. Can you tell which myths are real ancient sources and which are modern inventions? Free embeddable quiz from Krios Mythology.">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Quiz","name":"Greek Mythology: Real or Fake?","description":"Test whether you can distinguish ancient primary sources from modern mythology inventions","author":{"@type":"Person","name":"Stavros Krios"},"publisher":{"@type":"Organization","name":"Krios Mythology","url":"https://kriosgreece.com"}}</script>
+  <title>Greek Mythology Quiz · Real or Fake? | KRIOS</title>
+  <meta name="description" content="Test your Greek mythology knowledge. Can you tell which myths are real ancient sources and which are modern inventions? Free embeddable quiz from KRIOS.">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Quiz","name":"Greek Mythology: Real or Fake?","description":"Test whether you can distinguish ancient primary sources from modern mythology inventions","author":{"@type":"Person","name":"Stavros Krios"},"publisher":{"@type":"Organization","name":"KRIOS","url":"https://kriosgreece.com"}}</script>
   <style>
     *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
     :root{--bg:#0f0d0a;--text:#e8dcc8;--gold:#c9972a;--terracotta:#b85c38;--muted:#8a7d6a;--card:#1a1712;--border:#2a2318;--green:#4a7c59;--red:#8b3a3a;}
@@ -55,15 +55,34 @@
     footer a{color:var(--gold);text-decoration:none;}
     @media(max-width:500px){.page{padding:2rem 1.25rem 4rem;}.page-title{font-size:1.4rem;}.btn-row{flex-direction:column;}}
   </style>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet"><link rel="stylesheet" href="/assets/krios.css"><style>
+body.k-quizpage{background:#faf6ec!important;color:#1d1a14!important}
+.k-quiz{--bg:#faf6ec;--text:#1d1a14;--white:#14213a;--dim:#4a4336;--gold:#8a6a2c;--correct:#2f6b45;--wrong:#8c2a2a;
+--muted:#4a4336;--card:#f5edd8;--border:#d9cdb0;--terracotta:#7e2418;--green:#2f6b45;--red:#8c2a2a}
+body.k-quizpage{max-width:none!important;padding:0!important;margin:0!important;display:block!important;min-height:0!important}
+.k-quiz{max-width:720px;margin:0 auto;padding:40px 24px 0;line-height:1.65}
+.k-quiz h1{color:var(--white);font-weight:500;font-size:clamp(1.8rem,4vw,2.5rem);line-height:1.15;border:0;padding:0}
+.k-quiz .nav{font-size:.9rem}
+.k-quiz footer,.k-quiz .site-footer{display:none!important}
+.k-quiz .site-header{display:none!important}
+.k-quiz .page{padding:0!important;max-width:none!important}
+.question-card,.score-card,.myth-card,.quiz-card{background:var(--card)!important;border:1px solid var(--border)!important;border-radius:2px!important}
+.explanation{background:#ebe1c7!important}
+.k-quiz button,.k-quiz .share-btn,.k-quiz .btn{font-family:"EB Garamond",Georgia,serif!important;border-radius:2px!important;font-size:1.05rem}
+.k-quiz #options button{display:block;width:100%;text-align:left;margin:.5rem 0;background:#fff;color:var(--text);border:1px solid var(--border)}
+.k-quiz #options button:hover{border-color:var(--gold)}
+.k-quiz #next-btn,.k-quiz .share-btn{background:#14213a!important;color:#f5edd8!important}
+</style>
 </head>
-<body>
+<body class="k-quizpage" data-k="quiz-v1"><header class="k-top"><div class="k-in"><a class="k-brand" href="/"><b>KRIOS</b><span>Greek cultural preservation</span></a><nav class="k-nav" aria-label="Site"><a href="/#episodes">Episodes</a><a href="/blog/">Articles</a><a href="/answers/">Q&amp;A</a><a href="/tools/" aria-current=page>Quizzes</a><a class="k-sub" href="https://www.youtube.com/@KriosGreece?sub_confirmation=1" rel="noopener">Subscribe</a></nav></div></header>
+<div class="k-quiz">
 <header class="site-header">
   <a href="https://kriosgreece.com">KRIOS</a>
   <span>Greek Mythology from Primary Sources</span>
 </header>
 <div class="page">
   <h1 class="page-title">Real or Fake?</h1>
-  <p class="page-sub">Greek mythology — ancient source or modern invention? You have 8 questions.</p>
+  <p class="page-sub">Greek mythology · ancient source or modern invention? You have 8 questions.</p>
   <div class="progress-bar-wrap"><div class="progress-bar-fill" id="progressBar" style="width:0%"></div></div>
   <div id="quizContainer"></div>
   <div class="score-screen" id="scoreScreen">
@@ -73,7 +92,7 @@
     <div class="cta-block">
       <div class="cta-label">Watch the full episodes</div>
       <h3>Every answer comes from a primary source. See which ones on Krios.</h3>
-      <a class="btn-primary" href="https://www.youtube.com/@KriosMythology" target="_blank">Watch on YouTube →</a>
+      <a class="btn-primary" href="https://www.youtube.com/@KriosGreece" target="_blank">Watch on YouTube →</a>
       <a class="btn-primary" href="https://kriosgreece.com/answers/" target="_blank">Read the Sources →</a>
       <br><button class="btn-secondary" onclick="restartQuiz()">Play Again</button>
     </div>
@@ -84,14 +103,14 @@
     <div class="embed-code" id="embedCode" onclick="copyEmbed(this)">&lt;iframe src="https://kriosgreece.com/tools/real-or-fake/" width="100%" height="620" frameborder="0" style="border-radius:6px;" title="Greek Mythology Real or Fake Quiz"&gt;&lt;/iframe&gt;</div>
   </div>
 </div>
-<footer><p><a href="https://kriosgreece.com">kriosgreece.com</a> · Greek mythology from primary sources · <a href="https://www.youtube.com/@KriosMythology">YouTube</a></p><p style="margin-top:.5rem;font-size:.72rem;opacity:.45;">© 2026 Stavros Research Labs LLC. All rights reserved. Content may not be reproduced without written permission.</p></footer>
+<footer><p><a href="https://kriosgreece.com">kriosgreece.com</a> · Greek mythology from primary sources · <a href="https://www.youtube.com/@KriosGreece">YouTube</a></p><p style="margin-top:.5rem;font-size:.72rem;opacity:.45;">© 2026 Stavros Research Labs LLC. All rights reserved. Content may not be reproduced without written permission.</p></footer>
 <script>
-const QUESTIONS=[{text:"Medusa was a beautiful woman transformed into a monster by Athena as punishment for being assaulted by Poseidon in her temple.",answer:"fake",explanation:"This comes from Ovid's <em>Metamorphoses</em>, a Roman text from the 1st century AD — 700 years after Hesiod. In the oldest Greek sources (Hesiod's <em>Theogony</em>, 8th–7th century BC), Medusa is a monster from birth. The sympathetic victim narrative is Roman, not Greek.",source:"Hesiod, Theogony (8th–7th c. BC) vs Ovid, Metamorphoses (1st c. AD)"},{text:"The Iliad opens with the word menis — rage — referring to the anger of Achilles.",answer:"real",explanation:"Correct. The very first word of Homer's <em>Iliad</em> is μῆνιν (mēnin) — rage. Homer establishes Achilles' anger as the subject of the entire epic from the very first word.",source:"Homer, Iliad, Book 1, line 1 (8th century BC)"},{text:"Achilles had a vulnerable heel because his mother Thetis dipped him in the River Styx as a baby, holding him by the heel.",answer:"fake",explanation:"This story does not appear in Homer's <em>Iliad</em>. The heel tradition appears in Roman-era sources, primarily Statius's <em>Achilleid</em> (1st century AD). Homer describes Achilles dying from an arrow shot by Paris, guided by Apollo — nothing about a heel.",source:"Homer, Iliad (8th c. BC) vs Statius, Achilleid (1st c. AD)"},{text:"Thucydides records that Athens purified the island of Delos in 426 BC by removing all graves, because births and deaths were forbidden on Apollo's sacred birthplace.",answer:"real",explanation:"Correct. Thucydides records this in Book 3 of his <em>History of the Peloponnesian War</em>. The Athenians removed all graves from Delos and decreed no one could be born or die on the island — direct historical evidence of Delos's sacred status.",source:"Thucydides, History of the Peloponnesian War, Book 3 (5th century BC)"},{text:"The Trojan Horse is described in detail in Homer's Iliad.",answer:"fake",explanation:"The Trojan Horse does not appear in the <em>Iliad</em> — the poem ends before the fall of Troy. The Horse is mentioned briefly in Homer's <em>Odyssey</em> and described fully for the first time in Virgil's <em>Aeneid</em>, a Roman text from the 1st century BC.",source:"Homer, Iliad ends before Troy falls. Virgil, Aeneid (1st c. BC)"},{text:"Theseus forgot to change his sails from black to white after killing the Minotaur, causing his father Aegeus to believe he was dead and jump into the sea — which was then named the Aegean.",answer:"real",explanation:"Correct. Plutarch records this in his <em>Life of Theseus</em>. Theseus promised his father he would change the black sails to white if he survived. He forgot. Aegeus saw the black sails, assumed his son was dead, and threw himself into the sea. The Aegean Sea bears his name.",source:"Plutarch, Life of Theseus (1st–2nd century AD)"},{text:"Hades was considered evil by the ancient Greeks and was feared and hated as the god of death.",answer:"fake",explanation:"In Greek primary sources, Hades is a stern but just ruler — not a villain. He does not kill people; that is Thanatos (Death). Ancient Greeks avoided saying his name out of respect and superstition, not because he was evil. The 'evil Hades' is largely a modern pop culture invention.",source:"Hesiod, Theogony · Homer, Iliad and Odyssey · Homeric Hymn to Demeter"},{text:"The Cyclades islands were named after the Greek word for circle, because they form a ring around the sacred island of Delos.",answer:"real",explanation:"Correct. The name Κυκλάδες (Kyklades) derives from κύκλος (kyklos) — circle. The islands form a rough circle around Delos, considered the sacred centre as the mythological birthplace of Apollo.",source:"Strabo, Geography · Callimachus, Hymn to Delos (3rd century BC)"}];
+const QUESTIONS=[{text:"Medusa was a beautiful woman transformed into a monster by Athena as punishment for being assaulted by Poseidon in her temple.",answer:"fake",explanation:"This comes from Ovid's <em>Metamorphoses</em>, a Roman text from the 1st century AD · 700 years after Hesiod. In the oldest Greek sources (Hesiod's <em>Theogony</em>, 8th–7th century BC), Medusa is a monster from birth. The sympathetic victim narrative is Roman, not Greek.",source:"Hesiod, Theogony (8th–7th c. BC) vs Ovid, Metamorphoses (1st c. AD)"},{text:"The Iliad opens with the word menis · rage · referring to the anger of Achilles.",answer:"real",explanation:"Correct. The very first word of Homer's <em>Iliad</em> is μῆνιν (mēnin) · rage. Homer establishes Achilles' anger as the subject of the entire epic from the very first word.",source:"Homer, Iliad, Book 1, line 1 (8th century BC)"},{text:"Achilles had a vulnerable heel because his mother Thetis dipped him in the River Styx as a baby, holding him by the heel.",answer:"fake",explanation:"This story does not appear in Homer's <em>Iliad</em>. The heel tradition appears in Roman-era sources, primarily Statius's <em>Achilleid</em> (1st century AD). Homer describes Achilles dying from an arrow shot by Paris, guided by Apollo · nothing about a heel.",source:"Homer, Iliad (8th c. BC) vs Statius, Achilleid (1st c. AD)"},{text:"Thucydides records that Athens purified the island of Delos in 426 BC by removing all graves, because births and deaths were forbidden on Apollo's sacred birthplace.",answer:"real",explanation:"Correct. Thucydides records this in Book 3 of his <em>History of the Peloponnesian War</em>. The Athenians removed all graves from Delos and decreed no one could be born or die on the island · direct historical evidence of Delos's sacred status.",source:"Thucydides, History of the Peloponnesian War, Book 3 (5th century BC)"},{text:"The Trojan Horse is described in detail in Homer's Iliad.",answer:"fake",explanation:"The Trojan Horse does not appear in the <em>Iliad</em> · the poem ends before the fall of Troy. The Horse is mentioned briefly in Homer's <em>Odyssey</em> and described fully for the first time in Virgil's <em>Aeneid</em>, a Roman text from the 1st century BC.",source:"Homer, Iliad ends before Troy falls. Virgil, Aeneid (1st c. BC)"},{text:"Theseus forgot to change his sails from black to white after killing the Minotaur, causing his father Aegeus to believe he was dead and jump into the sea · which was then named the Aegean.",answer:"real",explanation:"Correct. Plutarch records this in his <em>Life of Theseus</em>. Theseus promised his father he would change the black sails to white if he survived. He forgot. Aegeus saw the black sails, assumed his son was dead, and threw himself into the sea. The Aegean Sea bears his name.",source:"Plutarch, Life of Theseus (1st–2nd century AD)"},{text:"Hades was considered evil by the ancient Greeks and was feared and hated as the god of death.",answer:"fake",explanation:"In Greek primary sources, Hades is a stern but just ruler · not a villain. He does not kill people; that is Thanatos (Death). Ancient Greeks avoided saying his name out of respect and superstition, not because he was evil. The 'evil Hades' is largely a modern pop culture invention.",source:"Hesiod, Theogony · Homer, Iliad and Odyssey · Homeric Hymn to Demeter"},{text:"The Cyclades islands were named after the Greek word for circle, because they form a ring around the sacred island of Delos.",answer:"real",explanation:"Correct. The name Κυκλάδες (Kyklades) derives from κύκλος (kyklos) · circle. The islands form a rough circle around Delos, considered the sacred centre as the mythological birthplace of Apollo.",source:"Strabo, Geography · Callimachus, Hymn to Delos (3rd century BC)"}];
 let current=0,score=0,answered=false;
 function buildQuestion(i){
   const q=QUESTIONS[i];
   document.getElementById('progressBar').style.width=(i/QUESTIONS.length*100)+'%';
-  document.getElementById('quizContainer').innerHTML=`<div class="quiz-card"><div class="q-number">Question ${i+1} of ${QUESTIONS.length}</div><div class="q-text">"${q.text}"</div><div class="q-source">Source context: ${q.source}</div><div class="btn-row"><button class="btn" id="btnReal" onclick="answer('real')">✓ Real — ancient source</button><button class="btn" id="btnFake" onclick="answer('fake')">✗ Fake — modern invention</button></div><div class="explanation" id="explanation"><div class="verdict ${q.answer}" id="verdict"></div><div id="explanationText"></div></div></div><div class="nav-row"><button class="btn-next" id="btnNext" onclick="nextQuestion()">${i+1<QUESTIONS.length?'Next question →':'See your score →'}</button></div>`;
+  document.getElementById('quizContainer').innerHTML=`<div class="quiz-card"><div class="q-number">Question ${i+1} of ${QUESTIONS.length}</div><div class="q-text">"${q.text}"</div><div class="q-source">Source context: ${q.source}</div><div class="btn-row"><button class="btn" id="btnReal" onclick="answer('real')">✓ Real · ancient source</button><button class="btn" id="btnFake" onclick="answer('fake')">✗ Fake · modern invention</button></div><div class="explanation" id="explanation"><div class="verdict ${q.answer}" id="verdict"></div><div id="explanationText"></div></div></div><div class="nav-row"><button class="btn-next" id="btnNext" onclick="nextQuestion()">${i+1<QUESTIONS.length?'Next question →':'See your score →'}</button></div>`;
   answered=false;
 }
 function answer(choice){
@@ -105,7 +124,7 @@ function answer(choice){
   if(choice==='real'){bR.className='btn '+(correct?'correct':'wrong');if(!correct)bF.className='btn correct';}
   else{bF.className='btn '+(correct?'correct':'wrong');if(!correct)bR.className='btn correct';}
   const verdict=document.getElementById('verdict'),expText=document.getElementById('explanationText');
-  verdict.textContent=correct?(q.answer==='real'?'✓ Real — from ancient primary sources':'✓ Correct — this is a modern invention'):(q.answer==='real'?'✗ Actually real — from ancient primary sources':'✗ Actually fake — modern invention');
+  verdict.textContent=correct?(q.answer==='real'?'✓ Real · from ancient primary sources':'✓ Correct · this is a modern invention'):(q.answer==='real'?'✗ Actually real · from ancient primary sources':'✗ Actually fake · modern invention');
   verdict.className='verdict '+q.answer;
   expText.innerHTML=q.explanation;
   document.getElementById('explanation').className='explanation show';
@@ -118,7 +137,7 @@ function showScore(){
   const pct=Math.round(score/QUESTIONS.length*100);
   document.getElementById('scoreNumber').textContent=score+'/'+QUESTIONS.length;
   document.getElementById('scoreLabel').textContent=pct+'% correct';
-  const msgs=['The myths you grew up with are mostly Roman. Ovid\'s Metamorphoses, Statius\'s Achilleid — 1st century AD texts that rewrote Greek mythology for a Roman audience. The original Greek versions are stranger and better.','The pattern in the wrong answers is usually the same: Roman-era sources get credited to ancient Greece. The oldest Greek sources tell a different story.','Not bad. The Achilles heel and Medusa questions catch most people — they\'re the most common mythology misconceptions.','Strong result. Most people get Achilles and Medusa wrong. The answers always go back to which source is oldest.','Perfect score. Every answer in this quiz comes directly from ancient Greek and Roman texts. The full episodes on Krios cover each one in depth.'];
+  const msgs=['The myths you grew up with are mostly Roman. Ovid\'s Metamorphoses, Statius\'s Achilleid · 1st century AD texts that rewrote Greek mythology for a Roman audience. The original Greek versions are stranger and better.','The pattern in the wrong answers is usually the same: Roman-era sources get credited to ancient Greece. The oldest Greek sources tell a different story.','Not bad. The Achilles heel and Medusa questions catch most people · they\'re the most common mythology misconceptions.','Strong result. Most people get Achilles and Medusa wrong. The answers always go back to which source is oldest.','Perfect score. Every answer in this quiz comes directly from ancient Greek and Roman texts. The full episodes on Krios cover each one in depth.'];
   const idx=score<=1?0:score<=3?1:score<=5?2:score<=7?3:4;
   document.getElementById('scoreMsg').textContent=msgs[idx];
   document.getElementById('scoreScreen').className='score-screen show';
@@ -129,5 +148,7 @@ function copyEmbed(el){
 }
 buildQuestion(0);
 </script>
+</div>
+<footer class="k-foot"><div class="k-in"><span>© 2026 KRIOS · <a href="/">kriosgreece.com</a> · <a href="https://www.youtube.com/@KriosGreece" rel="noopener">YouTube ↗</a></span><i>For my father, Peter (Πέτρος).</i></div></footer>
 </body>
 </html>

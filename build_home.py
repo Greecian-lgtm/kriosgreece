@@ -487,3 +487,7 @@ for lp in ("links.html", "links/index.html"):
                f'<li><a class="hi" href="{watch(latest["id"])}" rel="noopener"><b>Newest: {e(latest["title"])}</b>', t)
     open(lp, "w", encoding="utf-8").write(t)
 print("index.html", len(page), "bytes;", len(EP), "episodes")
+
+# keep the Articles, Q&A and Quizzes hubs in step (the Articles page lists the newest films)
+import os, runpy
+runpy.run_path(os.path.join(os.path.dirname(os.path.abspath(__file__)), "build_hubs.py"))

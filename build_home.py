@@ -55,15 +55,17 @@ e = html.escape
 
 latest, rest = EP[0], EP[1:]
 
-cards = "\n".join(f"""
+def card_list(xs): return "\n".join(f"""
       <li class="ep">
         <a class="ep-link" href="{watch(x['id'])}" rel="noopener">
           <span class="ep-img"><img src="{thumb(x['id'],'hqdefault')}" alt="" loading="lazy" width="480" height="360"></span>
-          <span class="ep-meta"><span class="ep-num">EP{x['n']:03d}</span><span>{e(x['label'])}</span><span>{x['mins']} min</span></span>
+          <span class="ep-meta"><span class="ep-num">S{3 if x['n']>=20 else 2} · EP{x['n']:03d}</span><span>{e(x['label'])}</span><span>{x['mins']} min</span></span>
           <span class="ep-title">{e(x['title'])}</span>
           <span class="ep-tease">{e(x['tease'])}</span>
         </a>
-      </li>""" for x in rest)
+      </li>""" for x in xs)
+s3 = card_list([x for x in EP if x['n'] >= 20])
+s2 = card_list([x for x in rest if x['n'] < 20])
 
 s1 = "\n".join(f'<li><a href="{watch(i)}" rel="noopener">{e(t)}</a></li>' for t, i in S1)
 
@@ -186,6 +188,10 @@ section.band{{padding:84px 0}}
 .ep-num{{color:var(--blue-800);font-weight:600}}
 .ep-title{{font-size:1.3rem;line-height:1.2;font-weight:500;transition:color .2s}}
 .ep-tease{{color:var(--ink-2);font-size:1rem}}
+.season{{font-weight:500;font-size:1.45rem;margin:8px 0 18px;padding-top:22px;border-top:1px solid var(--line);color:var(--blue-800)}}
+.season span{{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-ink);margin-left:12px}}
+.season-note{{margin:-8px 0 22px;color:var(--ink-2);max-width:40em}}
+.grid + .season{{margin-top:48px}}
 .began{{margin-top:56px;padding-top:28px;border-top:1px solid var(--line);display:grid;grid-template-columns:260px 1fr;gap:28px}}
 .began h3{{font-weight:500;font-size:1.35rem;margin:.2em 0 .3em}}
 .began p{{margin:0;color:var(--ink-2);font-size:1rem}}
@@ -287,7 +293,7 @@ footer a{{text-decoration:none}} footer a:hover{{color:var(--gold)}}
         <span class="play">▶ Watch · {latest['mins']} min</span>
       </span>
       <span class="body">
-        <span class="meta label"><span>EP{latest['n']:03d}</span><span>{e(latest['label'])}</span><span>{nice(latest['date'])}</span></span>
+        <span class="meta label"><span>Season 3 · EP{latest['n']:03d}</span><span>{e(latest['label'])}</span><span>{nice(latest['date'])}</span></span>
         <h2>{e(latest['title'])}</h2>
         <p>{e(latest['tease'])}</p>
       </span>
@@ -321,7 +327,12 @@ footer a{{text-decoration:none}} footer a:hover{{color:var(--gold)}}
       <div><span class="label">The documentaries</span><h2>Every episode, newest first</h2></div>
       <a class="more" href="{YT}/videos" rel="noopener">Watch on YouTube ↗</a>
     </div>
-    <ul class="grid">{cards}
+    <h3 class="season">Season 3 · The living story <span>EP020 onward</span></h3>
+    <p class="season-note">From EP020 the films follow Greek life as it is lived now: what families carried when they left, and how it survives.</p>
+    <ul class="grid">{s3}
+    </ul>
+    <h3 class="season">Season 2 · Heroes, heroines and forgotten history <span>EP011 to EP019</span></h3>
+    <ul class="grid">{s2}
     </ul>
     <div class="began">
       <div>

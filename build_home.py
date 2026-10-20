@@ -1,48 +1,13 @@
 # Builds index.html for kriosgreece.com from the episode data below.
 # Run: python3 build_home.py  (writes index.html in this folder)
-import html, json
+import html, json, re
 
-EP = [  # newest first; titles as published on YouTube
- dict(n=21, id="vpQUH4lBkiU", date="2026-10-18", mins=9, label="Living Roots",
-      title="The Greeks Who Left, and the Greece They Carried",
-      tease="A suitcase can carry clothes and photographs. How do you pack a language, a song, or a church bell?"),
- dict(n=20, id="8cu1S1DVFDI", date="2026-10-11", mins=11, label="Living Roots",
-      title="The Greek Dance That Wasn't Real… Until It Was",
-      tease="Sirtaki was created for a film. So what makes a tradition real, and who keeps it alive?"),
- dict(n=19, id="5YvEvk2wy7Q", date="2026-07-29", mins=10, label="Music & memory",
-      title="The Man Who Smuggled a Puppet Out of a Dictatorship",
-      tease="You've heard the song. You've never heard the man."),
- dict(n=18, id="uzqERcTIqS0", date="2026-07-22", mins=13, label="Diaspora",
-      title="Why a Greek Sponge Diver Built a Town in Florida",
-      tease="How divers from the Aegean turned Tarpon Springs into a Greek town."),
- dict(n=17, id="EeUEsp4CVj4", date="2026-07-15", mins=10, label="Family table",
-      title="I Ate This My Whole Childhood and Never Knew the Real Reason",
-      tease="The spoon sweet, served to every guest at a Greek door, was never just dessert."),
- dict(n=16, id="WL4yl8BZEI8", date="2026-07-09", mins=9, label="Occupation",
-      title="The Neutral Country That Broke a Blockade to Save Greece",
-      tease="The famine under Axis occupation, and the neutral country whose ships broke the blockade."),
- dict(n=15, id="YPfrT9-Eblg", date="2026-07-03", mins=10, label="Heroines",
-      title="Why Did Greece Forget the Greek Woman Who Bought Their Freedom?",
-      tease="Manto Mavrogenous spent her fortune on the Revolution and was never repaid."),
- dict(n=14, id="WSqxEWNQW24", date="2026-06-18", mins=12, label="Music",
-      title="The Music Your Greek Family Played at Every Party Was Illegal",
-      tease="Rebetiko: the music the state tried to silence, and the families who kept playing it."),
- dict(n=13, id="8_RRyIg5Fko", date="2026-06-04", mins=12, label="Heroines",
-      title="The Greek Captain Who Built Her Own Warship to Fight the Empire That Took Everything",
-      tease="Laskarina Bouboulina, who paid for her own warships in the Revolution of 1821."),
- dict(n=12, id="s8dG4GvwRDs", date="2026-05-28", mins=13, label="Faith",
-      title="The Greek Christians Who Hid Their Faith Inside the Ottoman Empire for 400 Years",
-      tease="Families who kept their Orthodox faith hidden for generations under Ottoman rule."),
- dict(n=11, id="GeJD0oIcMEk", date="2026-05-01", mins=9, label="Heroes",
-      title="The Greek Soldier Who Chose to Die at Thermopylae Rather Than Surrender to Persia",
-      tease="Thermopylae, 1821: the second monument at the pass, and the soldier it remembers."),
-]
-S1 = [  # where KRIOS began (Season 1)
- ("Achilles", "rsNL4YMtjxY"), ("Odysseus", "R7WPPD-F9ts"), ("Thermopylae", "J6J9-ylN0rI"),
- ("Heracles", "cWglqxd8yTQ"), ("Perseus", "ErdjhcEI9P0"), ("Troy", "2rg3tPOXz9Y"),
- ("Theseus", "I8Yc6TAlIag"), ("The Cyclades", "f1Jh8yihNBQ"), ("Parian marble", "HwOjU-CLHag"),
- ("The Acropolis", "jmwkiQRkoxU"),
-]
+DATA = json.load(open("data/episodes.json", encoding="utf-8"))
+EP = sorted(DATA["episodes"], key=lambda x: x["date"], reverse=True)  # newest first
+S1 = [(x["title"], x["id"]) for x in DATA["season1"]]
+UP = json.load(open("data/upcoming.json", encoding="utf-8"))["upcoming"]
+NEXT = UP[0] if UP else None
+
 YT = "https://www.youtube.com/@KriosGreece"
 SUB = "https://www.youtube.com/@KriosGreece?sub_confirmation=1"
 MONTHS = "January February March April May June July August September October November December".split()
@@ -64,10 +29,32 @@ def card_list(xs): return "\n".join(f"""
           <span class="ep-tease">{e(x['tease'])}</span>
         </a>
       </li>""" for k, x in enumerate(xs))
-s3 = card_list([x for x in EP if x['n'] >= 20])
-s2 = card_list([x for x in rest if x['n'] < 20])
+s3 = card_list([x for x in EP if x.get('season', 3) >= 3])
+s2 = card_list([x for x in EP if x.get('season', 3) == 2])
 
 s1 = "\n".join(f'<li><a href="{watch(i)}" rel="noopener">{e(t)}</a></li>' for t, i in S1)
+
+if NEXT:
+    y, m, dd = NEXT["date"].split("-")
+    next_html = f"""<section class="next reveal" aria-label="Coming next">
+  <div class="wrap">
+    <a class="next-card" href="{SUB}" rel="noopener">
+      <span class="next-img"><img src="{NEXT['image']}" alt="{e(NEXT['title'])}" width="960" height="540" loading="lazy"></span>
+      <span class="next-body">
+        <span class="label">{e(NEXT['label'])} · Coming {MONTHS[int(m)-1]} {int(dd)}</span>
+        <span class="next-title">{e(NEXT['title'])}</span>
+        <span class="next-text">{e(NEXT['text'])}</span>
+        <span class="next-cta">Subscribe to get it first →</span>
+      </span>
+    </a>
+  </div>
+</section>"""
+    sacred_link = f'<a class="more" href="{SUB}" rel="noopener">Next: {e(NEXT["title"].split(":")[0])}, {MONTHS[int(m)-1]} {int(dd)}</a>'
+else:
+    next_html = ""
+    sacred = next((x for x in EP if x.get("label") == "Sacred Days"), None)
+    sacred_link = (f'<a class="more" href="{watch(sacred["id"])}" rel="noopener">Watch the latest special</a>' if sacred
+                   else f'<a class="more" href="{SUB}" rel="noopener">Subscribe for the next one</a>')
 
 ld = {
   "@context": "https://schema.org",
@@ -332,19 +319,7 @@ footer a{{text-decoration:none}} footer a:hover{{color:var(--gold)}}
   <ol><li class="reveal" style="--d:0s">Preserve</li><li class="reveal" style="--d:.08s">Teach</li><li class="reveal" style="--d:.16s">Understand</li><li class="reveal" style="--d:.24s">Connect</li><li class="reveal" style="--d:.32s">Pass forward</li></ol>
 </div>
 
-<section class="next reveal" aria-label="Coming next">
-  <div class="wrap">
-    <a class="next-card" href="{SUB}" rel="noopener">
-      <span class="next-img"><img src="/images/sacred-days-saint-demetrios.jpg" alt="Saint Demetrios: More Than a Name Day" width="960" height="540" loading="lazy"></span>
-      <span class="next-body">
-        <span class="label">Sacred Days · Coming October 26</span>
-        <span class="next-title">Saint Demetrios: More Than a Name Day</span>
-        <span class="next-text">The saint of Thessaloniki, and the name day so many Greek families celebrate. On YouTube on his feast day.</span>
-        <span class="next-cta">Subscribe to get it first →</span>
-      </span>
-    </a>
-  </div>
-</section>
+{next_html}
 
 <section class="band why" id="why">
   <div class="wrap">
@@ -402,7 +377,7 @@ footer a{{text-decoration:none}} footer a:hover{{color:var(--gold)}}
         <span class="gr">Γιορτές</span>
         <h3>Sacred Days · Living Traditions</h3>
         <p>Feast days, name days and national days, released on the day itself. What families celebrate, why their grandparents celebrated it, and how it differs from village to village and city to city.</p>
-        <a class="more" href="{SUB}" rel="noopener">Next: Saint Demetrios, October 26</a>
+        {sacred_link}
       </article>
       <article>
         <span class="gr">Θυμάμαι</span>
@@ -492,4 +467,9 @@ footer a{{text-decoration:none}} footer a:hover{{color:var(--gold)}}
 </html>
 """
 open("index.html", "w", encoding="utf-8").write(page)
+for lp in ("links.html", "links/index.html"):
+    t = open(lp, encoding="utf-8").read()
+    t = re.sub(r'<li><a class="hi" href="[^"]*" rel="noopener"><b>Newest: [^<]*</b>',
+               f'<li><a class="hi" href="{watch(latest["id"])}" rel="noopener"><b>Newest: {e(latest["title"])}</b>', t)
+    open(lp, "w", encoding="utf-8").write(t)
 print("index.html", len(page), "bytes;", len(EP), "episodes")

@@ -1,0 +1,51 @@
+name: Sync site with YouTube
+
+# Checks the KRIOS channel feed every 30 minutes and updates kriosgreece.com when a new
+# long-form video is published (Shorts are skipped). Also runs on demand from the Actions tab.
+on:
+  schedule:
+    - cron: "7,37 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: sync-youtube
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Configure git
+        run: |
+          git config user.name "krios-site-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+      - name: Check YouTube and rebuild pages
+        run: python3 scripts/sync_youtube.py
+
+      - name: Commit and publish if anything changed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ -n "$(git status --porcelain)" ]; then
+            git add -A
+            git commit -m "Site sync: new YouTube video ($(date -u +%Y-%m-%dT%H:%MZ))"
+            git push origin HEAD:main
+            # ask GitHub Pages to rebuild (pushes made by this token don't always trigger it)
+            gh api -X POST "repos/${GITHUB_REPOSITORY}/pages/builds" || true
+          else
+            echo "No changes."
+          fi

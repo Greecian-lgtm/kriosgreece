@@ -1,0 +1,156 @@
+{
+ "episodes": [
+  {
+   "id": "vpQUH4lBkiU",
+   "date": "2026-10-18",
+   "mins": 9,
+   "label": "Living Roots",
+   "title": "The Greeks Who Left, and the Greece They Carried",
+   "tease": "A suitcase can carry clothes and photographs. How do you pack a language, a song, or a church bell?",
+   "season": 3,
+   "n": 21
+  },
+  {
+   "id": "8cu1S1DVFDI",
+   "date": "2026-10-11",
+   "mins": 11,
+   "label": "Living Roots",
+   "title": "The Greek Dance That Wasn't Real… Until It Was",
+   "tease": "Sirtaki was created for a film. So what makes a tradition real, and who keeps it alive?",
+   "season": 3,
+   "n": 20
+  },
+  {
+   "id": "5YvEvk2wy7Q",
+   "date": "2026-07-29",
+   "mins": 10,
+   "label": "Music & memory",
+   "title": "The Man Who Smuggled a Puppet Out of a Dictatorship",
+   "tease": "You've heard the song. You've never heard the man.",
+   "season": 2,
+   "n": 19
+  },
+  {
+   "id": "uzqERcTIqS0",
+   "date": "2026-07-22",
+   "mins": 13,
+   "label": "Diaspora",
+   "title": "Why a Greek Sponge Diver Built a Town in Florida",
+   "tease": "How divers from the Aegean turned Tarpon Springs into a Greek town.",
+   "season": 2,
+   "n": 18
+  },
+  {
+   "id": "EeUEsp4CVj4",
+   "date": "2026-07-15",
+   "mins": 10,
+   "label": "Family table",
+   "title": "I Ate This My Whole Childhood and Never Knew the Real Reason",
+   "tease": "The spoon sweet, served to every guest at a Greek door, was never just dessert.",
+   "season": 2,
+   "n": 17
+  },
+  {
+   "id": "WL4yl8BZEI8",
+   "date": "2026-07-09",
+   "mins": 9,
+   "label": "Occupation",
+   "title": "The Neutral Country That Broke a Blockade to Save Greece",
+   "tease": "The famine under Axis occupation, and the neutral country whose ships broke the blockade.",
+   "season": 2,
+   "n": 16
+  },
+  {
+   "id": "YPfrT9-Eblg",
+   "date": "2026-07-03",
+   "mins": 10,
+   "label": "Heroines",
+   "title": "Why Did Greece Forget the Greek Woman Who Bought Their Freedom?",
+   "tease": "Manto Mavrogenous spent her fortune on the Revolution and was never repaid.",
+   "season": 2,
+   "n": 15
+  },
+  {
+   "id": "WSqxEWNQW24",
+   "date": "2026-06-18",
+   "mins": 12,
+   "label": "Music",
+   "title": "The Music Your Greek Family Played at Every Party Was Illegal",
+   "tease": "Rebetiko: the music the state tried to silence, and the families who kept playing it.",
+   "season": 2,
+   "n": 14
+  },
+  {
+   "id": "8_RRyIg5Fko",
+   "date": "2026-06-04",
+   "mins": 12,
+   "label": "Heroines",
+   "title": "The Greek Captain Who Built Her Own Warship to Fight the Empire That Took Everything",
+   "tease": "Laskarina Bouboulina, who paid for her own warships in the Revolution of 1821.",
+   "season": 2,
+   "n": 13
+  },
+  {
+   "id": "s8dG4GvwRDs",
+   "date": "2026-05-28",
+   "mins": 13,
+   "label": "Faith",
+   "title": "The Greek Christians Who Hid Their Faith Inside the Ottoman Empire for 400 Years",
+   "tease": "Families who kept their Orthodox faith hidden for generations under Ottoman rule.",
+   "season": 2,
+   "n": 12
+  },
+  {
+   "id": "GeJD0oIcMEk",
+   "date": "2026-05-01",
+   "mins": 9,
+   "label": "Heroes",
+   "title": "The Greek Soldier Who Chose to Die at Thermopylae Rather Than Surrender to Persia",
+   "tease": "Thermopylae, 1821: the second monument at the pass, and the soldier it remembers.",
+   "season": 2,
+   "n": 11
+  }
+ ],
+ "season1": [
+  {
+   "title": "Achilles",
+   "id": "rsNL4YMtjxY"
+  },
+  {
+   "title": "Odysseus",
+   "id": "R7WPPD-F9ts"
+  },
+  {
+   "title": "Thermopylae",
+   "id": "J6J9-ylN0rI"
+  },
+  {
+   "title": "Heracles",
+   "id": "cWglqxd8yTQ"
+  },
+  {
+   "title": "Perseus",
+   "id": "ErdjhcEI9P0"
+  },
+  {
+   "title": "Troy",
+   "id": "2rg3tPOXz9Y"
+  },
+  {
+   "title": "Theseus",
+   "id": "I8Yc6TAlIag"
+  },
+  {
+   "title": "The Cyclades",
+   "id": "f1Jh8yihNBQ"
+  },
+  {
+   "title": "Parian marble",
+   "id": "HwOjU-CLHag"
+  },
+  {
+   "title": "The Acropolis",
+   "id": "jmwkiQRkoxU"
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+{
+ "upcoming": [
+  {
+   "match": "Saint Demetrios",
+   "label": "Sacred Days",
+   "date": "2026-10-26",
+   "title": "Saint Demetrios: More Than a Name Day",
+   "text": "The saint of Thessaloniki, and the name day so many Greek families celebrate. On YouTube on his feast day.",
+   "tease": "The saint of Thessaloniki, and the name day so many Greek families celebrate.",
+   "image": "/images/sacred-days-saint-demetrios.jpg",
+   "release_branch": "release/stdemetrios-credits",
+   "credits": "/credits/saint-demetrios.html",
+   "release_files": [
+    "credits/saint-demetrios.html"
+   ]
+  }
+ ]
+}

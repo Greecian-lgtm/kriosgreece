@@ -1,0 +1,343 @@
+{
+ "films": [
+  {
+   "match": {
+    "id": "GeJD0oIcMEk"
+   },
+   "source_note": "article",
+   "quiz": {
+    "slug": "athanasios-diakos",
+    "title": "How well do you know Athanasios Diakos?",
+    "intro": "Three quick questions from the film and its article.",
+    "questions": [
+     {
+      "q": "Where did Athanasios Diakos make his stand in April 1821?",
+      "options": [
+       "At the bridge of Alamana, near Thermopylae",
+       "On the walls of Missolonghi",
+       "At the harbour of Nafplio"
+      ],
+      "correct": 0,
+      "explain": "Diakos held the bridge at Alamana, about two kilometres from the pass at Thermopylae, in one of the first major battles of the War of Independence."
+     },
+     {
+      "q": "After his capture, what did the Ottoman commander Omer Vrioni offer him?",
+      "options": [
+       "A ship to leave Greece",
+       "His life, if he converted to Islam",
+       "Command of a Greek village"
+      ],
+      "correct": 1,
+      "explain": "He was offered his life if he converted to Islam and served the Ottomans. He refused, and he was executed days after the battle."
+     },
+     {
+      "q": "What does the name Athanasios mean?",
+      "options": [
+       "Brave",
+       "Immortal",
+       "Son of Athens"
+      ],
+      "correct": 1,
+      "explain": "Athanasios comes from athanatos: not dying, immortal."
+     }
+    ]
+   },
+   "qa": [
+    {
+     "slug": "who-was-athanasios-diakos",
+     "title": "Who was Athanasios Diakos?",
+     "answer": [
+      "Athanasios Diakos was a Greek commander of the War of Independence. He had trained as a deacon, which is where the name Diakos comes from, before becoming a klepht, one of the mountain fighters who resisted Ottoman rule.",
+      "In April 1821 he held the bridge of Alamana, near Thermopylae, against a much larger Ottoman force. Captured after the battle, he was offered his life if he converted to Islam. He refused and was executed. A monument to him stands at Thermopylae, near the monument to Leonidas."
+     ],
+     "sources": [
+      {
+       "cite": "Wikipedia: Athanasios Diakos",
+       "url": "https://en.wikipedia.org/wiki/Athanasios_Diakos"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "match": {
+    "id": "s8dG4GvwRDs"
+   },
+   "source_note": "article",
+   "quiz": {
+    "slug": "the-hidden-faith",
+    "title": "How well do you know the story of the hidden faith?",
+    "intro": "Three quick questions from the film and its article.",
+    "questions": [
+     {
+      "q": "Who were the Vallahades?",
+      "options": [
+       "Greek-speaking Muslims of western Macedonia",
+       "Venetian sailors on Crete",
+       "Monks on Mount Athos"
+      ],
+      "correct": 0,
+      "explain": "The Vallahades were Greek-speaking Muslims of western Macedonia who kept much of their Greek language and culture for generations after converting."
+     },
+     {
+      "q": "Where does the name Vallahades come from?",
+      "options": [
+       "A mountain in Macedonia",
+       "The oath wa-llahi, by God",
+       "A Byzantine family name"
+      ],
+      "correct": 1,
+      "explain": "The name comes from the oath wa-llahi, which they used in everyday speech."
+     },
+     {
+      "q": "In the 1923 population exchange, how were the Vallahades classified?",
+      "options": [
+       "By the language they spoke",
+       "By their religion, as Muslims, and sent to Turkey",
+       "They were allowed to choose"
+      ],
+      "correct": 1,
+      "explain": "The exchange sorted people by religion, so the Greek-speaking Vallahades were classified as Muslims and sent to Turkey."
+     }
+    ]
+   },
+   "qa": [
+    {
+     "slug": "who-were-the-vallahades",
+     "title": "Who were the Vallahades?",
+     "answer": [
+      "The Vallahades were Greek-speaking Muslims of western Macedonia, around Anaselitsa and Grevena. Their ancestors converted to Islam under Ottoman rule, but the community kept the Greek language and much of its Greek culture for generations.",
+      "In the population exchange between Greece and Turkey in 1923, people were sorted by religion, not language. The Vallahades were classified as Muslims and sent to Turkey."
+     ],
+     "sources": [
+      {
+       "cite": "Wikipedia: Vallahades",
+       "url": "https://en.wikipedia.org/wiki/Vallahades"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "match": {
+    "id": "8_RRyIg5Fko"
+   },
+   "source_note": "article",
+   "quiz": {
+    "slug": "bouboulina",
+    "title": "How well do you know Bouboulina?",
+    "intro": "Three quick questions from the film and its article.",
+    "questions": [
+     {
+      "q": "Which island was Laskarina Bouboulina from?",
+      "options": [
+       "Spetses",
+       "Crete",
+       "Corfu"
+      ],
+      "correct": 0,
+      "explain": "Bouboulina lived on Spetses, a shipowning island in the Saronic Gulf."
+     },
+     {
+      "q": "What was the name of the warship she had built?",
+      "options": [
+       "Agamemnon",
+       "Hellas",
+       "Leonidas"
+      ],
+      "correct": 0,
+      "explain": "She commissioned and helped pay for the Agamemnon, armed with 18 cannons, and commanded it herself."
+     },
+     {
+      "q": "Which Ottoman-held fortress did her ships blockade?",
+      "options": [
+       "Nafplio",
+       "Thessaloniki",
+       "Ioannina"
+      ],
+      "correct": 0,
+      "explain": "Her ships took part in the blockade of Nafplio, the most important fortress in the Peloponnese."
+     }
+    ]
+   },
+   "qa": [
+    {
+     "slug": "who-was-laskarina-bouboulina",
+     "title": "Who was Laskarina Bouboulina?",
+     "answer": [
+      "Laskarina Bouboulina was a shipowner from Spetses and a naval commander in the Greek War of Independence of 1821. After the deaths of her two husbands she managed their fortune and fleet herself.",
+      "She had the warship Agamemnon built and commanded it in the blockade of Nafplio. She was even arrested for a time by the revolutionary leadership, her own side, before being released."
+     ],
+     "sources": [
+      {
+       "cite": "Wikipedia: Laskarina Bouboulina",
+       "url": "https://en.wikipedia.org/wiki/Laskarina_Bouboulina"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "match": {
+    "id": "WSqxEWNQW24"
+   },
+   "source_note": "article",
+   "quiz": {
+    "slug": "rebetiko",
+    "title": "How well do you know rebetiko?",
+    "intro": "Three quick questions from the film and its article.",
+    "questions": [
+     {
+      "q": "Whose dictatorship formally censored rebetiko from 1936?",
+      "options": [
+       "Ioannis Metaxas",
+       "Eleftherios Venizelos",
+       "King Otto"
+      ],
+      "correct": 0,
+      "explain": "The Metaxas regime introduced censorship in 1936. Lyrics and recordings were reviewed and changed."
+     },
+     {
+      "q": "Who brought much of rebetiko's sound to Piraeus and Athens?",
+      "options": [
+       "Tourists from Western Europe",
+       "Refugees from Asia Minor after 1922",
+       "Sailors from the Ionian Islands"
+      ],
+      "correct": 1,
+      "explain": "Refugees from Smyrna, Constantinople and Asia Minor arrived with a musical world that shaped rebetiko."
+     },
+     {
+      "q": "What is the amané?",
+      "options": [
+       "A Greek dance",
+       "A mournful, improvised vocal form",
+       "A kind of bouzouki"
+      ],
+      "correct": 1,
+      "explain": "The amané is an improvised, lamenting style of singing that came with the refugees from Asia Minor."
+     }
+    ]
+   },
+   "qa": []
+  },
+  {
+   "match": {
+    "id": "EeUEsp4CVj4"
+   },
+   "source_note": "KB v39 to v44",
+   "quiz": {
+    "slug": "the-spoon-sweet",
+    "title": "How well do you know the spoon sweet?",
+    "intro": "Three quick questions about the film.",
+    "questions": [
+     {
+      "q": "What is glyko tou koutaliou?",
+      "options": [
+       "A cake baked for name days",
+       "Fruit preserved in thick syrup, served by the spoonful",
+       "A sweet wine from the islands"
+      ],
+      "correct": 1,
+      "explain": "The spoon sweet is fruit preserved in syrup, offered to a guest on a small spoon."
+     },
+     {
+      "q": "Why is it offered at a Greek door?",
+      "options": [
+       "As a welcome to every guest",
+       "Only to children",
+       "Only at Easter"
+      ],
+      "correct": 0,
+      "explain": "It was served to every guest who came to a Greek home, as a sign of welcome."
+     },
+     {
+      "q": "The film's surprise: a spoonful of this sweet was once linked to...",
+      "options": [
+       "A young woman's chances of marriage",
+       "Paying taxes",
+       "A school exam"
+      ],
+      "correct": 0,
+      "explain": "As the film tells it, a Greek woman's chances of getting married once came down to a single spoonful of fruit."
+     }
+    ]
+   },
+   "qa": [
+    {
+     "slug": "what-is-a-greek-spoon-sweet",
+     "title": "What is a Greek spoon sweet?",
+     "answer": [
+      "A spoon sweet, glyko tou koutaliou in Greek, is fruit preserved in thick syrup. It is served on a small spoon, traditionally to every guest who arrives at a Greek home, as a gesture of hospitality.",
+      "Almost any fruit can be used: sour cherries, quince, figs, citrus peel, even young walnuts. For many families it is a taste of childhood, kept in a jar in the cupboard for visitors."
+     ],
+     "sources": [
+      {
+       "cite": "Wikipedia: Spoon sweets",
+       "url": "https://en.wikipedia.org/wiki/Spoon_sweets"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "match": {
+    "id": "uzqERcTIqS0"
+   },
+   "source_note": "EP018 script factcheck v2 FINAL",
+   "quiz": {
+    "slug": "tarpon-springs",
+    "title": "How well do you know the story of Tarpon Springs?",
+    "intro": "Three quick questions from the film.",
+    "questions": [
+     {
+      "q": "Who organized the recruitment of Greek sponge divers to Tarpon Springs in 1905?",
+      "options": [
+       "John Cocoris",
+       "Alexander Ypsilantis",
+       "Aristotle Onassis"
+      ],
+      "correct": 0,
+      "explain": "John Cocoris went back to Greece in 1905 and recruited sponge divers for Tarpon Springs, Florida."
+     },
+     {
+      "q": "Which islands became famous for the sponge divers who followed?",
+      "options": [
+       "Corfu, Zakynthos and Kefalonia",
+       "Kalymnos, Symi and Halki",
+       "Crete and Rhodes only"
+      ],
+      "correct": 1,
+      "explain": "The first recruits came from Aegina and Hydra. Then the great sponge-diving islands of the Dodecanese, Kalymnos, Symi and Halki, sent their own men."
+     },
+     {
+      "q": "What is Tarpon Springs known for today?",
+      "options": [
+       "The highest share of Greek-Americans of any city in the United States",
+       "The oldest Greek church in America",
+       "Greece's largest consulate"
+      ],
+      "correct": 0,
+      "explain": "Tarpon Springs has the highest percentage of Greek-Americans of any city in the United States."
+     }
+    ]
+   },
+   "qa": [
+    {
+     "slug": "why-are-there-so-many-greeks-in-tarpon-springs",
+     "title": "Why are there so many Greeks in Tarpon Springs, Florida?",
+     "answer": [
+      "In 1905 John Cocoris recruited Greek sponge divers to work the sponge beds off the Florida coast, bringing diving suits and methods the local industry had never used. Divers came first from Aegina and Hydra, then from the Dodecanese islands of Kalymnos, Symi and Halki.",
+      "The community built a church, a sponge exchange and a Greek town around the docks. Today Tarpon Springs has the highest percentage of Greek-Americans of any city in the United States, and its Epiphany cross dive is famous across the country."
+     ],
+     "sources": [
+      {
+       "cite": "Wikipedia: Tarpon Springs, Florida",
+       "url": "https://en.wikipedia.org/wiki/Tarpon_Springs,_Florida"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

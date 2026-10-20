@@ -183,14 +183,16 @@ for q in qs_old:
     for k, _, rx in TOPICS:
         if re.search(rx, q["t"].lower()):
             groups[k].append(q); break
-TOPICS = [("newest", "From the newest films", None)] + TOPICS
+TOPICS = [("newest", "From the KRIOS films", None)] + TOPICS
 groups["newest"] = new_qs
 chips = "".join(f'<a href="#{k}">{e(n)} <small>{len(groups[k])}</small></a>' for k, n, _ in TOPICS if groups[k])
 secs = ""
 for k, n, _ in TOPICS:
     if not groups[k]:
         continue
-    items = "".join(f'<li><a href="{q["href"]}">{e(q["t"])}</a></li>' for q in sorted(groups[k], key=lambda q: q["t"]))
+    order = [q2["slug"] for t in _EXTRAS for q2 in t.get("qa", [])]
+    keyf = (lambda q: order.index(q["href"].strip("/").split("/")[-1]) if q["href"].strip("/").split("/")[-1] in order else 999) if k == "newest" else (lambda q: q["t"])
+    items = "".join(f'<li><a href="{q["href"]}">{e(q["t"])}</a></li>' for q in sorted(groups[k], key=keyf))
     secs += f'<section class="k-topic reveal" id="{k}"><h2>{e(n)}</h2><ul class="k-qlist">{items}</ul></section>\n'
 ans_body = f"""<header class="k-hero reveal">
   <span class="k-kick">Q&amp;A</span>
@@ -222,7 +224,7 @@ for f in sorted(glob.glob("tools/quiz-ep*.html")):
     nq = s.count('"question"')
     quizzes.append(dict(href="/" + f, t=t, nq=nq, vid=S1[quiz_vid[n]]["id"] if n in quiz_vid else None))
 new_quizzes = [dict(href=f"/tools/quiz-{t['quiz']['slug']}.html", t=t["quiz"]["title"], nq=len(t["quiz"]["questions"]), vid=t["episode"]["id"], label=t["episode"]["label"]) for t in _EXTRAS]
-new_quiz_html = ('<section class="k-sec"><div class="k-sechead reveal"><h2>From the newest films</h2><p>Watch the film, then see how much stayed with you.</p></div>'
+new_quiz_html = ('<section class="k-sec"><div class="k-sechead reveal"><h2>From the KRIOS films</h2><p>Newest first. Watch the film, then see how much stayed with you.</p></div>'
                  + grid(new_quizzes, lambda q, i: card(q['href'], thumb(q['vid']), f"{e(q['label'])} · {q['nq']} questions", q['t'], '', 'Take the quiz', False, (i % 3) * .08))
                  + '</section>') if new_quizzes else ""
 rf = open("tools/real-or-fake.html", encoding="utf-8").read()

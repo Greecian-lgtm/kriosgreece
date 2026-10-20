@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz: I Ate This My Whole Childhood and Never Knew the Real Reason · KRIOS</title>
+<meta name="description" content="Three quick questions about the film.">
+<link rel="canonical" href="https://kriosgreece.com/tools/quiz-the-spoon-sweet.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Quiz: I Ate This My Whole Childhood and Never Knew the Real Reason · KRIOS">
+<meta property="og:description" content="Three quick questions about the film.">
+<meta property="og:url" content="https://kriosgreece.com/tools/quiz-the-spoon-sweet.html">
+<meta name="theme-color" content="#14213a">
+<script>document.documentElement.classList.add("js")</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="/"><b>KRIOS</b><span>Greek cultural preservation</span></a>
+    <nav class="nav" aria-label="Main"><button class="menu-btn" type="button" data-menu-btn aria-expanded="false" aria-controls="site-menu"><span class="bars" aria-hidden="true"></span><span>Menu</span></button><div class="nav-links" id="site-menu"><a href="/films/">Films</a><a href="/sacred-days/">Sacred Days</a><a href="/blog/">Articles</a><a href="/answers/">Q&amp;A</a><a href="/tools/" aria-current="page">Quizzes</a></div><a class="btn btn-gold" href="https://www.youtube.com/@KriosGreece?sub_confirmation=1" rel="noopener">Subscribe<span class="m-hide-sm">&nbsp;on YouTube</span></a></nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap m-page m-narrow">
+  <nav class="m-crumbs" aria-label="Breadcrumb"><a href="/tools/">Quizzes</a> › I Ate This My Whole Childhood and Never Knew the Real Reason</nav>
+  <header class="m-phead reveal"><span class="label m-kick">Quiz · Family table</span><h1>How well do you know the spoon sweet?</h1><p>Three quick questions about the film.</p></header>
+  <div id="quiz" class="m-quiz"><noscript><p>This quiz needs JavaScript. You can <a href="https://www.youtube.com/watch?v=EeUEsp4CVj4">read about the film</a> instead.</p></noscript></div>
+  <div id="quiz-result" class="m-quiz-result" hidden><h2 tabindex="-1">Your score: <span id="quiz-score"></span></h2>
+    <p>Every answer comes from the film. Watch it again, then ask someone in your family what they remember.</p>
+    <p class="m-links"><a class="btn btn-gold" href="https://www.youtube.com/watch?v=EeUEsp4CVj4" rel="noopener">Watch the film</a><button type="button" class="btn btn-navy" id="quiz-again">Try again</button></p></div>
+  <script type="application/json" id="quiz-data">[{"q": "What is glyko tou koutaliou?", "options": ["A cake baked for name days", "Fruit preserved in thick syrup, served by the spoonful", "A sweet wine from the islands"], "correct": 1, "explain": "The spoon sweet is fruit preserved in syrup, offered to a guest on a small spoon."}, {"q": "Why is it offered at a Greek door?", "options": ["As a welcome to every guest", "Only to children", "Only at Easter"], "correct": 0, "explain": "It was served to every guest who came to a Greek home, as a sign of welcome."}, {"q": "The film's surprise: a spoonful of this sweet was once linked to...", "options": ["A young woman's chances of marriage", "Paying taxes", "A school exam"], "correct": 0, "explain": "As the film tells it, a Greek woman's chances of getting married once came down to a single spoonful of fruit."}]</script>
+</div>
+</main>
+<footer>
+  <div class="wrap">
+    <div>
+      <b>KRIOS</b>
+      <p>The living story of Greek civilization.<br>Preserve. Teach. Understand. Connect. Pass forward.</p>
+    </div>
+    <ul>
+      <li><a href="/films/">Films</a></li>
+      <li><a href="/sacred-days/">Sacred Days</a></li>
+      <li><a href="/how-we-work/">How we work</a></li>
+      <li><a href="/answers/">Q&amp;A</a></li>
+    </ul>
+    <ul>
+      <li><a href="https://www.youtube.com/@KriosGreece" rel="noopener">YouTube ↗</a></li>
+      <li><a href="/blog/">Articles</a></li>
+      <li><a href="/tools/">Quizzes</a></li>
+      <li><a href="/legal/">Legal</a></li>
+    </ul>
+    <div class="dedic">
+      <span>© 2026 KRIOS · kriosgreece.com</span>
+      <i>For my father, Peter (Πέτρος).</i>
+    </div>
+  </div>
+</footer>
+<script src="/assets/site-nav.js" defer></script>
+<script>
+(function(){
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  if(!('IntersectionObserver' in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('in')});}
+  else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{rootMargin:'0px 0px -8% 0px',threshold:0.08});
+  els.forEach(function(e){io.observe(e)});}
+  var on=function(){document.body.classList.toggle('scrolled',window.scrollY>8)}; window.addEventListener('scroll',on,{passive:true}); on();
+})();
+</script>
+<script>(function(){
+var Q=JSON.parse(document.getElementById('quiz-data').textContent),box=document.getElementById('quiz'),res=document.getElementById('quiz-result'),i=0,score=0;
+function esc(s){var d=document.createElement('div');d.textContent=s;return d.innerHTML;}
+function show(){if(i>=Q.length){box.hidden=true;res.hidden=false;document.getElementById('quiz-score').textContent=score+' out of '+Q.length;res.querySelector('h2').focus();return;}
+var q=Q[i];box.innerHTML='<p class="m-qnum">Question '+(i+1)+' of '+Q.length+'</p><h2 tabindex="-1">'+esc(q.q)+'</h2><div class="m-opts">'+q.options.map(function(o,k){return '<button type="button" data-k="'+k+'">'+esc(o)+'</button>'}).join('')+'</div><p class="m-explain" aria-live="polite"></p><button type="button" class="btn btn-navy m-next" hidden>'+(i+1<Q.length?'Next question':'See your score')+'</button>';
+box.querySelector('h2').focus();
+[].forEach.call(box.querySelectorAll('.m-opts button'),function(b){b.addEventListener('click',function(){var k=+b.dataset.k,ok=k===q.correct;if(ok)score++;
+[].forEach.call(box.querySelectorAll('.m-opts button'),function(x){x.disabled=true;var kk=+x.dataset.k;if(kk===q.correct){x.classList.add('ok');x.insertAdjacentHTML('beforeend',' <span class="m-tag">Correct answer</span>')}else if(kk===k){x.classList.add('no');x.insertAdjacentHTML('beforeend',' <span class="m-tag">Your answer</span>')}});
+box.querySelector('.m-explain').innerHTML='<b>'+(ok?'That\'s right. ':'Not quite. ')+'</b>'+esc(q.explain);var n=box.querySelector('.m-next');n.hidden=false;n.focus();
+n.addEventListener('click',function(){i++;show();});});});}
+document.getElementById('quiz-again').addEventListener('click',function(){i=0;score=0;res.hidden=true;box.hidden=false;show();});
+show();})();</script>
+</body>
+</html>

@@ -50,6 +50,7 @@ for _p in sorted(_glob.glob(os.path.join(ROOT, "data/extras/*.json"))):
         _x = released(_f["match"])
         if _x:
             EXTRAS.append(dict(_f, episode=_x))
+EXTRAS.sort(key=lambda t: t["episode"]["date"], reverse=True)
 EXTRA_QA_SLUGS = {q["slug"] for f in EXTRAS for q in f.get("qa", [])}
 
 MONTHS = "January February March April May June July August September October November December".split()

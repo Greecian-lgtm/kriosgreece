@@ -82,7 +82,17 @@ def main():
     ap.add_argument("--feed", help="read the feed from a local file instead of YouTube")
     a = ap.parse_args()
 
-    xml_text = open(a.feed, encoding="utf-8").read() if a.feed else get(FEED).read().decode("utf-8")
+    if a.feed:
+        xml_text = open(a.feed, encoding="utf-8").read()
+    else:
+        last = None
+        for attempt in range(3):
+            try:
+                xml_text = get(FEED).read().decode("utf-8"); break
+            except Exception as ex:
+                last = ex; import time; time.sleep(5 * (attempt + 1))
+        else:
+            raise RuntimeError(f"YouTube feed unreachable: {last!r}")
     data = json.load(open("data/episodes.json", encoding="utf-8"))
     up = json.load(open("data/upcoming.json", encoding="utf-8"))
     known = {x["id"] for x in data["episodes"]} | {x["id"] for x in data["season1"]}
@@ -128,4 +138,11 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except Exception as ex:
+        import traceback
+        tb = traceback.format_exc().strip().splitlines()
+        msg = f"{type(ex).__name__}: {ex} | at {tb[-3].strip() if len(tb) > 2 else ''}"
+        print("::error title=site sync failed::" + msg.replace("\n", " ")[:900])
+        raise SystemExit(1)

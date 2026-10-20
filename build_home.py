@@ -3,7 +3,7 @@
 # Run: python3 build_home.py   (the YouTube sync runs this after adding a new video)
 import json, os, re, runpy
 from site_lib import (EP, UP, S1, SUBJ, e, watch, thumb, nice, short, weekday, card, sacred_next,
-                      DEDICATION_HTML, ILLUSTRATION_NOTE, MONTHS)
+                      DEDICATION_HTML, ILLUSTRATION_NOTE, MONTHS, film_page_for)
 from site_parts import head, header, footer, SCRIPTS, YT, SUB
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -16,10 +16,9 @@ ld = {"@context": "https://schema.org", "@graph": [
     {"@type": "Organization", "name": "KRIOS", "url": "https://kriosgreece.com", "sameAs": [YT],
      "description": "KRIOS: the living story of Greek civilization. Documentaries on Greek history, faith, tradition and family memory."},
     {"@type": "ItemList", "name": "KRIOS documentaries", "itemListElement": [
-        {"@type": "ListItem", "position": k + 1, "item": {
-            "@type": "VideoObject", "name": x["title"], "description": x["tease"],
-            "thumbnailUrl": thumb(x["id"], "maxresdefault"), "uploadDate": x["date"], "url": watch(x["id"]),
-            "embedUrl": f"https://www.youtube.com/embed/{x['id']}"}} for k, x in enumerate(EP)]}]}
+        # Plain list of links: full VideoObject data lives on each film page, where the video is the main content
+        {"@type": "ListItem", "position": k + 1, "name": x["title"],
+         "url": ("https://kriosgreece.com" + film_page_for(x)) if film_page_for(x) else watch(x["id"])} for k, x in enumerate(EP)]}]}
 
 # ---------- Sacred Days module: next scheduled special, or one released in the last 30 days ----------
 state, sd = sacred_next()

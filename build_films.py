@@ -224,6 +224,13 @@ for f in FILMS:
             secs.append(("watch", "Watch the film", video))
         if f.get("story"):
             secs.append(("story", "The story", "".join(f"<p>{e(t)}</p>" for t in f["story"]) + f'<p class="m-note-sm">{e(f.get("story_from", ""))}</p>'))
+    if not held and f.get("read"):
+        words = sum(len(p_.split()) for s_ in f["read"] for p_ in s_["p"])
+        inner = "".join(f'<h3>{e(s_["h"])}</h3>' + "".join(f"<p>{e(p_)}</p>" for p_ in s_["p"]) for s_ in f["read"])
+        secs.append(("read", "Read the film", f'<p>The full narration, for anyone who would rather read, or wants to find a line again. '
+                     f'About {words:,} words, {max(1, round(words / 230))} minutes to read.</p>'
+                     f'<details class="m-read"><summary>Read the full narration</summary><div class="m-read-body">{inner}'
+                     f'<p class="m-note-sm">{e(f.get("read_from", ""))}</p></div></details>'))
     if f.get("family_questions"):
         secs.append(("family", "Ask someone in your family", '<p>Questions to start a conversation at your own table.</p><ul class="m-askqs">'
                      + "".join(f"<li>{e(q)}</li>" for q in f["family_questions"]) + "</ul>"))

@@ -421,3 +421,11 @@ button.m-video{display:block;width:100%;padding:0;border:1px solid #2a3a5c;curso
 .m-srclist{padding-left:1.2em}.m-srclist a{color:var(--red)}
 .m-qa-film{margin-top:28px}.m-qa-film a{color:var(--red)}
 .k-note{padding:16px 18px;background:var(--ivory);border-left:3px solid var(--gold);font-size:1rem;color:var(--ink-2)}
+/* Read the film: full narration, collapsed by default */
+.m-read{margin-top:14px;border:1px solid rgba(20,33,58,.18);background:#fff}
+.m-read summary{cursor:pointer;padding:14px 20px;font-size:1.1rem;color:var(--blue-800);font-weight:500;min-height:44px;display:flex;align-items:center}
+.m-read summary:focus-visible{outline:3px solid #b8892d;outline-offset:2px}
+.m-read[open] summary{border-bottom:1px solid rgba(20,33,58,.12)}
+.m-read-body{padding:6px 22px 18px;max-width:68ch}
+.m-read-body h3{margin:22px 0 8px;font-size:1.2rem;color:var(--blue-800)}
+.m-read-body p{margin:0 0 12px;line-height:1.7}

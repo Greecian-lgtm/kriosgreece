@@ -118,6 +118,13 @@ section.band{padding:84px 0}
 .why .ladder{list-style:none;padding:0;margin:24px 0 0;border-left:2px solid var(--gold)}
 .why .ladder li{padding:6px 0 6px 18px;color:var(--ink-2)}
 .why .ladder li:last-child{color:var(--ink);font-weight:500}
+.why .dedication{grid-column:1/-1;margin:36px auto 0;max-width:640px;text-align:center;color:var(--ink-2)}
+.why .dedication p{margin:0 0 6px;font-size:1.08rem}
+.why .dedication .dname{display:flex;align-items:center;justify-content:center;gap:18px;font-size:1.35rem;color:var(--blue-800);margin-bottom:14px}
+.why .dedication .dname i{white-space:nowrap}
+.why .dedication .dname span{flex:0 1 120px;min-width:24px;height:1px;background:var(--gold)}
+.why .dedication .dname span::after{content:"";display:block;width:7px;height:7px;background:var(--gold);transform:translateY(-3px) rotate(45deg);margin:0 auto}
+.why .dedication .dgr{margin-top:14px;font-style:italic;color:var(--red);font-size:1.15rem}
 
 /* episodes */
 .eps{background:var(--ivory)}
@@ -275,6 +282,12 @@ footer a{text-decoration:none} footer a:hover{color:var(--gold)}
         <li>"I want to ask my grandparents about this."</li>
         <li>"I want my children to know this."</li>
       </ul>
+    </div>
+    <div class="dedication reveal" style="--d:.2s">
+      <p class="dname"><span aria-hidden="true"></span><i>For my father, Peter (Πέτρος).</i><span aria-hidden="true"></span></p>
+      <p>He led by example.</p>
+      <p>A tremendous piece of you will forever remain in ours.</p>
+      <p class="dgr" lang="el">Αἰωνία σου ἡ μνήμη.</p>
     </div>
   </div>
 </section>

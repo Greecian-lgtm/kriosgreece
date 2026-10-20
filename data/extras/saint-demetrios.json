@@ -1,0 +1,91 @@
+{
+ "films": [
+  {
+   "match": {
+    "title": "Saint Demetrios"
+   },
+   "quiz": {
+    "slug": "saint-demetrios",
+    "title": "How well do you know Saint Demetrios?",
+    "intro": "Five questions from the Sacred Days film. Every answer comes from what the film says.",
+    "questions": [
+     {
+      "q": "On which date do Greek Orthodox communities that follow the Church of Greece calendar celebrate Saint Demetrios?",
+      "options": [
+       "April 23",
+       "October 26",
+       "December 6"
+      ],
+      "correct": 1,
+      "explain": "October 26 is his feast day. Churches that keep the old Julian calendar observe it on November 8 by the civil calendar."
+     },
+     {
+      "q": "What does the Greek title Μυροβλύτης mean?",
+      "options": [
+       "The Myrrh-Streamer",
+       "The Horseman",
+       "The Protector of the Walls"
+      ],
+      "correct": 0,
+      "explain": "Μυροβλύτης means the Myrrh-Streamer. According to Orthodox tradition, fragrant myrrh flowed from his shrine."
+     },
+     {
+      "q": "On some later icons, who is the fallen figure beneath Demetrios's spear?",
+      "options": [
+       "The gladiator from the story of Nestor",
+       "A Roman emperor",
+       "Kaloyan, a Bulgarian ruler who besieged Thessaloniki in 1207"
+      ],
+      "correct": 2,
+      "explain": "On some later icons the fallen figure represents Kaloyan, who died during his campaign against the city in 1207."
+     },
+     {
+      "q": "In 1912, the surrender of Thessaloniki to Greek forces was dated...",
+      "options": [
+       "October 26, the feast of Saint Demetrios",
+       "March 25",
+       "August 15"
+      ],
+      "correct": 0,
+      "explain": "The papers were signed after midnight, but dated October 26 by the calendar Greece used then. Accounts differ on why."
+     },
+     {
+      "q": "For shepherds, what did Saint Demetrios's day mark?",
+      "options": [
+       "The start of the olive harvest",
+       "The flocks coming down from the mountain pastures",
+       "The first snowfall"
+      ],
+      "correct": 1,
+      "explain": "On Saint George's day in spring the flocks went up to the mountain pastures. On Saint Demetrios's day in autumn they came back down."
+     }
+    ]
+   },
+   "qa": [
+    {
+     "slug": "why-is-saint-demetrios-shown-spearing-a-man",
+     "title": "Why is Saint Demetrios shown spearing a man on horseback?",
+     "answer": [
+      "In early images Saint Demetrios appears as a young man in court dress. Around the tenth century he was increasingly shown with a spear and shield, and later still riding a horse.",
+      "On some later icons, the fallen figure beneath his spear represents Kaloyan, a Bulgarian ruler who besieged Thessaloniki and died during the campaign in 1207. Within about ten years, writers were already saying the saint himself had struck him. Historians still debate how Kaloyan actually died."
+     ],
+     "sources": [
+      {
+       "cite": "Wikipedia: Kaloyan of Bulgaria",
+       "url": "https://en.wikipedia.org/wiki/Kaloyan_of_Bulgaria"
+      }
+     ]
+    },
+    {
+     "slug": "why-is-october-26-important-in-thessaloniki",
+     "title": "Why is October 26 important in Thessaloniki?",
+     "answer": [
+      "October 26 is the feast of Saint Demetrios, the city's patron saint. The celebrations begin the day before, with services and a procession of his relics.",
+      "It is also the day Thessaloniki remembers its liberation in 1912, during the First Balkan War. The surrender papers were dated October 26 by the calendar Greece used then. Accounts differ on why that date was chosen."
+     ],
+     "sources": []
+    }
+   ]
+  }
+ ]
+}

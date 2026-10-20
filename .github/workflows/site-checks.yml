@@ -1,0 +1,37 @@
+name: Site checks
+
+# Publishing safeguards and accessibility tests for kriosgreece.com (Gate C plan, sections 4 and 5).
+# Runs on pushes and pull requests. It does not run inside the YouTube sync until after the
+# Oct 26, 2026 Saint Demetrios release (plan phase 0b).
+on:
+  push:
+    branches: [main, "site-v2**"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Publishing safeguards
+        env:
+          KRIOS_PRIVATE_TERMS: ${{ secrets.KRIOS_PRIVATE_TERMS }}
+        run: python3 scripts/check_site.py
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+      - name: Accessibility, layout and menu tests
+        run: |
+          npm install --no-save playwright @axe-core/playwright
+          npx playwright install --with-deps chromium
+          python3 -m http.server 8000 >/dev/null 2>&1 &
+          sleep 2
+          node tests/site.test.mjs http://localhost:8000

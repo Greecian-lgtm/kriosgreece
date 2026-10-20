@@ -1,0 +1,18 @@
+{
+ "_note": "Curated Sacred Days calendar (director-approved list of six, Oct 19, 2026). Feast dates only; film status comes from episodes.json / upcoming.json. Every entry needs a verification source.",
+ "calendar_note": "Fixed feasts are shown on the calendar followed by the Church of Greece. Communities that keep the Old Calendar celebrate them 13 days later. Pascha moves each year.",
+ "feasts": [
+  {"key": "st-demetrios", "en": "Saint Demetrios", "el": "Άγιος Δημήτριος", "date": "2026-10-26", "film_match": "Saint Demetrios",
+   "verified": {"source": "https://www.saintjohnsmonastery.org/saint-demetrius-the-myrrh-streamer/", "note": "October 26 (Old Calendar November 8)", "checked": "2026-10-19"}},
+  {"key": "st-nicholas", "en": "Saint Nicholas", "el": "Άγιος Νικόλαος", "date": "2026-12-06",
+   "verified": {"source": "https://www.stnicholascenter.org/pages/orthodox-byzantine", "note": "December 6", "checked": "2026-10-19"}},
+  {"key": "theophany", "en": "Theophany", "el": "Θεοφάνεια", "date": "2027-01-06",
+   "verified": {"source": "https://oca.org/fs/icons-of-twelve-great-feasts", "note": "January 6", "checked": "2026-10-19"}},
+  {"key": "annunciation", "en": "The Annunciation", "el": "Ευαγγελισμός της Θεοτόκου", "date": "2027-03-25",
+   "verified": {"source": "https://oca.org/fs/icons-of-twelve-great-feasts", "note": "March 25", "checked": "2026-10-19"}},
+  {"key": "pascha", "en": "Pascha", "el": "Πάσχα", "date": "2027-05-02", "moveable": true,
+   "verified": {"source": "https://www.acrod.org/prayercorner/movablefeasts/", "note": "Pascha 2027: May 2", "checked": "2026-10-19"}},
+  {"key": "dormition", "en": "The Dormition of the Theotokos", "el": "Κοίμηση της Θεοτόκου", "date": "2027-08-15",
+   "verified": {"source": "https://oca.org/fs/icons-of-twelve-great-feasts", "note": "August 15", "checked": "2026-10-19"}}
+ ]
+}

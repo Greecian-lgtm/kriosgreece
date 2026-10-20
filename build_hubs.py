@@ -40,11 +40,11 @@ FONT = ('<link rel="preconnect" href="https://fonts.googleapis.com">'
 
 
 def top(active):
-    links = [("/#episodes", "Episodes"), ("/blog/", "Articles"), ("/answers/", "Q&amp;A"), ("/tools/", "Quizzes")]
-    nav = "".join(f'<a href="{h}"{" aria-current=page" if t == active else ""}>{t}</a>' for h, t in links)
+    from site_parts import NAV, menu_button
+    links = "".join(f'<a href="{h}"{" aria-current=page" if t == active else ""}>{t}</a>' for h, t in NAV)
     return ('<header class="k-top"><div class="k-in">'
             '<a class="k-brand" href="/"><b>KRIOS</b><span>Greek cultural preservation</span></a>'
-            f'<nav class="k-nav" aria-label="Site">{nav}'
+            f'<nav class="k-nav" aria-label="Site">{menu_button()}<div class="nav-links" id="site-menu">{links}</div>'
             f'<a class="k-sub" href="{YT}?sub_confirmation=1" rel="noopener">Subscribe</a></nav></div></header>')
 
 
@@ -75,6 +75,7 @@ def page(path, title, desc, canonical, active, body, extra_js=""):
 {body}
 </main>
 {FOOT}
+<script src="/assets/site-nav.js" defer></script>
 {extra_js}
 </body>
 </html>
@@ -127,12 +128,12 @@ blog_body = f"""<header class="k-hero reveal">
 </section>
 
 <section class="k-sec">
-  <div class="k-sechead reveal"><h2>Season 2 · Heroes, heroines and forgotten history</h2></div>
+  <div class="k-sechead reveal"><h2>Heroes, heroines and forgotten history</h2></div>
   {grid(s2, lambda a, i: card(a['href'], thumb(a['vid']) if a['vid'] else '', e(label_of.get(a['n']) or 'Article'), a['title'], a['text'], 'Read the article', False, i * .08))}
 </section>
 
 <section class="k-sec">
-  <div class="k-sechead reveal"><h2>Where KRIOS began</h2><p>The first season told the ancient stories.</p></div>
+  <div class="k-sechead reveal"><h2>Where KRIOS began</h2><p>The first films told the ancient stories.</p></div>
   {grid(s1, lambda a, i: card(a['href'], thumb(a['vid']) if a['vid'] else '', e(S1[a['n'] - 1]['title']), a['title'], a['text'], 'Read the article', False, (i % 3) * .08))}
 </section>
 """
@@ -187,7 +188,7 @@ for k, n, _ in TOPICS:
 ans_body = f"""<header class="k-hero reveal">
   <span class="k-kick">Q&amp;A</span>
   <h1>Questions about ancient Greece, answered</h1>
-  <p class="k-lead">Short answers to {len(qs)} questions about Greek myth and ancient history, written alongside the first season of KRIOS.</p>
+  <p class="k-lead">Short answers to {len(qs)} questions about Greek myth and ancient history, written alongside the first KRIOS films.</p>
   <div class="k-find"><label for="qfind">Find a question</label><input id="qfind" type="search" placeholder="Try Medusa, kleos or Thermopylae" autocomplete="off"><span id="qcount" aria-live="polite"></span></div>
   <nav class="k-chips" aria-label="Topics">{chips}</nav>
 </header>
@@ -218,7 +219,7 @@ rf_n = len(re.findall(r'"statement"\s*:', rf)) or 15
 tools_body = f"""<header class="k-hero reveal">
   <span class="k-kick">Quizzes</span>
   <h1>Test what you know</h1>
-  <p class="k-lead">Short quizzes from the first season of KRIOS. A few minutes each, and you can share your score.</p>
+  <p class="k-lead">Short quizzes from the first KRIOS films. A few minutes each, and you can share your score.</p>
 </header>
 <a class="k-feature reveal" href="/tools/real-or-fake.html">
   <span class="k-kick">The game</span>
@@ -280,4 +281,20 @@ def quiz_restyle(f):
 
 
 done = [f for f in glob.glob("tools/quiz-ep*.html") + ["tools/real-or-fake.html", "tools/real-or-fake/index.html"] if quiz_restyle(f)]
+
+HEADER_RX = re.compile(r'<header class="k-top">.*?</header>', re.S)
+section = lambda f: "Articles" if f.startswith("blog/") else ("Q&amp;A" if f.startswith("answers/") else "Quizzes")
+hdr_done = 0
+for f in sorted(set(glob.glob("blog/**/*.html", recursive=True) + glob.glob("answers/**/*.html", recursive=True) + glob.glob("tools/**/*.html", recursive=True))):
+    s0 = open(f, encoding="utf-8").read()
+    if not HEADER_RX.search(s0):
+        continue
+    s1 = HEADER_RX.sub(lambda m: top(section(f)), s0, count=1)
+    if "/assets/site-nav.js" not in s1:
+        s1 = s1.replace("</body>", '<script src="/assets/site-nav.js" defer></script>\n</body>', 1)
+    if '<script>document.documentElement.classList.add("js")' not in s1 and "d.className+=' js'" not in s1:
+        s1 = s1.replace("</head>", '<script>document.documentElement.classList.add("js")</script>\n</head>', 1)
+    if s1 != s0:
+        open(f, "w", encoding="utf-8").write(s1); hdr_done += 1
+print("headers updated", hdr_done)
 print("hubs: articles", len(arts), "· questions", len(qs), "· quizzes", len(quizzes), "· quiz pages restyled", len(done))

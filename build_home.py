@@ -1,300 +1,74 @@
-# Builds index.html for kriosgreece.com from the episode data below.
-# Run: python3 build_home.py  (writes index.html in this folder)
-import html, json, re
+# Builds index.html for kriosgreece.com from data/episodes.json and data/upcoming.json,
+# then the Films, Sacred Days and How we work pages (build_films.py) and the hubs (build_hubs.py).
+# Run: python3 build_home.py   (the YouTube sync runs this after adding a new video)
+import json, os, re, runpy
+from site_lib import (EP, UP, S1, SUBJ, e, watch, thumb, nice, short, weekday, card, sacred_next,
+                      DEDICATION_HTML, ILLUSTRATION_NOTE, MONTHS)
+from site_parts import head, header, footer, SCRIPTS, YT, SUB
 
-DATA = json.load(open("data/episodes.json", encoding="utf-8"))
-EP = sorted(DATA["episodes"], key=lambda x: x["date"], reverse=True)  # newest first
-S1 = [(x["title"], x["id"]) for x in DATA["season1"]]
-UP = json.load(open("data/upcoming.json", encoding="utf-8"))["upcoming"]
-NEXT = UP[0] if UP else None
+ROOT = os.path.dirname(os.path.abspath(__file__))
+latest = EP[0]
+recent = EP[1:4]                                    # the hero already features the newest film
+n_films = len(EP) + len(S1)
+n_lr = sum(1 for x in EP if x.get("label") == "Living Roots")
 
-YT = "https://www.youtube.com/@KriosGreece"
-SUB = "https://www.youtube.com/@KriosGreece?sub_confirmation=1"
-MONTHS = "January February March April May June July August September October November December".split()
-
-def watch(i): return f"https://www.youtube.com/watch?v={i}"
-def thumb(i, q="maxresdefault"): return f"https://i.ytimg.com/vi/{i}/{q}.jpg"
-def nice(d):
-    y, m, dd = d.split("-"); return f"{MONTHS[int(m)-1][:3]} {int(dd)}, {y}"
-e = html.escape
-
-latest, rest = EP[0], EP[1:]
-
-def card_list(xs): return "\n".join(f"""
-      <li class="ep reveal" style="--d:{(k%3)*0.08:.2f}s">
-        <a class="ep-link" href="{watch(x['id'])}" rel="noopener">
-          <span class="ep-img"><img src="{thumb(x['id'],'hqdefault')}" alt="" loading="lazy" width="480" height="360"></span>
-          <span class="ep-meta"><span class="ep-num">{e(x['label'])}</span><span>{nice(x['date'])}</span><span>{x['mins']} min</span></span>
-          <span class="ep-title">{e(x['title'])}</span>
-          <span class="ep-tease">{e(x['tease'])}</span>
-        </a>
-      </li>""" for k, x in enumerate(xs))
-s3 = card_list([x for x in EP if x.get('season', 3) >= 3])
-s2 = card_list([x for x in EP if x.get('season', 3) == 2])
-
-s1 = "\n".join(f'<li><a href="{watch(i)}" rel="noopener">{e(t)}</a></li>' for t, i in S1)
-
-if NEXT:
-    y, m, dd = NEXT["date"].split("-")
-    next_html = f"""<section class="next reveal" aria-label="Coming next">
-  <div class="wrap">
-    <a class="next-card" href="{SUB}" rel="noopener">
-      <span class="next-img"><img src="{NEXT['image']}" alt="{e(NEXT['title'])}" width="960" height="540" loading="lazy"></span>
-      <span class="next-body">
-        <span class="label">{e(NEXT['label'])} · Coming {MONTHS[int(m)-1]} {int(dd)}</span>
-        <span class="next-title">{e(NEXT['title'])}</span>
-        <span class="next-text">{e(NEXT['text'])}</span>
-        <span class="next-cta">Subscribe to get it first →</span>
-      </span>
-    </a>
-  </div>
-</section>"""
-    sacred_link = f'<a class="more" href="{SUB}" rel="noopener">Next: {e(NEXT["title"].split(":")[0])}, {MONTHS[int(m)-1]} {int(dd)}</a>'
-else:
-    next_html = ""
-    sacred = next((x for x in EP if x.get("label") == "Sacred Days"), None)
-    sacred_link = (f'<a class="more" href="{watch(sacred["id"])}" rel="noopener">Watch the latest special</a>' if sacred
-                   else f'<a class="more" href="{SUB}" rel="noopener">Subscribe for the next one</a>')
-
-ld = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {"@type": "Organization", "name": "KRIOS", "url": "https://kriosgreece.com",
-     "sameAs": [YT], "description": "KRIOS: the living story of Greek civilization. Documentaries on Greek history, faith, tradition and family memory."},
+ld = {"@context": "https://schema.org", "@graph": [
+    {"@type": "Organization", "name": "KRIOS", "url": "https://kriosgreece.com", "sameAs": [YT],
+     "description": "KRIOS: the living story of Greek civilization. Documentaries on Greek history, faith, tradition and family memory."},
     {"@type": "ItemList", "name": "KRIOS documentaries", "itemListElement": [
-      {"@type": "ListItem", "position": k+1, "item": {
-        "@type": "VideoObject", "name": x["title"], "description": x["tease"],
-        "thumbnailUrl": thumb(x["id"]), "uploadDate": x["date"], "url": watch(x["id"]),
-        "embedUrl": f"https://www.youtube.com/embed/{x['id']}"}} for k, x in enumerate(EP)]},
-  ]}
+        {"@type": "ListItem", "position": k + 1, "item": {
+            "@type": "VideoObject", "name": x["title"], "description": x["tease"],
+            "thumbnailUrl": thumb(x["id"], "maxresdefault"), "uploadDate": x["date"], "url": watch(x["id"]),
+            "embedUrl": f"https://www.youtube.com/embed/{x['id']}"}} for k, x in enumerate(EP)]}]}
 
-page = f"""<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="google-site-verification" content="pPkMXZrBWp8jReHeeuMGoONMkFykv5Va8zj8RIYuHsk">
-<title>KRIOS · The Living Story of Greek Civilization</title>
-<meta name="description" content="Documentaries on Greek history, faith, tradition and family memory, for Greeks in Greece and around the world. Real archives, sourced claims, and the stories families carried with them.">
-<link rel="canonical" href="https://kriosgreece.com/">
-<meta property="og:type" content="website">
-<meta property="og:title" content="KRIOS · The Living Story of Greek Civilization">
-<meta property="og:description" content="Documentaries on Greek history, faith, tradition and family memory. Newest: {e(latest['title'])}.">
-<meta property="og:url" content="https://kriosgreece.com/">
-<meta property="og:image" content="{thumb(latest['id'])}">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#14213a">
-<script>document.documentElement.classList.add("js")</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
-<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>
-<style>
-:root {{
-  --blue-900:#101a2e; --blue-800:#14213a; --blue-700:#1c2d4d; --blue-500:#3a5a8c;
-  --ivory:#f5edd8; --ivory-2:#ebe1c7; --paper:#faf6ec;
-  --gold:#c9a35e; --gold-ink:#8a6a2c; --red:#7e2418;
-  --ink:#1d1a14; --ink-2:#4a4336; --line:#d9cdb0;
-  --serif:"EB Garamond", Georgia, "Times New Roman", serif;
-  --w:1160px;
-}}
-*{{box-sizing:border-box}}
-html{{scroll-behavior:smooth}}
-@media (prefers-reduced-motion: reduce){{html{{scroll-behavior:auto}} *{{transition:none!important}}}}
-body{{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:19px;line-height:1.55;-webkit-font-smoothing:antialiased}}
-img{{max-width:100%;display:block}}
-a{{color:inherit}}
-:focus-visible{{outline:2px solid var(--gold);outline-offset:3px}}
-.wrap{{max-width:var(--w);margin:0 auto;padding:0 24px}}
-.label{{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;font-weight:500}}
-.skip{{position:absolute;left:-9999px}} .skip:focus{{left:16px;top:16px;background:var(--ivory);padding:8px 12px;z-index:10}}
+# ---------- Sacred Days module: next scheduled special, or one released in the last 30 days ----------
+state, sd = sacred_next()
+sacred_html = ""
+if sd:
+    d = sd["date"]
+    cal = f'<div class="m-cal" aria-hidden="true"><span>{MONTHS[int(d[5:7]) - 1][:3]}</span><b>{int(d[8:10])}</b></div>'
+    if state == "upcoming":
+        img = sd["image"]
+        status = f'<p class="m-status"><span class="m-dot"></span>Premieres {weekday(d)}, {nice(d)} on YouTube</p>'
+        links = (f'<a class="btn btn-navy" href="/sacred-days/">Sacred Days calendar</a>'
+                 f'<a class="m-more" href="{SUB}" rel="noopener">Subscribe on YouTube to see it first →</a>')
+        text = sd["text"]
+        img_link = "/sacred-days/"
+        note = f'<p class="m-imgnote">{ILLUSTRATION_NOTE}</p>' if sd.get("image_is_illustration") else ""
+    else:
+        img = thumb(sd["id"], "maxresdefault")
+        status = f'<p class="m-status"><span class="m-dot"></span>Now on YouTube · {sd["mins"]} min</p>'
+        links = (f'<a class="btn btn-navy" href="{watch(sd["id"])}" rel="noopener">Watch the film</a>'
+                 f'<a class="m-more" href="/sacred-days/">All Sacred Days →</a>')
+        text = sd.get("tease", "")
+        img_link = watch(sd["id"])
+        note = ""
+    sacred_html = f'''<section class="m-sd" aria-label="Sacred Days">
+  <div class="wrap"><div class="m-sd-in reveal">
+    {cal}
+    <div class="m-sd-body">
+      <span class="label m-kick m-red">Sacred Days · Living traditions</span>
+      <h2>{e(sd["title"])}</h2>
+      <p>{e(text)}</p>
+      {status}
+      <div class="m-links">{links}</div>
+    </div>
+    <div><a class="m-sd-img" href="{img_link}"{' rel="noopener"' if img_link.startswith("http") else ""}><img src="{img}" alt="{e(sd["title"])}" width="960" height="540" loading="lazy"></a>{note}</div>
+  </div></div>
+</section>'''
 
-/* header */
-.top{{background:var(--blue-900);color:var(--ivory);border-bottom:1px solid #2a3a5c}}
-.top .wrap{{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:68px}}
-.brand{{text-decoration:none;display:flex;align-items:baseline;gap:12px}}
-.brand b{{font-weight:600;letter-spacing:.22em;font-size:1.25rem}}
-.brand span{{color:var(--gold);font-style:italic;font-size:.95rem}}
-.nav{{display:flex;gap:22px;align-items:center;flex-wrap:wrap}}
-.nav a{{text-decoration:none;font-size:.95rem;opacity:.88}} .nav a:hover{{opacity:1;color:var(--gold)}}
-.btn{{display:inline-flex;align-items:center;gap:.5em;min-height:46px;padding:10px 20px;border-radius:2px;text-decoration:none;font-size:1rem;font-weight:500;transition:background .2s,color .2s}}
-.btn-gold{{background:var(--gold);color:var(--blue-900)}} .btn-gold:hover{{background:#d9b674}}
-.btn-line{{border:1px solid rgba(245,237,216,.5);color:var(--ivory)}} .btn-line:hover{{border-color:var(--gold);color:var(--gold)}}
-.nav .btn{{min-height:40px;padding:6px 14px;opacity:1}}
+chips = "".join(f'<a href="/films/#{k}">{e(SUBJ["names"][k])}</a>' for k in SUBJ["order"])
+sd_entry = ("First film October 26 →" if state == "upcoming" and sd and sd["date"].endswith("-10-26")
+            else (f'Next: {short(sd["date"])} →' if state == "upcoming" else "Feast days and name days →"))
 
-/* motion: content is visible without JS; .js enables the reveal */
-.js .reveal{{opacity:0;transform:translateY(18px);transition:opacity .7s ease var(--d,0s),transform .8s cubic-bezier(.2,.7,.2,1) var(--d,0s)}}
-.js .reveal.in{{opacity:1;transform:none}}
-@media (prefers-reduced-motion: reduce){{.js .reveal{{opacity:1;transform:none;transition:none}}}}
-.top{{position:sticky;top:0;z-index:30;transition:box-shadow .3s}}
-body.scrolled .top{{box-shadow:0 8px 24px rgba(8,13,24,.35)}}
-.more{{background:linear-gradient(var(--gold),var(--gold)) left bottom/0 1px no-repeat;border-bottom-color:rgba(201,163,94,.45);transition:background-size .3s}}
-.more:hover{{background-size:100% 1px}}
-.latest,.ep-link,.next-card,.explore a.tile{{transition:transform .25s ease,border-color .25s,box-shadow .25s}}
-.latest:hover,.next-card:hover,.explore a.tile:hover{{transform:translateY(-3px);box-shadow:0 14px 30px rgba(8,13,24,.18)}}
-.ep-link:hover{{transform:translateY(-3px)}}
-.creed li::before{{transition:transform .6s}} .creed li.in::before{{transform:rotate(225deg)}}
-
-/* next (upcoming) */
-.next{{background:var(--paper);padding:40px 0 0}}
-.next-card{{display:grid;grid-template-columns:minmax(0,1.1fr) 1fr;gap:0;text-decoration:none;background:var(--blue-800);color:var(--ivory);border:1px solid var(--blue-700)}}
-.next-img{{display:block;aspect-ratio:16/9;overflow:hidden}}
-.next-img img{{width:100%;height:100%;object-fit:cover;transition:transform .6s}}
-.next-card:hover .next-img img{{transform:scale(1.03)}}
-.next-body{{display:flex;flex-direction:column;justify-content:center;gap:10px;padding:26px 30px}}
-.next-body .label{{color:var(--gold)}}
-.next-title{{font-size:clamp(1.6rem,2.6vw,2.2rem);line-height:1.1;font-weight:500}}
-.next-text{{color:#d9cfb6}}
-.next-cta{{color:var(--gold);margin-top:4px}}
-
-/* hero */
-.hero{{background:linear-gradient(180deg,var(--blue-900),var(--blue-800));color:var(--ivory);padding:72px 0 88px;border-bottom:3px solid var(--red)}}
-.hero .wrap{{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}}
-.hero .label{{color:var(--gold)}}
-.hero h1{{font-weight:500;font-size:clamp(2.6rem,5.2vw,4.4rem);line-height:1.03;margin:.35em 0 .4em;letter-spacing:-.01em}}
-.hero h1 em{{color:var(--gold);font-style:italic}}
-.hero p.lead{{font-size:1.2rem;max-width:34em;color:#e9dfc6;margin:0 0 28px}}
-.actions{{display:flex;gap:14px;flex-wrap:wrap}}
-.latest{{text-decoration:none;display:block;background:var(--blue-700);border:1px solid #33476e;transition:border-color .2s}}
-.latest:hover{{border-color:var(--gold)}}
-.latest .frame{{display:block;position:relative;aspect-ratio:16/9;background:#0b1322;overflow:hidden}}
-.latest .frame img{{width:100%;height:100%;object-fit:cover}}
-.latest .new{{position:absolute;left:14px;top:14px;background:var(--red);color:var(--ivory);padding:4px 10px}}
-.latest .play{{position:absolute;right:14px;bottom:14px;background:rgba(16,26,46,.86);color:var(--ivory);padding:6px 12px;font-size:.95rem}}
-.latest .body{{display:block;padding:20px 22px 22px}}
-.latest .meta{{color:var(--gold);display:flex;gap:14px;flex-wrap:wrap}}
-.latest h2{{font-weight:500;font-size:1.65rem;line-height:1.15;margin:.35em 0 .3em}}
-.latest p{{margin:0;color:#d9cfb6}}
-
-/* creed */
-.creed{{background:var(--ivory);border-bottom:1px solid var(--line)}}
-.creed ol{{list-style:none;margin:0 auto;padding:22px 24px;max-width:var(--w);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}}
-.creed li{{font-size:1.15rem;letter-spacing:.06em;color:var(--blue-800)}}
-.creed li::before{{content:"";display:inline-block;width:7px;height:7px;background:var(--gold);transform:rotate(45deg);margin-right:12px;vertical-align:middle}}
-
-/* sections */
-section.band{{padding:84px 0}}
-.head{{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:36px;flex-wrap:wrap}}
-.head h2{{font-weight:500;font-size:clamp(2rem,3.4vw,2.8rem);line-height:1.08;margin:.2em 0 0;max-width:18em}}
-.head .label{{color:var(--gold-ink)}}
-.head p{{max-width:30em;margin:0;color:var(--ink-2)}}
-.more{{text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:2px;white-space:nowrap}}
-
-/* why */
-.why .wrap{{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}}
-.why blockquote{{margin:0;font-size:clamp(1.6rem,2.6vw,2.15rem);line-height:1.25;color:var(--blue-800)}}
-.why blockquote em{{color:var(--red);font-style:italic}}
-.why .text p{{margin:0 0 1em}}
-.why .ladder{{list-style:none;padding:0;margin:24px 0 0;border-left:2px solid var(--gold)}}
-.why .ladder li{{padding:6px 0 6px 18px;color:var(--ink-2)}}
-.why .ladder li:last-child{{color:var(--ink);font-weight:500}}
-.why .dedication{{grid-column:1/-1;margin:36px auto 0;max-width:640px;text-align:center;color:var(--ink-2)}}
-.why .dedication p{{margin:0 0 6px;font-size:1.08rem}}
-.why .dedication .dname{{display:flex;align-items:center;justify-content:center;gap:12px;font-size:1.35rem;color:var(--blue-800);margin-bottom:14px}}
-.why .dedication .dname i{{white-space:nowrap}}
-.why .dedication .dname span{{flex:0 1 120px;min-width:24px;height:1px;background:var(--gold)}}
-.why .dedication .dname .xr{{flex:none;width:17px;height:25px;fill:var(--gold)}}
-@media (max-width:480px){{.why .dedication .dname span{{display:none}} .why .dedication .dname{{font-size:1.2rem;gap:10px}}}}
-.why .dedication .dgr{{margin-top:14px;font-style:italic;color:var(--red);font-size:1.15rem}}
-
-/* episodes */
-.eps{{background:var(--ivory)}}
-.grid{{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:34px 28px}}
-.ep-link{{text-decoration:none;display:flex;flex-direction:column;gap:10px;height:100%}}
-.ep-img{{aspect-ratio:16/9;overflow:hidden;background:var(--blue-800);display:block}}
-.ep-img img{{width:100%;height:100%;object-fit:cover;transition:transform .3s}}
-.ep-link:hover .ep-img img{{transform:scale(1.03)}}
-.ep-link:hover .ep-title{{color:var(--red)}}
-.ep-meta{{display:flex;gap:12px;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-ink)}}
-.ep-num{{color:var(--blue-800);font-weight:600}}
-.ep-title{{font-size:1.3rem;line-height:1.2;font-weight:500;transition:color .2s}}
-.ep-tease{{color:var(--ink-2);font-size:1rem}}
-.season{{font-weight:500;font-size:1.45rem;margin:8px 0 18px;padding-top:22px;border-top:1px solid var(--line);color:var(--blue-800)}}
-.season span{{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-ink);margin-left:12px}}
-.season-note{{margin:-8px 0 22px;color:var(--ink-2);max-width:40em}}
-.grid + .season{{margin-top:48px}}
-.began{{margin-top:56px;padding-top:28px;border-top:1px solid var(--line);display:grid;grid-template-columns:260px 1fr;gap:28px}}
-.began h3{{font-weight:500;font-size:1.35rem;margin:.2em 0 .3em}}
-.began p{{margin:0;color:var(--ink-2);font-size:1rem}}
-.began ul{{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px}}
-.began li a{{display:inline-block;padding:8px 14px;border:1px solid var(--line);text-decoration:none;font-size:1rem;min-height:44px;line-height:26px}}
-.began li a:hover{{border-color:var(--gold);color:var(--red)}}
-
-/* series */
-.series .cols{{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line)}}
-.series article{{padding:30px 28px 8px 0;border-right:1px solid var(--line);margin-right:28px}}
-.series article:last-child{{border-right:0;margin-right:0}}
-.series h3{{font-weight:500;font-size:1.55rem;margin:.3em 0 .4em;line-height:1.15}}
-.series .gr{{color:var(--red);font-style:italic;font-size:1.05rem}}
-.series p{{color:var(--ink-2);margin:0 0 1em}}
-
-/* method */
-.method{{background:var(--blue-800);color:var(--ivory)}}
-.method .head .label{{color:var(--gold)}} .method .head p{{color:#d9cfb6}}
-.rules{{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:0}}
-.rules li{{padding:26px 26px 26px 0;border-top:1px solid #33476e}}
-.rules b{{display:block;font-weight:500;font-size:1.2rem;color:var(--gold);margin-bottom:6px}}
-.rules span{{color:#e3d9bf;font-size:1rem}}
-
-/* explore */
-.explore .links{{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}}
-.explore a.tile{{display:block;padding:24px;border:1px solid var(--line);text-decoration:none;background:#fffdf7;min-height:150px}}
-.explore a.tile:hover{{border-color:var(--gold)}}
-.explore a.tile b{{display:block;font-weight:500;font-size:1.25rem;margin-bottom:6px}}
-.explore a.tile span{{color:var(--ink-2);font-size:1rem}}
-
-/* ask */
-.ask{{background:var(--ivory-2);text-align:center;padding:96px 0}}
-.ask h2{{font-weight:500;font-style:italic;font-size:clamp(2.2rem,4.4vw,3.6rem);margin:0 0 .3em;color:var(--blue-800)}}
-.ask p{{max-width:34em;margin:0 auto 28px;color:var(--ink-2);font-size:1.15rem}}
-.ask .btn-gold{{background:var(--blue-800);color:var(--ivory)}} .ask .btn-gold:hover{{background:var(--red)}}
-
-/* footer */
-footer{{background:var(--blue-900);color:#cfc5ab;padding:56px 0 40px;font-size:.98rem}}
-footer .wrap{{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}}
-footer b{{color:var(--ivory);letter-spacing:.2em;font-weight:600}}
-footer ul{{list-style:none;padding:0;margin:0;display:grid;gap:8px}}
-footer a{{text-decoration:none}} footer a:hover{{color:var(--gold)}}
-.dedic{{grid-column:1/-1;border-top:1px solid #2a3a5c;padding-top:24px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}}
-.dedic i{{color:var(--ivory)}}
-
-@media (max-width:980px){{
-  .hero .wrap,.why .wrap{{grid-template-columns:1fr;gap:40px}}
-  .grid{{grid-template-columns:repeat(2,1fr)}}
-  .series .cols,.rules{{grid-template-columns:1fr}}
-  .series article{{border-right:0;margin-right:0;border-bottom:1px solid var(--line);padding-right:0}}
-  .explore .links{{grid-template-columns:repeat(2,1fr)}}
-  .began{{grid-template-columns:1fr}}
-  .next-card{{grid-template-columns:1fr}}
-  footer .wrap{{grid-template-columns:1fr 1fr}}
-}}
-@media (max-width:640px){{
-  body{{font-size:18px}}
-  .wrap{{padding:0 16px}}
-  .nav a:not(.btn){{display:none}}
-  .hero{{padding:48px 0 60px}}
-  section.band{{padding:60px 0}}
-  .grid,.explore .links{{grid-template-columns:1fr}}
-  .creed ol{{justify-content:flex-start;padding:18px 16px;gap:8px 18px}}
-  .creed li{{font-size:1rem}}
-  footer .wrap{{grid-template-columns:1fr}}
-}}
-</style>
-</head>
+page = f"""{head("KRIOS · The Living Story of Greek Civilization",
+               "Documentaries on Greek history, faith, tradition and family memory, for Greeks in Greece and around the world. Real archives, sourced claims, and the stories families carried with them.",
+               "/",
+               '<meta name="google-site-verification" content="pPkMXZrBWp8jReHeeuMGoONMkFykv5Va8zj8RIYuHsk">\n'
+               f'<meta property="og:image" content="{thumb(latest["id"], "maxresdefault")}">\n<meta name="twitter:card" content="summary_large_image">\n'
+               f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>')}
 <body>
-<a class="skip" href="#main">Skip to content</a>
-<header class="top">
-  <div class="wrap">
-    <a class="brand" href="/"><b>KRIOS</b><span>Greek cultural preservation</span></a>
-    <nav class="nav" aria-label="Main">
-      <a href="#episodes">Episodes</a>
-      <a href="#series">Series</a>
-      <a href="#how">How we work</a>
-      <a href="#explore">Explore</a>
-      <a class="btn btn-gold" href="{SUB}" rel="noopener">Subscribe</a>
-    </nav>
-  </div>
-</header>
+{header()}
 
 <main id="main">
 <section class="hero">
@@ -304,13 +78,13 @@ footer a{{text-decoration:none}} footer a:hover{{color:var(--gold)}}
       <h1 class="reveal" style="--d:.15s">The living story of <em>Greek civilization</em></h1>
       <p class="lead reveal" style="--d:.28s">Documentaries for Greeks everywhere: the heroes, the customs, the music and the families who carried Greece with them. Real archives, sourced history, and the questions worth asking the people who raised you.</p>
       <div class="actions reveal" style="--d:.4s">
-        <a class="btn btn-gold" href="{watch(latest['id'])}" rel="noopener">Watch the newest episode</a>
-        <a class="btn btn-line" href="#episodes">All episodes</a>
+        <a class="btn btn-gold" href="{watch(latest['id'])}" rel="noopener">Watch the newest film</a>
+        <a class="btn btn-line" href="/films/">All films</a>
       </div>
     </div>
     <a class="latest reveal" style="--d:.3s" href="{watch(latest['id'])}" rel="noopener">
       <span class="frame">
-        <img src="{thumb(latest['id'])}" onerror="this.onerror=null;this.src='{thumb(latest['id'],'hqdefault')}'" alt="{e(latest['title'])}" width="1280" height="720">
+        <img src="{thumb(latest['id'], 'maxresdefault')}" onerror="this.onerror=null;this.src='{thumb(latest['id'])}'" alt="{e(latest['title'])}" width="1280" height="720">
         <span class="new label">New</span>
         <span class="play">▶ Watch · {latest['mins']} min</span>
       </span>
@@ -327,110 +101,55 @@ footer a{{text-decoration:none}} footer a:hover{{color:var(--gold)}}
   <ol><li class="reveal" style="--d:0s">Preserve</li><li class="reveal" style="--d:.08s">Teach</li><li class="reveal" style="--d:.16s">Understand</li><li class="reveal" style="--d:.24s">Connect</li><li class="reveal" style="--d:.32s">Pass forward</li></ol>
 </div>
 
-{next_html}
-
-<section class="band why" id="why">
+<section class="m-begin" aria-labelledby="begin-h">
   <div class="wrap">
-    <blockquote class="reveal">History tells us what happened. KRIOS shows <em>why it still lives in us.</em></blockquote>
-    <div class="text reveal" style="--d:.12s">
-      <p>Greek civilization didn't end in antiquity. It changed, survived occupation, crossed oceans in suitcases and lived on in kitchens, churches and name days.</p>
-      <p>Each film follows one real story, from the past to a living family today, and lets the evidence show what was kept, what changed and what was lost.</p>
-      <ul class="ladder">
-        <li>"I never knew that."</li>
-        <li>"That's why my family does this."</li>
-        <li>"I want to ask my grandparents about this."</li>
-        <li>"I want my children to know this."</li>
-      </ul>
-    </div>
-    <div class="dedication reveal" style="--d:.2s">
-      <p class="dname"><span aria-hidden="true"></span><svg class="xr" viewBox="0 0 18 26" aria-hidden="true"><rect x="7.6" y="2" width="2.8" height="22"/><rect x="1.5" y="7.6" width="15" height="2.8"/><circle cx="9" cy="2.2" r="2"/><circle cx="9" cy="23.8" r="2"/><circle cx="1.8" cy="9" r="2"/><circle cx="16.2" cy="9" r="2"/></svg><i>For my father, Peter (Πέτρος).</i><svg class="xr" viewBox="0 0 18 26" aria-hidden="true"><rect x="7.6" y="2" width="2.8" height="22"/><rect x="1.5" y="7.6" width="15" height="2.8"/><circle cx="9" cy="2.2" r="2"/><circle cx="9" cy="23.8" r="2"/><circle cx="1.8" cy="9" r="2"/><circle cx="16.2" cy="9" r="2"/></svg><span aria-hidden="true"></span></p>
-      <p>He led by example.</p>
-      <p>A piece of you will forever remain in our hearts.</p>
-      <p class="dgr" lang="el">Αἰωνία σου ἡ μνήμη.</p>
+    <h2 id="begin-h" class="reveal">Where would you like to begin?</h2>
+    <div class="m-entries">
+      <a class="m-entry reveal" href="/films/#living-roots"><span class="m-gr" lang="el">Ρίζες</span><b>Living Roots</b><span>Family, migration and belonging.</span><i>{n_lr} films →</i></a>
+      <a class="m-entry reveal" style="--d:.08s" href="/sacred-days/"><span class="m-gr" lang="el">Γιορτές</span><b>Sacred Days</b><span>Faith, customs and the traditions we carry forward.</span><i>{sd_entry}</i></a>
+      <a class="m-entry reveal" style="--d:.16s" href="/films/#growing-up-greek"><span class="m-gr" lang="el">Θυμάμαι</span><b>Growing Up Greek</b><span>Childhood memories that connect generations.</span><i>New series · coming soon →</i></a>
     </div>
   </div>
 </section>
 
-<section class="band eps" id="episodes">
+{sacred_html}
+
+<section class="band m-lib" id="films">
   <div class="wrap">
-    <div class="head reveal">
-      <div><span class="label">The documentaries</span><h2>Every episode, newest first</h2></div>
-      <a class="more" href="{YT}/videos" rel="noopener">Watch on YouTube ↗</a>
-    </div>
-    <h3 class="season reveal">Season 3 · The living story</h3>
-    <p class="season-note">Since October 2026 the films follow Greek life as it is lived now: what families carried when they left, and how it survives.</p>
-    <ul class="grid">{s3}
-    </ul>
-    <h3 class="season reveal">Season 2 · Heroes, heroines and forgotten history</h3>
-    <ul class="grid">{s2}
-    </ul>
-    <div class="began">
-      <div>
-        <span class="label" style="color:var(--gold-ink)">Season 1</span>
-        <h3>Where KRIOS began</h3>
-        <p>The first season told the ancient stories. Everything since has followed those stories into the lives of the people who inherited them.</p>
-      </div>
-      <ul>{s1}</ul>
-    </div>
+    <div class="m-head reveal"><div><span class="label m-kick">The documentaries</span><h2>Explore the films</h2></div><a class="m-more" href="/films/">View all {n_films} films →</a></div>
+    <nav class="m-chips reveal" aria-label="Browse films by subject">{chips}</nav>
+    <div class="m-grid m-grid--3">{"".join(card(x, i * .08) for i, x in enumerate(recent))}</div>
+    <p class="m-all reveal"><a class="btn btn-navy" href="/films/">View all {n_films} films</a></p>
   </div>
 </section>
 
-<section class="band series" id="series">
+<section class="band m-why" id="why">
   <div class="wrap">
-    <div class="head reveal">
-      <div><span class="label">Series</span><h2>Three ways into the story</h2></div>
-    </div>
-    <div class="cols reveal">
-      <article>
-        <span class="gr">Ρίζες</span>
-        <h3>Living Roots</h3>
-        <p>Where Greek families came from, what they carried when they left, and how it survives abroad. It begins with the dance the world thinks is Greek and the Greeks who left home.</p>
-        <a class="more" href="{watch(latest['id'])}" rel="noopener">Watch the newest film</a>
-      </article>
-      <article>
-        <span class="gr">Γιορτές</span>
-        <h3>Sacred Days · Living Traditions</h3>
-        <p>Feast days, name days and national days, released on the day itself. What families celebrate, why their grandparents celebrated it, and how it differs from village to village and city to city.</p>
-        {sacred_link}
-      </article>
-      <article>
-        <span class="gr">Θυμάμαι</span>
-        <h3>Growing Up Greek</h3>
-        <p>The things many of us remember: Sunday in church, the icon on the wall, Greek school after school, the team you were born into. Stories that start with "I remember that" and lead to the history behind it.</p>
-        <a class="more" href="{SUB}" rel="noopener">Coming to the channel</a>
-      </article>
-    </div>
+    <span class="label m-kick reveal">Why KRIOS exists</span>
+    <blockquote class="reveal">History tells us what happened.<br>KRIOS shows <em>why it still lives in us.</em></blockquote>
+    <p class="m-why-text reveal">Each film follows one real story, from the past to a living family today, and lets the evidence show what was kept, what changed and what was lost.</p>
+    <ol class="m-ladder">
+      <li class="reveal"><span>1</span>"I never knew that."</li>
+      <li class="reveal" style="--d:.1s"><span>2</span>"That's why my family does this."</li>
+      <li class="reveal" style="--d:.2s"><span>3</span>"I want to ask my grandparents about this."</li>
+      <li class="reveal" style="--d:.3s"><span>4</span>"I want my children to know this."</li>
+    </ol>
+    {DEDICATION_HTML}
   </div>
 </section>
 
-<section class="band method" id="how">
-  <div class="wrap">
-    <div class="head reveal">
-      <div><span class="label">How we work</span><h2>Built on evidence, told by people</h2></div>
-      <p>If a claim can't be traced to a source, it doesn't go in the film. When the evidence runs out, we say so.</p>
-    </div>
-    <ul class="rules reveal">
-      <li><b>The oldest source, not the most famous</b><span>Primary sources and named scholarship for every historical claim, checked before recording and again on the finished film.</span></li>
-      <li><b>Real archives first</b><span>Historical photographs, documents, icons and maps, credited with their licence. Low-resolution archives are shown as framed prints, never stretched or AI-enhanced.</span></li>
-      <li><b>Illustration is labelled</b><span>Where no photograph exists, some everyday scenes are illustrated. They are marked on screen and never stand in for sacred or historical evidence.</span></li>
-      <li><b>History, tradition and belief kept apart</b><span>We say which is which: what is documented, what the Church teaches, what families practice, and where communities differ.</span></li>
-      <li><b>A human voice</b><span>Every documentary today is narrated in a human voice.</span></li>
-      <li><b>English and Greek</b><span>New films get English and Greek captions reviewed by people, so the story reaches every generation of the family.</span></li>
-    </ul>
-  </div>
-</section>
-
-<section class="band explore" id="explore">
-  <div class="wrap">
-    <div class="head reveal">
-      <div><span class="label">Explore</span><h2>Keep reading</h2></div>
-    </div>
-    <div class="links reveal">
-      <a class="tile" href="/answers/"><b>Greek history Q&amp;A</b><span>Short, sourced answers to the questions people actually ask.</span></a>
-      <a class="tile" href="/blog/"><b>Episode articles</b><span>The written companions to the films, with sources.</span></a>
-      <a class="tile" href="/tools/"><b>Quizzes and tools</b><span>Test what you know, including Real or Fake.</span></a>
-      <a class="tile" href="/links.html"><b>All KRIOS links</b><span>YouTube and every KRIOS page in one place.</span></a>
-    </div>
+<section class="band m-support" id="how">
+  <div class="wrap m-support-in">
+    <div class="reveal"><span class="label m-kick">How we work</span><h2>Built on evidence, told by people</h2>
+      <ul class="m-rules"><li><b>The oldest source, not the most famous.</b> Every historical claim is traced to a primary source or named scholarship.</li>
+      <li><b>Real archives first.</b> Photographs, documents, icons and maps, credited with their licence.</li>
+      <li><b>Illustration is labelled.</b> It never stands in for sacred or historical evidence.</li></ul>
+      <a class="m-more" href="/how-we-work/">Read all six standards →</a></div>
+    <div class="reveal" style="--d:.1s"><span class="label m-kick">Keep reading</span><h2>More from KRIOS</h2>
+      <ul class="m-linklist"><li><a href="/blog/">Articles<span>The written companions to the films</span></a></li>
+      <li><a href="/answers/">Q&amp;A<span>Questions about ancient Greece, answered</span></a></li>
+      <li><a href="/tools/">Quizzes<span>Test what you know, including Real or Fake</span></a></li>
+      <li><a href="/links.html">All links<span>YouTube and every KRIOS page</span></a></li></ul></div>
   </div>
 </section>
 
@@ -443,51 +162,20 @@ footer a{{text-decoration:none}} footer a:hover{{color:var(--gold)}}
 </section>
 </main>
 
-<footer>
-  <div class="wrap">
-    <div>
-      <b>KRIOS</b>
-      <p>The living story of Greek civilization.<br>Preserve. Teach. Understand. Connect. Pass forward.</p>
-    </div>
-    <ul>
-      <li><a href="#episodes">Episodes</a></li>
-      <li><a href="#series">Series</a></li>
-      <li><a href="#how">How we work</a></li>
-      <li><a href="/answers/">Q&amp;A</a></li>
-    </ul>
-    <ul>
-      <li><a href="{YT}" rel="noopener">YouTube ↗</a></li>
-      <li><a href="/blog/">Articles</a></li>
-      <li><a href="/tools/">Quizzes</a></li>
-      <li><a href="/legal/">Legal</a></li>
-    </ul>
-    <div class="dedic">
-      <span>© 2026 KRIOS · kriosgreece.com</span>
-      <i>For my father, Peter (Πέτρος).</i>
-    </div>
-  </div>
-</footer>
-<script>
-(function(){{
-  
-  var els=[].slice.call(document.querySelectorAll('.reveal'));
-  if(!('IntersectionObserver' in window)){{els.forEach(function(e){{e.classList.add('in')}});return;}}
-  var io=new IntersectionObserver(function(es){{es.forEach(function(e){{if(e.isIntersecting){{e.target.classList.add('in');io.unobserve(e.target);}}}})}},{{rootMargin:'0px 0px -8% 0px',threshold:0.08}});
-  els.forEach(function(e){{io.observe(e)}});
-  var on=function(){{document.body.classList.toggle('scrolled',window.scrollY>8)}}; window.addEventListener('scroll',on,{{passive:true}}); on();
-}})();
-</script>
+{footer()}
+{SCRIPTS}
 </body>
 </html>
 """
-open("index.html", "w", encoding="utf-8").write(page)
+open(os.path.join(ROOT, "index.html"), "w", encoding="utf-8").write(page)
 for lp in ("links.html", "links/index.html"):
-    t = open(lp, encoding="utf-8").read()
+    p = os.path.join(ROOT, lp)
+    t = open(p, encoding="utf-8").read()
     t = re.sub(r'<li><a class="hi" href="[^"]*" rel="noopener"><b>Newest: [^<]*</b>',
                f'<li><a class="hi" href="{watch(latest["id"])}" rel="noopener"><b>Newest: {e(latest["title"])}</b>', t)
-    open(lp, "w", encoding="utf-8").write(t)
+    open(p, "w", encoding="utf-8").write(t)
 print("index.html", len(page), "bytes;", len(EP), "episodes")
 
-# keep the Articles, Q&A and Quizzes hubs in step (the Articles page lists the newest films)
-import os, runpy
-runpy.run_path(os.path.join(os.path.dirname(os.path.abspath(__file__)), "build_hubs.py"))
+# Films, Sacred Days and How we work pages, then the Articles, Q&A and Quizzes hubs
+runpy.run_path(os.path.join(ROOT, "build_films.py"))
+runpy.run_path(os.path.join(ROOT, "build_hubs.py"))

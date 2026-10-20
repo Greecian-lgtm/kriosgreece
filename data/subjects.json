@@ -1,0 +1,15 @@
+{
+ "_note": "Subjects for the Films page. One subject per label by default; nothing extra is added automatically. Multiple subjects only through 'overrides' (director-approved, matched by video id or by title text). Episode numbers and season numbers are never shown.",
+ "order": ["living-roots", "sacred-days", "growing-up-greek", "history", "faith", "music", "family", "myth"],
+ "names": {"living-roots": "Living Roots", "sacred-days": "Sacred Days", "growing-up-greek": "Growing Up Greek",
+           "history": "History and heroes", "faith": "Faith", "music": "Music and memory",
+           "family": "Family, food and diaspora", "myth": "Where KRIOS began"},
+ "from_label": {"Heroes": ["history"], "Heroines": ["history"], "Occupation": ["history"], "Faith": ["faith"],
+                "Sacred Days": ["sacred-days"], "Music": ["music"], "Music & memory": ["music"],
+                "Living Roots": ["living-roots"], "Diaspora": ["family"], "Family table": ["family"]},
+ "overrides": [
+  {"id": "8cu1S1DVFDI", "subjects": ["music", "history"], "approved": "director, Oct 19, 2026"},
+  {"id": "vpQUH4lBkiU", "subjects": ["living-roots", "family", "history"], "approved": "director, Oct 19, 2026"},
+  {"title": "Saint Demetrios", "subjects": ["sacred-days", "faith", "history"], "approved": "director, Oct 19, 2026"}
+ ]
+}

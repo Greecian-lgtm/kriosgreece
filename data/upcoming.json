@@ -12,7 +12,8 @@
    "credits": "/credits/saint-demetrios.html",
    "release_files": [
     "credits/saint-demetrios.html"
-   ]
+   ],
+   "image_is_illustration": true
   }
  ]
 }

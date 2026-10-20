@@ -190,10 +190,11 @@ section.band{{padding:84px 0}}
 .why .ladder li:last-child{{color:var(--ink);font-weight:500}}
 .why .dedication{{grid-column:1/-1;margin:36px auto 0;max-width:640px;text-align:center;color:var(--ink-2)}}
 .why .dedication p{{margin:0 0 6px;font-size:1.08rem}}
-.why .dedication .dname{{display:flex;align-items:center;justify-content:center;gap:18px;font-size:1.35rem;color:var(--blue-800);margin-bottom:14px}}
+.why .dedication .dname{{display:flex;align-items:center;justify-content:center;gap:12px;font-size:1.35rem;color:var(--blue-800);margin-bottom:14px}}
 .why .dedication .dname i{{white-space:nowrap}}
 .why .dedication .dname span{{flex:0 1 120px;min-width:24px;height:1px;background:var(--gold)}}
-.why .dedication .dname span::after{{content:"";display:block;width:7px;height:7px;background:var(--gold);transform:translateY(-3px) rotate(45deg);margin:0 auto}}
+.why .dedication .dname .xr{{flex:none;width:17px;height:25px;fill:var(--gold)}}
+@media (max-width:480px){{.why .dedication .dname span{{display:none}} .why .dedication .dname{{font-size:1.2rem;gap:10px}}}}
 .why .dedication .dgr{{margin-top:14px;font-style:italic;color:var(--red);font-size:1.15rem}}
 
 /* episodes */
@@ -342,9 +343,9 @@ footer a{{text-decoration:none}} footer a:hover{{color:var(--gold)}}
       </ul>
     </div>
     <div class="dedication reveal" style="--d:.2s">
-      <p class="dname"><span aria-hidden="true"></span><i>For my father, Peter (Πέτρος).</i><span aria-hidden="true"></span></p>
+      <p class="dname"><span aria-hidden="true"></span><svg class="xr" viewBox="0 0 18 26" aria-hidden="true"><rect x="7.6" y="2" width="2.8" height="22"/><rect x="1.5" y="7.6" width="15" height="2.8"/><circle cx="9" cy="2.2" r="2"/><circle cx="9" cy="23.8" r="2"/><circle cx="1.8" cy="9" r="2"/><circle cx="16.2" cy="9" r="2"/></svg><i>For my father, Peter (Πέτρος).</i><svg class="xr" viewBox="0 0 18 26" aria-hidden="true"><rect x="7.6" y="2" width="2.8" height="22"/><rect x="1.5" y="7.6" width="15" height="2.8"/><circle cx="9" cy="2.2" r="2"/><circle cx="9" cy="23.8" r="2"/><circle cx="1.8" cy="9" r="2"/><circle cx="16.2" cy="9" r="2"/></svg><span aria-hidden="true"></span></p>
       <p>He led by example.</p>
-      <p>A tremendous piece of you will forever remain in ours.</p>
+      <p>A piece of you will forever remain in our hearts.</p>
       <p class="dgr" lang="el">Αἰωνία σου ἡ μνήμη.</p>
     </div>
   </div>

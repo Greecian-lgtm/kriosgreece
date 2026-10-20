@@ -56,14 +56,14 @@ e = html.escape
 latest, rest = EP[0], EP[1:]
 
 def card_list(xs): return "\n".join(f"""
-      <li class="ep">
+      <li class="ep reveal" style="--d:{(k%3)*0.08:.2f}s">
         <a class="ep-link" href="{watch(x['id'])}" rel="noopener">
           <span class="ep-img"><img src="{thumb(x['id'],'hqdefault')}" alt="" loading="lazy" width="480" height="360"></span>
           <span class="ep-meta"><span class="ep-num">{e(x['label'])}</span><span>{nice(x['date'])}</span><span>{x['mins']} min</span></span>
           <span class="ep-title">{e(x['title'])}</span>
           <span class="ep-tease">{e(x['tease'])}</span>
         </a>
-      </li>""" for x in xs)
+      </li>""" for k, x in enumerate(xs))
 s3 = card_list([x for x in EP if x['n'] >= 20])
 s2 = card_list([x for x in rest if x['n'] < 20])
 
@@ -97,6 +97,7 @@ page = f"""<!doctype html>
 <meta property="og:image" content="{thumb(latest['id'])}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#14213a">
+<script>document.documentElement.classList.add("js")</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -133,6 +134,31 @@ a{{color:inherit}}
 .btn-gold{{background:var(--gold);color:var(--blue-900)}} .btn-gold:hover{{background:#d9b674}}
 .btn-line{{border:1px solid rgba(245,237,216,.5);color:var(--ivory)}} .btn-line:hover{{border-color:var(--gold);color:var(--gold)}}
 .nav .btn{{min-height:40px;padding:6px 14px;opacity:1}}
+
+/* motion: content is visible without JS; .js enables the reveal */
+.js .reveal{{opacity:0;transform:translateY(18px);transition:opacity .7s ease var(--d,0s),transform .8s cubic-bezier(.2,.7,.2,1) var(--d,0s)}}
+.js .reveal.in{{opacity:1;transform:none}}
+@media (prefers-reduced-motion: reduce){{.js .reveal{{opacity:1;transform:none;transition:none}}}}
+.top{{position:sticky;top:0;z-index:30;transition:box-shadow .3s}}
+body.scrolled .top{{box-shadow:0 8px 24px rgba(8,13,24,.35)}}
+.more{{background:linear-gradient(var(--gold),var(--gold)) left bottom/0 1px no-repeat;border-bottom-color:rgba(201,163,94,.45);transition:background-size .3s}}
+.more:hover{{background-size:100% 1px}}
+.latest,.ep-link,.next-card,.explore a.tile{{transition:transform .25s ease,border-color .25s,box-shadow .25s}}
+.latest:hover,.next-card:hover,.explore a.tile:hover{{transform:translateY(-3px);box-shadow:0 14px 30px rgba(8,13,24,.18)}}
+.ep-link:hover{{transform:translateY(-3px)}}
+.creed li::before{{transition:transform .6s}} .creed li.in::before{{transform:rotate(225deg)}}
+
+/* next (upcoming) */
+.next{{background:var(--paper);padding:40px 0 0}}
+.next-card{{display:grid;grid-template-columns:minmax(0,1.1fr) 1fr;gap:0;text-decoration:none;background:var(--blue-800);color:var(--ivory);border:1px solid var(--blue-700)}}
+.next-img{{display:block;aspect-ratio:16/9;overflow:hidden}}
+.next-img img{{width:100%;height:100%;object-fit:cover;transition:transform .6s}}
+.next-card:hover .next-img img{{transform:scale(1.03)}}
+.next-body{{display:flex;flex-direction:column;justify-content:center;gap:10px;padding:26px 30px}}
+.next-body .label{{color:var(--gold)}}
+.next-title{{font-size:clamp(1.6rem,2.6vw,2.2rem);line-height:1.1;font-weight:500}}
+.next-text{{color:#d9cfb6}}
+.next-cta{{color:var(--gold);margin-top:4px}}
 
 /* hero */
 .hero{{background:linear-gradient(180deg,var(--blue-900),var(--blue-800));color:var(--ivory);padding:72px 0 88px;border-bottom:3px solid var(--red)}}
@@ -244,6 +270,7 @@ footer a{{text-decoration:none}} footer a:hover{{color:var(--gold)}}
   .series article{{border-right:0;margin-right:0;border-bottom:1px solid var(--line);padding-right:0}}
   .explore .links{{grid-template-columns:repeat(2,1fr)}}
   .began{{grid-template-columns:1fr}}
+  .next-card{{grid-template-columns:1fr}}
   footer .wrap{{grid-template-columns:1fr 1fr}}
 }}
 @media (max-width:640px){{
@@ -278,15 +305,15 @@ footer a{{text-decoration:none}} footer a:hover{{color:var(--gold)}}
 <section class="hero">
   <div class="wrap">
     <div>
-      <span class="label">Greek history, faith and family memory</span>
-      <h1>The living story of <em>Greek civilization</em></h1>
-      <p class="lead">Documentaries for Greeks everywhere: the heroes, the customs, the music and the families who carried Greece with them. Real archives, sourced history, and the questions worth asking the people who raised you.</p>
-      <div class="actions">
+      <span class="label reveal" style="--d:.05s">Greek history, faith and family memory</span>
+      <h1 class="reveal" style="--d:.15s">The living story of <em>Greek civilization</em></h1>
+      <p class="lead reveal" style="--d:.28s">Documentaries for Greeks everywhere: the heroes, the customs, the music and the families who carried Greece with them. Real archives, sourced history, and the questions worth asking the people who raised you.</p>
+      <div class="actions reveal" style="--d:.4s">
         <a class="btn btn-gold" href="{watch(latest['id'])}" rel="noopener">Watch the newest episode</a>
         <a class="btn btn-line" href="#episodes">All episodes</a>
       </div>
     </div>
-    <a class="latest" href="{watch(latest['id'])}" rel="noopener">
+    <a class="latest reveal" style="--d:.3s" href="{watch(latest['id'])}" rel="noopener">
       <span class="frame">
         <img src="{thumb(latest['id'])}" onerror="this.onerror=null;this.src='{thumb(latest['id'],'hqdefault')}'" alt="{e(latest['title'])}" width="1280" height="720">
         <span class="new label">New</span>
@@ -302,13 +329,27 @@ footer a{{text-decoration:none}} footer a:hover{{color:var(--gold)}}
 </section>
 
 <div class="creed" aria-label="The KRIOS creed">
-  <ol><li>Preserve</li><li>Teach</li><li>Understand</li><li>Connect</li><li>Pass forward</li></ol>
+  <ol><li class="reveal" style="--d:0s">Preserve</li><li class="reveal" style="--d:.08s">Teach</li><li class="reveal" style="--d:.16s">Understand</li><li class="reveal" style="--d:.24s">Connect</li><li class="reveal" style="--d:.32s">Pass forward</li></ol>
 </div>
+
+<section class="next reveal" aria-label="Coming next">
+  <div class="wrap">
+    <a class="next-card" href="{SUB}" rel="noopener">
+      <span class="next-img"><img src="/images/sacred-days-saint-demetrios.jpg" alt="Saint Demetrios: More Than a Name Day" width="960" height="540" loading="lazy"></span>
+      <span class="next-body">
+        <span class="label">Sacred Days · Coming October 26</span>
+        <span class="next-title">Saint Demetrios: More Than a Name Day</span>
+        <span class="next-text">The saint of Thessaloniki, and the name day so many Greek families celebrate. On YouTube on his feast day.</span>
+        <span class="next-cta">Subscribe to get it first →</span>
+      </span>
+    </a>
+  </div>
+</section>
 
 <section class="band why" id="why">
   <div class="wrap">
-    <blockquote>History tells us what happened. KRIOS shows <em>why it still lives in us.</em></blockquote>
-    <div class="text">
+    <blockquote class="reveal">History tells us what happened. KRIOS shows <em>why it still lives in us.</em></blockquote>
+    <div class="text reveal" style="--d:.12s">
       <p>Greek civilization didn't end in antiquity. It changed, survived occupation, crossed oceans in suitcases and lived on in kitchens, churches and name days.</p>
       <p>Each film follows one real story, from the past to a living family today, and lets the evidence show what was kept, what changed and what was lost.</p>
       <ul class="ladder">
@@ -323,15 +364,15 @@ footer a{{text-decoration:none}} footer a:hover{{color:var(--gold)}}
 
 <section class="band eps" id="episodes">
   <div class="wrap">
-    <div class="head">
+    <div class="head reveal">
       <div><span class="label">The documentaries</span><h2>Every episode, newest first</h2></div>
       <a class="more" href="{YT}/videos" rel="noopener">Watch on YouTube ↗</a>
     </div>
-    <h3 class="season">Season 3 · The living story</h3>
+    <h3 class="season reveal">Season 3 · The living story</h3>
     <p class="season-note">Since October 2026 the films follow Greek life as it is lived now: what families carried when they left, and how it survives.</p>
     <ul class="grid">{s3}
     </ul>
-    <h3 class="season">Season 2 · Heroes, heroines and forgotten history</h3>
+    <h3 class="season reveal">Season 2 · Heroes, heroines and forgotten history</h3>
     <ul class="grid">{s2}
     </ul>
     <div class="began">
@@ -347,10 +388,10 @@ footer a{{text-decoration:none}} footer a:hover{{color:var(--gold)}}
 
 <section class="band series" id="series">
   <div class="wrap">
-    <div class="head">
+    <div class="head reveal">
       <div><span class="label">Series</span><h2>Three ways into the story</h2></div>
     </div>
-    <div class="cols">
+    <div class="cols reveal">
       <article>
         <span class="gr">Ρίζες</span>
         <h3>Living Roots</h3>
@@ -361,12 +402,12 @@ footer a{{text-decoration:none}} footer a:hover{{color:var(--gold)}}
         <span class="gr">Γιορτές</span>
         <h3>Sacred Days · Living Traditions</h3>
         <p>Feast days, name days and national days, released on the day itself. What families celebrate, why their grandparents celebrated it, and how it differs from village to village and city to city.</p>
-        <a class="more" href="{SUB}" rel="noopener">Subscribe for the next one</a>
+        <a class="more" href="{SUB}" rel="noopener">Next: Saint Demetrios, October 26</a>
       </article>
       <article>
         <span class="gr">Θυμάμαι</span>
         <h3>Growing Up Greek</h3>
-        <p>The things many of us remember: Sunday in church, the icon on the wall, Greek school after school, the team you were born into. Stories that start with "I remember that" and lead somewhere deeper.</p>
+        <p>The things many of us remember: Sunday in church, the icon on the wall, Greek school after school, the team you were born into. Stories that start with "I remember that" and lead to the history behind it.</p>
         <a class="more" href="{SUB}" rel="noopener">Coming to the channel</a>
       </article>
     </div>
@@ -375,16 +416,16 @@ footer a{{text-decoration:none}} footer a:hover{{color:var(--gold)}}
 
 <section class="band method" id="how">
   <div class="wrap">
-    <div class="head">
+    <div class="head reveal">
       <div><span class="label">How we work</span><h2>Built on evidence, told by people</h2></div>
       <p>If a claim can't be traced to a source, it doesn't go in the film. When the evidence runs out, we say so.</p>
     </div>
-    <ul class="rules">
+    <ul class="rules reveal">
       <li><b>The oldest source, not the most famous</b><span>Primary sources and named scholarship for every historical claim, checked before recording and again on the finished film.</span></li>
       <li><b>Real archives first</b><span>Historical photographs, documents, icons and maps, credited with their licence. Low-resolution archives are shown as framed prints, never stretched or AI-enhanced.</span></li>
       <li><b>Illustration is labelled</b><span>Where no photograph exists, some everyday scenes are illustrated. They are marked on screen and never stand in for sacred or historical evidence.</span></li>
       <li><b>History, tradition and belief kept apart</b><span>We say which is which: what is documented, what the Church teaches, what families practice, and where communities differ.</span></li>
-      <li><b>A human voice</b><span>Today every documentary is narrated by a real person, not a synthetic voice.</span></li>
+      <li><b>A human voice</b><span>Every documentary today is narrated in a human voice.</span></li>
       <li><b>English and Greek</b><span>New films get English and Greek captions reviewed by people, so the story reaches every generation of the family.</span></li>
     </ul>
   </div>
@@ -392,21 +433,21 @@ footer a{{text-decoration:none}} footer a:hover{{color:var(--gold)}}
 
 <section class="band explore" id="explore">
   <div class="wrap">
-    <div class="head">
+    <div class="head reveal">
       <div><span class="label">Explore</span><h2>Keep reading</h2></div>
     </div>
-    <div class="links">
+    <div class="links reveal">
       <a class="tile" href="/answers/"><b>Greek history Q&amp;A</b><span>Short, sourced answers to the questions people actually ask.</span></a>
       <a class="tile" href="/blog/"><b>Episode articles</b><span>The written companions to the films, with sources.</span></a>
       <a class="tile" href="/tools/"><b>Quizzes and tools</b><span>Test what you know, including Real or Fake.</span></a>
-      <a class="tile" href="/links.html"><b>All KRIOS links</b><span>YouTube, social channels and everything else in one place.</span></a>
+      <a class="tile" href="/links.html"><b>All KRIOS links</b><span>YouTube and every KRIOS page in one place.</span></a>
     </div>
   </div>
 </section>
 
 <section class="ask">
   <div class="wrap">
-    <h2>Who taught you yours?</h2>
+    <h2 class="reveal">Who taught you yours?</h2>
     <p>Behind every Greek custom, recipe and dance is a place, a family and somebody who decided it was worth remembering. Ask them while you can.</p>
     <a class="btn btn-gold" href="{SUB}" rel="noopener">Subscribe on YouTube</a>
   </div>
@@ -437,6 +478,16 @@ footer a{{text-decoration:none}} footer a:hover{{color:var(--gold)}}
     </div>
   </div>
 </footer>
+<script>
+(function(){{
+  
+  var els=[].slice.call(document.querySelectorAll('.reveal'));
+  if(!('IntersectionObserver' in window)){{els.forEach(function(e){{e.classList.add('in')}});return;}}
+  var io=new IntersectionObserver(function(es){{es.forEach(function(e){{if(e.isIntersecting){{e.target.classList.add('in');io.unobserve(e.target);}}}})}},{{rootMargin:'0px 0px -8% 0px',threshold:0.08}});
+  els.forEach(function(e){{io.observe(e)}});
+  var on=function(){{document.body.classList.toggle('scrolled',window.scrollY>8)}}; window.addEventListener('scroll',on,{{passive:true}}); on();
+}})();
+</script>
 </body>
 </html>
 """

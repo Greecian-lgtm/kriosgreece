@@ -58,6 +58,7 @@ REVEAL = ("<script>(function(){var d=document.documentElement;d.className+=' js'
 
 
 def page(path, title, desc, canonical, active, body, extra_js=""):
+    from site_parts import SHARE_IMAGE, ld_script, breadcrumbs
     out = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -67,6 +68,8 @@ def page(path, title, desc, canonical, active, body, extra_js=""):
 <link rel="canonical" href="https://kriosgreece.com{canonical}">
 <meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}">
 <meta property="og:url" content="https://kriosgreece.com{canonical}"><meta property="og:type" content="website">
+<meta property="og:site_name" content="KRIOS"><meta property="og:image" content="{SHARE_IMAGE}"><meta name="twitter:card" content="summary_large_image">
+{ld_script(breadcrumbs((re.sub(r" · KRIOS$", "", title), canonical)))}
 {FONT}
 {REVEAL}
 </head>

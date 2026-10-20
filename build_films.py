@@ -1,10 +1,10 @@
 # Builds /films/, /sacred-days/ and /how-we-work/ from the data files. Run by build_home.py.
 # No episode numbers, no season numbers. Film pages (/films/<slug>/) are not generated yet:
 # they need director-approved content files (Gate C plan, Phase 5), so cards link to YouTube.
-import os
+import json, os
 from site_lib import (ROOT, EP, UP, S1, SUBJ, SD, e, watch, nice, short, weekday, card, s1card, upcoming_card,
                       featured, featured_film, calendar_entries, film_for_feast, sacred_films, ILLUSTRATION_NOTE, MONTHS)
-from site_parts import head, header, footer, SCRIPTS, SUB
+from site_parts import head, header, footer, SCRIPTS, SUB, breadcrumbs
 
 FILTER_JS = """<script>(function(){var c=[].slice.call(document.querySelectorAll('[data-f]'));if(!c.length)return;
 var live=document.getElementById('f-status');
@@ -24,8 +24,8 @@ def write(path, html_text):
     open(full, "w", encoding="utf-8").write(html_text)
 
 
-def page(path, title, desc, canonical, active, body, extra_js=""):
-    write(path, f"""{head(title, desc, canonical)}
+def page(path, title, desc, canonical, active, body, extra_js="", image=None, ld=None):
+    write(path, f"""{head(title, desc, canonical, image=image, ld=ld)}
 <body>
 {header(active)}
 <main id="main">
@@ -69,7 +69,7 @@ films_body = f'''<div class="wrap m-page">
   </div>
 </div>'''
 page("films/index.html", "Films · KRIOS", f"Every KRIOS documentary: Greek history, faith, music and family memory. {n_films} films, newest first.",
-     "/films/", "Films", films_body, FILTER_JS)
+     "/films/", "Films", films_body, FILTER_JS, ld=[breadcrumbs(("Films", "/films/"))])
 
 # ================= /sacred-days/ =================
 rows = ""
@@ -108,6 +108,10 @@ related = (card(faith) if faith else "") + (
     '<a class="m-card m-card--text reveal" href="/blog/ep012-cryptochristians.html"><span class="m-cbody"><span class="label m-kick">Article</span>'
     "<span class=\"m-ctitle\">They Didn't Lose Their Faith. They Hid It Inside the Empire Trying to Erase It.</span>"
     '<span class="m-cta">Read the article →</span></span></a>')
+GUIDES = json.load(open(os.path.join(ROOT, "data", "guides.json"), encoding="utf-8"))["guides"]
+guide_cards = "".join(
+    f'<a class="m-card m-card--text reveal" href="/{g["slug"]}/"><span class="m-cbody"><span class="label m-kick">{e(g["kicker"])}</span>'
+    f'<span class="m-ctitle">{e(g["title"])}</span><span class="m-cta">Read →</span></span></a>' for g in GUIDES)
 sacred_body = f'''<section class="m-sdhero"><div class="wrap">
   <span class="label m-kick m-gold reveal">Sacred Days · Living traditions</span>
   <h1 class="reveal">The days we remember</h1>
@@ -120,11 +124,12 @@ sacred_body = f'''<section class="m-sdhero"><div class="wrap">
     <ol class="m-feasts">{rows}</ol>
     <p class="m-note-sm reveal">{e(SD["calendar_note"])}</p></section>
   <section class="m-group"><h2 class="reveal">Sacred Days films</h2>{films_html}</section>
+  <section class="m-group"><h2 class="reveal">Name days and national days</h2><div class="m-grid m-grid--3">{guide_cards}</div></section>
   <section class="m-group"><h2 class="reveal">Related films and reading</h2><div class="m-grid m-grid--3">{related}</div></section>
 </div>'''
 page("sacred-days/index.html", "Sacred Days · KRIOS",
      "Sacred Days: Greek Orthodox feast days and name days, with KRIOS documentaries released on the day itself.",
-     "/sacred-days/", "Sacred Days", sacred_body)
+     "/sacred-days/", "Sacred Days", sacred_body, ld=[breadcrumbs(("Sacred Days", "/sacred-days/"))])
 
 # ================= /how-we-work/ =================
 how_body = '''<section class="band method m-method-page" id="how">
@@ -144,7 +149,7 @@ how_body = '''<section class="band method m-method-page" id="how">
   </div>
 </section>'''
 page("how-we-work/index.html", "How we work · KRIOS", "The KRIOS standards: sources, real archives, labelled illustration, and history, tradition and belief kept apart.",
-     "/how-we-work/", "", how_body)
+     "/how-we-work/", "", how_body, ld=[breadcrumbs(("How we work", "/how-we-work/"))])
 print("films, sacred-days, how-we-work built")
 
 # ================= film pages (/films/<slug>/) =================
@@ -244,7 +249,16 @@ for f in FILMS:
   {"".join(f'<section class="m-fsec reveal" id="{k}">' + (f"<h2>{h}</h2>" if h else "") + f"{c}</section>" for k, h, c in secs)}
   <section class="m-fsec reveal" id="more"><h2>Continue exploring</h2><div class="m-grid m-grid--3">{related_html(f.get("related", []), (x or {}).get("id"))}</div></section>
 </div>'''
-    page(f"films/{f['slug']}/index.html", f"{title} · KRIOS", intro or title, f"/films/{f['slug']}/", "Films", body, LITE_JS)
+    film_ld = [breadcrumbs(("Films", "/films/"), (title, f"/films/{f['slug']}/"))]
+    if x:
+        film_ld.append({"@context": "https://schema.org", "@type": "VideoObject", "name": title,
+                        "description": intro or title, "thumbnailUrl": [thumb(x["id"], "maxresdefault"), thumb(x["id"])],
+                        "uploadDate": x["date"], "embedUrl": f"https://www.youtube.com/embed/{x['id']}",
+                        "url": watch(x["id"]), "inLanguage": "en",
+                        "publisher": {"@type": "Organization", "name": "KRIOS", "url": "https://kriosgreece.com/"}})
+    share_img = (hero_img["src"] if hero_img else (thumb(x["id"], "maxresdefault") if x else up["image"]))
+    page(f"films/{f['slug']}/index.html", f"{title} · KRIOS", intro or title, f"/films/{f['slug']}/", "Films", body, LITE_JS,
+         image=share_img, ld=film_ld)
 print("film pages:", [f["slug"] for f in FILMS])
 
 # ================= quizzes and Q&A for the newer films =================
@@ -276,7 +290,8 @@ for t in EXTRAS:
     <p class="m-links"><a class="btn btn-gold" href="{watch(x["id"])}" rel="noopener">Watch the film</a>{f'<a class="m-more" href="{fp}">About the film →</a>' if fp else ""}<button type="button" class="btn btn-navy" id="quiz-again">Try again</button></p></div>
   <script type="application/json" id="quiz-data">{_json.dumps(data, ensure_ascii=False).replace("</", "<\\/")}</script>
 </div>'''
-    page(f"tools/quiz-{q['slug']}.html", f"Quiz: {x['title']} · KRIOS", q["intro"], f"/tools/quiz-{q['slug']}.html", "Quizzes", body, QUIZ_JS)
+    page(f"tools/quiz-{q['slug']}.html", f"Quiz: {x['title']} · KRIOS", q["intro"], f"/tools/quiz-{q['slug']}.html", "Quizzes", body, QUIZ_JS,
+         image=thumb(x["id"], "maxresdefault"), ld=[breadcrumbs(("Quizzes", "/tools/"), (q["title"], f"/tools/quiz-{q['slug']}.html"))])
     for a in t.get("qa", []):
         src = "".join(f'<li><a href="{s["url"]}" rel="noopener">{e(s["cite"])}</a></li>' for s in a.get("sources", []))
         body = f'''<div class="wrap m-page m-narrow">
@@ -287,5 +302,44 @@ for t in EXTRAS:
   <div class="k-note m-qa-film"><b>From the film</b> <a href="{fp or watch(x["id"])}">{e(x["title"])}</a>{f' · <a href="/tools/quiz-{q["slug"]}.html">Take the quiz</a>'}</div>
   </article>
 </div>'''
-        page(f"answers/{a['slug']}/index.html", f"{a['title']} · KRIOS", a["answer"][0][:155], f"/answers/{a['slug']}/", "Q&amp;A", body)
+        qa_ld = [breadcrumbs(("Q&A", "/answers/"), (a["title"], f"/answers/{a['slug']}/")),
+                 {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": a["title"],
+                  "acceptedAnswer": {"@type": "Answer", "text": " ".join(a["answer"])}}]}]
+        page(f"answers/{a['slug']}/index.html", f"{a['title']} · KRIOS", a["answer"][0][:155], f"/answers/{a['slug']}/", "Q&amp;A", body,
+             image=thumb(x["id"], "maxresdefault"), ld=qa_ld)
 print("quizzes and Q&A for newer films:", [t["quiz"]["slug"] for t in EXTRAS])
+
+
+# ================= guides: name days and national days (data/guides.json) =================
+for g in GUIDES:
+    feast = next((f for f in SD["feasts"] if f["key"] == g.get("feast_key")), None)
+    x = released({"title": g["film_match"]}) if g.get("film_match") else None
+    up = None if x or not g.get("film_match") else next((u for u in UP if g["film_match"].lower() in u["title"].lower()), None)
+    when = f'<p class="m-filmmeta">This year: {weekday(feast["date"])}, {nice(feast["date"])}</p>' if feast else ""
+    secs = "".join(f'<section class="m-fsec reveal"><h2>{e(s["h"])}</h2>' + "".join(f"<p>{e(p_)}</p>" for p_ in s["p"]) + "</section>" for s in g["sections"])
+    film = ""
+    if x:
+        film = (f'<section class="m-fsec reveal"><h2>The KRIOS film</h2><p><b>{e(x["title"])}</b>. {e(x.get("tease", ""))}</p>'
+                f'<p class="m-links"><a class="btn btn-gold" href="{watch(x["id"])}" rel="noopener">Watch on YouTube</a>'
+                + (f' <a class="m-more" href="/films/{g["film_slug"]}/">About the film →</a>' if g.get("film_slug") else "") + "</p></section>")
+    elif up:
+        film = (f'<section class="m-fsec reveal"><h2>The KRIOS film</h2><p><b>{e(up["title"])}</b> premieres on YouTube on '
+                f'{weekday(up["date"])}, {nice(up["date"])}, the feast day.</p><p class="m-links"><a class="btn btn-gold" href="{SUB}" rel="noopener">Subscribe to see it first</a>'
+                + (f' <a class="m-more" href="/films/{g["film_slug"]}/">About the film →</a>' if g.get("film_slug") else "") + "</p></section>")
+    else:
+        film = (f'<section class="m-fsec reveal"><h2>Watch KRIOS</h2><p>Documentaries on Greek history, faith and family memory.</p>'
+                f'<p class="m-links"><a class="btn btn-gold" href="/films/">Browse the films</a> <a class="m-more" href="{SUB}" rel="noopener">Subscribe on YouTube →</a></p></section>')
+    ask = '<section class="m-fsec reveal"><h2>Ask someone in your family</h2><ul class="m-askqs">' + "".join(f"<li>{e(q)}</li>" for q in g["ask"]) + "</ul></section>"
+    src = '<section class="m-fsec reveal"><h2>Sources</h2><ul class="m-srclist">' + "".join(
+        f'<li><a href="{s["url"]}" rel="noopener">{e(s["cite"])}</a></li>' for s in g["sources"]) + "</ul></section>"
+    crumb_name, crumb_url = ("Sacred Days", "/sacred-days/")
+    body = f'''<div class="wrap m-page m-narrow">
+  <nav class="m-crumbs" aria-label="Breadcrumb"><a href="{crumb_url}">{crumb_name}</a> › {e(g["title"])}</nav>
+  <header class="m-phead reveal"><span class="label m-kick">{e(g["kicker"])}</span><h1>{e(g["title"])}</h1>{when}<p class="m-filmintro">{e(g["lead"])}</p></header>
+  {secs}{film}{ask}{src}
+</div>'''
+    ld = [breadcrumbs((crumb_name, crumb_url), (g["title"], f"/{g['slug']}/")),
+          {"@context": "https://schema.org", "@type": "Article", "headline": g["seo_title"], "description": g["desc"],
+           "mainEntityOfPage": f"https://kriosgreece.com/{g['slug']}/", "publisher": {"@type": "Organization", "name": "KRIOS", "url": "https://kriosgreece.com/"}}]
+    page(f"{g['slug']}/index.html", f"{g['seo_title']} · KRIOS", g["desc"], f"/{g['slug']}/", "Sacred Days", body, ld=ld)
+print("guides:", [g["slug"] for g in GUIDES])

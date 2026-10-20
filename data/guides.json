@@ -1,0 +1,59 @@
+{
+ "_note": "Short evergreen pages built for search (name days, national days). Every factual line comes from a verified source listed with the page or from a claim-ledger row marked USABLE. No held film content: a film's story, sources and quiz stay on its own page until release. Director preview required before first publication.",
+ "guides": [
+  {
+   "slug": "sacred-days/saint-demetrios-name-day",
+   "kicker": "Sacred Days · Name day",
+   "title": "When is Saint Demetrios name day?",
+   "seo_title": "When is Saint Demetrios name day? Dimitris, Dimitrios and Dimitra",
+   "desc": "Saint Demetrios name day is October 26 (November 8 on the Old Calendar). Who celebrates it, what to say, and the KRIOS film on the feast.",
+   "feast_key": "st-demetrios",
+   "film_match": "Saint Demetrios",
+   "film_slug": "saint-demetrios",
+   "lead": "October 26. On the calendar followed by the Church of Greece, the feast of Saint Demetrios (Άγιος Δημήτριος), the saint of Thessaloniki, falls on October 26 every year.",
+   "sections": [
+    {"h": "Who celebrates", "p": ["People named Dimitris (Δημήτρης), Dimitrios (Δημήτριος) and Dimitra (Δήμητρα) celebrate their name day on the feast of Saint Demetrios."]},
+    {"h": "Old Calendar communities", "p": ["Churches that keep the Old (Julian) Calendar celebrate the same feast 13 days later, on November 8 of the civil calendar."]},
+    {"h": "What to say", "p": ["The usual wish on a name day is Χρόνια πολλά (Chronia polla), “many years”."]}
+   ],
+   "ask": ["Who in your family is named Dimitris, Dimitrios or Dimitra?", "Who were they named after?", "How did your family celebrate the name day when you were young?"],
+   "sources": [
+    {"cite": "Saint John's Monastery: Saint Demetrius the Myrrh-streamer (feast October 26; Old Calendar November 8)", "url": "https://www.saintjohnsmonastery.org/saint-demetrius-the-myrrh-streamer/"}
+   ]
+  },
+  {
+   "slug": "ohi-day",
+   "kicker": "Living history · National day",
+   "title": "Ohi Day, October 28",
+   "seo_title": "Ohi Day, October 28: what happened in 1940 and how Greeks remember it",
+   "desc": "Why Greeks mark October 28: Italy's ultimatum of 1940, the refusal that became the word ΟΧΙ, and how the day is remembered in Greece and abroad.",
+   "lead": "On October 28, Greeks remember the morning in 1940 when Greece refused Italy's ultimatum and went to war. It is a national holiday in Greece and in Cyprus.",
+   "sections": [
+    {"h": "What happened on October 28, 1940", "p": [
+      "Just before three in the morning, the Italian ambassador, Emanuele Grazzi, arrived at the house of Prime Minister Ioannis Metaxas in Kifissia, near Athens. He carried an ultimatum from Mussolini: let Italian troops into Greece to occupy strategic points.",
+      "Metaxas did not answer with a single word. Speaking French, he told the ambassador that this meant war. The Greek people turned that refusal into one word: ΟΧΙ, “no”.",
+      "At half past five, before the deadline had even expired, Italian troops crossed from Albania into Epirus.",
+      "The refusal came from Metaxas, who had ruled Greece as a dictator since 1936. The resistance that followed belonged to the whole nation. In the mountains of the Pindus, where mules could not climb, women carried shells and supplies on their own backs."
+    ]},
+    {"h": "How the day is remembered", "p": [
+      "Greeks marked the anniversary even under occupation, and after liberation it became a national holiday.",
+      "In Thessaloniki, soldiers march before the President of the Republic. In towns and villages across Greece, schoolchildren parade under blue-and-white flags.",
+      "On the same day the Church of Greece celebrates the Protection of the Theotokos (Αγία Σκέπη), a feast it placed on October 28 in 1952. It is a church feast, separate from the national commemoration.",
+      "Abroad, Greek communities gather in church and at war memorials. In Australia, doxologies and wreath-layings are held in Melbourne, Sydney and Adelaide."
+    ]}
+   ],
+   "ask": ["Who in your family first told you about the ΟΧΙ?", "Did anyone in your family serve on the Albanian front, or live through the war at home?", "What did your school do on October 28?"],
+   "sources": [
+    {"cite": "Hellenic Army General Staff: October 28, 1940", "url": "https://army.gr/?p=118206"},
+    {"cite": "Hellenic War Museum: the house of Ioannis Metaxas (the \"Ochi\" house)", "url": "https://militarytourism.warmuseum.gr/en/attractions/house-ioannis-metaxas-ochi-house"},
+    {"cite": "To Vima: How the Greco-Italian War began in 1940", "url": "https://www.tovima.gr/2022/10/28/international/october-28-this-is-how-the-greco-italian-war-began-in-1940/amp/"},
+    {"cite": "Britannica: Ioannis Metaxas", "url": "https://www.britannica.com/biography/Ioannis-Metaxas"},
+    {"cite": "Foundation of the Hellenic World: the women of Pindos (soldier's diary, 7 November 1940)", "url": "https://www.fhw.gr/Chronos/14/en/1940_1945/war/pigi05.html"},
+    {"cite": "EBSCO Research Starters: Ochi Day (Greece and Cyprus)", "url": "https://www.ebsco.com/research-starters/history/ochi-day-greece-and-cyprus"},
+    {"cite": "Greek News Agenda: Ohi Day parade in Thessaloniki", "url": "https://www.greeknewsagenda.gr/ohi-day-president-pavlopoulos-calls-for-unity-to-achieve-national-objectives/"},
+    {"cite": "Orthodoxia News Agency: the feast of the Protection of the Theotokos on October 28", "url": "https://www.orthodoxianewsagency.gr/pdf.php?id=156363"},
+    {"cite": "Greek Herald: Ohi Day in Melbourne, Sydney and Adelaide", "url": "https://greekherald.com.au/?p=194877"}
+   ]
+  }
+ ]
+}

@@ -68,8 +68,33 @@ SCRIPTS = '''<script src="/assets/site-nav.js" defer></script>
 </script>'''
 
 
-def head(title, desc, canonical, extra=""):
+SITE = "https://kriosgreece.com"
+SHARE_IMAGE = SITE + "/images/share-default.jpg"
+
+
+def ld_script(obj):
+    """One JSON-LD block, safe to place inside HTML."""
+    import json
+    return '<script type="application/ld+json">' + json.dumps(obj, ensure_ascii=False).replace("</", "<\\/") + "</script>"
+
+
+def breadcrumbs(*items):
+    """BreadcrumbList from (name, path) pairs, starting after Home."""
+    els = [("KRIOS", "/")] + list(items)
+    return {"@context": "https://schema.org", "@type": "BreadcrumbList",
+            "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": n, "item": SITE + u} for i, (n, u) in enumerate(els)]}
+
+
+def head(title, desc, canonical, extra="", image=None, ld=None, og_type="website"):
     e = html.escape
+    share = ""
+    if "og:image" not in extra:
+        img = image or SHARE_IMAGE
+        if img.startswith("/"):
+            img = SITE + img
+        share = (f'<meta property="og:image" content="{e(img)}">\n'
+                 '<meta name="twitter:card" content="summary_large_image">\n')
+    lds = "".join(ld_script(o) + "\n" for o in (ld or []))
     return f'''<!doctype html>
 <html lang="en">
 <head>
@@ -78,11 +103,12 @@ def head(title, desc, canonical, extra=""):
 <title>{e(title)}</title>
 <meta name="description" content="{e(desc)}">
 <link rel="canonical" href="https://kriosgreece.com{canonical}">
-<meta property="og:type" content="website">
+<meta property="og:type" content="{og_type}">
+<meta property="og:site_name" content="KRIOS">
 <meta property="og:title" content="{e(title)}">
 <meta property="og:description" content="{e(desc)}">
 <meta property="og:url" content="https://kriosgreece.com{canonical}">
-<meta name="theme-color" content="#14213a">
+{share}{lds}<meta name="theme-color" content="#14213a">
 <script>document.documentElement.classList.add("js")</script>
 {FONTS}
 <link rel="stylesheet" href="/assets/site.css">

@@ -5,7 +5,7 @@ import { AxeBuilder } from '@axe-core/playwright';
 const BASE = process.argv[2] || 'http://localhost:8000';
 const SHOTS = process.argv[3] || '';
 const PAGES = ['/', '/films/', '/sacred-days/', '/how-we-work/', '/blog/', '/answers/', '/tools/',
-  '/blog/ep014-rebetiko.html', '/films/the-greek-dance/', '/films/the-greeks-who-left/', '/films/saint-demetrios/', '/tools/quiz-the-greeks-who-left.html', '/answers/is-sirtaki-a-traditional-greek-dance/', '/tools/quiz-bouboulina.html', '/answers/who-was-athanasios-diakos/', '/answers/who-was-theseus/', '/tools/quiz-ep001-achilles.html'];
+  '/blog/ep014-rebetiko.html', '/films/the-greek-dance/', '/films/the-greeks-who-left/', '/films/saint-demetrios/', '/tools/quiz-the-greeks-who-left.html', '/answers/is-sirtaki-a-traditional-greek-dance/', '/tools/quiz-bouboulina.html', '/answers/who-was-athanasios-diakos/', '/answers/who-was-theseus/', '/tools/quiz-ep001-achilles.html', '/sacred-days/saint-demetrios-name-day/', '/ohi-day/'];
 const WIDTHS = [320, 390, 768, 1440];
 const opts = { headless: true };
 if (process.env.CHROMIUM_PATH) Object.assign(opts, { executablePath: process.env.CHROMIUM_PATH, args: ['--headless=new'], ignoreDefaultArgs: ['--headless=old'] });

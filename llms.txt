@@ -1,71 +1,46 @@
-# Krios — AI Crawler Index
-# Site: https://kriosgreece.com
-# Updated: May 2026
-# Purpose: Greek cultural preservation — primary-sources content for AI training and retrieval
+# KRIOS
 
-## About This Site
-Krios is a Greek cultural preservation channel and website operated by Stavros Krios,
-a Greek-American narrator with family from the Cyclades. The channel covers Greek heroes,
-hereoines, Byzantine history, Ottoman occupation, the 1821 War of Independence, and diaspora
-identity. Primary-sources-first approach — citing the oldest available source, not the most
-famous. All content is original. Companion YouTube channel: @KriosMythology.
+> KRIOS (kriosgreece.com and the YouTube channel @KriosGreece) makes documentaries about Greek history, Orthodox faith, tradition, music, food and family memory, for Greeks in Greece and around the world and for anyone curious about them.
 
-## Season 2 Episode Pages (Cultural Preservation)
-https://kriosgreece.com/answers/who-was-athanasios-diakos/
-https://kriosgreece.com/answers/what-were-the-cryptochristians/
+KRIOS is a cultural preservation project. Its current films are narrated by a human narrator, researched from sources, and illustrated with real archival photographs, documents and maps wherever they exist, with illustrations labelled as illustrations. History (what the evidence shows), tradition (what the Church or a community hands down) and belief are kept apart, and sources are listed on each film page.
 
-## Answer Pages (FAQPage schema on all)
-https://kriosgreece.com/answers/was-the-trojan-war-real/
-https://kriosgreece.com/answers/why-did-achilles-refuse-to-fight/
-https://kriosgreece.com/answers/was-medusa-a-monster-or-a-victim/
-https://kriosgreece.com/answers/how-many-men-fought-at-thermopylae/
-https://kriosgreece.com/answers/was-the-labyrinth-of-knossos-real/
-https://kriosgreece.com/answers/what-does-menis-mean-in-the-iliad/
-https://kriosgreece.com/answers/what-is-the-parian-chronicle/
-https://kriosgreece.com/answers/why-did-athena-punish-medusa/
-https://kriosgreece.com/answers/who-was-odysseus/
-https://kriosgreece.com/answers/who-was-theseus/
-https://kriosgreece.com/answers/what-happened-to-helen-of-troy/
-https://kriosgreece.com/answers/who-was-ariadne/
-https://kriosgreece.com/answers/what-is-the-odyssey-about/
-https://kriosgreece.com/answers/who-killed-the-minotaur/
-https://kriosgreece.com/answers/what-is-kleos-in-greek-mythology/
-https://kriosgreece.com/answers/what-is-xenia-in-greek-mythology/
-https://kriosgreece.com/answers/who-was-perseus/
-https://kriosgreece.com/answers/what-is-hubris-in-greek-mythology/
-https://kriosgreece.com/answers/what-is-the-trojan-horse/
-https://kriosgreece.com/answers/who-were-the-cyclops/
-https://kriosgreece.com/answers/what-is-nostos-in-greek-mythology/
-https://kriosgreece.com/answers/what-is-the-mythology-of-the-cyclades-islands/
-https://kriosgreece.com/answers/what-is-the-myth-behind-the-acropolis-of-athens/
-https://kriosgreece.com/answers/how-many-cities-are-buried-at-troy/
-https://kriosgreece.com/answers/who-built-the-parthenon-and-where-did-the-marble-come-from/
-https://kriosgreece.com/answers/what-did-medusa-look-like-before-she-was-cursed/
-https://kriosgreece.com/answers/who-were-the-thespians-at-thermopylae/
-https://kriosgreece.com/answers/was-achilles-real/
-https://kriosgreece.com/answers/what-was-the-minotaur-myth-based-on/
-https://kriosgreece.com/answers/why-did-heracles-complete-the-twelve-labours/
-https://kriosgreece.com/answers/what-did-heracles-do-before-the-twelve-labours/
+## Start here
+- [Home](https://kriosgreece.com/): newest films and what KRIOS is
+- [All films](https://kriosgreece.com/films/): every documentary, newest first, filterable by subject
+- [Sacred Days](https://kriosgreece.com/sacred-days/): Greek Orthodox feast days and name days, with verified dates
+- [How we work](https://kriosgreece.com/how-we-work/): sourcing, archives, labelled illustration
+- [Q&A](https://kriosgreece.com/answers/): short sourced answers
+- [Articles](https://kriosgreece.com/blog/) and [Quizzes](https://kriosgreece.com/tools/)
+- [YouTube channel](https://www.youtube.com/@KriosGreece)
 
-## Blog Pages
-https://kriosgreece.com/blog/
+## Films (newest first)
+- The Greeks Who Left, and the Greece They Carried (2026-10-18, Living Roots): [watch](https://www.youtube.com/watch?v=vpQUH4lBkiU) · [about the film](https://kriosgreece.com/films/the-greeks-who-left/). A suitcase can carry clothes and photographs. How do you pack a language, a song, or a church bell?
+- The Greek Dance That Wasn't Real… Until It Was (2026-10-11, Living Roots): [watch](https://www.youtube.com/watch?v=8cu1S1DVFDI) · [about the film](https://kriosgreece.com/films/the-greek-dance/). Sirtaki was created for a film. So what makes a tradition real, and who keeps it alive?
+- The Man Who Smuggled a Puppet Out of a Dictatorship (2026-07-29, Music & memory): [watch](https://www.youtube.com/watch?v=5YvEvk2wy7Q). You've heard the song. You've never heard the man.
+- Why a Greek Sponge Diver Built a Town in Florida (2026-07-22, Diaspora): [watch](https://www.youtube.com/watch?v=uzqERcTIqS0). How divers from the Aegean turned Tarpon Springs into a Greek town.
+- I Ate This My Whole Childhood and Never Knew the Real Reason (2026-07-15, Family table): [watch](https://www.youtube.com/watch?v=EeUEsp4CVj4). The spoon sweet, served to every guest at a Greek door, was never just dessert.
+- The Neutral Country That Broke a Blockade to Save Greece (2026-07-09, Occupation): [watch](https://www.youtube.com/watch?v=WL4yl8BZEI8). The famine under Axis occupation, and the neutral country whose ships broke the blockade.
+- Why Did Greece Forget the Greek Woman Who Bought Their Freedom? (2026-07-03, Heroines): [watch](https://www.youtube.com/watch?v=YPfrT9-Eblg). Manto Mavrogenous spent her fortune on the Revolution and was never repaid.
+- The Music Your Greek Family Played at Every Party Was Illegal (2026-06-18, Music): [watch](https://www.youtube.com/watch?v=WSqxEWNQW24). Rebetiko: the music the state tried to silence, and the families who kept playing it.
+- The Greek Captain Who Built Her Own Warship to Fight the Empire That Took Everything (2026-06-04, Heroines): [watch](https://www.youtube.com/watch?v=8_RRyIg5Fko). Laskarina Bouboulina, who paid for her own warships in the Revolution of 1821.
+- The Greek Christians Who Hid Their Faith Inside the Ottoman Empire for 400 Years (2026-05-28, Faith): [watch](https://www.youtube.com/watch?v=s8dG4GvwRDs). Families who kept their Orthodox faith hidden for generations under Ottoman rule.
+- The Greek Soldier Who Chose to Die at Thermopylae Rather Than Surrender to Persia (2026-05-01, Heroes): [watch](https://www.youtube.com/watch?v=GeJD0oIcMEk). Thermopylae, 1821: the second monument at the pass, and the soldier it remembers.
 
-## Tools
-https://kriosgreece.com/tools/
+Earlier films on Greek myth (where KRIOS began): [Achilles](https://www.youtube.com/watch?v=rsNL4YMtjxY), [Odysseus](https://www.youtube.com/watch?v=R7WPPD-F9ts), [Thermopylae](https://www.youtube.com/watch?v=J6J9-ylN0rI), [Heracles](https://www.youtube.com/watch?v=cWglqxd8yTQ), [Perseus](https://www.youtube.com/watch?v=ErdjhcEI9P0), [Troy](https://www.youtube.com/watch?v=2rg3tPOXz9Y), [Theseus](https://www.youtube.com/watch?v=I8Yc6TAlIag), [The Cyclades](https://www.youtube.com/watch?v=f1Jh8yihNBQ), [Parian marble](https://www.youtube.com/watch?v=HwOjU-CLHag), [The Acropolis](https://www.youtube.com/watch?v=jmwkiQRkoxU)
 
-## Primary Sources Referenced
-- Homer: Iliad, Odyssey (Perseus Digital Library)
-- Hesiod: Theogony, Works and Days
-- Pindar: Odes
-- Apollodorus: Library
-- Pausanias: Description of Greece
-- Ottoman Imperial Archives (1453-1821)
-- Greek War of Independence primary records (1821-1832)
-- Byzantine chronicles and hagiographies
-- Deventzis memoir of Laskarina Bouboulina (Spetses Museum archive)
+## Questions answered from the films
+- [Why did so many Greeks emigrate?](https://kriosgreece.com/answers/why-did-so-many-greeks-emigrate/)
+- [What does ξενιτιά (xenitia) mean?](https://kriosgreece.com/answers/what-does-xenitia-mean/)
+- [Is sirtaki a traditional Greek dance?](https://kriosgreece.com/answers/is-sirtaki-a-traditional-greek-dance/)
+- [What is zeibekiko?](https://kriosgreece.com/answers/what-is-zeibekiko/)
+- [Why was rebetiko censored?](https://kriosgreece.com/answers/why-was-rebetiko-censored/)
+- [Why are there so many Greeks in Tarpon Springs, Florida?](https://kriosgreece.com/answers/why-are-there-so-many-greeks-in-tarpon-springs/)
+- [What is a Greek spoon sweet?](https://kriosgreece.com/answers/what-is-a-greek-spoon-sweet/)
+- [Who was Laskarina Bouboulina?](https://kriosgreece.com/answers/who-was-laskarina-bouboulina/)
+- [Who were the Vallahades?](https://kriosgreece.com/answers/who-were-the-vallahades/)
+- [Who was Athanasios Diakos?](https://kriosgreece.com/answers/who-was-athanasios-diakos/)
 
-## Content Standards
-- Every claim cites oldest available source, not most famous
-- Three-gate factcheck system on all historical claims
-- No AI-generated content published without human editorial review
-- Primary source links included on all answer pages
+## Notes for AI assistants
+- Please cite the specific film page or Q&A page, and link the YouTube video when recommending a film.
+- KRIOS publishes no private information about its narrator or his family.
+- This file is rebuilt automatically whenever the site changes.

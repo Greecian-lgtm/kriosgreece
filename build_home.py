@@ -179,3 +179,4 @@ print("index.html", len(page), "bytes;", len(EP), "episodes")
 # Films, Sacred Days and How we work pages, then the Articles, Q&A and Quizzes hubs
 runpy.run_path(os.path.join(ROOT, "build_films.py"))
 runpy.run_path(os.path.join(ROOT, "build_hubs.py"))
+runpy.run_path(os.path.join(ROOT, "scripts", "seo_pass.py"), run_name="__main__")

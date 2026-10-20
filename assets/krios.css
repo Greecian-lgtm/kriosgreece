@@ -1,0 +1,74 @@
+/* KRIOS shared stylesheet for article, Q&A and utility pages (kriosgreece.com) */
+:root{
+  --blue-900:#101a2e; --blue-800:#14213a; --blue-700:#1c2d4d;
+  --ivory:#f5edd8; --ivory-2:#ebe1c7; --paper:#faf6ec;
+  --gold:#c9a35e; --gold-ink:#8a6a2c; --red:#7e2418;
+  --ink:#1d1a14; --ink-2:#4a4336; --line:#d9cdb0;
+  --serif:"EB Garamond", Georgia, "Times New Roman", serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0!important;padding:0!important;background:var(--paper)!important;color:var(--ink)!important;
+  font-family:var(--serif)!important;font-size:19px;line-height:1.62;-webkit-font-smoothing:antialiased;max-width:none!important}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+img{max-width:100%;height:auto}
+
+/* site chrome injected on every page */
+.k-top{background:var(--blue-900);color:var(--ivory);border-bottom:3px solid var(--red)}
+.k-top .k-in{max-width:1160px;margin:0 auto;padding:0 24px;min-height:64px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.k-brand{color:var(--ivory)!important;text-decoration:none!important;display:flex;align-items:baseline;gap:12px}
+.k-brand b{font-weight:600;letter-spacing:.22em;font-size:1.2rem}
+.k-brand span{color:var(--gold);font-style:italic;font-size:.92rem}
+.k-nav{display:flex;gap:20px;align-items:center;flex-wrap:wrap}
+.k-nav a{color:var(--ivory)!important;text-decoration:none!important;font-size:.95rem;opacity:.9}
+.k-nav a:hover{color:var(--gold)!important}
+.k-nav a.k-sub{background:var(--gold);color:var(--blue-900)!important;padding:7px 14px;opacity:1}
+.k-foot{background:var(--blue-900);color:#cfc5ab;margin-top:72px;padding:36px 0;font-size:.95rem}
+.k-foot .k-in{max-width:1160px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.k-foot a{color:#cfc5ab!important;text-decoration:none}
+.k-foot a:hover{color:var(--gold)!important}
+.k-foot i{color:var(--ivory)}
+
+/* content column */
+.k-main{max-width:760px;margin:0 auto;padding:48px 24px 0}
+.k-main > nav, .k-main > .nav, .k-main > header, .k-main > footer, .k-main .wrap > nav, .k-main .wrap > header{
+  background:none!important;border:0!important;padding:0!important;margin:0 0 18px!important;font-size:.9rem;color:var(--ink-2)!important}
+.k-main > nav a, .k-main > .nav a, .k-main > header a{color:var(--gold-ink)!important;text-decoration:none!important;margin-right:14px}
+.k-main > footer{border-top:1px solid var(--line)!important;padding-top:18px!important;margin-top:48px!important}
+.k-main .wrap, .k-main main, .k-main article, .k-main .container, .k-main .content{max-width:none!important;margin:0!important;padding:0!important;background:none!important;box-shadow:none!important;border:0!important}
+.k-main h1{font-weight:500!important;font-size:clamp(2rem,4.2vw,2.9rem)!important;line-height:1.1!important;margin:.25em 0 .5em!important;color:var(--blue-800)!important;font-family:var(--serif)!important;letter-spacing:-.005em!important;text-transform:none!important}
+.k-main h2{font-weight:500!important;font-size:1.65rem!important;line-height:1.2!important;margin:1.6em 0 .5em!important;color:var(--blue-800)!important;font-family:var(--serif)!important;text-transform:none!important;letter-spacing:0!important}
+.k-main h3{font-weight:500!important;font-size:1.3rem!important;margin:1.4em 0 .4em!important;color:var(--ink)!important;font-family:var(--serif)!important;text-transform:none!important;letter-spacing:0!important}
+.k-main p, .k-main li{color:var(--ink)!important;font-family:var(--serif)!important}
+.k-main p{margin:0 0 1em!important}
+.k-main a{color:var(--red)!important;text-decoration-thickness:1px;text-underline-offset:3px}
+.k-main a:hover{color:var(--blue-800)!important}
+.k-main ul, .k-main ol{padding-left:1.3em}
+.k-main li{margin:.3em 0}
+.k-main blockquote{margin:1.4em 0!important;padding:.4em 0 .4em 20px!important;border-left:3px solid var(--gold)!important;background:none!important;color:var(--ink-2)!important;font-style:italic}
+.k-main .meta, .k-main .byline, .k-main .date{font-size:.82rem!important;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-ink)!important}
+.k-main table{border-collapse:collapse;width:100%;margin:1.2em 0;font-size:1rem}
+.k-main th, .k-main td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+.k-main th{color:var(--blue-800);font-weight:600}
+.k-main code, .k-main pre{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.85em;background:var(--ivory)}
+.k-main hr{border:0;border-top:1px solid var(--line);margin:2em 0}
+.k-main button, .k-main .btn, .k-main .cta{font-family:var(--serif)!important}
+.k-main a.cta, .k-main a.button, .k-main .btn{display:inline-block;background:var(--blue-800)!important;color:var(--ivory)!important;padding:10px 18px!important;text-decoration:none!important;border-radius:2px!important;border:0!important}
+.k-note{margin:28px 0 0;padding:16px 18px;background:var(--ivory);border-left:3px solid var(--gold);font-size:1rem;color:var(--ink-2)}
+.k-note a{color:var(--red)!important}
+
+@media (max-width:640px){
+  body{font-size:18px}
+  .k-top .k-in,.k-foot .k-in{padding:0 16px}
+  .k-nav a:not(.k-sub){display:none}
+  .k-main{padding:32px 16px 0}
+}
+
+/* neutralise old inline dark boxes so text stays readable */
+.k-main [style*="background"]{background:var(--ivory)!important;color:var(--ink)!important;border-color:var(--line)!important}
+.k-main [style*="background"] *{color:var(--ink)!important}
+.k-main [style*="background"] a{color:var(--red)!important}
+.k-main [style*="color"]:not(a){color:inherit!important}
+@media (max-width:640px){ .k-brand span{display:none} }
+
+.k-main div.cta, .k-main section.cta{display:block;background:var(--ivory)!important;padding:16px 18px!important;border:0!important;border-left:3px solid var(--gold)!important;margin:28px 0!important}

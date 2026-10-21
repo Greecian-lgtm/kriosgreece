@@ -57,6 +57,7 @@ def footer():
 
 
 SCRIPTS = '''<script src="/assets/site-nav.js" defer></script>
+<script src="/assets/analytics.js" defer></script>
 <script>
 (function(){
   var els=[].slice.call(document.querySelectorAll('.reveal'));

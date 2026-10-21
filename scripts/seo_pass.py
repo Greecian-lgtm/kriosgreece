@@ -103,6 +103,8 @@ def fix_head(rel):
         add += (f'<meta property="og:site_name" content="KRIOS">\n<meta property="og:image" content="{SITE}/images/share-default.jpg">\n'
                 '<meta name="twitter:card" content="summary_large_image">\n')
         t = t.replace("</head>", add + "</head>", 1)
+    if "/assets/analytics.js" not in t and "</body>" in t:
+        t = t.replace("</body>", '<script src="/assets/analytics.js" defer></script>\n</body>', 1)
     if t != orig:
         open(path, "w", encoding="utf-8").write(t)
     noindex = bool(re.search(r'<meta[^>]+name="robots"[^>]+noindex', t))

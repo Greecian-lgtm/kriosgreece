@@ -1,0 +1,207 @@
+/* KRIOS Universe design system, PROPOSED (design prototype, not approved).
+   Aegean blue, ivory, stone, charcoal, restrained antique gold.
+   Loaded after site.css, only by the prototype page. Every class is prefixed u-. */
+:root{
+  /* colour tokens */
+  --u-aegean-950:#0b2036; --u-aegean-900:#0f2a43; --u-aegean-800:#143a5c; --u-aegean-700:#1a4a73; --u-aegean-500:#3f86b5;
+  --u-ivory:#f6f0e2; --u-ivory-2:#ece3cd; --u-paper:#faf6ec;
+  --u-stone:#d8d1c0; --u-stone-2:#bdb5a1; --u-stone-ink:#5a5546;
+  --u-charcoal:#22252a; --u-charcoal-2:#33373e; --u-ink:#1d1f23;
+  --u-gold:#c0a05c; --u-gold-ink:#664c16;
+  /* type */
+  --u-display:"EB Garamond",Georgia,"Times New Roman",serif;
+  --u-ui:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  /* scale (body is 19px in site.css) */
+  --u-label:1rem;            /* 16px: never smaller, also on phones (rem is 16px, body is 19px) */
+  --u-h1:clamp(2.5rem,5.4vw,4.4rem);
+  --u-h2:clamp(1.9rem,3.4vw,2.8rem);
+  --u-h3:clamp(1.3rem,2vw,1.6rem);
+  /* space */
+  --u-gap:24px; --u-section:clamp(56px,8vw,104px);
+}
+
+/* ---------- shared ---------- */
+.u-wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.u-label{font-family:var(--u-ui);font-size:var(--u-label);letter-spacing:.1em;text-transform:uppercase;font-weight:500;line-height:1.3}
+.u-el{font-family:var(--u-display);font-style:normal}
+.u-sec{padding:var(--u-section) 0}
+.u-sec h2{font-family:var(--u-display);font-weight:500;font-size:var(--u-h2);line-height:1.1;margin:10px 0 14px;text-wrap:balance}
+.u-lede{max-width:60ch;font-size:1.15rem;margin:0}
+.u-rule{display:block;width:72px;height:1px;background:var(--u-gold);margin:0 0 22px}
+
+/* focus is visible on every surface */
+.u-sec a:focus-visible,.u-sec button:focus-visible,.u-hero a:focus-visible,.u-hero button:focus-visible,.u-proto a:focus-visible{
+  outline:3px solid var(--u-aegean-500);outline-offset:3px;border-radius:2px}
+.u-dark a:focus-visible,.u-dark button:focus-visible,.u-hero a:focus-visible,.u-hero button:focus-visible{outline-color:var(--u-gold)}
+
+/* buttons */
+.u-btn{display:inline-flex;align-items:center;gap:.5em;min-height:48px;padding:10px 22px;border-radius:2px;border:1px solid transparent;
+  font-family:var(--u-ui);font-size:1rem;font-weight:500;text-decoration:none;cursor:pointer;line-height:1.2;transition:background .2s,color .2s,border-color .2s}
+.u-btn-gold{background:var(--u-gold);color:var(--u-aegean-950)} .u-btn-gold:hover{background:#d1b374}
+.u-btn-line{border-color:rgba(246,240,226,.55);color:var(--u-ivory);background:transparent} .u-btn-line:hover{border-color:var(--u-gold);color:var(--u-gold)}
+.u-btn-ink{border-color:var(--u-aegean-700);color:var(--u-aegean-800);background:transparent} .u-btn-ink:hover{background:var(--u-aegean-800);color:var(--u-ivory)}
+
+/* ---------- prototype banner (removed on promotion) ---------- */
+.u-proto{margin:0;background:var(--u-charcoal);color:var(--u-ivory);font-family:var(--u-ui);font-size:var(--u-label);padding:10px 0;border-bottom:1px solid #000}
+.u-proto .u-wrap{display:flex;gap:10px 18px;flex-wrap:wrap;align-items:center}
+.u-proto b{letter-spacing:.14em;text-transform:uppercase;color:var(--u-gold)}
+.u-proto a{color:var(--u-ivory)}
+
+/* ---------- hero ---------- */
+.u-hero{position:relative;background:var(--u-aegean-950);color:var(--u-ivory);overflow:hidden;border-bottom:1px solid var(--u-aegean-700)}
+.u-hero-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);min-height:clamp(480px,64vh,640px)}
+.u-hero-copy{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;gap:20px;padding:56px 24px 56px max(24px,calc((100vw - 1160px)/2 + 24px));max-width:100%}
+.u-hero h1{font-family:var(--u-display);font-weight:500;font-size:var(--u-h1);line-height:1.04;margin:0;text-wrap:balance}
+.u-hero h1 span{display:block}
+.u-hero h1 .u-q2{font-style:italic;font-weight:400;color:var(--u-ivory-2)}
+.u-hero .u-kick{color:var(--u-gold)}
+.u-hero p.u-sub{margin:0;max-width:44ch;font-size:1.15rem;color:#e6dec6}
+.u-hero .u-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
+.u-hero-art{position:relative;margin:0;min-height:260px}
+.u-hero-art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:46% 50%}
+.u-hero-art::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,var(--u-aegean-950) 0%,rgba(11,32,54,.55) 18%,rgba(11,32,54,0) 46%)}
+.u-chip{position:absolute;z-index:2;left:16px;bottom:56px;background:rgba(11,32,54,.9);color:var(--u-ivory);font-family:var(--u-ui);font-size:var(--u-label);
+  padding:6px 12px;border:1px solid rgba(192,160,92,.6);border-radius:2px;letter-spacing:.04em}
+.u-hero-art::after{content:"";position:absolute;left:0;right:0;bottom:0;height:34%;z-index:1;background:linear-gradient(0deg,rgba(11,32,54,.82),rgba(11,32,54,0))}
+.u-cap{position:absolute;z-index:2;left:16px;right:16px;bottom:14px;margin:0;font-family:var(--u-ui);font-size:var(--u-label);color:#e6dec6;text-shadow:0 1px 8px rgba(0,0,0,.7);max-width:60ch}
+
+/* ---------- strip ---------- */
+.u-strip{background:var(--u-aegean-900);color:var(--u-ivory);padding:18px 0;border-bottom:1px solid var(--u-aegean-700)}
+.u-strip ul{list-style:none;margin:0;padding:0;display:flex;gap:10px 28px;flex-wrap:wrap;justify-content:center}
+.u-strip li{font-family:var(--u-ui);font-size:var(--u-label);letter-spacing:.16em;text-transform:uppercase;color:var(--u-gold)}
+.u-strip li+li::before{content:"";display:inline-block;width:4px;height:4px;background:var(--u-gold);border-radius:50%;margin-right:28px;vertical-align:middle;opacity:.7}
+@media (max-width:640px){.u-strip li+li::before{display:none}.u-strip ul{gap:6px 18px}}
+
+/* ---------- gateways ---------- */
+.u-gates{background:var(--u-ivory);color:var(--u-ink)}
+.u-gates .u-lede{color:var(--u-stone-ink)}
+.u-gate-grid{list-style:none;margin:40px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:var(--u-gap)}
+.u-gate{position:relative;display:flex;flex-direction:column;gap:10px;min-height:240px;padding:26px 26px 22px;background:var(--u-paper);border:1px solid var(--u-stone);border-top:3px solid var(--u-aegean-700);
+  transition:border-color .25s,box-shadow .25s,transform .25s}
+.u-gate:hover{border-color:var(--u-gold);box-shadow:0 14px 30px rgba(11,32,54,.12)}
+.u-gate-top{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.u-gate-num{font-family:var(--u-ui);font-size:var(--u-label);letter-spacing:.14em;color:var(--u-gold-ink)}
+.u-gate-el{font-size:1.15rem;color:var(--u-stone-ink);font-style:italic}
+.u-gate h3{font-family:var(--u-display);font-weight:500;font-size:var(--u-h3);line-height:1.15;margin:4px 0 0;color:var(--u-aegean-900)}
+.u-gate h3 a{text-decoration:none}
+.u-gate h3 a::after{content:"";position:absolute;inset:0}
+.u-gate p{margin:0;color:var(--u-stone-ink);font-size:1.05rem}
+.u-gate-foot{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:14px;border-top:1px solid var(--u-stone);
+  font-family:var(--u-ui);font-size:var(--u-label);color:var(--u-aegean-800)}
+.u-gate-foot .u-go{font-size:1.2rem;transition:transform .25s}
+.u-gate:hover .u-go{transform:translateX(4px)}
+.u-gate--empty{border-top-color:var(--u-stone-2)}
+.u-gate--empty .u-gate-foot{color:var(--u-stone-ink)}
+@media (max-width:980px){.u-gate-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){
+  .u-gate-grid{grid-template-columns:1fr;gap:12px;margin-top:28px}
+  .u-gate{min-height:0;padding:18px 18px 16px}
+  .u-gate p{font-size:1rem}
+}
+
+/* ---------- featured documentary ---------- */
+.u-feat{background:var(--u-aegean-900);color:var(--u-ivory)}
+.u-feat .u-kick{color:var(--u-gold)}
+.u-feat .u-lede{color:#e6dec6}
+.u-feat-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:48px;margin-top:36px;align-items:start}
+.u-film{display:flex;flex-direction:column;gap:14px;padding:32px;background:var(--u-aegean-800);border:1px solid var(--u-aegean-700);border-left:3px solid var(--u-gold)}
+.u-film h3{font-family:var(--u-display);font-weight:500;font-size:clamp(1.6rem,2.6vw,2.2rem);line-height:1.1;margin:0}
+.u-film p{margin:0;color:#e6dec6}
+.u-film-meta{font-family:var(--u-ui);font-size:var(--u-label);color:var(--u-gold);letter-spacing:.1em;text-transform:uppercase}
+.u-film .u-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
+.u-rail{display:grid;gap:0;margin:0;padding:0;list-style:none;border-top:1px solid var(--u-aegean-700)}
+.u-rail>li{padding:20px 0;border-bottom:1px solid var(--u-aegean-700)}
+.u-rail h3{font-family:var(--u-ui);font-weight:500;font-size:var(--u-label);letter-spacing:.14em;text-transform:uppercase;color:var(--u-gold);margin:0 0 8px}
+.u-rail p,.u-rail li li{margin:0;font-size:1.05rem;color:#e6dec6}
+.u-rail ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.u-rail a{color:var(--u-ivory);text-decoration-color:rgba(192,160,92,.7);text-underline-offset:3px}
+.u-rail a:hover{color:var(--u-gold)}
+.u-soft{color:#c9c0a6}
+@media (max-width:900px){.u-feat-grid{grid-template-columns:1fr;gap:28px}.u-film{padding:22px}}
+
+/* ---------- Memory Room ---------- */
+.u-room{background:var(--u-charcoal);color:var(--u-ivory);position:relative;overflow:hidden}
+.u-room .u-kick{color:var(--u-gold)}
+.u-room .u-lede{color:#d9d2bd}
+.u-room-card{margin:36px 0 0;padding:clamp(28px,5vw,56px);background:var(--u-charcoal-2);border:1px solid #474c55;border-top:3px solid var(--u-gold);max-width:860px}
+.u-qs{list-style:none;margin:0;padding:0}
+.u-qs li{margin:0 0 18px}
+.u-q-text{font-family:var(--u-display);font-size:clamp(1.7rem,3.6vw,2.6rem);line-height:1.15;margin:0;text-wrap:balance}
+.u-q-from{font-family:var(--u-ui);font-size:var(--u-label);color:var(--u-gold);margin:12px 0 0;letter-spacing:.04em}
+.js .u-qs li:not(.is-on){display:none}
+.u-room-note{margin:22px 0 0;max-width:56ch;color:#d9d2bd;font-size:1.05rem}
+.u-room-actions{display:none;gap:12px;flex-wrap:wrap;margin-top:26px}
+.js .u-room-actions{display:flex}
+.u-status{font-family:var(--u-ui);font-size:var(--u-label);color:var(--u-gold);min-height:1.4em;margin:12px 0 0}
+.u-room-fine{font-family:var(--u-ui);font-size:var(--u-label);color:#c9c0a6;margin:26px 0 0;max-width:62ch}
+.u-fade{animation:u-in .5s ease both}
+@keyframes u-in{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.u-fade{animation:none}}
+
+/* ---------- Why do we do this? ---------- */
+.u-why{background:var(--u-ivory);color:var(--u-ink)}
+.u-why .u-lede{color:var(--u-stone-ink)}
+.u-why-list{margin:36px 0 0;display:grid;gap:14px;max-width:900px}
+.u-why details{background:var(--u-paper);border:1px solid var(--u-stone);border-left:3px solid var(--u-aegean-700)}
+.u-why details[open]{border-left-color:var(--u-gold)}
+.u-why summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:20px 24px;min-height:64px;
+  font-family:var(--u-display);font-size:clamp(1.3rem,2.4vw,1.75rem);line-height:1.2;color:var(--u-aegean-900)}
+.u-why summary::-webkit-details-marker{display:none}
+.u-why summary::after{content:"+";font-family:var(--u-ui);font-size:1.6rem;color:var(--u-gold-ink);flex:none;width:28px;text-align:center}
+.u-why details[open] summary::after{content:"\2212"}
+.u-why summary:focus-visible{outline:3px solid var(--u-aegean-500);outline-offset:-3px}
+.u-why-body{padding:4px 24px 26px;display:grid;gap:22px}
+.u-why-body h3{font-family:var(--u-ui);font-weight:500;font-size:var(--u-label);letter-spacing:.14em;text-transform:uppercase;color:var(--u-gold-ink);margin:0 0 8px}
+.u-why-body p{margin:0 0 10px}
+.u-claims{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.u-claims li{padding-left:16px;border-left:2px solid var(--u-stone-2)}
+.u-claims cite{display:block;font-style:normal;font-family:var(--u-ui);font-size:var(--u-label);color:var(--u-stone-ink);margin-top:4px}
+.u-claims cite a{color:var(--u-aegean-700)}
+.u-quote{margin:0;padding:0 0 0 18px;border-left:3px solid var(--u-gold);font-size:1.15rem;font-style:italic;color:var(--u-aegean-900)}
+.u-quote p{margin:0 0 8px}
+.u-quote .u-quote-from{font-family:var(--u-ui);font-size:var(--u-label);font-style:normal;color:var(--u-stone-ink)}
+.u-ask{display:flex;gap:10px 24px;flex-wrap:wrap;align-items:center;padding-top:6px}
+
+/* ---------- how we know ---------- */
+.u-know{background:var(--u-stone);color:var(--u-ink)}
+.u-know ul{list-style:none;margin:32px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--u-gap)}
+.u-know li{border-top:2px solid var(--u-aegean-700);padding-top:14px}
+.u-know b{display:block;font-family:var(--u-display);font-weight:500;font-size:1.25rem;color:var(--u-aegean-900);margin-bottom:6px}
+.u-know span{color:#3d3a2f;font-size:1.02rem}
+.u-know .u-more{margin-top:28px}
+@media (max-width:900px){.u-know ul{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.u-know ul{grid-template-columns:1fr;gap:18px}}
+
+/* ---------- dedication and close ---------- */
+.u-ded{background:var(--u-paper);text-align:center;color:var(--u-ink)}
+.u-ded .m-dedication{margin-top:0}
+.u-close{background:var(--u-aegean-950);color:var(--u-ivory);text-align:center}
+.u-close h2{font-family:var(--u-display);font-weight:500;font-size:clamp(2.2rem,5vw,3.6rem);margin:0 0 22px}
+
+/* ---------- motion: gentle, optional ---------- */
+@media (prefers-reduced-motion:no-preference){
+  .u-gate:hover{transform:translateY(-2px)}
+  .js .u-hero-copy>*{animation:u-in .8s ease both}
+  .js .u-hero-copy>*:nth-child(2){animation-delay:.08s}
+  .js .u-hero-copy>*:nth-child(3){animation-delay:.16s}
+  .js .u-hero-copy>*:nth-child(4){animation-delay:.24s}
+}
+
+/* ---------- tablet and phone ---------- */
+@media (max-width:860px){
+  .u-hero-grid{grid-template-columns:1fr;min-height:0}
+  .u-hero-copy{padding:44px 24px 36px;order:1}
+  .u-hero-art{order:2;min-height:0;aspect-ratio:16/10}
+  .u-hero-art::before{background:linear-gradient(180deg,var(--u-aegean-950) 0%,rgba(11,32,54,0) 30%)}
+  .u-chip{bottom:60px}
+}
+@media (max-width:520px){
+  .u-wrap{padding:0 16px}
+  .u-hero-copy{padding:36px 16px 28px}
+  .u-hero-art{aspect-ratio:4/3}
+  .u-cap{left:12px;right:12px}
+  .u-btn{width:100%;justify-content:center}
+  .u-room-actions .u-btn,.u-ask .u-btn{width:100%}
+  .u-why summary{padding:16px 16px}
+  .u-why-body{padding:2px 16px 22px}
+}

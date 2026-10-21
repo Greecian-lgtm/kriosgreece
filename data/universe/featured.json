@@ -1,0 +1,5 @@
+{
+ "_note": "PROPOSED (design prototype). The featured documentary is the newest film unless 'slug' names another approved film. 'shorts' lists only Shorts that are PUBLIC (title and YouTube id). Private or scheduled Shorts never go here.",
+ "slug": "",
+ "shorts": []
+}

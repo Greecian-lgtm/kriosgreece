@@ -10,21 +10,20 @@ def route_data(slug):
 
 
 def _wave_svg(origin, dests, color_cls, label):
+    # Narrow viewBox so labels stay near 18px on a phone. One trunk, evenly spaced branches.
     n = len(dests)
-    step = 54
-    h = 70 + step * (n - 1)
+    step = 58
+    h = 74 + step * (n - 1)
     mid = h / 2
-    x0, xs, xe = 70, 300, 540
+    x0, xb, xs, xe = 60, 150, 190, 250
     paths, stops = [], []
     for i, name in enumerate(dests):
-        y = 35 + step * i
-        dy = abs(y - mid)
-        bend = xs - dy if y != mid else xs
-        d = f"M{x0} {mid:g} H{bend:g} L{xs:g} {y:g} H{xe}" if y != mid else f"M{x0} {mid:g} H{xe}"
+        y = 37 + step * i
+        d = f"M{x0} {mid:g} H{xe}" if abs(y - mid) < 0.5 else f"M{x0} {mid:g} H{xb} L{xs} {y:g} H{xe}"
         paths.append(f'<path class="mo-line {color_cls}" pathLength="1" style="--i:{i}" d="{d}"/>')
-        stops.append(f'<g class="mo-stop" style="--i:{i}"><circle cx="{xe}" cy="{y:g}" r="7"/><text x="{xe + 18}" y="{y + 5:g}">{e(name)}</text></g>')
-    origin_g = (f'<g class="mo-origin"><circle cx="{x0}" cy="{mid:g}" r="10"/><text x="{x0}" y="{mid - 20:g}" text-anchor="middle">{e(origin)}</text></g>')
-    return (f'<svg class="mo-svg" viewBox="0 0 760 {h:g}" role="img" aria-label="{e(label)}" focusable="false">'
+        stops.append(f'<g class="mo-stop" style="--i:{i}"><circle cx="{xe}" cy="{y:g}" r="8"/><text x="{xe + 18}" y="{y + 8:g}">{e(name)}</text></g>')
+    origin_g = (f'<g class="mo-origin"><circle cx="{x0}" cy="{mid:g}" r="11"/><text x="{x0}" y="{mid - 22:g}" text-anchor="middle">{e(origin)}</text></g>')
+    return (f'<svg class="mo-svg" viewBox="0 0 470 {h:g}" role="img" aria-label="{e(label)}" focusable="false">'
             + "".join(paths) + origin_g + "".join(stops) + "</svg>")
 
 

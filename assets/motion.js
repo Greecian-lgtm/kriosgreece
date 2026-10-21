@@ -58,16 +58,20 @@
   }
 
   var targets = [];
+  var sacred = location.pathname.indexOf('/sacred-days') === 0;   /* devotional pages: no manuscript or stitch ornament */
+  var rules = 0;
   [].forEach.call(document.querySelectorAll('.hero, .m-sdhero, .m-filmhero'), topo);
 
   [].forEach.call(document.querySelectorAll('main h2'), function (h) {
+    if (sacred) return;
     if (h.closest('.hero, .m-sdhero, .m-filmhero, .m-card, .m-feat, .m-read, .m-src')) return;
-    if (h.closest('.ask')) { targets.push(stitch(h)); return; }                    // closing "Who taught you yours?": stitched
-    if (h.closest('#family')) { targets.push(stitch(h.nextSibling)); return; }     // family questions: stitched, not illuminated
+    if (h.closest('.ask')) { targets.push(stitch(h)); return; }                    // closing "Who taught you yours?": the one stitched divider
+    if (h.closest('#family') || rules >= 2) return;                                // at most two flourishes per page
+    rules++;
     targets.push(rule(h, !!h.closest('.m-begin') && getComputedStyle(h).textAlign === 'center'));
   });
-  var foot = document.querySelector('footer .wrap');
-  if (foot) targets.push(stitch(foot));
+  var sp = document.querySelector('#story > p');
+  if (sp && !sacred && /^[A-Za-z]/.test(sp.textContent.trim())) sp.classList.add('mo-dropcap');
 
   [].forEach.call(document.querySelectorAll('[data-mo]'), function (n) { targets.push(n); });
 

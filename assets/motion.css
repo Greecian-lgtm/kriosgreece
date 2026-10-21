@@ -9,10 +9,6 @@
 .mo-host>.wrap{position:relative;z-index:1}
 .mo-topo{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;color:var(--gold,#c9a35e);opacity:.16}
 .mo-topo path{fill:none;stroke:currentColor;stroke-width:1.1;vector-effect:non-scaling-stroke}
-@media (prefers-reduced-motion:no-preference){
-  .mo-topo g{transform-origin:70% 50%;animation:mo-drift 120s ease-in-out infinite alternate}
-  @keyframes mo-drift{from{transform:rotate(-2deg) scale(1)}to{transform:rotate(2.5deg) scale(1.06)}}
-}
 
 /* ---- 10 Illuminated Manuscript: ornamental rule under section headings, drop cap on the story ---- */
 .mo-rule{display:block;width:150px;height:18px;margin:.35em 0 .9em;color:var(--gold-ink,#8a6a2c)}
@@ -20,12 +16,11 @@
 .method .mo-rule,.m-support .mo-rule{color:var(--gold,#c9a35e)}
 .mo-rule path,.mo-rule line{fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round}
 .mo-rule .mo-gem{fill:currentColor;stroke:none}
-#story>p:not(.m-note-sm):first-of-type::first-letter{float:left;font-size:3.6em;line-height:.82;padding:.06em .1em 0 0;color:var(--red,#7e2418);font-weight:500}
+#story>p.mo-dropcap::first-letter{float:left;font-size:3.6em;line-height:.82;padding:.06em .1em 0 0;color:var(--red,#7e2418);font-weight:500}
 
 /* ---- 57 Cross-Stitch Sampler: running stitch with small crosses ---- */
 .mo-stitch{display:block;width:100%;max-width:520px;height:22px;margin:18px 0;color:var(--red,#7e2418)}
-.ask .mo-stitch,footer .mo-stitch{margin-left:auto;margin-right:auto}
-footer .mo-stitch{color:var(--gold,#c9a35e);max-width:var(--w,1160px);width:calc(100% - 48px);margin:0 auto 28px;opacity:.7}
+.ask .mo-stitch{margin-left:auto;margin-right:auto}
 .mo-stitch line{stroke:currentColor;stroke-width:2;stroke-dasharray:9 7;stroke-linecap:round}
 .mo-stitch .mo-x{stroke:currentColor;stroke-width:1.6;stroke-linecap:round;fill:none}
 
@@ -37,7 +32,7 @@ footer .mo-stitch{color:var(--gold,#c9a35e);max-width:var(--w,1160px);width:calc
 .mo-line{fill:none;stroke-width:6;stroke-linecap:round;stroke-linejoin:round}
 .mo-a{stroke:var(--red,#7e2418)} .mo-b{stroke:var(--blue-500,#3a5a8c)}
 .mo-origin circle,.mo-stop circle{fill:var(--paper,#faf6ec);stroke:var(--blue-900,#101a2e);stroke-width:3.5}
-.mo-origin text,.mo-stop text{font-family:var(--serif);fill:var(--blue-900,#101a2e);font-size:20px}
+.mo-origin text,.mo-stop text{font-family:var(--serif);fill:var(--blue-900,#101a2e);font-size:24px}
 .mo-origin text{font-weight:600}
 
 /* ---- motion: only when JavaScript says it is safe (no reduced-motion preference) ---- */
@@ -53,3 +48,6 @@ html.mo-on .mo-rule.mo-in .mo-gem{opacity:1}
 .mo-stitch{-webkit-mask:linear-gradient(#000,#000) left/100% 100% no-repeat;mask:linear-gradient(#000,#000) left/100% 100% no-repeat}
 html.mo-on .mo-stitch{-webkit-mask-size:0% 100%;mask-size:0% 100%;transition:mask-size 1.6s ease,-webkit-mask-size 1.6s ease}
 html.mo-on .mo-stitch.mo-in{-webkit-mask-size:100% 100%;mask-size:100% 100%}
+
+/* print and any failure of the script: always show the final state */
+@media print{html.mo-on .mo-line{stroke-dashoffset:0!important;transition:none!important}html.mo-on .mo-stop,html.mo-on .mo-rule .mo-gem{opacity:1!important}html.mo-on .mo-rule path,html.mo-on .mo-rule line{stroke-dashoffset:0!important}html.mo-on .mo-stitch{-webkit-mask-size:100% 100%!important;mask-size:100% 100%!important}.mo-topo{display:none}}

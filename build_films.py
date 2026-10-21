@@ -6,6 +6,7 @@ from site_lib import (ROOT, EP, UP, S1, SUBJ, SD, e, watch, nice, short, weekday
                       featured, featured_film, calendar_entries, film_for_feast, sacred_films, ILLUSTRATION_NOTE, MONTHS)
 from site_parts import head, header, footer, SCRIPTS, SUB, breadcrumbs
 from motion_parts import route_html, route_data
+from culture_page import body as cyclades_body
 
 FILTER_JS = """<script>(function(){var c=[].slice.call(document.querySelectorAll('[data-f]'));if(!c.length)return;
 var live=document.getElementById('f-status');
@@ -151,7 +152,10 @@ how_body = '''<section class="band method m-method-page" id="how">
 </section>'''
 page("how-we-work/index.html", "How we work · KRIOS", "The KRIOS standards: sources, real archives, labelled illustration, and history, tradition and belief kept apart.",
      "/how-we-work/", "", how_body, ld=[breadcrumbs(("How we work", "/how-we-work/"))])
-print("films, sacred-days, how-we-work built")
+page("cyclades/index.html", "The Cyclades, at the table and at home · KRIOS",
+     "Everyday Greek life in the Cyclades: words, coffee, tavli, the family table and the lamp before the icons. Questions to ask your family.",
+     "/cyclades/", "", cyclades_body(), ld=[breadcrumbs(("The Cyclades, at the table and at home", "/cyclades/"))])
+print("films, sacred-days, how-we-work, cyclades built")
 
 # ================= film pages (/films/<slug>/) =================
 from site_lib import FILMS, EXTRAS, released, thumb, film_page_for, card as _card

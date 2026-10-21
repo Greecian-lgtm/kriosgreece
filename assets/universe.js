@@ -37,3 +37,11 @@
   }, { threshold: 0.12 });
   els.concat(secs).forEach(function (el) { io.observe(el); });
 })();
+
+(function () {
+  var t = document.querySelector('.u-sb-track'); if (!t) return;
+  var step = function (d) { var w = t.firstElementChild ? t.firstElementChild.getBoundingClientRect().width + 20 : 300; t.scrollBy({ left: d * w }); };
+  var n = document.getElementById('u-sb-next'), p = document.getElementById('u-sb-prev');
+  if (n) n.addEventListener('click', function () { step(1); });
+  if (p) p.addEventListener('click', function () { step(-1); });
+})();

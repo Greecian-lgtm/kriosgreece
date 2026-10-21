@@ -133,6 +133,30 @@ def featured():
 </section>'''
 
 
+# ---------- storybook: unlocking memories (published films open, upcoming stay locked) ----------
+def storybook():
+    pages = []
+    for x in sorted((x for x in EP if x["id"] and x.get("date") and film_page_for(x)), key=lambda x: x["date"], reverse=True)[:3]:
+        f = next((f for f in FILMS if _matches(f["match"], x)), None)
+        img = (f or {}).get("hero_image")
+        art = (f'<img src="{e(img["src"])}" alt="{e(img["alt"])}" width="1280" height="720" loading="lazy"><span class="u-chip u-chip-s">Illustration</span>'
+               if img else '<div class="u-sb-noart"><span>Approved image to come</span></div>')
+        pages.append(f'''<li class="u-sb-page is-open"><div class="u-sb-art">{art}</div>
+      <div class="u-sb-text"><p class="u-label u-sb-tag">Memory unlocked</p><h3>{e(x["title"])}</h3><p>{e(x.get("tease", ""))}</p>
+      <a class="u-btn u-btn-gold" href="{e(film_page_for(x))}">Open this memory</a></div></li>''')
+    for u in UP:
+        pages.append(f'''<li class="u-sb-page is-locked"><div class="u-sb-art"><div class="u-sb-lock" aria-hidden="true"></div></div>
+      <div class="u-sb-text"><p class="u-label u-sb-tag">Opens {nice(u["date"])}</p><h3>{e(u["title"])}</h3><p>This page stays closed until the premiere.</p></div></li>''')
+    return f'''<section class="u-sec u-sb u-dark" id="storybook" aria-labelledby="u-sb-h">
+  <div class="u-wrap">
+    <h2 id="u-sb-h">A storybook of memories{TAG if PROTO else ''}</h2>
+    <p class="u-lede">Each film opens one page. Turn through the ones that are open. The next one is waiting.</p>
+    <ol class="u-sb-track" tabindex="0" aria-label="Storybook pages, scroll sideways">{"".join(pages)}</ol>
+    <div class="u-sb-nav"><button class="u-btn u-btn-line" type="button" id="u-sb-prev">Previous page</button><button class="u-btn u-btn-gold" type="button" id="u-sb-next">Turn the page</button></div>
+  </div>
+</section>'''
+
+
 # ---------- Memory Room ----------
 def memory_room():
     per = []
@@ -235,6 +259,7 @@ def build():
 <main id="main">
 {hero()}
 {featured()}
+{storybook()}
 {gateways()}
 {memory_room()}
 {why()}

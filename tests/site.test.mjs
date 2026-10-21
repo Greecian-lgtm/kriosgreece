@@ -17,7 +17,9 @@ for (const path of PAGES) {
     const p = await ctxp.newPage();
     const errs = []; p.on('pageerror', (x) => errs.push(x.message));
     await p.goto(BASE + path, { waitUntil: 'domcontentloaded' });
-    await p.evaluate(() => document.querySelectorAll('.reveal').forEach((e) => e.classList.add('in')));
+    await p.evaluate(() => { document.querySelectorAll('.reveal').forEach((e) => e.classList.add('in')); document.querySelectorAll('.u-rv').forEach((e) => e.classList.add('is-in')); });
+    // freeze animations so axe never measures contrast mid-fade (the Universe homepage animates on scroll)
+    await p.addStyleTag({ content: '*{animation:none!important;transition:none!important}.u-rv,.reveal{opacity:1!important;transform:none!important}' });
     await p.waitForTimeout(700);
     const sw = await p.evaluate(() => document.documentElement.scrollWidth);
     if (sw > w) fail(`${path} @${w}: horizontal scroll (${sw}px)`);
@@ -84,7 +86,7 @@ for (const path of PAGES) {
 {
   const ctx = await b.newContext({ reducedMotion: 'reduce' });
   const p = await ctx.newPage(); await p.goto(BASE + '/'); await p.waitForTimeout(300);
-  const op = await p.evaluate(() => getComputedStyle(document.querySelector('.m-why blockquote')).opacity);
+  const op = await p.evaluate(() => getComputedStyle(document.querySelector('.u-hero h1')).opacity);
   if (op !== '1') fail('reduced motion: content hidden');
   await ctx.close();
 }

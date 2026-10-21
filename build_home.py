@@ -60,12 +60,14 @@ chips = "".join(f'<a href="/films/#{k}">{e(SUBJ["names"][k])}</a>' for k in SUBJ
 sd_entry = ("First film October 26 →" if state == "upcoming" and sd and sd["date"].endswith("-10-26")
             else (f'Next: {short(sd["date"])} →' if state == "upcoming" else "Feast days and name days →"))
 
+HOME_EXTRA = ('<meta name="google-site-verification" content="pPkMXZrBWp8jReHeeuMGoONMkFykv5Va8zj8RIYuHsk">\n'
+              f'<meta property="og:image" content="{thumb(latest["id"], "maxresdefault")}">\n<meta name="twitter:card" content="summary_large_image">\n'
+              f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>')
+
 page = f"""{head("KRIOS · The Living Story of Greek Civilization",
                "Documentaries on Greek history, faith, tradition and family memory, for Greeks in Greece and around the world. Real archives, sourced claims, and the stories families carried with them.",
                "/",
-               '<meta name="google-site-verification" content="pPkMXZrBWp8jReHeeuMGoONMkFykv5Va8zj8RIYuHsk">\n'
-               f'<meta property="og:image" content="{thumb(latest["id"], "maxresdefault")}">\n<meta name="twitter:card" content="summary_large_image">\n'
-               f'<script type="application/ld+json">{json.dumps(ld, ensure_ascii=False)}</script>')}
+               HOME_EXTRA)}
 <body>
 {header()}
 
@@ -166,6 +168,9 @@ page = f"""{head("KRIOS · The Living Story of Greek Civilization",
 </body>
 </html>
 """
+# The homepage is the Universe design (build_universe.py). The previous homepage markup above is no longer written.
+import build_universe
+page = build_universe.render(live=True, head_extra=HOME_EXTRA)
 open(os.path.join(ROOT, "index.html"), "w", encoding="utf-8").write(page)
 for lp in ("links.html", "links/index.html"):
     p = os.path.join(ROOT, lp)

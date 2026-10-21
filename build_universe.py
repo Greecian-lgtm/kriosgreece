@@ -257,13 +257,21 @@ def close():
 </div></section>'''
 
 
-def build():
-    extra = ('<meta name="robots" content="noindex, nofollow">\n<link rel="stylesheet" href="/assets/universe.css">\n'
+def render(live=False, head_extra=""):
+    """The homepage HTML. live=False: noindex prototype with banner and 'proposed' tags. live=True: the real homepage at /."""
+    global PROTO
+    PROTO = not live
+    extra = ('' if live else '<meta name="robots" content="noindex, nofollow">\n') + head_extra + (
+             '\n<link rel="stylesheet" href="/assets/universe.css">\n'
              '<link rel="preload" href="/assets/fonts/universe/eb-garamond-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>\n'
              '<link rel="stylesheet" href="/assets/universe-fonts.css">')
     banner = ('<div class="u-proto" role="note"><span class="u-wrap"><b>Design prototype</b>'
               '<span>Proposed homepage. Not the live site, not approved, not indexed.</span></span></div>') if PROTO else ""
-    html = f"""{head("KRIOS · Universe homepage prototype", "Proposed redesign of the KRIOS homepage. Design prototype, not the live site.", "/prototype/universe/", extra=extra)}
+    ttl, dsc, canon = (("KRIOS · The Living Story of Greek Civilization",
+                        "Documentaries on Greek history, faith, tradition and family memory, for Greeks in Greece and around the world. Real archives, sourced claims, and the stories families carried with them.",
+                        "/") if live else
+                       ("KRIOS · Universe homepage prototype", "Proposed redesign of the KRIOS homepage. Design prototype, not the live site.", "/prototype/universe/"))
+    html = f"""{head(ttl, dsc, canon, extra=extra)}
 <body>
 {header(banner)}
 <main id="main">
@@ -285,6 +293,11 @@ def build():
     # self-hosted fonts only on this page: drop the shared Google Fonts links
     html = re.sub(r'<link rel="preconnect" href="https://fonts\.(googleapis|gstatic)\.com"[^>]*>\n?', "", html)
     html = re.sub(r'<link href="https://fonts\.googleapis\.com[^>]*>\n?', "", html)
+    return html
+
+
+def build():
+    html = render(live=False)
     full = os.path.join(ROOT, OUT)
     os.makedirs(os.path.dirname(full), exist_ok=True)
     open(full, "w", encoding="utf-8").write(html)

@@ -5,6 +5,7 @@ import json, os
 from site_lib import (ROOT, EP, UP, S1, SUBJ, SD, e, watch, nice, short, weekday, card, s1card, upcoming_card,
                       featured, featured_film, calendar_entries, film_for_feast, sacred_films, ILLUSTRATION_NOTE, MONTHS)
 from site_parts import head, header, footer, SCRIPTS, SUB, breadcrumbs
+from motion_parts import route_html, route_data
 
 FILTER_JS = """<script>(function(){var c=[].slice.call(document.querySelectorAll('[data-f]'));if(!c.length)return;
 var live=document.getElementById('f-status');
@@ -231,6 +232,8 @@ for f in FILMS:
                      f'About {words:,} words, {max(1, round(words / 230))} minutes to read.</p>'
                      f'<details class="m-read"><summary>Read the full narration</summary><div class="m-read-body">{inner}'
                      f'<p class="m-note-sm">{e(f.get("read_from", ""))}</p></div></details>'))
+    if not held and route_html(f["slug"]):
+        secs.append(("route", route_data(f["slug"])["heading"], route_html(f["slug"])))
     if f.get("family_questions"):
         secs.append(("family", "Ask someone in your family", '<p>Questions to start a conversation at your own table.</p><ul class="m-askqs">'
                      + "".join(f"<li>{e(q)}</li>" for q in f["family_questions"]) + "</ul>"))

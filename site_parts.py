@@ -57,6 +57,7 @@ def footer():
 
 
 SCRIPTS = '''<script src="/assets/site-nav.js" defer></script>
+<script src="/assets/motion.js" defer></script>
 <script>
 (function(){
   var els=[].slice.call(document.querySelectorAll('.reveal'));
@@ -112,5 +113,6 @@ def head(title, desc, canonical, extra="", image=None, ld=None, og_type="website
 <script>document.documentElement.classList.add("js")</script>
 {FONTS}
 <link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/motion.css">
 {extra}
 </head>'''

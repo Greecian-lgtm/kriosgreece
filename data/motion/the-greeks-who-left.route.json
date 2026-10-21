@@ -1,0 +1,11 @@
+{
+  "status": "DRAFT for director review. Wording is taken from the Migration Policy Institute source already cited on this film page; nothing new is claimed.",
+  "heading": "Where they went",
+  "intro": "Two main waves of emigration, drawn as a simple route map. It shows destinations, not exact journeys, and it is not to scale.",
+  "origin": "Greece",
+  "waves": [
+    {"years": "1890 to 1914", "note": "Almost a sixth of Greece's population emigrated, mostly to the United States and Egypt.", "to": ["United States", "Egypt"]},
+    {"years": "1950 to 1974", "note": "More than one million Greeks emigrated, mainly to Western Europe, the United States, Canada and Australia.", "to": ["Western Europe", "United States", "Canada", "Australia"]}
+  ],
+  "source": {"text": "Migration Policy Institute, Greece: A History of Migration (Kasimis and Kassimi, 2004)", "url": "https://www.migrationpolicy.org/journal/country-profile/greece-history-migration"}
+}

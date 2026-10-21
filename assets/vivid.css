@@ -1,0 +1,69 @@
+/* /cyclades/ vivid theme (draft). Cycladic cobalt, Aegean turquoise, sun, bougainvillea. Heavy sans against an italic serif,
+   tilted floating cards, drifting petals. Transform and opacity only; everything holds still under reduced motion. */
+:root{--cobalt:#0b5fd0;--aegean:#093b8f;--turq:#12b5c4;--sun:#ffc233;--rose:#c4246b;--wash:#ffffff;--vvsans:"Helvetica Neue",Helvetica,"Arial Black",Arial,system-ui,sans-serif}
+.vv-big{font-family:var(--vvsans);font-weight:900;letter-spacing:-.035em;line-height:.98}
+.vv-it{font-family:var(--serif);font-style:italic;font-weight:500;letter-spacing:-.01em}
+.vv-hero{position:relative;overflow:hidden;color:#fff;padding:84px 0 96px;background:linear-gradient(135deg,#0a3d91 0%,#0b5fd0 45%,#12b5c4 100%)}
+.vv-hero-in{position:relative;z-index:2;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
+.vv-kick{display:inline-block;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);padding:5px 14px;border-radius:99px;font:600 .85rem var(--vvsans);letter-spacing:.14em;text-transform:uppercase}
+.vv-hero h1{margin:.4em 0 .3em;font-size:clamp(2.6rem,7.2vw,5.6rem);line-height:.98;font-weight:400}
+.vv-hero h1 .vv-it{color:var(--sun);display:block;font-size:.72em;margin-top:.12em}
+.vv-hero p{font-size:1.3rem;max-width:560px;color:#eaf4ff}
+.vv-btn{display:inline-block;margin-top:14px;background:var(--sun);color:#0a2a66;font:800 1rem var(--vvsans);padding:15px 26px;border-radius:99px;text-decoration:none;box-shadow:0 10px 26px rgba(255,194,51,.4);transition:transform .2s ease,box-shadow .2s ease}
+.vv-btn:hover{transform:translateY(-3px) scale(1.03)} .vv-btn:active{transform:scale(.97)}
+.vv-blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.55;pointer-events:none}
+.vv-b1{width:520px;height:520px;background:#ffc233;left:-140px;top:-160px;opacity:.38}
+.vv-b2{width:480px;height:480px;background:#e0357a;right:-120px;bottom:-200px;opacity:.42}
+.vv-b3{width:420px;height:420px;background:#7fe3ee;left:38%;top:30%;opacity:.35}
+.vv-petals{position:absolute;inset:0;overflow:hidden;z-index:1;pointer-events:none}
+.vv-petals i{position:absolute;top:100%;left:var(--x);width:var(--s);height:calc(var(--s)*1.5);background:#fff;opacity:.55;border-radius:60% 40% 60% 40%/70% 60% 40% 30%}
+.vv-petals i:nth-child(3n){background:#ffc2da} .vv-petals i:nth-child(4n){background:#ffe08a}
+.vv-stack{position:relative;height:420px}
+.vv-fl{position:absolute;width:210px;padding:22px 22px 18px;border-radius:26px;box-shadow:0 30px 50px -18px rgba(5,25,70,.55),0 8px 16px rgba(5,25,70,.2);transform:rotate(var(--r))}
+.vv-fl span{display:block;font:900 2.4rem/1 var(--vvsans);letter-spacing:-.02em} .vv-fl small{display:block;margin-top:6px;font:italic 1.15rem var(--serif);opacity:.85}
+.vv-fl:nth-child(1){left:0;top:10px} .vv-fl:nth-child(2){right:0;top:70px} .vv-fl:nth-child(3){left:30px;top:215px} .vv-fl:nth-child(4){right:20px;top:285px}
+.vv-c-sun{background:var(--sun);color:#0a2a66} .vv-c-rose{background:var(--rose);color:#fff} .vv-c-turq{background:var(--turq);color:#052a45}
+.vv-c-white{background:#fff;color:#0a3d91} .vv-c-cobalt{background:var(--cobalt);color:#fff}
+.vv-belt{background:#0a2a66;color:#fff;overflow:hidden;white-space:nowrap;border-block:3px solid var(--sun)}
+.vv-belt-in{display:inline-flex;gap:46px;padding:16px 0;font:900 1.7rem var(--vvsans);letter-spacing:-.01em}
+.vv-belt-in span:nth-child(even){color:var(--sun);font-family:var(--serif);font-style:italic;font-weight:500}
+.vv-band{padding:80px 0;position:relative;overflow:hidden}
+.vv-band h2{margin:0 0 .35em;font-size:clamp(2.2rem,5.4vw,4rem);font-weight:400;line-height:1;color:inherit}
+.vv-band h2 .vv-it{font-size:.9em}
+.vv-band p{max-width:700px;font-size:1.22rem}
+.vv-w{background:#fff;color:#0a2a66} .vv-w h2 .vv-it{color:var(--rose)}
+.vv-cobalt{background:var(--cobalt);color:#fff} .vv-cobalt h2 .vv-it{color:var(--sun)} .vv-cobalt a,.vv-turq a,.vv-rose a{color:inherit}
+.vv-sun{background:var(--sun);color:#0a2a66} .vv-sun h2 .vv-it{color:var(--rose)}
+.vv-turq{background:var(--turq);color:#052a45} .vv-turq h2 .vv-it{color:#fff}
+.vv-rose{background:var(--rose);color:#fff} .vv-rose h2 .vv-it{color:var(--sun)}
+.vv-band .m-note-sm{color:inherit;opacity:.85}
+.vv-page .cy-words{grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:26px;margin-top:34px}
+.vv-page .cy-word,.vv-page .cy-orders li,.vv-page .cy-games li{border:0;border-radius:24px;padding:22px 22px 20px;box-shadow:0 22px 40px -20px rgba(8,30,80,.45),0 6px 12px rgba(8,30,80,.12);transform:rotate(var(--r,0deg)) perspective(700px) rotateX(var(--tx,0deg)) rotateY(var(--ty,0deg));transition:transform .25s ease,box-shadow .25s ease;background:#fff;color:#0a2a66}
+.vv-page .cy-word .cy-gr,.vv-page .cy-orders .cy-gr,.vv-page .cy-games .cy-gr{font:900 2.3rem/1.05 var(--vvsans);letter-spacing:-.02em;color:inherit}
+.vv-page .cy-tr{color:inherit;opacity:.8;font-size:1.15rem}
+.vv-page .cy-word b{color:inherit;font-size:1.1rem} .vv-page .cy-word span:last-child{color:inherit;opacity:.9}
+.vv-page .vv-c-white{background:#fff;color:#0a3d91} .vv-page .cy-word.vv-c-white{border-top:0}
+.vv-sun .cy-orders li,.vv-turq .cy-games li{background:#fff;color:#0a2a66}
+.vv-page .cy-orders,.vv-page .cy-games{max-width:960px;gap:24px;margin:30px 0}
+.vv-page .m-askqs li{background:#f1f7ff;border-left:6px solid var(--rose);border-radius:14px;color:#0a2a66;font-size:1.15rem}
+.vv-steam{position:absolute;right:8%;top:60px;display:flex;gap:14px;opacity:.55}
+.vv-steam i{display:block;width:10px;height:90px;border-radius:99px;background:linear-gradient(#fff,rgba(255,255,255,0))}
+.vv-lamp{position:absolute;right:10%;top:40px;width:130px;height:130px;border-radius:50%;background:radial-gradient(circle,rgba(255,226,140,.95),rgba(255,194,51,.35) 45%,rgba(255,194,51,0) 70%)}
+@media (prefers-reduced-motion:no-preference){
+  .vv-blob{animation:vv-drift 16s ease-in-out infinite alternate} .vv-b2{animation-duration:20s;animation-delay:-6s} .vv-b3{animation-duration:24s;animation-delay:-10s}
+  @keyframes vv-drift{from{transform:translate(0,0) scale(1)}to{transform:translate(60px,40px) scale(1.15)}}
+  .vv-fl{animation:vv-bob 6s ease-in-out infinite alternate;animation-delay:var(--d)}
+  @keyframes vv-bob{from{transform:translateY(-8px) rotate(var(--r))}to{transform:translateY(10px) rotate(calc(var(--r) + 2deg))}}
+  .vv-petals i{animation:vv-rise var(--t) linear infinite;animation-delay:var(--d)}
+  @keyframes vv-rise{from{transform:translateY(0) rotate(0)}to{transform:translateY(-120vh) rotate(260deg)}}
+  .vv-belt-in{animation:vv-belt 42s linear infinite} .vv-belt:hover .vv-belt-in{animation-play-state:paused}
+  @keyframes vv-belt{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  .vv-steam i{animation:vv-steam 4s ease-in-out infinite;animation-delay:calc(var(--n,0)*.7s)} .vv-steam i:nth-child(2){animation-delay:.7s} .vv-steam i:nth-child(3){animation-delay:1.4s}
+  @keyframes vv-steam{0%{transform:translateY(20px) scaleY(.6);opacity:0}40%{opacity:.8}100%{transform:translateY(-30px) scaleY(1.1);opacity:0}}
+  .vv-lamp{animation:vv-flame 3.4s ease-in-out infinite alternate}
+  @keyframes vv-flame{from{transform:scale(.92);opacity:.75}to{transform:scale(1.08);opacity:1}}
+  .vv-page .cy-word:hover,.vv-page .cy-orders li:hover,.vv-page .cy-games li:hover{box-shadow:0 34px 50px -20px rgba(8,30,80,.55)}
+}
+@media (prefers-reduced-motion:reduce){.vv-belt{white-space:normal}.vv-belt-in{flex-wrap:wrap;justify-content:center;gap:10px 30px}.vv-belt-in span:nth-child(n+9){display:none}}
+@media (max-width:860px){.vv-hero-in{grid-template-columns:1fr}.vv-stack{height:360px;max-width:420px}.vv-fl{width:170px}.vv-fl span{font-size:2rem}.vv-band{padding:56px 0}.vv-steam,.vv-lamp{display:none}}
+@media print{.vv-blob,.vv-petals{display:none}}

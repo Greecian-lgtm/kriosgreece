@@ -70,6 +70,7 @@
 
   [].forEach.call(document.querySelectorAll('main h2'), function (h) {
     if (sacred) return;
+    if (h.closest('.vv-band')) return;
     if (h.closest('.hero, .m-sdhero, .m-filmhero, .m-card, .m-feat, .m-read, .m-src')) return;
     if (h.closest('.ask')) { targets.push(stitch(h)); return; }                    // closing "Who taught you yours?": the one stitched divider
     if (h.closest('#family') || rules >= 2) return;                                // at most two flourishes per page
@@ -80,6 +81,17 @@
   if (sp && !sacred && /^[A-Za-z]/.test(sp.textContent.trim())) sp.classList.add('mo-dropcap');
 
   [].forEach.call(document.querySelectorAll('[data-mo]'), function (n) { targets.push(n); });
+
+  /* gentle pointer tilt on [data-tilt] cards; skipped with reduced motion */
+  if (animate && window.matchMedia && matchMedia('(hover:hover)').matches) {
+    [].forEach.call(document.querySelectorAll('[data-tilt]'), function (c) {
+      c.addEventListener('pointermove', function (ev) {
+        var b = c.getBoundingClientRect(), x = (ev.clientX - b.left) / b.width - .5, y = (ev.clientY - b.top) / b.height - .5;
+        c.style.setProperty('--tx', (y * -8).toFixed(1) + 'deg'); c.style.setProperty('--ty', (x * 10).toFixed(1) + 'deg');
+      });
+      c.addEventListener('pointerleave', function () { c.style.setProperty('--tx', '0deg'); c.style.setProperty('--ty', '0deg'); });
+    });
+  }
 
   if (!animate) { targets.forEach(function (t) { t.classList.add('mo-in'); }); return; }
   var io = new IntersectionObserver(function (es) {

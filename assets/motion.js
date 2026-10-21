@@ -93,6 +93,17 @@
     });
   }
 
+  /* visible pause for the decorative motion on the vivid page */
+  var vh = document.querySelector('.vv-hero');
+  if (vh && animate) {
+    var pb = document.createElement('button'); pb.type = 'button'; pb.className = 'vv-pause'; pb.setAttribute('aria-pressed', 'false'); pb.textContent = 'Pause motion';
+    pb.addEventListener('click', function () {
+      var on = document.documentElement.classList.toggle('vv-still');
+      pb.setAttribute('aria-pressed', on ? 'true' : 'false'); pb.textContent = on ? 'Play motion' : 'Pause motion';
+    });
+    vh.appendChild(pb);
+  }
+
   if (!animate) { targets.forEach(function (t) { t.classList.add('mo-in'); }); return; }
   var io = new IntersectionObserver(function (es) {
     es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('mo-in'); io.unobserve(e.target); } });

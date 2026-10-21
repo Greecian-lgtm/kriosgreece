@@ -7,12 +7,12 @@ SRC_TAVLI = ("https://en.wikipedia.org/wiki/Tavli", "Tavli, the three games and 
 
 WORDS = [
     ("κέφι", "kéfi", "high spirits", "The mood that makes a table, a song or an afternoon come alive."),
-    ("φιλοξενία", "filoxenía", "hospitality", "Made from φιλία, friendship, and ξένος, stranger or guest."),
+    ("φιλοξενία", "filoxenía", "hospitality", "Made from φίλος, friend, and ξένος, stranger or guest."),
     ("παρέα", "paréa", "company", "The people you spend your time with, and the time itself."),
     ("κέρασμα", "kérasma", "a treat offered", "What a host puts in front of you before you have asked for anything."),
     ("καφενείο", "kafeneío", "the coffeehouse", "A place for coffee, talk, cards and tavli."),
     ("κομπολόι", "kompolói", "worry beads", "Strung beads kept moving through the fingers, for the hands more than for counting."),
-    ("κανδήλι", "kandíli", "the small oil lamp", "Kept lit in front of the icons at home."),
+    ("καντήλι", "kandíli", "the small oil lamp", "Kept lit in front of the icons at home."),
     ("γιορτή", "giortí", "feast, celebration", "Also what many families call a name day."),
 ]
 
@@ -25,7 +25,7 @@ COFFEE = [
 GAMES = [
     ("Πόρτες", "Pórtes", "The one closest to backgammon. You can hit a lone checker off the board."),
     ("Πλακωτό", "Plakotó", "No hitting. You pin an opposing checker by covering it with one of your own."),
-    ("Έβγα", "Évga", "A running game. No hitting and no pinning, both sides move the same way round the board."),
+    ("Φεύγα", "Févga", "A running game, also called Έβγα (Évga). No hitting and no pinning, both sides move the same way round the board."),
 ]
 
 ASK = [
@@ -67,7 +67,7 @@ def body():
 <div class="vv-belt" aria-hidden="true"><div class="vv-belt-in">{belt}</div></div>
 <div class="cy-page vv-page">
   <section class="vv-band vv-w" id="words"><div class="wrap reveal"><h2><span class="vv-big">Words</span> <em class="vv-it">we keep</em></h2>
-    <p>Everyday Greek words you may have heard at a family table. Spelling and accents are flagged for review by a Greek reader before release.</p>
+    <p>Everyday Greek words you may have heard at a family table.</p>
     <ul class="cy-words">{words}</ul></div></section>
 
   <section class="vv-band vv-cobalt" id="table"><div class="wrap reveal"><h2><span class="vv-big">What was</span> <em class="vv-it">on the table</em></h2>
@@ -79,7 +79,7 @@ def body():
     <div class="vv-steam" aria-hidden="true"><i></i><i></i><i></i></div>
     <p>Greek coffee is made in a small long-handled pot, a μπρίκι (bríki), and served in a small cup with a layer of foam on top. You order it by how much sugar you want, and then you stay a while.</p>
     <ul class="cy-orders">{coffee}</ul>
-    <p class="m-note-sm">Method as described in common recipe and culture guides. A stronger ethnographic source is on the research list.</p></div></section>
+    <p class="m-note-sm">Method as described in common recipe and culture guides.</p></div></section>
 
   <section class="vv-band vv-turq" id="tavli"><div class="wrap reveal"><h2><span class="vv-big">Tavli</span></h2>
     <p>Tavli is a board game for two, played with dice. It is really three games played one after another until someone reaches the agreed score.</p>
@@ -88,7 +88,7 @@ def body():
 
   <section class="vv-band vv-rose" id="faith"><div class="wrap reveal"><h2><span class="vv-big">Faith</span> <em class="vv-it">at home</em></h2>
     <div class="vv-lamp" aria-hidden="true"></div>
-    <p>In many Greek Orthodox homes there is a corner for the icons, an εικονοστάσι (eikonostási), often with a small κανδήλι lit before it. Name days, the feast of the saint you are named for, are marked with a call, a visit or a sweet.</p>
+    <p>In many Greek Orthodox homes there is a corner for the icons, an εικονοστάσι (eikonostási), often with a small καντήλι lit before it. Name days, the feast of the saint you are named for, are marked with a call, a visit or a sweet.</p>
     <p class="m-note-sm">Customs differ from family to family, and none of them is more Greek than another. For feast days and name days, see <a href="/sacred-days/">Sacred Days</a>.</p></div></section>
 
   <section class="vv-band vv-w cy-ask" id="ask"><div class="wrap reveal"><h2><span class="vv-big">Ask someone</span> <em class="vv-it">in your family</em></h2>

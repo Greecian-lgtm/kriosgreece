@@ -25,3 +25,15 @@
     if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(t).then(ok, fallback); else fallback();
   });
 })();
+
+/* gentle scroll reveal: adds classes only; content is visible without it */
+(function () {
+  if (!('IntersectionObserver' in window) || (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) return;
+  var els = [].slice.call(document.querySelectorAll('.u-gate, .u-film, .u-rail > li, .u-room-card, .u-why details, .u-know li'));
+  var secs = [].slice.call(document.querySelectorAll('.u-feat, .u-gates'));
+  els.forEach(function (el, k) { el.classList.add('u-rv'); el.style.setProperty('--i', k % 3); });
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('is-in'); io.unobserve(en.target); } });
+  }, { threshold: 0.12 });
+  els.concat(secs).forEach(function (el) { io.observe(el); });
+})();

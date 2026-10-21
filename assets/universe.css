@@ -192,18 +192,18 @@
 @media (max-width:860px){
   .u-hero-grid{grid-template-columns:1fr;min-height:0}
   .u-hero-copy{padding:32px 24px 40px;order:2}
-  .u-hero-art{order:1;min-height:0;aspect-ratio:16/10;margin-bottom:0}
+  .u-hero-art{order:1;min-height:0;aspect-ratio:auto;margin-bottom:0;padding-bottom:14px;background:var(--u-aegean-950)}
   .u-hero-art::before{background:linear-gradient(0deg,var(--u-aegean-950) 0%,rgba(11,32,54,0) 24%)}
   .u-hero-art::after{display:none}
   .u-chip{bottom:auto;top:12px}
-  .u-cap{position:static;display:block;padding:10px 24px 0;text-shadow:none;background:var(--u-aegean-950)}
-  .u-hero-art{display:flex;flex-direction:column}
-  .u-hero-art img{position:relative;inset:auto;aspect-ratio:16/10;height:auto}
+  .u-cap{position:static;display:block;padding:12px 24px 0;text-shadow:none;background:var(--u-aegean-950)}
+  .u-hero-art{display:block}
+  .u-hero-art img{position:static;display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover}
 }
 @media (max-width:520px){
   .u-wrap{padding:0 16px}
   .u-hero-copy{padding:36px 16px 28px}
-  .u-hero-art{aspect-ratio:4/3}
+  .u-hero-art{aspect-ratio:auto}
   .u-cap{padding:10px 16px 0}
   .u-btn{width:100%;justify-content:center}
   .u-room-actions .u-btn,.u-ask .u-btn{width:100%}
@@ -218,3 +218,17 @@
 .u-ask a:not(.u-btn){padding:0 2px}
 header.top .btn,header.top .nav-links a{min-height:44px;display:inline-flex;align-items:center}
 .u-proto .u-wrap{min-height:0}
+
+/* ---------- gentle animation (only when motion is welcome) ---------- */
+@media (prefers-reduced-motion:no-preference){
+  .u-hero-art img{animation:u-settle 2.4s cubic-bezier(.2,.6,.2,1) both}
+  @keyframes u-settle{from{transform:scale(1.07);opacity:.6}to{transform:none;opacity:1}}
+  .u-hero-art{overflow:hidden}
+  .js .u-rv{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s ease;transition-delay:calc(var(--i,0)*90ms)}
+  .js .u-rv.is-in{opacity:1;transform:none}
+  .u-gate{transition:border-color .25s,box-shadow .25s,transform .25s}
+  .u-gate-el{transition:color .3s,letter-spacing .4s} .u-gate:hover .u-gate-el{color:var(--u-gold-ink);letter-spacing:.04em}
+  .u-film{animation:none}
+  .u-feat h2::after,.u-gates h2::after{content:"";display:block;width:0;height:2px;margin-top:14px;background:var(--u-gold);transition:width 1s ease .2s}
+  .u-feat.is-in h2::after,.u-gates.is-in h2::after{width:72px}
+}

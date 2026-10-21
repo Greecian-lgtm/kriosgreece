@@ -31,6 +31,12 @@
       }
       el('path', { d: d + 'Z' }, g);
     }
+    var stars = el('g', { 'class': 'mo-stars' }, s);
+    [[120,70],[340,120],[520,70],[690,40],[830,110],[960,60],[300,230],[560,200],[880,210]].forEach(function (p, k) {
+      var c = el('circle', { cx: p[0], cy: p[1], r: k % 3 === 0 ? 3 : 2.2 }, stars); c.setAttribute('style', '--k:' + k);
+    });
+    var glow = document.createElement('div'); glow.className = 'mo-glow'; glow.setAttribute('aria-hidden', 'true');
+    host.insertBefore(glow, host.firstChild);
     host.classList.add('mo-host');
     host.insertBefore(s, host.firstChild);
   }

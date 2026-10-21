@@ -2,9 +2,36 @@
  "_note": "PROPOSED (design prototype). 'Why do we do this?' entries are NOT written by hand. Each one points at a director-approved, published film file (data/films/<slug>.json) and picks claims and quotes by index, so the page can only say what the film page already says. Quote indexes refer to the film's 'story' paragraphs (quoted from approved narration).",
  "intro": "Pick a question. Each answer separates what the sources show from what is still open, and ends with a question for your own family.",
  "items": [
-  {"key": "left", "question": "Why did so many Greeks leave?", "film": "the-greeks-who-left",
-   "established": [0], "open": [0], "quote": [0, 1]},
-  {"key": "dance", "question": "Where does the famous \u201cGreek dance\u201d come from?", "film": "the-greek-dance",
-   "established": [0], "interpretation": [0], "quote": [1, 3]}
+  {
+   "key": "left",
+   "question": "Why did so many Greeks leave?",
+   "film": "the-greeks-who-left",
+   "established": [
+    0,
+    1
+   ],
+   "open": [
+    0
+   ],
+   "quote": [
+    0,
+    1
+   ]
+  },
+  {
+   "key": "dance",
+   "question": "Where does the famous “Greek dance” come from?",
+   "film": "the-greek-dance",
+   "established": [
+    0
+   ],
+   "interpretation": [
+    0
+   ],
+   "quote": [
+    1,
+    3
+   ]
+  }
  ]
 }

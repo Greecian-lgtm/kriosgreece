@@ -1,29 +1,103 @@
 {
  "_note": "PROPOSED (design prototype, not approved). Six cultural gateways. Greek words are common nouns and need the director's or a fluent reviewer's check. 'subjects' point at data/subjects.json keys so the film count is computed, never typed. A gateway with no film says so plainly.",
  "gateways": [
-  {"key": "roots-diaspora", "num": "01", "el": "Ρίζες", "en": "Roots & Diaspora",
-   "line": "Where our families came from, why they left, and what they carried with them.",
-   "subjects": ["living-roots", "family"], "href": "/films/#living-roots",
-   "realms": ["Diaspora", "Family", "Language"]},
-  {"key": "faith-sacred-days", "num": "02", "el": "Πίστη", "en": "Faith & Sacred Days",
-   "line": "Feast days, name days and the faith that shaped the year.",
-   "subjects": ["sacred-days", "faith"], "href": "/sacred-days/",
-   "realms": ["Faith", "Traditions", "Artifacts"]},
-  {"key": "family-traditions", "num": "03", "el": "Οικογένεια", "en": "Family & Traditions",
-   "line": "The table, the names and the customs we repeat without asking why.",
-   "subjects": ["family", "growing-up-greek"], "href": "/films/#family",
-   "realms": ["Family", "Traditions", "Food"]},
-  {"key": "villages-places", "num": "04", "el": "Χωριά", "en": "Villages & Places",
-   "line": "Villages, islands and landscapes, and the people who made them home.",
-   "subjects": [], "href": "/films/",
-   "realms": ["Place", "Nature & Land", "Living Greece"]},
-  {"key": "music-identity", "num": "05", "el": "Μουσική", "en": "Music & Identity",
-   "line": "Songs and dances, and what it means to belong to them.",
-   "subjects": ["music"], "href": "/films/#music",
-   "realms": ["Music & Dance", "Language", "People"]},
-  {"key": "history-hidden-greece", "num": "06", "el": "Ιστορία", "en": "History & Hidden Greece",
-   "line": "Heroes, hardships and the overlooked stories behind them.",
-   "subjects": ["history", "myth"], "href": "/films/#history",
-   "realms": ["Civilization", "People", "Hidden Greece"]}
+  {
+   "key": "roots-diaspora",
+   "num": "01",
+   "el": "Ρίζες",
+   "en": "Roots & Diaspora",
+   "line": "Suitcases, ships and the Greece people carried abroad.",
+   "subjects": [
+    "living-roots",
+    "family"
+   ],
+   "href": "/films/#living-roots",
+   "realms": [
+    "Diaspora",
+    "Family",
+    "Language"
+   ]
+  },
+  {
+   "key": "faith-sacred-days",
+   "num": "02",
+   "el": "Πίστη",
+   "en": "Faith & Sacred Days",
+   "line": "Name days, icons and the church calendar.",
+   "subjects": [
+    "sacred-days",
+    "faith"
+   ],
+   "href": "/sacred-days/",
+   "realms": [
+    "Faith",
+    "Traditions",
+    "Artifacts"
+   ]
+  },
+  {
+   "key": "family-traditions",
+   "num": "03",
+   "el": "Οικογένεια",
+   "en": "Family & Traditions",
+   "line": "Sunday tables, grandmothers and the names we pass down.",
+   "subjects": [
+    "family",
+    "growing-up-greek"
+   ],
+   "href": "/films/#family",
+   "realms": [
+    "Family",
+    "Traditions",
+    "Food"
+   ]
+  },
+  {
+   "key": "villages-places",
+   "num": "04",
+   "el": "Χωριά",
+   "en": "Villages & Places",
+   "line": "Island harbours and mountain squares. Coming soon.",
+   "subjects": [],
+   "href": "/films/",
+   "realms": [
+    "Place",
+    "Nature & Land",
+    "Living Greece"
+   ]
+  },
+  {
+   "key": "music-identity",
+   "num": "05",
+   "el": "Μουσική",
+   "en": "Music & Identity",
+   "line": "Dances and songs, and who taught them to us.",
+   "subjects": [
+    "music"
+   ],
+   "href": "/films/#music",
+   "realms": [
+    "Music & Dance",
+    "Language",
+    "People"
+   ]
+  },
+  {
+   "key": "history-hidden-greece",
+   "num": "06",
+   "el": "Ιστορία",
+   "en": "History & Hidden Greece",
+   "line": "People and events most of us were never taught.",
+   "subjects": [
+    "history",
+    "myth"
+   ],
+   "href": "/films/#history",
+   "realms": [
+    "Civilization",
+    "People",
+    "Hidden Greece"
+   ]
+  }
  ]
 }

@@ -317,3 +317,8 @@ header.top .btn,header.top .nav-links a{min-height:44px;display:inline-flex;alig
 .u-film-thumb{display:block;margin:-32px -32px 6px;aspect-ratio:16/9;overflow:hidden;background:var(--u-aegean-950)}
 .u-film-thumb img{width:100%;height:100%;object-fit:cover;display:block}
 @media (max-width:900px){.u-film-thumb{margin:-22px -22px 6px}}
+
+/* Preview page for an upcoming film: approved thumbnail only, story held until the premiere */
+.is-preview .u-sb-art img{filter:saturate(.85) brightness(.82)}
+.u-sb-premiere{position:absolute;left:12px;top:12px;max-width:calc(100% - 24px);z-index:2;background:var(--u-gold);color:#14202e;font-family:var(--u-ui);font-size:var(--u-label);font-weight:600;letter-spacing:.04em;padding:6px 12px;border-radius:2px;line-height:1.2}
+.is-preview .u-chip.u-chip-s{left:12px;right:auto;top:52px;bottom:auto;backdrop-filter:none}

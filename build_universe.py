@@ -96,7 +96,7 @@ def featured():
     x = next((x for x in EP if x["id"] and FT.get("slug") and film_page_for(x) == f'/films/{FT["slug"]}/'), None) or featured_film()
     page = film_page_for(x)
     f = next(f for f in FILMS if _matches(f["match"], x))
-    src = f["sources"]
+    src = f.get("sources") or {}   # absent only if a release lands without its source list; then no source line is shown
     n_est, n_open, n_int = len(src.get("established", [])), len(src.get("open", [])), len(src.get("interpretation", []))
     parts = [f'{n_est} established claim{"s" if n_est != 1 else ""}']
     if n_int:
@@ -125,7 +125,7 @@ def featured():
         </div>
       </article>
       <ul class="u-rail" aria-label="Connected to this film">
-        <li><h3>Source material</h3><p>{e(", ".join(parts))}, each with a named source.</p><p><a href="{e(page)}#sources">Read the sources</a> <a href="{e(page)}#credits">Image credits</a></p></li>
+        {('<li><h3>Source material</h3><p>' + e(", ".join(parts)) + ', each with a named source.</p><p><a href="' + e(page) + '#sources">Read the sources</a> <a href="' + e(page) + '#credits">Image credits</a></p></li>') if src else ''}
         {('<li><h3>Related Shorts</h3>' + sh + '</li>') if sh else ''}
         <li><h3>Coming next</h3>{chapters}</li>
       </ul>
@@ -145,8 +145,16 @@ def storybook():
       <div class="u-sb-text"><p class="u-label u-sb-tag">Memory unlocked</p><h3>{e(x["title"])}</h3><p>{e(x.get("tease", ""))}</p>
       <a class="u-btn u-btn-gold" href="{e(film_page_for(x))}">Open this memory</a></div></li>''')
     for u in UP:
-        pages.append(f'''<li class="u-sb-page is-locked"><div class="u-sb-art"><div class="u-sb-lock" aria-hidden="true"></div></div>
-      <div class="u-sb-text"><p class="u-label u-sb-tag">Opens {nice(u["date"])}</p><h3>{e(u["title"])}</h3><p>This page stays closed until the premiere.</p></div></li>''')
+        # Preview page: the director's approved thumbnail (already public on the film page). Nothing else is shown.
+        # When the film goes public, sync_youtube removes it from UP and it becomes a normal open page above.
+        if u.get("image"):
+            chip = '<span class="u-chip u-chip-s">AI-generated illustration</span>' if u.get("image_is_illustration") else ""
+            art = (f'<img src="{e(u["image"])}" alt="Thumbnail artwork for {e(u["title"])}. An illustration. Premieres {nice(u["date"])}." '
+                   f'width="960" height="540" loading="lazy">{chip}<span class="u-sb-premiere">Premieres {nice(u["date"])}</span>')
+        else:
+            art = '<div class="u-sb-lock" aria-hidden="true"></div>'
+        pages.append(f'''<li class="u-sb-page is-locked is-preview"><div class="u-sb-art">{art}</div>
+      <div class="u-sb-text"><p class="u-label u-sb-tag">Opens {nice(u["date"])}</p><h3>{e(u["title"])}</h3><p>{e(u.get("tease", "The next page opens on its premiere."))} The story opens on premiere day.</p></div></li>''')
     return f'''<section class="u-sec u-sb u-dark" id="storybook" aria-labelledby="u-sb-h">
   <div class="u-wrap">
     <h2 id="u-sb-h" data-ch="CHAPTER I">A storybook of memories{TAG if PROTO else ''}</h2>

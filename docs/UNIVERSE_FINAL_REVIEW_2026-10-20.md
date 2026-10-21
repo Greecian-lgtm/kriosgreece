@@ -61,3 +61,10 @@ Desktop and mobile preview: the private Claude preview of the prototype (link in
 6. Keep the two Saint Demetrios pages in the sitemap until Oct 26, or pull them.
 7. Self-host the YouTube thumbnails, yes or no.
 8. Release date after the Oct 27 freeze. No deployment is authorized.
+
+## 9. Director decisions, Oct 20, 11:01 PM
+- **No language tag on the father's name.** The locked dedication stays byte-exact, including Πέτρος with no `lang` attribute. Decision 2 above is closed. Nothing changed.
+- **Storybook uses the director's thumbnails.** The episode list already uses the published film thumbnails.
+- **Saint Demetrios preview stays, now with its approved thumbnail.** The preview page shows the thumbnail that is already public on the live film page (`images/sacred-days-saint-demetrios.jpg`), the label "AI-generated illustration", "Premieres October 26, 2026", the public one-line description, and "The story opens on premiere day." No story, no credits, no sources. The film page and credits stay on the release branch.
+- **Flip on release.** The preview comes from `data/upcoming.json`. When the film goes public, the existing sync step (`scripts/sync_youtube.py`) removes the upcoming entry and brings in the held release files. Then the same film appears as an open storybook page with its YouTube thumbnail and becomes "The newest film" on its own (featured.json has no fixed slug). Tested with a throwaway copy: with the upcoming entry removed and the film in the episode list, the featured section and first open page both show Saint Demetrios, and the preview card is gone. I also made the featured section skip the "Source material" line if a release lands without its source list, so the build cannot fail on that.
+- Mobile and desktop screenshots of the preview card checked: the "Premieres" label and the illustration label no longer overlap.

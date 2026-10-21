@@ -3,7 +3,7 @@
 # nothing here is typed by hand that the film data already says. Run: python3 build_universe.py
 import json, os
 from site_lib import (ROOT, EP, UP, SUBJ, FILMS, DEDICATION_HTML, e, nice, short, released, film_page_for, featured_film,
-                      subjects_of, calendar_entries, film_for_feast, _matches)
+                      subjects_of, calendar_entries, film_for_feast, _matches, thumb)
 from site_parts import head, footer, SCRIPTS, SUB, YT, menu_button
 
 OUT = "prototype/universe/index.html"
@@ -137,15 +137,14 @@ def featured():
 def storybook():
     pages = []
     for x in sorted((x for x in EP if x["id"] and x.get("date") and film_page_for(x)), key=lambda x: x["date"], reverse=True)[:3]:
-        f = next((f for f in FILMS if _matches(f["match"], x)), None)
-        img = (f or {}).get("hero_image")
-        art = (f'<img src="{e(img["src"])}" alt="{e(img["alt"])}" width="1280" height="720" loading="lazy"><span class="u-chip u-chip-s">Illustration</span>'
-               if img else '<div class="u-sb-noart"><span>Approved image to come</span></div>')
+        t = thumb(x["id"], "maxresdefault")
+        art = (f'<img src="{t}" alt="Thumbnail of the film {e(x["title"])}" width="1280" height="720" loading="lazy" '
+               f'onerror="this.onerror=null;this.src=\'{thumb(x["id"])}\'">')
         pages.append(f'''<li class="u-sb-page is-open"><div class="u-sb-art">{art}</div>
       <div class="u-sb-text"><p class="u-label u-sb-tag">Memory unlocked</p><h3>{e(x["title"])}</h3><p>{e(x.get("tease", ""))}</p>
       <a class="u-btn u-btn-gold" href="{e(film_page_for(x))}">Open this memory</a></div></li>''')
     for u in UP:
-        pages.append(f'''<li class="u-sb-page is-locked"><div class="u-sb-art"><div class="u-sb-lock" aria-hidden="true"></div></div>
+        pages.append(f'''<li class="u-sb-page is-locked"><div class="u-sb-art u-sb-veil"><img src="{e(u["image"])}" alt="" width="960" height="540" loading="lazy"><div class="u-sb-lock" aria-hidden="true"></div></div>
       <div class="u-sb-text"><p class="u-label u-sb-tag">Opens {nice(u["date"])}</p><h3>{e(u["title"])}</h3><p>This page stays closed until the premiere.</p></div></li>''')
     return f'''<section class="u-sec u-sb u-dark" id="storybook" aria-labelledby="u-sb-h">
   <div class="u-wrap">

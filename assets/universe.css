@@ -262,3 +262,6 @@ header.top .btn,header.top .nav-links a{min-height:44px;display:inline-flex;alig
 }
 @media (max-width:520px){.u-sb-nav .u-btn{width:100%}}
 .u-sb-noart{display:flex;align-items:center;justify-content:center}.u-sb-noart span{font-family:var(--u-ui);font-size:var(--u-label);color:#e6dec6;border:1px dashed rgba(192,160,92,.7);padding:8px 14px}
+
+.u-sb-veil img{filter:blur(18px) brightness(.55) saturate(.8);transform:scale(1.15)}
+.u-sb-veil .u-sb-lock{z-index:1}

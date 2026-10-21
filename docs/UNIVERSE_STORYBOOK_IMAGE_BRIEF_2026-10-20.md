@@ -17,3 +17,8 @@ Prototype section `#storybook` on `/prototype/universe/` (design branch only). P
 
 ## Mechanic
 Scroll-snap pages with Previous and Turn the page buttons. Open pages show Memory unlocked. Locked pages show the opening date. Unlocking is a deliberate content change at release, not a clock. Motion is gentle and off under reduced motion.
+
+## Update (director, Oct 20): the images are the film thumbnails
+- Open pages use each published film's YouTube thumbnail (same hotlink the live site already uses).
+- The locked Saint Demetrios page uses the Sacred Days thumbnail already shown on the live homepage, veiled with blur and a lock until the premiere. Its reveal is a content change on Oct 26.
+- No new artwork is needed for this section.

@@ -312,3 +312,8 @@ header.top .btn,header.top .nav-links a{min-height:44px;display:inline-flex;alig
     .u-sb-track{perspective:1200px}
   }
 }
+
+.u-lede2{margin-top:12px;color:var(--u-ivory)}
+.u-film-thumb{display:block;margin:-32px -32px 6px;aspect-ratio:16/9;overflow:hidden;background:var(--u-aegean-950)}
+.u-film-thumb img{width:100%;height:100%;object-fit:cover;display:block}
+@media (max-width:900px){.u-film-thumb{margin:-22px -22px 6px}}

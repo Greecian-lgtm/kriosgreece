@@ -1,7 +1,7 @@
 # Builds the PROPOSED Universe homepage prototype at /prototype/universe/ (design branch only).
 # Not linked from the live site, noindex, kept out of the sitemap. Reads the same approved data as the live site;
 # nothing here is typed by hand that the film data already says. Run: python3 build_universe.py
-import json, os
+import json, os, re
 from site_lib import (ROOT, EP, UP, SUBJ, FILMS, DEDICATION_HTML, e, nice, short, released, film_page_for, featured_film,
                       subjects_of, calendar_entries, film_for_feast, _matches, thumb)
 from site_parts import head, footer, SCRIPTS, SUB, YT, menu_button
@@ -51,7 +51,7 @@ def hero():
     </div>
     <figure class="u-hero-art">
       <img src="{e(img['src'])}" alt="{e(img['alt'])}" width="1280" height="720" fetchpriority="high">
-      <span class="u-chip">Illustration</span>
+      <span class="u-chip">AI-generated illustration</span>
       <figcaption class="u-cap">Illustration from the film The Greeks Who Left. It is not a historical photograph.</figcaption>
     </figure>
   </div>
@@ -115,6 +115,7 @@ def featured():
     <h2 id="u-feat-h" data-ch="CHAPTER II">The newest film</h2>
     <div class="u-feat-grid">
       <article class="u-film">
+        <a class="u-film-thumb" href="https://www.youtube.com/watch?v={e(x["id"])}" rel="noopener" tabindex="-1" aria-hidden="true"><img src="{thumb(x["id"], "maxresdefault")}" alt="" width="1280" height="720" loading="lazy" onerror="this.onerror=null;this.src='{thumb(x["id"])}'"></a>
         <span class="u-film-meta">{e(x["label"])} · {x["mins"]} min · {nice(x["date"])}</span>
         <h3>{e(x["title"])}</h3>
         <p>{e(x.get("tease", ""))}</p>
@@ -144,7 +145,7 @@ def storybook():
       <div class="u-sb-text"><p class="u-label u-sb-tag">Memory unlocked</p><h3>{e(x["title"])}</h3><p>{e(x.get("tease", ""))}</p>
       <a class="u-btn u-btn-gold" href="{e(film_page_for(x))}">Open this memory</a></div></li>''')
     for u in UP:
-        pages.append(f'''<li class="u-sb-page is-locked"><div class="u-sb-art u-sb-veil"><img src="{e(u["image"])}" alt="" width="960" height="540" loading="lazy"><div class="u-sb-lock" aria-hidden="true"></div></div>
+        pages.append(f'''<li class="u-sb-page is-locked"><div class="u-sb-art"><div class="u-sb-lock" aria-hidden="true"></div></div>
       <div class="u-sb-text"><p class="u-label u-sb-tag">Opens {nice(u["date"])}</p><h3>{e(u["title"])}</h3><p>This page stays closed until the premiere.</p></div></li>''')
     return f'''<section class="u-sec u-sb u-dark" id="storybook" aria-labelledby="u-sb-h">
   <div class="u-wrap">
@@ -168,15 +169,16 @@ def memory_room():
     return f'''<section class="u-sec u-room u-dark" id="memory-room" aria-labelledby="u-room-h">
   <div class="u-wrap">
     <p class="u-label u-kick">Memory Room{TAG if PROTO else ''}</p>
-    <h2 id="u-room-h">A question to take to the table</h2>
-    <p class="u-lede">Most of what we inherited was never written down. Here is one question for the table. Skip any that feel heavy.</p>
+    <h2 id="u-room-h">Some questions stay with us.</h2>
+    <p class="u-lede">Maybe it&rsquo;s something your grandparents used to say. A tradition your family followed. Or a story you wish you&rsquo;d asked more about.</p>
+    <p class="u-lede u-lede2">Bring your curiosity. We&rsquo;ll explore the meaning together.</p>
     <div class="u-room-card">
       <ol class="u-qs" aria-live="off">{items}</ol>
       <div class="u-room-actions">
         <button class="u-btn u-btn-gold" type="button" id="u-next">Another question</button>
       </div>
       <p class="u-status" id="u-status" role="status"></p>
-      <p class="u-room-note">Maybe write down one thing they say.</p>
+      <p class="u-room-note">Here is one question to start. Skip any that feel heavy.</p>
     </div>
     <p class="u-room-fine">Nothing here is saved or sent. These questions come from the film pages.</p>
   </div>
@@ -249,7 +251,8 @@ def close():
 
 def build():
     extra = ('<meta name="robots" content="noindex, nofollow">\n<link rel="stylesheet" href="/assets/universe.css">\n'
-             '<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">')
+             '<link rel="preload" href="/assets/fonts/universe/eb-garamond-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>\n'
+             '<link rel="stylesheet" href="/assets/universe-fonts.css">')
     banner = ('<div class="u-proto" role="note"><span class="u-wrap"><b>Design prototype</b>'
               '<span>Proposed homepage. Not the live site, not approved, not indexed.</span></span></div>') if PROTO else ""
     html = f"""{head("KRIOS · Universe homepage prototype", "Proposed redesign of the KRIOS homepage. Design prototype, not the live site.", "/prototype/universe/", extra=extra)}
@@ -271,6 +274,9 @@ def build():
 </body>
 </html>
 """
+    # self-hosted fonts only on this page: drop the shared Google Fonts links
+    html = re.sub(r'<link rel="preconnect" href="https://fonts\.(googleapis|gstatic)\.com"[^>]*>\n?', "", html)
+    html = re.sub(r'<link href="https://fonts\.googleapis\.com[^>]*>\n?', "", html)
     full = os.path.join(ROOT, OUT)
     os.makedirs(os.path.dirname(full), exist_ok=True)
     open(full, "w", encoding="utf-8").write(html)

@@ -58,3 +58,24 @@ Not fixed on purpose: "Πέτρος" lang inside the locked dedication (see deci
 
 ## 8. Update: v2 cinematic direction (director, Oct 20, 10:29 PM)
 The prototype now uses a full-bleed hero with large serif type, warm terracotta accents, chapter marks (I to IV), translucent layered captions and scroll-driven depth (hero drift, page-turn entry on storybook pages). Motion is progressive enhancement and off under reduced motion. The storybook uses the film thumbnails. The previous version is in git history (commit 2d98509). Peer research: `KRIOS_website_peer_research_2026-10-20.md`.
+
+## 9. ChatGPT creative review applied (Oct 20, 10:35 PM)
+Applied: hero chip now "AI-generated illustration"; Memory Room copy "Some questions stay with us..." as proposed copy only; featured film shows the published thumbnail; fonts self-hosted (EB Garamond and Inter, Latin and Greek subsets, SIL OFL licences in `assets/fonts/universe/`), and the prototype no longer calls Google Fonts; the locked Saint Demetrios page no longer carries any image, only its title and date, both already on the live site. Gateway names unchanged.
+
+### Approved versus placeholder assets
+| Slot | Status |
+|---|---|
+| Hero (harbour illustration) | Approved, labelled AI-generated illustration |
+| Storybook: The Greeks Who Left, The Greek Dance | Approved, published film thumbnails |
+| Featured film thumbnail | Approved, published thumbnail |
+| Storybook: Saint Demetrios | No image. Lock only. Title and date already public |
+| Six gateway images | EMPTY. Mood-board briefs only (ChatGPT). Fill from approved assets or rights-cleared archive first |
+| Memory Room image | EMPTY. Brief: ordinary family object, no staging |
+| Fonts | Self-hosted, OFL |
+
+### Decisions resolved or still open
+- Saint Demetrios title: CONFIRMED against the director-approved release package (title and description approved Oct 19, 14:58).
+- Sirtaki source: OPEN. I could not find an authoritative source yet. Pages found: a hobby music site (no named scholar) and a folk-dance blog without citations; Britannica's Zorba page does not mention the dance. One academic lead I could not open: Studies in European Cinema 12(1), 2015, "Zorba the Greek, Sixties exotica and a new cinema in Hollywood and Greece". The film data is director-approved, so it is not edited. Needs a source from the director or ChatGPT.
+- lang tag on Πέτρος: OPEN. The dedication is locked byte-exact and a blocking check enforces it. Changing it needs the director's decision, not only a recommendation.
+- Release after the Oct 24 to 27 freeze, no automatic deployment.
+- Premature exposure of Saint Demetrios: the prototype exposes only the public title and date. The film page, credits and release files stay on `release/stdemetrios-credits`, not in this branch.

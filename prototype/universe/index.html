@@ -15,13 +15,11 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#14213a">
 <script>document.documentElement.classList.add("js")</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/site.css">
 <meta name="robots" content="noindex, nofollow">
 <link rel="stylesheet" href="/assets/universe.css">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preload" href="/assets/fonts/universe/eb-garamond-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/universe-fonts.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -44,7 +42,7 @@
     </div>
     <figure class="u-hero-art">
       <img src="/images/films/the-greeks-who-left-harbour.jpg" alt="A man in a long coat stands at a harbour railing beside his suitcases." width="1280" height="720" fetchpriority="high">
-      <span class="u-chip">Illustration</span>
+      <span class="u-chip">AI-generated illustration</span>
       <figcaption class="u-cap">Illustration from the film The Greeks Who Left. It is not a historical photograph.</figcaption>
     </figure>
   </div>
@@ -54,6 +52,7 @@
     <h2 id="u-feat-h" data-ch="CHAPTER II">The newest film</h2>
     <div class="u-feat-grid">
       <article class="u-film">
+        <a class="u-film-thumb" href="https://www.youtube.com/watch?v=vpQUH4lBkiU" rel="noopener" tabindex="-1" aria-hidden="true"><img src="https://i.ytimg.com/vi/vpQUH4lBkiU/maxresdefault.jpg" alt="" width="1280" height="720" loading="lazy" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/vpQUH4lBkiU/hqdefault.jpg'"></a>
         <span class="u-film-meta">Living Roots · 9 min · October 18, 2026</span>
         <h3>The Greeks Who Left, and the Greece They Carried</h3>
         <p>A suitcase can carry clothes and photographs. How do you pack a language, a song, or a church bell?</p>
@@ -78,7 +77,7 @@
       <div class="u-sb-text"><p class="u-label u-sb-tag">Memory unlocked</p><h3>The Greeks Who Left, and the Greece They Carried</h3><p>A suitcase can carry clothes and photographs. How do you pack a language, a song, or a church bell?</p>
       <a class="u-btn u-btn-gold" href="/films/the-greeks-who-left/">Open this memory</a></div></li><li class="u-sb-page is-open"><div class="u-sb-art"><img src="https://i.ytimg.com/vi/8cu1S1DVFDI/maxresdefault.jpg" alt="Thumbnail of the film The Greek Dance That Wasn&#x27;t Real… Until It Was" width="1280" height="720" loading="lazy" onerror="this.onerror=null;this.src='https://i.ytimg.com/vi/8cu1S1DVFDI/hqdefault.jpg'"></div>
       <div class="u-sb-text"><p class="u-label u-sb-tag">Memory unlocked</p><h3>The Greek Dance That Wasn&#x27;t Real… Until It Was</h3><p>Sirtaki was created for a film. So what makes a tradition real, and who keeps it alive?</p>
-      <a class="u-btn u-btn-gold" href="/films/the-greek-dance/">Open this memory</a></div></li><li class="u-sb-page is-locked"><div class="u-sb-art u-sb-veil"><img src="/images/sacred-days-saint-demetrios.jpg" alt="" width="960" height="540" loading="lazy"><div class="u-sb-lock" aria-hidden="true"></div></div>
+      <a class="u-btn u-btn-gold" href="/films/the-greek-dance/">Open this memory</a></div></li><li class="u-sb-page is-locked"><div class="u-sb-art"><div class="u-sb-lock" aria-hidden="true"></div></div>
       <div class="u-sb-text"><p class="u-label u-sb-tag">Opens October 26, 2026</p><h3>Saint Demetrios: More Than a Name Day</h3><p>This page stays closed until the premiere.</p></div></li></ol>
     <div class="u-sb-nav"><button class="u-btn u-btn-line" type="button" id="u-sb-prev">Previous page</button><button class="u-btn u-btn-gold" type="button" id="u-sb-next">Turn the page</button></div>
   </div>
@@ -124,15 +123,16 @@
 <section class="u-sec u-room u-dark" id="memory-room" aria-labelledby="u-room-h">
   <div class="u-wrap">
     <p class="u-label u-kick">Memory Room · proposed</p>
-    <h2 id="u-room-h">A question to take to the table</h2>
-    <p class="u-lede">Most of what we inherited was never written down. Here is one question for the table. Skip any that feel heavy.</p>
+    <h2 id="u-room-h">Some questions stay with us.</h2>
+    <p class="u-lede">Maybe it&rsquo;s something your grandparents used to say. A tradition your family followed. Or a story you wish you&rsquo;d asked more about.</p>
+    <p class="u-lede u-lede2">Bring your curiosity. We&rsquo;ll explore the meaning together.</p>
     <div class="u-room-card">
       <ol class="u-qs" aria-live="off"><li><p class="u-q-text">What Greek dances did you learn growing up, and who taught you?</p><p class="u-q-from">From The Greek Dance That Wasn&#x27;t Real… Until It Was</p></li><li><p class="u-q-text">What did our family bring with them when they left Greece?</p><p class="u-q-from">From The Greeks Who Left, and the Greece They Carried</p></li><li><p class="u-q-text">Do you remember the first time you heard the music from Zorba the Greek?</p><p class="u-q-from">From The Greek Dance That Wasn&#x27;t Real… Until It Was</p></li><li><p class="u-q-text">What did our grandparents miss most about home?</p><p class="u-q-from">From The Greeks Who Left, and the Greece They Carried</p></li><li><p class="u-q-text">Was there a dance everyone in your family knew, even without being taught?</p><p class="u-q-from">From The Greek Dance That Wasn&#x27;t Real… Until It Was</p></li><li><p class="u-q-text">Which traditions did our family keep after arriving in a new country?</p><p class="u-q-from">From The Greeks Who Left, and the Greece They Carried</p></li></ol>
       <div class="u-room-actions">
         <button class="u-btn u-btn-gold" type="button" id="u-next">Another question</button>
       </div>
       <p class="u-status" id="u-status" role="status"></p>
-      <p class="u-room-note">Maybe write down one thing they say.</p>
+      <p class="u-room-note">Here is one question to start. Skip any that feel heavy.</p>
     </div>
     <p class="u-room-fine">Nothing here is saved or sent. These questions come from the film pages.</p>
   </div>

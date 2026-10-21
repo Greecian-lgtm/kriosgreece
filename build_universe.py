@@ -83,7 +83,7 @@ def gateways():
     </li>''')
     return f'''<section class="u-sec u-gates" id="gateways" aria-labelledby="u-gates-h">
   <div class="u-wrap">
-    <h2 id="u-gates-h">Start with what feels closest to home.</h2>
+    <h2 id="u-gates-h" data-ch="CHAPTER III">Start with what feels closest to home.</h2>
     <ul class="u-gate-grid">
       {"".join(tiles)}
     </ul>
@@ -112,7 +112,7 @@ def featured():
     chapters = "<ul>" + "".join(ups) + "</ul>"
     return f'''<section class="u-sec u-feat u-dark" id="featured" aria-labelledby="u-feat-h">
   <div class="u-wrap">
-    <h2 id="u-feat-h">The newest film</h2>
+    <h2 id="u-feat-h" data-ch="CHAPTER II">The newest film</h2>
     <div class="u-feat-grid">
       <article class="u-film">
         <span class="u-film-meta">{e(x["label"])} · {x["mins"]} min · {nice(x["date"])}</span>
@@ -148,7 +148,7 @@ def storybook():
       <div class="u-sb-text"><p class="u-label u-sb-tag">Opens {nice(u["date"])}</p><h3>{e(u["title"])}</h3><p>This page stays closed until the premiere.</p></div></li>''')
     return f'''<section class="u-sec u-sb u-dark" id="storybook" aria-labelledby="u-sb-h">
   <div class="u-wrap">
-    <h2 id="u-sb-h">A storybook of memories{TAG if PROTO else ''}</h2>
+    <h2 id="u-sb-h" data-ch="CHAPTER I">A storybook of memories{TAG if PROTO else ''}</h2>
     <p class="u-lede">Each film opens one page. Turn through the ones that are open. The next one is waiting.</p>
     <ol class="u-sb-track" tabindex="0" aria-label="Storybook pages, scroll sideways">{"".join(pages)}</ol>
     <div class="u-sb-nav"><button class="u-btn u-btn-line" type="button" id="u-sb-prev">Previous page</button><button class="u-btn u-btn-gold" type="button" id="u-sb-next">Turn the page</button></div>
@@ -216,7 +216,7 @@ def why():
     return f'''<section class="u-sec u-why" id="why" aria-labelledby="u-why-h">
   <div class="u-wrap">
     <p class="u-label u-kick" style="color:var(--u-gold-ink)">Why do we do this?{TAG if PROTO else ''}</p>
-    <h2 id="u-why-h">Questions the films answer</h2>
+    <h2 id="u-why-h" data-ch="CHAPTER IV">Questions the films answer</h2>
     <p class="u-lede">Each answer shows what the sources say and what is still open.</p>
     <div class="u-why-list">{"".join(out)}</div>
   </div>

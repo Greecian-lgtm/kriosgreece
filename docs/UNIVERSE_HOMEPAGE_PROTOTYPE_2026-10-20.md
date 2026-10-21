@@ -55,3 +55,6 @@ Not fixed on purpose: "Πέτρος" lang inside the locked dedication (see deci
 9. Self-host fonts.
 10. Whether the Memory Room ever collects family stories (not in this prototype).
 11. Release date after the Oct 27 freeze.
+
+## 8. Update: v2 cinematic direction (director, Oct 20, 10:29 PM)
+The prototype now uses a full-bleed hero with large serif type, warm terracotta accents, chapter marks (I to IV), translucent layered captions and scroll-driven depth (hero drift, page-turn entry on storybook pages). Motion is progressive enhancement and off under reduced motion. The storybook uses the film thumbnails. The previous version is in git history (commit 2d98509). Peer research: `KRIOS_website_peer_research_2026-10-20.md`.

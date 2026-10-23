@@ -1,0 +1,440 @@
+{
+ "_page": "sacred-days",
+ "_status": "draft",
+ "strings": [
+  {
+   "en": "Sacred Days · Living traditions",
+   "html": null,
+   "el": "Sacred Days · Ζωντανές παραδόσεις",
+   "es": "Sacred Days · Tradiciones vivas"
+  },
+  {
+   "en": "The days we remember",
+   "html": null,
+   "el": "Οι μέρες που θυμόμαστε",
+   "es": "Los días que recordamos"
+  },
+  {
+   "en": "Faith, customs and the traditions we carry forward. Feast days and name days, released on the day itself: what families celebrate, why their grandparents celebrated it, and how it differs from village to village and city to city.",
+   "html": null,
+   "el": "Πίστη, έθιμα και οι παραδόσεις που συνεχίζουμε. Γιορτές και ονομαστικές γιορτές, που κυκλοφορούν την ίδια την ημέρα: τι γιορτάζουν οι οικογένειες, γιατί το γιόρταζαν οι παππούδες τους και πώς διαφέρει από χωριό σε χωριό και από πόλη σε πόλη.",
+   "es": "Fe, costumbres y las tradiciones que llevamos adelante. Fiestas y días del santo (onomásticas), publicados el mismo día: lo que celebran las familias, por qué lo celebraban sus abuelos y cómo cambia de un pueblo a otro y de una ciudad a otra."
+  },
+  {
+   "en": "Thumbnail artwork is an illustration, not a historical image.",
+   "html": null,
+   "el": "Η εικόνα της μικρογραφίας είναι εικονογράφηση, όχι ιστορική εικόνα.",
+   "es": "La imagen en miniatura es una ilustración, no una imagen histórica."
+  },
+  {
+   "en": "Next Sacred Days film",
+   "html": null,
+   "el": "Η επόμενη ταινία των Sacred Days",
+   "es": "La próxima película de Sacred Days"
+  },
+  {
+   "en": "Saint Demetrios: More Than a Name Day",
+   "html": null,
+   "el": "Saint Demetrios: More Than a Name Day",
+   "es": "Saint Demetrios: More Than a Name Day"
+  },
+  {
+   "en": "The saint of Thessaloniki, and the name day so many Greek families celebrate. On YouTube on his feast day.",
+   "html": null,
+   "el": "Ο άγιος της Θεσσαλονίκης και η ονομαστική γιορτή που γιορτάζουν τόσες ελληνικές οικογένειες. Στο YouTube την ημέρα της γιορτής του.",
+   "es": "El santo de Tesalónica y el día del santo que celebran tantas familias griegas. En YouTube el día de su fiesta."
+  },
+  {
+   "en": "Premieres Monday, October 26, 2026 on YouTube",
+   "html": "<span></span>Premieres Monday, October 26, 2026 on YouTube",
+   "el": "Πρεμιέρα τη Δευτέρα 26 Οκτωβρίου 2026 στο YouTube",
+   "es": "Estreno el lunes 26 de octubre de 2026 en YouTube",
+   "el_html": "<span></span>Πρεμιέρα τη Δευτέρα 26 Οκτωβρίου 2026 στο YouTube",
+   "es_html": "<span></span>Estreno el lunes 26 de octubre de 2026 en YouTube"
+  },
+  {
+   "en": "Subscribe on YouTube to see it first",
+   "html": null,
+   "el": "Εγγραφείτε στο YouTube για να τη δείτε πρώτοι",
+   "es": "Suscríbase en YouTube para verla primero"
+  },
+  {
+   "en": "The year ahead",
+   "html": null,
+   "el": "Η χρονιά που έρχεται",
+   "es": "El año que viene"
+  },
+  {
+   "en": "Sacred Days calendar",
+   "html": null,
+   "el": "Εορτολόγιο των Sacred Days",
+   "es": "Calendario de Sacred Days"
+  },
+  {
+   "en": "A curated selection of feast days. Each feast date is listed separately from any KRIOS film release.",
+   "html": null,
+   "el": "Μια επιλογή γιορτών. Η ημερομηνία κάθε γιορτής αναφέρεται χωριστά από κάθε κυκλοφορία ταινίας του KRIOS.",
+   "es": "Una selección de fiestas. La fecha de cada fiesta se indica por separado de cualquier estreno de una película de KRIOS."
+  },
+  {
+   "en": "Oct",
+   "html": null,
+   "el": "Οκτ",
+   "es": "oct"
+  },
+  {
+   "en": "Oct26",
+   "html": "<span>Oct</span><b>26</b>",
+   "el": "Οκτ26",
+   "es": "oct26",
+   "el_html": "<span>Οκτ</span><b>26</b>",
+   "es_html": "<span>oct</span><b>26</b>"
+  },
+  {
+   "en": "Saint Demetrios",
+   "html": null,
+   "el": "Άγιος Δημήτριος",
+   "es": "San Demetrio"
+  },
+  {
+   "en": "Feast day · Monday, October 26, 2026",
+   "html": null,
+   "el": "Γιορτή · Δευτέρα 26 Οκτωβρίου 2026",
+   "es": "Fiesta · lunes 26 de octubre de 2026"
+  },
+  {
+   "en": "Saint Demetrios Άγιος ΔημήτριοςFeast day · Monday, October 26, 2026",
+   "html": "<b>Saint Demetrios</b> <span>Άγιος Δημήτριος</span><small>Feast day · Monday, October 26, 2026</small>",
+   "el": "Άγιος Δημήτριος Γιορτή · Δευτέρα 26 Οκτωβρίου 2026",
+   "es": "San Demetrio Άγιος ΔημήτριοςFiesta · lunes 26 de octubre de 2026",
+   "el_html": "<b>Άγιος Δημήτριος</b> <span>Άγιος Δημήτριος</span><small>Γιορτή · Δευτέρα 26 Οκτωβρίου 2026</small>",
+   "es_html": "<b>San Demetrio</b> <span>Άγιος Δημήτριος</span><small>Fiesta · lunes 26 de octubre de 2026</small>"
+  },
+  {
+   "en": "KRIOS film premieres Oct 26",
+   "html": "<span></span>KRIOS film premieres Oct 26",
+   "el": "Πρεμιέρα ταινίας του KRIOS 26 Οκτ",
+   "es": "Estreno de una película de KRIOS el 26 de oct",
+   "el_html": "<span></span>Πρεμιέρα ταινίας του KRIOS 26 Οκτ",
+   "es_html": "<span></span>Estreno de una película de KRIOS el 26 de oct"
+  },
+  {
+   "en": "Dec",
+   "html": null,
+   "el": "Δεκ",
+   "es": "dic"
+  },
+  {
+   "en": "Dec6",
+   "html": "<span>Dec</span><b>6</b>",
+   "el": "Δεκ6",
+   "es": "dic6",
+   "el_html": "<span>Δεκ</span><b>6</b>",
+   "es_html": "<span>dic</span><b>6</b>"
+  },
+  {
+   "en": "Saint Nicholas",
+   "html": null,
+   "el": "Άγιος Νικόλαος",
+   "es": "San Nicolás"
+  },
+  {
+   "en": "Feast day · Sunday, December 6, 2026",
+   "html": null,
+   "el": "Γιορτή · Κυριακή 6 Δεκεμβρίου 2026",
+   "es": "Fiesta · domingo 6 de diciembre de 2026"
+  },
+  {
+   "en": "Saint Nicholas Άγιος ΝικόλαοςFeast day · Sunday, December 6, 2026",
+   "html": "<b>Saint Nicholas</b> <span>Άγιος Νικόλαος</span><small>Feast day · Sunday, December 6, 2026</small>",
+   "el": "Άγιος Νικόλαος Γιορτή · Κυριακή 6 Δεκεμβρίου 2026",
+   "es": "San Nicolás Άγιος ΝικόλαοςFiesta · domingo 6 de diciembre de 2026",
+   "el_html": "<b>Άγιος Νικόλαος</b> <span>Άγιος Νικόλαος</span><small>Γιορτή · Κυριακή 6 Δεκεμβρίου 2026</small>",
+   "es_html": "<b>San Nicolás</b> <span>Άγιος Νικόλαος</span><small>Fiesta · domingo 6 de diciembre de 2026</small>"
+  },
+  {
+   "en": "No KRIOS film scheduled",
+   "html": "<span></span>No KRIOS film scheduled",
+   "el": "Δεν έχει προγραμματιστεί ταινία του KRIOS",
+   "es": "No hay ninguna película de KRIOS programada",
+   "el_html": "<span></span>Δεν έχει προγραμματιστεί ταινία του KRIOS",
+   "es_html": "<span></span>No hay ninguna película de KRIOS programada"
+  },
+  {
+   "en": "Jan",
+   "html": null,
+   "el": "Ιαν",
+   "es": "ene"
+  },
+  {
+   "en": "Jan6",
+   "html": "<span>Jan</span><b>6</b>",
+   "el": "Ιαν6",
+   "es": "ene6",
+   "el_html": "<span>Ιαν</span><b>6</b>",
+   "es_html": "<span>ene</span><b>6</b>"
+  },
+  {
+   "en": "Theophany",
+   "html": null,
+   "el": "Θεοφάνεια",
+   "es": "Teofanía"
+  },
+  {
+   "en": "Feast day · Wednesday, January 6, 2027",
+   "html": null,
+   "el": "Γιορτή · Τετάρτη 6 Ιανουαρίου 2027",
+   "es": "Fiesta · miércoles 6 de enero de 2027"
+  },
+  {
+   "en": "Theophany ΘεοφάνειαFeast day · Wednesday, January 6, 2027",
+   "html": "<b>Theophany</b> <span>Θεοφάνεια</span><small>Feast day · Wednesday, January 6, 2027</small>",
+   "el": "Θεοφάνεια Γιορτή · Τετάρτη 6 Ιανουαρίου 2027",
+   "es": "Teofanía ΘεοφάνειαFiesta · miércoles 6 de enero de 2027",
+   "el_html": "<b>Θεοφάνεια</b> <span>Θεοφάνεια</span><small>Γιορτή · Τετάρτη 6 Ιανουαρίου 2027</small>",
+   "es_html": "<b>Teofanía</b> <span>Θεοφάνεια</span><small>Fiesta · miércoles 6 de enero de 2027</small>"
+  },
+  {
+   "en": "Mar",
+   "html": null,
+   "el": "Μαρ",
+   "es": "mar"
+  },
+  {
+   "en": "Mar25",
+   "html": "<span>Mar</span><b>25</b>",
+   "el": "Μαρ25",
+   "es": "mar25",
+   "el_html": "<span>Μαρ</span><b>25</b>",
+   "es_html": "<span>mar</span><b>25</b>"
+  },
+  {
+   "en": "The Annunciation",
+   "html": null,
+   "el": "Ευαγγελισμός της Θεοτόκου",
+   "es": "La Anunciación"
+  },
+  {
+   "en": "Feast day · Thursday, March 25, 2027",
+   "html": null,
+   "el": "Γιορτή · Πέμπτη 25 Μαρτίου 2027",
+   "es": "Fiesta · jueves 25 de marzo de 2027"
+  },
+  {
+   "en": "The Annunciation Ευαγγελισμός της ΘεοτόκουFeast day · Thursday, March 25, 2027",
+   "html": "<b>The Annunciation</b> <span>Ευαγγελισμός της Θεοτόκου</span><small>Feast day · Thursday, March 25, 2027</small>",
+   "el": "Ευαγγελισμός της Θεοτόκου Γιορτή · Πέμπτη 25 Μαρτίου 2027",
+   "es": "La Anunciación Ευαγγελισμός της ΘεοτόκουFiesta · jueves 25 de marzo de 2027",
+   "el_html": "<b>Ευαγγελισμός της Θεοτόκου</b> <span>Ευαγγελισμός της Θεοτόκου</span><small>Γιορτή · Πέμπτη 25 Μαρτίου 2027</small>",
+   "es_html": "<b>La Anunciación</b> <span>Ευαγγελισμός της Θεοτόκου</span><small>Fiesta · jueves 25 de marzo de 2027</small>"
+  },
+  {
+   "en": "May",
+   "html": null,
+   "el": "Μάι",
+   "es": "may"
+  },
+  {
+   "en": "May2",
+   "html": "<span>May</span><b>2</b>",
+   "el": "Μάι2",
+   "es": "may2",
+   "el_html": "<span>Μάι</span><b>2</b>",
+   "es_html": "<span>may</span><b>2</b>"
+  },
+  {
+   "en": "Pascha",
+   "html": null,
+   "el": "Πάσχα",
+   "es": "Pascua"
+  },
+  {
+   "en": "Feast day · Sunday, May 2, 2027 · moveable feast",
+   "html": null,
+   "el": "Γιορτή · Κυριακή 2 Μαΐου 2027 · κινητή γιορτή",
+   "es": "Fiesta · domingo 2 de mayo de 2027 · fiesta móvil"
+  },
+  {
+   "en": "Pascha ΠάσχαFeast day · Sunday, May 2, 2027 · moveable feast",
+   "html": "<b>Pascha</b> <span>Πάσχα</span><small>Feast day · Sunday, May 2, 2027 · moveable feast</small>",
+   "el": "Πάσχα Γιορτή · Κυριακή 2 Μαΐου 2027 · κινητή γιορτή",
+   "es": "Pascua ΠάσχαFiesta · domingo 2 de mayo de 2027 · fiesta móvil",
+   "el_html": "<b>Πάσχα</b> <span>Πάσχα</span><small>Γιορτή · Κυριακή 2 Μαΐου 2027 · κινητή γιορτή</small>",
+   "es_html": "<b>Pascua</b> <span>Πάσχα</span><small>Fiesta · domingo 2 de mayo de 2027 · fiesta móvil</small>"
+  },
+  {
+   "en": "Aug",
+   "html": null,
+   "el": "Αύγ",
+   "es": "ago"
+  },
+  {
+   "en": "Aug15",
+   "html": "<span>Aug</span><b>15</b>",
+   "el": "Αύγ15",
+   "es": "ago15",
+   "el_html": "<span>Αύγ</span><b>15</b>",
+   "es_html": "<span>ago</span><b>15</b>"
+  },
+  {
+   "en": "The Dormition of the Theotokos",
+   "html": null,
+   "el": "Κοίμηση της Θεοτόκου",
+   "es": "La Dormición de la Theotokos"
+  },
+  {
+   "en": "Feast day · Sunday, August 15, 2027",
+   "html": null,
+   "el": "Γιορτή · Κυριακή 15 Αυγούστου 2027",
+   "es": "Fiesta · domingo 15 de agosto de 2027"
+  },
+  {
+   "en": "The Dormition of the Theotokos Κοίμηση της ΘεοτόκουFeast day · Sunday, August 15, 2027",
+   "html": "<b>The Dormition of the Theotokos</b> <span>Κοίμηση της Θεοτόκου</span><small>Feast day · Sunday, August 15, 2027</small>",
+   "el": "Κοίμηση της Θεοτόκου Γιορτή · Κυριακή 15 Αυγούστου 2027",
+   "es": "La Dormición de la Theotokos Κοίμηση της ΘεοτόκουFiesta · domingo 15 de agosto de 2027",
+   "el_html": "<b>Κοίμηση της Θεοτόκου</b> <span>Κοίμηση της Θεοτόκου</span><small>Γιορτή · Κυριακή 15 Αυγούστου 2027</small>",
+   "es_html": "<b>La Dormición de la Theotokos</b> <span>Κοίμηση της Θεοτόκου</span><small>Fiesta · domingo 15 de agosto de 2027</small>"
+  },
+  {
+   "en": "Fixed feasts are shown on the calendar followed by the Church of Greece. Communities that keep the Old Calendar celebrate them 13 days later. Pascha moves each year.",
+   "html": null,
+   "el": "Οι ακίνητες γιορτές εμφανίζονται σύμφωνα με το ημερολόγιο που ακολουθεί η Εκκλησία της Ελλάδος. Οι κοινότητες που τηρούν το παλαιό ημερολόγιο τις γιορτάζουν 13 ημέρες αργότερα. Το Πάσχα αλλάζει ημερομηνία κάθε χρόνο.",
+   "es": "Las fiestas fijas se muestran según el calendario que sigue la Iglesia de Grecia. Las comunidades que siguen el calendario antiguo las celebran 13 días después. La Pascua cambia de fecha cada año."
+  },
+  {
+   "en": "Sacred Days films",
+   "html": null,
+   "el": "Ταινίες των Sacred Days",
+   "es": "Películas de Sacred Days"
+  },
+  {
+   "en": "Saint Demetrios will be the first. Each new Sacred Days film appears here on its feast day.",
+   "html": null,
+   "el": "Ο Άγιος Δημήτριος θα είναι η πρώτη. Κάθε νέα ταινία των Sacred Days εμφανίζεται εδώ την ημέρα της γιορτής της.",
+   "es": "San Demetrio será la primera. Cada nueva película de Sacred Days aparece aquí el día de su fiesta."
+  },
+  {
+   "en": "Name days and national days",
+   "html": null,
+   "el": "Ονομαστικές γιορτές και εθνικές επέτειοι",
+   "es": "Días del santo y fiestas nacionales"
+  },
+  {
+   "en": "Sacred Days · Name day",
+   "html": null,
+   "el": "Sacred Days · Ονομαστική γιορτή",
+   "es": "Sacred Days · Día del santo"
+  },
+  {
+   "en": "When is Saint Demetrios name day?",
+   "html": null,
+   "el": "Πότε γιορτάζει ο Άγιος Δημήτριος;",
+   "es": "¿Cuándo es el día de san Demetrio?"
+  },
+  {
+   "en": "Read →",
+   "html": null,
+   "el": "Διαβάστε →",
+   "es": "Leer →"
+  },
+  {
+   "en": "Sacred Days · Name dayWhen is Saint Demetrios name day?Read →",
+   "html": "<span>Sacred Days · Name day</span><span>When is Saint Demetrios name day?</span><span>Read →</span>",
+   "el": "Sacred Days · Ονομαστική γιορτήΠότε γιορτάζει ο Άγιος Δημήτριος;Διαβάστε →",
+   "es": "Sacred Days · Día del santo¿Cuándo es el día de san Demetrio?Leer →",
+   "el_html": "<span>Sacred Days · Ονομαστική γιορτή</span><span>Πότε γιορτάζει ο Άγιος Δημήτριος;</span><span>Διαβάστε →</span>",
+   "es_html": "<span>Sacred Days · Día del santo</span><span>¿Cuándo es el día de san Demetrio?</span><span>Leer →</span>"
+  },
+  {
+   "en": "Living history · National day",
+   "html": null,
+   "el": "Ζωντανή ιστορία · Εθνική επέτειος",
+   "es": "Historia viva · Fiesta nacional"
+  },
+  {
+   "en": "Ohi Day, October 28",
+   "html": null,
+   "el": "Η επέτειος του «Όχι», 28 Οκτωβρίου",
+   "es": "El Día del «Ohi» (el Día del No), 28 de octubre"
+  },
+  {
+   "en": "Living history · National dayOhi Day, October 28Read →",
+   "html": "<span>Living history · National day</span><span>Ohi Day, October 28</span><span>Read →</span>",
+   "el": "Ζωντανή ιστορία · Εθνική επέτειοςΗ επέτειος του «Όχι», 28 ΟκτωβρίουΔιαβάστε →",
+   "es": "Historia viva · Fiesta nacionalEl Día del «Ohi» (el Día del No), 28 de octubreLeer →",
+   "el_html": "<span>Ζωντανή ιστορία · Εθνική επέτειος</span><span>Η επέτειος του «Όχι», 28 Οκτωβρίου</span><span>Διαβάστε →</span>",
+   "es_html": "<span>Historia viva · Fiesta nacional</span><span>El Día del «Ohi» (el Día del No), 28 de octubre</span><span>Leer →</span>"
+  },
+  {
+   "en": "Related films and reading",
+   "html": null,
+   "el": "Σχετικές ταινίες και κείμενα",
+   "es": "Películas y lecturas relacionadas"
+  },
+  {
+   "en": "Faith · May 28 · 13 min",
+   "html": null,
+   "el": "Πίστη · 28 Μαΐου · 13 λεπ.",
+   "es": "Fe · 28 de mayo · 13 min"
+  },
+  {
+   "en": "The Greek Christians Who Hid Their Faith Inside the Ottoman Empire for 400 Years",
+   "html": null,
+   "el": "The Greek Christians Who Hid Their Faith Inside the Ottoman Empire for 400 Years",
+   "es": "The Greek Christians Who Hid Their Faith Inside the Ottoman Empire for 400 Years"
+  },
+  {
+   "en": "Families who kept their Orthodox faith hidden for generations under Ottoman rule.",
+   "html": null,
+   "el": "Οικογένειες που κράτησαν κρυφή την ορθόδοξη πίστη τους για γενιές υπό την οθωμανική κυριαρχία.",
+   "es": "Familias que mantuvieron oculta su fe ortodoxa durante generaciones bajo el dominio otomano."
+  },
+  {
+   "en": "Faith · May 28 · 13 minThe Greek Christians Who Hid Their Faith Inside the Ottoman Empire for 400 YearsFamilies who kept their Orthodox faith hidden for generations under Ottoman rule.",
+   "html": "<span>Faith · May 28 · 13 min</span><span>The Greek Christians Who Hid Their Faith Inside the Ottoman Empire for 400 Years</span><span>Families who kept their Orthodox faith hidden for generations under Ottoman rule.</span>",
+   "el": "Πίστη · 28 Μαΐου · 13 λεπ.The Greek Christians Who Hid Their Faith Inside the Ottoman Empire for 400 YearsΟικογένειες που κράτησαν κρυφή την ορθόδοξη πίστη τους για γενιές υπό την οθωμανική κυριαρχία.",
+   "es": "Fe · 28 de mayo · 13 minThe Greek Christians Who Hid Their Faith Inside the Ottoman Empire for 400 YearsFamilias que mantuvieron oculta su fe ortodoxa durante generaciones bajo el dominio otomano.",
+   "el_html": "<span>Πίστη · 28 Μαΐου · 13 λεπ.</span><span>The Greek Christians Who Hid Their Faith Inside the Ottoman Empire for 400 Years</span><span>Οικογένειες που κράτησαν κρυφή την ορθόδοξη πίστη τους για γενιές υπό την οθωμανική κυριαρχία.</span>",
+   "es_html": "<span>Fe · 28 de mayo · 13 min</span><span>The Greek Christians Who Hid Their Faith Inside the Ottoman Empire for 400 Years</span><span>Familias que mantuvieron oculta su fe ortodoxa durante generaciones bajo el dominio otomano.</span>"
+  },
+  {
+   "en": "Article",
+   "html": null,
+   "el": "Άρθρο",
+   "es": "Artículo"
+  },
+  {
+   "en": "They Didn't Lose Their Faith. They Hid It Inside the Empire Trying to Erase It.",
+   "html": null,
+   "el": "They Didn't Lose Their Faith. They Hid It Inside the Empire Trying to Erase It.",
+   "es": "They Didn't Lose Their Faith. They Hid It Inside the Empire Trying to Erase It."
+  },
+  {
+   "en": "Read the article →",
+   "html": null,
+   "el": "Διαβάστε το άρθρο →",
+   "es": "Leer el artículo →"
+  },
+  {
+   "en": "ArticleThey Didn't Lose Their Faith. They Hid It Inside the Empire Trying to Erase It.Read the article →",
+   "html": "<span>Article</span><span>They Didn't Lose Their Faith. They Hid It Inside the Empire Trying to Erase It.</span><span>Read the article →</span>",
+   "el": "ΆρθροThey Didn't Lose Their Faith. They Hid It Inside the Empire Trying to Erase It.Διαβάστε το άρθρο →",
+   "es": "ArtículoThey Didn't Lose Their Faith. They Hid It Inside the Empire Trying to Erase It.Leer el artículo →",
+   "el_html": "<span>Άρθρο</span><span>They Didn't Lose Their Faith. They Hid It Inside the Empire Trying to Erase It.</span><span>Διαβάστε το άρθρο →</span>",
+   "es_html": "<span>Artículo</span><span>They Didn't Lose Their Faith. They Hid It Inside the Empire Trying to Erase It.</span><span>Leer el artículo →</span>"
+  }
+ ],
+ "attrs": [
+  {
+   "en": "Main",
+   "el": "Κύριο μενού",
+   "es": "Principal"
+  },
+  {
+   "en": "Saint Demetrios: More Than a Name Day",
+   "el": "Saint Demetrios: More Than a Name Day",
+   "es": "Saint Demetrios: More Than a Name Day"
+  }
+ ]
+}

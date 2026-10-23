@@ -1,0 +1,124 @@
+{
+ "_note": "Site-wide language layer: menu, footer and shared buttons. Section labels stay in English (director, Oct 23, 2026) and get a hover, focus or tap explanation from 'terms'.",
+ "review": {
+  "en": "source",
+  "el": "published_draft",
+  "es": "published_draft"
+ },
+ "legend": {
+  "en": "Language",
+  "el": "Γλώσσα",
+  "es": "Idioma"
+ },
+ "draft": {
+  "el": "Πρόχειρη μετάφραση για έλεγχο. Δεν έχει εγκριθεί ακόμη.",
+  "es": "Traducción en borrador para revisión. Todavía no está aprobada."
+ },
+ "strings": [
+  {
+   "en": "Skip to content",
+   "el": "Μετάβαση στο περιεχόμενο",
+   "es": "Saltar al contenido"
+  },
+  {
+   "en": "Menu",
+   "el": "Μενού",
+   "es": "Menú"
+  },
+  {
+   "en": "Greek cultural preservation",
+   "el": "Διατήρηση του ελληνικού πολιτισμού",
+   "es": "Preservación de la cultura griega"
+  },
+  {
+   "en": "Subscribe on YouTube",
+   "html": "Subscribe<span> on YouTube</span>",
+   "el": "Εγγραφή στο YouTube",
+   "es": "Suscribirse en YouTube",
+   "el_html": "Εγγραφή<span> στο YouTube</span>",
+   "es_html": "Suscribirse<span> en YouTube</span>"
+  },
+  {
+   "en": "Subscribe",
+   "el": "Εγγραφή",
+   "es": "Suscribirse"
+  },
+  {
+   "en": "The living story of Greek civilization.Preserve. Teach. Understand. Connect. Pass forward.",
+   "html": "The living story of Greek civilization.<br>Preserve. Teach. Understand. Connect. Pass forward.",
+   "el": "Η ζωντανή ιστορία του ελληνικού πολιτισμού. Διαφυλάσσουμε. Διδάσκουμε. Κατανοούμε. Συνδέουμε. Παραδίδουμε στους επόμενους.",
+   "es": "La historia viva de la civilización griega. Preservar. Enseñar. Comprender. Conectar. Transmitir.",
+   "el_html": "Η ζωντανή ιστορία του ελληνικού πολιτισμού.<br>Διαφυλάσσουμε. Διδάσκουμε. Κατανοούμε. Συνδέουμε. Παραδίδουμε στους επόμενους.",
+   "es_html": "La historia viva de la civilización griega.<br>Preservar. Enseñar. Comprender. Conectar. Transmitir."
+  }
+ ],
+ "attrs": [
+  {
+   "en": "Main",
+   "el": "Κύριο μενού",
+   "es": "Menú principal"
+  }
+ ],
+ "terms": {
+  "el": {
+   "Films": "Ταινίες",
+   "Articles": "Άρθρα",
+   "Q&A": "Ερωτήσεις και απαντήσεις",
+   "Quizzes": "Κουίζ",
+   "Sacred Days": "Ιερές Ημέρες",
+   "Memory Room": "Χώρος Μνήμης",
+   "How we work": "Πώς δουλεύουμε",
+   "All films": "Όλες οι ταινίες",
+   "Sources": "Πηγές",
+   "The Greeks Who Left": "Ταινία: Οι Έλληνες που έφυγαν",
+   "Sources for The Greeks Who Left": "Πηγές της ταινίας «Οι Έλληνες που έφυγαν»",
+   "Image credits for The Greeks Who Left": "Πηγές των εικόνων της ταινίας «Οι Έλληνες που έφυγαν»",
+   "The Greek Dance": "Ταινία: Ο ελληνικός χορός",
+   "The Greek Dance, sources": "Πηγές της ταινίας «Ο ελληνικός χορός»",
+   "The Greek Dance That Wasn't Real… Until It Was": "Ταινία: Ο ελληνικός χορός που δεν ήταν αληθινός… μέχρι που έγινε",
+   "When is Saint Demetrios name day?": "Πότε είναι η γιορτή του Αγίου Δημητρίου, όταν γιορτάζουν όσοι λέγονται Δημήτρης και Δήμητρα;",
+   "What does xenitia mean?": "Τι σημαίνει ξενιτιά;",
+   "Sacred": "Ιερά",
+   "Themes": "Θέματα",
+   "Legal": "Νομικά"
+  },
+  "es": {
+   "Films": "Películas",
+   "Articles": "Artículos",
+   "Q&A": "Preguntas y respuestas",
+   "Quizzes": "Cuestionarios de conocimientos",
+   "Sacred Days": "Días Sagrados",
+   "Memory Room": "Sala de la Memoria",
+   "How we work": "Cómo trabajamos",
+   "All films": "Todas las películas",
+   "Sources": "Fuentes",
+   "The Greeks Who Left": "Película: Los griegos que se fueron",
+   "Sources for The Greeks Who Left": "Fuentes de la película Los griegos que se fueron",
+   "Image credits for The Greeks Who Left": "Créditos de las imágenes de la película Los griegos que se fueron",
+   "The Greek Dance": "Película: La danza griega",
+   "The Greek Dance, sources": "Fuentes de la película La danza griega",
+   "The Greek Dance That Wasn't Real… Until It Was": "Película: La danza griega que no era real… hasta que lo fue",
+   "When is Saint Demetrios name day?": "¿Cuándo es la fiesta de san Demetrio, el día del santo de Dimitris y Dimitra?",
+   "What does xenitia mean?": "¿Qué significa xenitiá?",
+   "Sacred": "Lo sagrado",
+   "Themes": "Temas",
+   "Legal": "Aviso legal"
+  }
+ },
+ "untranslated": {
+  "el": "Αυτή η σελίδα δεν έχει μεταφραστεί ακόμη στα ελληνικά. Το μενού εμφανίζεται στα ελληνικά, το κείμενο στα αγγλικά.",
+  "es": "Esta página todavía no está traducida al español. El menú aparece en español y el texto, en inglés."
+ },
+ "pages": [
+  "films",
+  "films__saint-demetrios",
+  "films__the-greek-dance",
+  "films__the-greeks-who-left",
+  "home",
+  "how-we-work",
+  "ohi-day",
+  "sacred-days",
+  "sacred-days__saint-demetrios-name-day",
+  "tools"
+ ]
+}

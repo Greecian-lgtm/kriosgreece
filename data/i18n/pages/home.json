@@ -1,0 +1,696 @@
+{
+ "_page": "home",
+ "_status": "draft",
+ "strings": [
+  {
+   "en": "The stories we inherited.",
+   "html": null,
+   "el": "Οι ιστορίες που κληρονομήσαμε.",
+   "es": "Las historias que heredamos."
+  },
+  {
+   "en": "The questions we never asked.",
+   "html": null,
+   "el": "Οι ερωτήσεις που δεν κάναμε ποτέ.",
+   "es": "Las preguntas que nunca hicimos."
+  },
+  {
+   "en": "The stories we inherited.The questions we never asked.",
+   "html": "<span>The stories we inherited.</span><span>The questions we never asked.</span>",
+   "el_html": "<span>Οι ιστορίες που κληρονομήσαμε.</span><span>Οι ερωτήσεις που δεν κάναμε ποτέ.</span>",
+   "es_html": "<span>Las historias que heredamos.</span><span>Las preguntas que nunca hicimos.</span>",
+   "el": "Οι ιστορίες που κληρονομήσαμε.Οι ερωτήσεις που δεν κάναμε ποτέ.",
+   "es": "Las historias que heredamos.Las preguntas que nunca hicimos."
+  },
+  {
+   "en": "Short documentaries on Greek history, faith and family memory. Real archives. Named sources. Made for Greeks in Greece and everywhere else.",
+   "html": null,
+   "el": "Σύντομα ντοκιμαντέρ για την ελληνική ιστορία, την πίστη και τη μνήμη της οικογένειας. Πραγματικά αρχεία. Κατονομαζόμενες πηγές. Για τους Έλληνες στην Ελλάδα και σε όλο τον κόσμο.",
+   "es": "Documentales breves sobre la historia, la fe y la memoria familiar griegas. Archivos reales. Fuentes con nombre. Hechos para los griegos de Grecia y de todo el mundo."
+  },
+  {
+   "en": "Watch the newest film",
+   "html": null,
+   "el": "Δείτε τη νεότερη ταινία",
+   "es": "Ver la película más reciente"
+  },
+  {
+   "en": "Or start with a theme",
+   "html": null,
+   "el": "Ή ξεκινήστε από ένα θέμα",
+   "es": "O empiece por un tema"
+  },
+  {
+   "en": "AI-generated illustration",
+   "html": null,
+   "el": "Εικονογράφηση με τεχνητή νοημοσύνη",
+   "es": "Ilustración creada con IA"
+  },
+  {
+   "en": "Illustration from the film The Greeks Who Left. It is not a historical photograph.",
+   "html": null,
+   "el": "Εικονογράφηση από την ταινία «The Greeks Who Left». Δεν είναι ιστορική φωτογραφία.",
+   "es": "Ilustración de la película «The Greeks Who Left». No es una fotografía histórica."
+  },
+  {
+   "en": "The newest film",
+   "html": null,
+   "el": "Η νεότερη ταινία",
+   "es": "La película más reciente"
+  },
+  {
+   "en": "Living Roots · 9 min · October 18, 2026",
+   "html": null,
+   "el": "Living Roots · 9 λεπ. · 18 Οκτωβρίου 2026",
+   "es": "Living Roots · 9 min · 18 de octubre de 2026"
+  },
+  {
+   "en": "The Greeks Who Left, and the Greece They Carried",
+   "html": null,
+   "el": "The Greeks Who Left, and the Greece They Carried",
+   "es": "The Greeks Who Left, and the Greece They Carried"
+  },
+  {
+   "en": "A suitcase can carry clothes and photographs. How do you pack a language, a song, or a church bell?",
+   "html": null,
+   "el": "Μια βαλίτσα χωράει ρούχα και φωτογραφίες. Πώς όμως πακετάρεις μια γλώσσα, ένα τραγούδι ή μια καμπάνα εκκλησίας;",
+   "es": "Una maleta puede llevar ropa y fotografías. ¿Pero cómo se empaca un idioma, una canción o la campana de una iglesia?"
+  },
+  {
+   "en": "Watch on YouTube",
+   "html": null,
+   "el": "Δείτε στο YouTube",
+   "es": "Ver en YouTube"
+  },
+  {
+   "en": "Open the film page",
+   "html": null,
+   "el": "Άνοιγμα της σελίδας της ταινίας",
+   "es": "Abrir la página de la película"
+  },
+  {
+   "en": "Source material",
+   "html": null,
+   "el": "Υλικό πηγών",
+   "es": "Material de fuentes"
+  },
+  {
+   "en": "2 established claims, 1 still open, each with a named source.",
+   "html": null,
+   "el": "2 τεκμηριωμένοι ισχυρισμοί, 1 ακόμη ανοιχτός, ο καθένας με κατονομαζόμενη πηγή.",
+   "es": "2 afirmaciones establecidas y 1 todavía abierta, cada una con una fuente con nombre."
+  },
+  {
+   "en": "Read the sources",
+   "html": null,
+   "el": "Διαβάστε τις πηγές",
+   "es": "Leer las fuentes"
+  },
+  {
+   "en": "Image credits",
+   "html": null,
+   "el": "Προέλευση εικόνων",
+   "es": "Créditos de las imágenes"
+  },
+  {
+   "en": "Coming next",
+   "html": null,
+   "el": "Έρχεται σύντομα",
+   "es": "Próximamente"
+  },
+  {
+   "en": "Saint Demetrios: More Than a Name Day",
+   "html": null,
+   "el": "Saint Demetrios: More Than a Name Day",
+   "es": "Saint Demetrios: More Than a Name Day"
+  },
+  {
+   "en": "Sacred Days · premieres October 26, 2026",
+   "html": null,
+   "el": "Sacred Days · πρεμιέρα 26 Οκτωβρίου 2026",
+   "es": "Sacred Days · estreno el 26 de octubre de 2026"
+  },
+  {
+   "en": "Saint Demetrios: More Than a Name DaySacred Days · premieres October 26, 2026",
+   "html": "<b>Saint Demetrios: More Than a Name Day</b><br><span>Sacred Days · premieres October 26, 2026</span>",
+   "el_html": "<b>Saint Demetrios: More Than a Name Day</b><br><span>Sacred Days · πρεμιέρα 26 Οκτωβρίου 2026</span>",
+   "es_html": "<b>Saint Demetrios: More Than a Name Day</b><br><span>Sacred Days · estreno el 26 de octubre de 2026</span>",
+   "el": "Saint Demetrios: More Than a Name DaySacred Days · πρεμιέρα 26 Οκτωβρίου 2026",
+   "es": "Saint Demetrios: More Than a Name DaySacred Days · estreno el 26 de octubre de 2026"
+  },
+  {
+   "en": "A storybook of memories",
+   "html": null,
+   "el": "Ένα βιβλίο αναμνήσεων",
+   "es": "Un libro de recuerdos"
+  },
+  {
+   "en": "Each film opens one page. Turn through the ones that are open. The next one is waiting.",
+   "html": null,
+   "el": "Κάθε ταινία ανοίγει μία σελίδα. Ξεφυλλίστε όσες είναι ανοιχτές. Η επόμενη περιμένει.",
+   "es": "Cada película abre una página. Hojee las que ya están abiertas. La siguiente le espera."
+  },
+  {
+   "en": "Memory unlocked",
+   "html": null,
+   "el": "Η ανάμνηση άνοιξε",
+   "es": "Recuerdo desbloqueado"
+  },
+  {
+   "en": "Open this memory",
+   "html": null,
+   "el": "Ανοίξτε αυτή την ανάμνηση",
+   "es": "Abrir este recuerdo"
+  },
+  {
+   "en": "The Greek Dance That Wasn't Real… Until It Was",
+   "html": null,
+   "el": "The Greek Dance That Wasn't Real… Until It Was",
+   "es": "The Greek Dance That Wasn't Real… Until It Was"
+  },
+  {
+   "en": "Sirtaki was created for a film. So what makes a tradition real, and who keeps it alive?",
+   "html": null,
+   "el": "Το συρτάκι δημιουργήθηκε για μια ταινία. Τι κάνει λοιπόν μια παράδοση αληθινή, και ποιος την κρατά ζωντανή;",
+   "es": "El sirtaki se creó para una película. Entonces, ¿qué hace que una tradición sea real, y quién la mantiene viva?"
+  },
+  {
+   "en": "Premieres October 26, 2026",
+   "html": null,
+   "el": "Πρεμιέρα 26 Οκτωβρίου 2026",
+   "es": "Estreno el 26 de octubre de 2026"
+  },
+  {
+   "en": "AI-generated illustrationPremieres October 26, 2026",
+   "html": "<span>AI-generated illustration</span><span>Premieres October 26, 2026</span>",
+   "el_html": "<span>Εικονογράφηση με τεχνητή νοημοσύνη</span><span>Πρεμιέρα 26 Οκτωβρίου 2026</span>",
+   "es_html": "<span>Ilustración creada con IA</span><span>Estreno el 26 de octubre de 2026</span>",
+   "el": "Εικονογράφηση με τεχνητή νοημοσύνηΠρεμιέρα 26 Οκτωβρίου 2026",
+   "es": "Ilustración creada con IAEstreno el 26 de octubre de 2026"
+  },
+  {
+   "en": "Opens October 26, 2026",
+   "html": null,
+   "el": "Ανοίγει στις 26 Οκτωβρίου 2026",
+   "es": "Se abre el 26 de octubre de 2026"
+  },
+  {
+   "en": "The saint of Thessaloniki, and the name day so many Greek families celebrate. The story opens on premiere day.",
+   "html": null,
+   "el": "Ο άγιος της Θεσσαλονίκης και η ονομαστική γιορτή που γιορτάζουν τόσες ελληνικές οικογένειες. Η ιστορία ανοίγει την ημέρα της πρεμιέρας.",
+   "es": "El santo de Tesalónica y el día del santo que celebran tantas familias griegas. La historia se abre el día del estreno."
+  },
+  {
+   "en": "Previous page",
+   "html": null,
+   "el": "Προηγούμενη σελίδα",
+   "es": "Página anterior"
+  },
+  {
+   "en": "Turn the page",
+   "html": null,
+   "el": "Γυρίστε σελίδα",
+   "es": "Pasar la página"
+  },
+  {
+   "en": "Start with what feels closest to home.",
+   "html": null,
+   "el": "Ξεκινήστε από ό,τι νιώθετε πιο κοντά στο σπίτι σας.",
+   "es": "Empiece por lo que sienta más cercano a su hogar."
+  },
+  {
+   "en": "Roots & Diaspora",
+   "html": null,
+   "el": "Ρίζες και διασπορά",
+   "es": "Raíces y diáspora"
+  },
+  {
+   "en": "Suitcases, ships and the Greece people carried abroad.",
+   "html": null,
+   "el": "Βαλίτσες, πλοία και η Ελλάδα που πήραν μαζί τους οι άνθρωποι στο εξωτερικό.",
+   "es": "Maletas, barcos y la Grecia que la gente llevó consigo al extranjero."
+  },
+  {
+   "en": "3 films",
+   "html": null,
+   "el": "3 ταινίες",
+   "es": "3 películas"
+  },
+  {
+   "en": "3 films→",
+   "html": "<span>3 films</span><span>→</span>",
+   "el_html": "<span>3 ταινίες</span><span>→</span>",
+   "es_html": "<span>3 películas</span><span>→</span>",
+   "el": "3 ταινίες→",
+   "es": "3 películas→"
+  },
+  {
+   "en": "Faith & Sacred Days",
+   "html": null,
+   "el": "Πίστη και Sacred Days",
+   "es": "Fe y Sacred Days"
+  },
+  {
+   "en": "Name days, icons and the church calendar.",
+   "html": null,
+   "el": "Ονομαστικές γιορτές, εικόνες και το εκκλησιαστικό ημερολόγιο.",
+   "es": "Días del santo, íconos y el calendario de la Iglesia."
+  },
+  {
+   "en": "1 film and a calendar",
+   "html": null,
+   "el": "1 ταινία και ένα ημερολόγιο",
+   "es": "1 película y un calendario"
+  },
+  {
+   "en": "1 film and a calendar→",
+   "html": "<span>1 film and a calendar</span><span>→</span>",
+   "el_html": "<span>1 ταινία και ένα ημερολόγιο</span><span>→</span>",
+   "es_html": "<span>1 película y un calendario</span><span>→</span>",
+   "el": "1 ταινία και ένα ημερολόγιο→",
+   "es": "1 película y un calendario→"
+  },
+  {
+   "en": "Family & Traditions",
+   "html": null,
+   "el": "Οικογένεια και παραδόσεις",
+   "es": "Familia y tradiciones"
+  },
+  {
+   "en": "Sunday tables, grandmothers and the names we pass down.",
+   "html": null,
+   "el": "Κυριακάτικα τραπέζια, γιαγιάδες και τα ονόματα που περνάμε στους επόμενους.",
+   "es": "Mesas de domingo, abuelas y los nombres que transmitimos."
+  },
+  {
+   "en": "Villages & Places",
+   "html": null,
+   "el": "Χωριά και τόποι",
+   "es": "Pueblos y lugares"
+  },
+  {
+   "en": "Island harbours and mountain squares. Coming soon.",
+   "html": null,
+   "el": "Λιμάνια νησιών και πλατείες ορεινών χωριών. Έρχεται σύντομα.",
+   "es": "Puertos de islas y plazas de montaña. Próximamente."
+  },
+  {
+   "en": "Coming soon",
+   "html": null,
+   "el": "Έρχεται σύντομα",
+   "es": "Próximamente"
+  },
+  {
+   "en": "Coming soon→",
+   "html": "<span>Coming soon</span><span>→</span>",
+   "el_html": "<span>Έρχεται σύντομα</span><span>→</span>",
+   "es_html": "<span>Próximamente</span><span>→</span>",
+   "el": "Έρχεται σύντομα→",
+   "es": "Próximamente→"
+  },
+  {
+   "en": "Music & Identity",
+   "html": null,
+   "el": "Μουσική και ταυτότητα",
+   "es": "Música e identidad"
+  },
+  {
+   "en": "Dances and songs, and who taught them to us.",
+   "html": null,
+   "el": "Χοροί και τραγούδια, και ποιος μας τα έμαθε.",
+   "es": "Bailes y canciones, y quién nos los enseñó."
+  },
+  {
+   "en": "History & Hidden Greece",
+   "html": null,
+   "el": "Ιστορία και κρυμμένη Ελλάδα",
+   "es": "Historia y la Grecia escondida"
+  },
+  {
+   "en": "People and events most of us were never taught.",
+   "html": null,
+   "el": "Άνθρωποι και γεγονότα που οι περισσότεροι δεν μάθαμε ποτέ.",
+   "es": "Personas y hechos que a la mayoría nunca nos enseñaron."
+  },
+  {
+   "en": "6 films",
+   "html": null,
+   "el": "6 ταινίες",
+   "es": "6 películas"
+  },
+  {
+   "en": "6 films→",
+   "html": "<span>6 films</span><span>→</span>",
+   "el_html": "<span>6 ταινίες</span><span>→</span>",
+   "es_html": "<span>6 películas</span><span>→</span>",
+   "el": "6 ταινίες→",
+   "es": "6 películas→"
+  },
+  {
+   "en": "Some questions stay with us.",
+   "html": null,
+   "el": "Κάποιες ερωτήσεις μένουν μαζί μας.",
+   "es": "Algunas preguntas se quedan con nosotros."
+  },
+  {
+   "en": "Maybe it’s something your grandparents used to say. A tradition your family followed. Or a story you wish you’d asked more about.",
+   "html": null,
+   "el": "Ίσως είναι κάτι που έλεγαν οι παππούδες σας. Μια παράδοση που ακολουθούσε η οικογένειά σας. Ή μια ιστορία για την οποία θα θέλατε να είχατε ρωτήσει περισσότερα.",
+   "es": "Tal vez sea algo que decían sus abuelos. Una tradición que seguía su familia. O una historia sobre la que le hubiera gustado preguntar más."
+  },
+  {
+   "en": "Bring your curiosity. We’ll explore the meaning together.",
+   "html": null,
+   "el": "Φέρτε την περιέργειά σας. Θα εξερευνήσουμε το νόημα μαζί.",
+   "es": "Traiga su curiosidad. Exploraremos juntos el significado."
+  },
+  {
+   "en": "What Greek dances did you learn growing up, and who taught you?",
+   "html": null,
+   "el": "Ποιους ελληνικούς χορούς μάθατε μεγαλώνοντας, και ποιος σας τους έμαθε;",
+   "es": "¿Qué bailes griegos aprendió de niño, y quién se los enseñó?"
+  },
+  {
+   "en": "From The Greek Dance That Wasn't Real… Until It Was",
+   "html": null,
+   "el": "Από την ταινία «The Greek Dance That Wasn't Real… Until It Was»",
+   "es": "De la película «The Greek Dance That Wasn't Real… Until It Was»"
+  },
+  {
+   "en": "What did our family bring with them when they left Greece?",
+   "html": null,
+   "el": "Τι πήρε μαζί της η οικογένειά μας όταν έφυγε από την Ελλάδα;",
+   "es": "¿Qué se llevó nuestra familia cuando dejó Grecia?"
+  },
+  {
+   "en": "From The Greeks Who Left, and the Greece They Carried",
+   "html": null,
+   "el": "Από την ταινία «The Greeks Who Left, and the Greece They Carried»",
+   "es": "De la película «The Greeks Who Left, and the Greece They Carried»"
+  },
+  {
+   "en": "Do you remember the first time you heard the music from Zorba the Greek?",
+   "html": null,
+   "el": "Θυμάστε την πρώτη φορά που ακούσατε τη μουσική από τον «Αλέξη Ζορμπά»;",
+   "es": "¿Recuerda la primera vez que escuchó la música de «Zorba el griego»?"
+  },
+  {
+   "en": "What did our grandparents miss most about home?",
+   "html": null,
+   "el": "Τι τους έλειπε περισσότερο από την πατρίδα στους παππούδες μας;",
+   "es": "¿Qué era lo que más extrañaban nuestros abuelos de su tierra?"
+  },
+  {
+   "en": "Was there a dance everyone in your family knew, even without being taught?",
+   "html": null,
+   "el": "Υπήρχε κάποιος χορός που τον ήξεραν όλοι στην οικογένειά σας, ακόμη κι αν δεν τον είχαν μάθει ποτέ;",
+   "es": "¿Había un baile que todos en su familia sabían, aunque nadie se lo hubiera enseñado?"
+  },
+  {
+   "en": "Which traditions did our family keep after arriving in a new country?",
+   "html": null,
+   "el": "Ποιες παραδόσεις κράτησε η οικογένειά μας όταν έφτασε σε μια νέα χώρα;",
+   "es": "¿Qué tradiciones conservó nuestra familia al llegar a un país nuevo?"
+  },
+  {
+   "en": "Another question",
+   "html": null,
+   "el": "Άλλη ερώτηση",
+   "es": "Otra pregunta"
+  },
+  {
+   "en": "Here is one question to start. Skip any that feel heavy.",
+   "html": null,
+   "el": "Ορίστε μια ερώτηση για να ξεκινήσετε. Προσπεράστε όποια σας φαίνεται βαριά.",
+   "es": "Aquí tiene una pregunta para empezar. Omita las que le resulten pesadas."
+  },
+  {
+   "en": "Nothing here is saved or sent. These questions come from the film pages.",
+   "html": null,
+   "el": "Τίποτα εδώ δεν αποθηκεύεται ούτε αποστέλλεται. Οι ερωτήσεις προέρχονται από τις σελίδες των ταινιών.",
+   "es": "Nada de esto se guarda ni se envía. Estas preguntas provienen de las páginas de las películas."
+  },
+  {
+   "en": "Why do we do this?",
+   "html": null,
+   "el": "Γιατί το κάνουμε αυτό;",
+   "es": "¿Por qué lo hacemos?"
+  },
+  {
+   "en": "Questions the films answer",
+   "html": null,
+   "el": "Ερωτήσεις που απαντούν οι ταινίες",
+   "es": "Preguntas que responden las películas"
+  },
+  {
+   "en": "Each answer shows what the sources say and what is still open.",
+   "html": null,
+   "el": "Κάθε απάντηση δείχνει τι λένε οι πηγές και τι παραμένει ανοιχτό.",
+   "es": "Cada respuesta muestra lo que dicen las fuentes y lo que sigue abierto."
+  },
+  {
+   "en": "Why did so many Greeks leave?",
+   "html": null,
+   "el": "Γιατί έφυγαν τόσοι Έλληνες;",
+   "es": "¿Por qué se fueron tantos griegos?"
+  },
+  {
+   "en": "What the sources say",
+   "html": null,
+   "el": "Τι λένε οι πηγές",
+   "es": "Lo que dicen las fuentes"
+  },
+  {
+   "en": "Migration Policy Institute, Greece: A History of Migration (Kasimis and Kassimi, 2004)",
+   "html": null,
+   "el": "Migration Policy Institute, Greece: A History of Migration (Kasimis and Kassimi, 2004)",
+   "es": "Migration Policy Institute, Greece: A History of Migration (Kasimis and Kassimi, 2004)"
+  },
+  {
+   "en": "Still open",
+   "html": null,
+   "el": "Ακόμη ανοιχτό",
+   "es": "Todavía abierto"
+  },
+  {
+   "en": "In the late nineteenth and early twentieth centuries, many Greeks left because work was scarce and they hoped to build a more secure future. Some crossed the Atlantic to the United States, planning to earn money and return.",
+   "html": null,
+   "el": "Στα τέλη του 19ου και στις αρχές του 20ού αιώνα, πολλοί Έλληνες έφυγαν επειδή η δουλειά ήταν λίγη και ήλπιζαν να χτίσουν ένα πιο ασφαλές μέλλον. Κάποιοι διέσχισαν τον Ατλαντικό προς τις Ηνωμένες Πολιτείες, με σκοπό να κερδίσουν χρήματα και να επιστρέψουν.",
+   "es": "A finales del siglo XIX y principios del XX, muchos griegos se fueron porque escaseaba el trabajo y esperaban construir un futuro más seguro. Algunos cruzaron el Atlántico hacia los Estados Unidos con la idea de ganar dinero y volver."
+  },
+  {
+   "en": "In Greek, there's a word for life far from home: ξενιτιά. It's more than a destination on a map. It's the distance between the person who leaves and the people who stay.",
+   "html": "In Greek, there's a word for life far from home: <span>ξενιτιά</span>. It's more than a destination on a map. It's the distance between the person who leaves and the people who stay.",
+   "el_html": "Στα ελληνικά υπάρχει μια λέξη για τη ζωή μακριά από τον τόπο σου: <span>ξενιτιά</span>. Είναι κάτι περισσότερο από έναν προορισμό στον χάρτη. Είναι η απόσταση ανάμεσα σε εκείνον που φεύγει και σε όσους μένουν.",
+   "es_html": "En griego hay una palabra para la vida lejos de casa: <span>ξενιτιά</span> (xenitiá). Es más que un destino en un mapa. Es la distancia entre quien se va y quienes se quedan.",
+   "el": "Στα ελληνικά υπάρχει μια λέξη για τη ζωή μακριά από τον τόπο σου: ξενιτιά. Είναι κάτι περισσότερο από έναν προορισμό στον χάρτη. Είναι η απόσταση ανάμεσα σε εκείνον που φεύγει και σε όσους μένουν.",
+   "es": "En griego hay una palabra para la vida lejos de casa: ξενιτιά (xenitiá). Es más que un destino en un mapa. Es la distancia entre quien se va y quienes se quedan."
+  },
+  {
+   "en": "From the film’s narration.",
+   "html": null,
+   "el": "Από την αφήγηση της ταινίας.",
+   "es": "De la narración de la película."
+  },
+  {
+   "en": "Questions for your family",
+   "html": null,
+   "el": "Ερωτήσεις για την οικογένειά σας",
+   "es": "Preguntas para su familia"
+  },
+  {
+   "en": "Read the full film page",
+   "html": null,
+   "el": "Διαβάστε ολόκληρη τη σελίδα της ταινίας",
+   "es": "Leer la página completa de la película"
+  },
+  {
+   "en": "Where does the famous “Greek dance” come from?",
+   "html": null,
+   "el": "Από πού προέρχεται ο διάσημος «ελληνικός χορός»;",
+   "es": "¿De dónde viene el famoso «baile griego»?"
+  },
+  {
+   "en": "Wikipedia: Sirtaki",
+   "html": null,
+   "el": "Wikipedia: Συρτάκι",
+   "es": "Wikipedia: Sirtaki"
+  },
+  {
+   "en": "Interpretation, not established fact",
+   "html": null,
+   "el": "Ερμηνεία, όχι τεκμηριωμένο γεγονός",
+   "es": "Interpretación, no un hecho establecido"
+  },
+  {
+   "en": "Greece already had more dances than Hollywood could ever fit into one film. Greek dance isn't decoration sitting on top of a Greek culture. It's one of the places culture was stored.",
+   "html": null,
+   "el": "Η Ελλάδα είχε ήδη περισσότερους χορούς απ' όσους θα χωρούσαν ποτέ σε μια ταινία του Χόλιγουντ. Ο ελληνικός χορός δεν είναι στολίδι πάνω στον ελληνικό πολιτισμό. Είναι ένα από τα μέρη όπου φυλάχτηκε ο πολιτισμός.",
+   "es": "Grecia ya tenía más bailes de los que Hollywood podría meter en una sola película. El baile griego no es un adorno puesto encima de la cultura griega. Es uno de los lugares donde se guardó la cultura."
+  },
+  {
+   "en": "Something invented can become tradition. Something old can change. And something genuinely ancient can disappear completely if nobody teaches it. Age doesn't guarantee survival. People do.",
+   "html": null,
+   "el": "Κάτι επινοημένο μπορεί να γίνει παράδοση. Κάτι παλιό μπορεί να αλλάξει. Και κάτι πραγματικά αρχαίο μπορεί να χαθεί εντελώς αν δεν το διδάξει κανείς. Η ηλικία δεν εγγυάται την επιβίωση. Οι άνθρωποι την εγγυώνται.",
+   "es": "Algo inventado puede convertirse en tradición. Algo antiguo puede cambiar. Y algo verdaderamente antiguo puede desaparecer por completo si nadie lo enseña. La edad no garantiza la supervivencia. Las personas sí."
+  },
+  {
+   "en": "The oldest source, not the most famous",
+   "html": null,
+   "el": "Η παλαιότερη πηγή, όχι η πιο διάσημη",
+   "es": "La fuente más antigua, no la más famosa"
+  },
+  {
+   "en": "Primary sources and named scholarship for every historical claim, checked before recording and again on the finished film.",
+   "html": null,
+   "el": "Πρωτογενείς πηγές και κατονομαζόμενη επιστημονική έρευνα για κάθε ιστορικό ισχυρισμό, ελεγμένες πριν από την ηχογράφηση και ξανά στην ολοκληρωμένη ταινία.",
+   "es": "Fuentes primarias e investigación académica con nombre para cada afirmación histórica, verificadas antes de la grabación y otra vez en la película terminada."
+  },
+  {
+   "en": "The oldest source, not the most famousPrimary sources and named scholarship for every historical claim, checked before recording and again on the finished film.",
+   "html": "<b>The oldest source, not the most famous</b><span>Primary sources and named scholarship for every historical claim, checked before recording and again on the finished film.</span>",
+   "el_html": "<b>Η παλαιότερη πηγή, όχι η πιο διάσημη</b><span>Πρωτογενείς πηγές και κατονομαζόμενη επιστημονική έρευνα για κάθε ιστορικό ισχυρισμό, ελεγμένες πριν από την ηχογράφηση και ξανά στην ολοκληρωμένη ταινία.</span>",
+   "es_html": "<b>La fuente más antigua, no la más famosa</b><span>Fuentes primarias e investigación académica con nombre para cada afirmación histórica, verificadas antes de la grabación y otra vez en la película terminada.</span>",
+   "el": "Η παλαιότερη πηγή, όχι η πιο διάσημηΠρωτογενείς πηγές και κατονομαζόμενη επιστημονική έρευνα για κάθε ιστορικό ισχυρισμό, ελεγμένες πριν από την ηχογράφηση και ξανά στην ολοκληρωμένη ταινία.",
+   "es": "La fuente más antigua, no la más famosaFuentes primarias e investigación académica con nombre para cada afirmación histórica, verificadas antes de la grabación y otra vez en la película terminada."
+  },
+  {
+   "en": "Real archives first",
+   "html": null,
+   "el": "Πρώτα τα πραγματικά αρχεία",
+   "es": "Primero, archivos reales"
+  },
+  {
+   "en": "Historical photographs, documents, icons and maps, credited with their licence.",
+   "html": null,
+   "el": "Ιστορικές φωτογραφίες, έγγραφα, εικόνες και χάρτες, με αναφορά προέλευσης και άδειας.",
+   "es": "Fotografías históricas, documentos, íconos y mapas, con su crédito y su licencia."
+  },
+  {
+   "en": "Real archives firstHistorical photographs, documents, icons and maps, credited with their licence.",
+   "html": "<b>Real archives first</b><span>Historical photographs, documents, icons and maps, credited with their licence.</span>",
+   "el_html": "<b>Πρώτα τα πραγματικά αρχεία</b><span>Ιστορικές φωτογραφίες, έγγραφα, εικόνες και χάρτες, με αναφορά προέλευσης και άδειας.</span>",
+   "es_html": "<b>Primero, archivos reales</b><span>Fotografías históricas, documentos, íconos y mapas, con su crédito y su licencia.</span>",
+   "el": "Πρώτα τα πραγματικά αρχείαΙστορικές φωτογραφίες, έγγραφα, εικόνες και χάρτες, με αναφορά προέλευσης και άδειας.",
+   "es": "Primero, archivos realesFotografías históricas, documentos, íconos y mapas, con su crédito y su licencia."
+  },
+  {
+   "en": "Illustration is labelled",
+   "html": null,
+   "el": "Η εικονογράφηση επισημαίνεται",
+   "es": "La ilustración se señala"
+  },
+  {
+   "en": "Where no photograph exists, some everyday scenes are illustrated. They are marked and never stand in for sacred or historical evidence.",
+   "html": null,
+   "el": "Όπου δεν υπάρχει φωτογραφία, ορισμένες καθημερινές σκηνές είναι εικονογραφημένες. Επισημαίνονται και δεν αντικαθιστούν ποτέ ιερές ή ιστορικές μαρτυρίες.",
+   "es": "Donde no existe una fotografía, algunas escenas cotidianas están ilustradas. Se señalan y nunca sustituyen testimonios sagrados o históricos."
+  },
+  {
+   "en": "Illustration is labelledWhere no photograph exists, some everyday scenes are illustrated. They are marked and never stand in for sacred or historical evidence.",
+   "html": "<b>Illustration is labelled</b><span>Where no photograph exists, some everyday scenes are illustrated. They are marked and never stand in for sacred or historical evidence.</span>",
+   "el_html": "<b>Η εικονογράφηση επισημαίνεται</b><span>Όπου δεν υπάρχει φωτογραφία, ορισμένες καθημερινές σκηνές είναι εικονογραφημένες. Επισημαίνονται και δεν αντικαθιστούν ποτέ ιερές ή ιστορικές μαρτυρίες.</span>",
+   "es_html": "<b>La ilustración se señala</b><span>Donde no existe una fotografía, algunas escenas cotidianas están ilustradas. Se señalan y nunca sustituyen testimonios sagrados o históricos.</span>",
+   "el": "Η εικονογράφηση επισημαίνεταιΌπου δεν υπάρχει φωτογραφία, ορισμένες καθημερινές σκηνές είναι εικονογραφημένες. Επισημαίνονται και δεν αντικαθιστούν ποτέ ιερές ή ιστορικές μαρτυρίες.",
+   "es": "La ilustración se señalaDonde no existe una fotografía, algunas escenas cotidianas están ilustradas. Se señalan y nunca sustituyen testimonios sagrados o históricos."
+  },
+  {
+   "en": "A human voice",
+   "html": null,
+   "el": "Μια ανθρώπινη φωνή",
+   "es": "Una voz humana"
+  },
+  {
+   "en": "Every film is narrated by a human voice.",
+   "html": null,
+   "el": "Κάθε ταινία έχει αφήγηση από ανθρώπινη φωνή.",
+   "es": "Cada película está narrada por una voz humana."
+  },
+  {
+   "en": "A human voiceEvery film is narrated by a human voice.",
+   "html": "<b>A human voice</b><span>Every film is narrated by a human voice.</span>",
+   "el_html": "<b>Μια ανθρώπινη φωνή</b><span>Κάθε ταινία έχει αφήγηση από ανθρώπινη φωνή.</span>",
+   "es_html": "<b>Una voz humana</b><span>Cada película está narrada por una voz humana.</span>",
+   "el": "Μια ανθρώπινη φωνήΚάθε ταινία έχει αφήγηση από ανθρώπινη φωνή.",
+   "es": "Una voz humanaCada película está narrada por una voz humana."
+  },
+  {
+   "en": "Read how we work",
+   "html": null,
+   "el": "Διαβάστε πώς δουλεύουμε",
+   "es": "Leer cómo trabajamos"
+  },
+  {
+   "en": "Open the Page Guide",
+   "html": null,
+   "el": "Άνοιγμα του Οδηγού KRIOS",
+   "es": "Abrir la Guía KRIOS"
+  },
+  {
+   "en": "He led by example.",
+   "html": null,
+   "el": "Έδειχνε τον δρόμο με το παράδειγμά του.",
+   "es": "Enseñaba con el ejemplo."
+  },
+  {
+   "en": "A piece of you will forever remain in our hearts.",
+   "html": null,
+   "el": "Ένα κομμάτι σου θα μείνει για πάντα στις καρδιές μας.",
+   "es": "Una parte de ti quedará para siempre en nuestros corazones."
+  },
+  {
+   "en": "Who taught you the songs?",
+   "html": null,
+   "el": "Ποιος σας έμαθε τα τραγούδια;",
+   "es": "¿Quién le enseñó las canciones?"
+  },
+  {
+   "en": "The films live on YouTube. Subscribe to hear when the next one is out.",
+   "html": null,
+   "el": "Οι ταινίες βρίσκονται στο YouTube. Γίνετε συνδρομητές για να μαθαίνετε πότε βγαίνει η επόμενη.",
+   "es": "Las películas están en YouTube. Suscríbase para enterarse cuando salga la próxima."
+  }
+ ],
+ "attrs": [
+  {
+   "en": "A man in a long coat stands at a harbour railing beside his suitcases.",
+   "el": "Ένας άντρας με μακρύ παλτό στέκεται στο κάγκελο ενός λιμανιού δίπλα στις βαλίτσες του.",
+   "es": "Un hombre con un abrigo largo está de pie junto a la baranda de un puerto, al lado de sus maletas."
+  },
+  {
+   "en": "Connected to this film",
+   "el": "Σχετικά με αυτή την ταινία",
+   "es": "Relacionado con esta película"
+  },
+  {
+   "en": "Dedication",
+   "el": "Αφιέρωση",
+   "es": "Dedicatoria"
+  },
+  {
+   "en": "Main",
+   "el": "Κύριο",
+   "es": "Principal"
+  },
+  {
+   "en": "Storybook pages, scroll sideways",
+   "el": "Σελίδες του βιβλίου αναμνήσεων, κύλιση πλάγια",
+   "es": "Páginas del libro de recuerdos, desplácese hacia los lados"
+  },
+  {
+   "en": "Thumbnail artwork for Saint Demetrios: More Than a Name Day. An illustration. Premieres October 26, 2026.",
+   "el": "Μικρογραφία για την ταινία «Saint Demetrios: More Than a Name Day». Εικονογράφηση. Πρεμιέρα 26 Οκτωβρίου 2026.",
+   "es": "Miniatura de la película «Saint Demetrios: More Than a Name Day». Una ilustración. Estreno el 26 de octubre de 2026."
+  },
+  {
+   "en": "Thumbnail of the film The Greek Dance That Wasn't Real… Until It Was",
+   "el": "Μικρογραφία της ταινίας «The Greek Dance That Wasn't Real… Until It Was»",
+   "es": "Miniatura de la película «The Greek Dance That Wasn't Real… Until It Was»"
+  },
+  {
+   "en": "Thumbnail of the film The Greeks Who Left, and the Greece They Carried",
+   "el": "Μικρογραφία της ταινίας «The Greeks Who Left, and the Greece They Carried»",
+   "es": "Miniatura de la película «The Greeks Who Left, and the Greece They Carried»"
+  }
+ ]
+}

@@ -1,0 +1,247 @@
+{
+ "_page": "tools",
+ "_status": "draft",
+ "strings": [
+  {
+   "en": "Test what you know",
+   "html": null,
+   "el": "Δοκιμάστε τι ξέρετε",
+   "es": "Ponga a prueba lo que sabe"
+  },
+  {
+   "en": "Short quizzes from the KRIOS films. A few minutes each, and every answer comes from the film.",
+   "html": null,
+   "el": "Σύντομα κουίζ από τις ταινίες του KRIOS. Λίγα λεπτά το καθένα, και κάθε απάντηση προέρχεται από την ταινία.",
+   "es": "Cuestionarios breves de las películas de KRIOS. Unos minutos cada uno, y cada respuesta viene de la película."
+  },
+  {
+   "en": "The game",
+   "html": null,
+   "el": "Το παιχνίδι",
+   "es": "El juego"
+  },
+  {
+   "en": "Real myth, or modern invention?",
+   "html": null,
+   "el": "Αληθινός μύθος ή σύγχρονη επινόηση;",
+   "es": "¿Mito auténtico o invención moderna?"
+  },
+  {
+   "en": "15 statements about Greek mythology. Some come from the ancient sources, some were made up much later. Can you tell which is which?",
+   "html": null,
+   "el": "15 δηλώσεις για την ελληνική μυθολογία. Κάποιες προέρχονται από τις αρχαίες πηγές, κάποιες επινοήθηκαν πολύ αργότερα. Μπορείτε να ξεχωρίσετε ποια είναι ποια;",
+   "es": "15 afirmaciones sobre la mitología griega. Algunas vienen de las fuentes antiguas y otras se inventaron mucho después. ¿Puede distinguir cuál es cuál?"
+  },
+  {
+   "en": "Play Real or Fake",
+   "html": null,
+   "el": "Παίξτε το Real or Fake",
+   "es": "Jugar a Real or Fake"
+  },
+  {
+   "en": "From the KRIOS films",
+   "html": null,
+   "el": "Από τις ταινίες του KRIOS",
+   "es": "De las películas de KRIOS"
+  },
+  {
+   "en": "Newest first. Watch the film, then see how much stayed with you.",
+   "html": null,
+   "el": "Πρώτα τα νεότερα. Δείτε την ταινία και μετά δείτε πόσα θυμάστε.",
+   "es": "Primero los más recientes. Vea la película y luego compruebe cuánto recuerda."
+  },
+  {
+   "en": "Living Roots · 5 questions",
+   "html": null,
+   "el": "Living Roots · 5 ερωτήσεις",
+   "es": "Living Roots · 5 preguntas"
+  },
+  {
+   "en": "How well do you know the story of the Greeks who left?",
+   "html": null,
+   "el": "Πόσο καλά ξέρετε την ιστορία των Ελλήνων που έφυγαν;",
+   "es": "¿Cuánto sabe de la historia de los griegos que se fueron?"
+  },
+  {
+   "en": "Take the quiz",
+   "html": null,
+   "el": "Κάντε το κουίζ",
+   "es": "Hacer el cuestionario"
+  },
+  {
+   "en": "How well do you know the Greek dance story?",
+   "html": null,
+   "el": "Πόσο καλά ξέρετε την ιστορία του ελληνικού χορού;",
+   "es": "¿Cuánto sabe de la historia del baile griego?"
+  },
+  {
+   "en": "Diaspora · 3 questions",
+   "html": null,
+   "el": "Διασπορά · 3 ερωτήσεις",
+   "es": "Diáspora · 3 preguntas"
+  },
+  {
+   "en": "How well do you know the story of Tarpon Springs?",
+   "html": null,
+   "el": "Πόσο καλά ξέρετε την ιστορία του Tarpon Springs;",
+   "es": "¿Cuánto sabe de la historia de Tarpon Springs?"
+  },
+  {
+   "en": "Family table · 3 questions",
+   "html": null,
+   "el": "Οικογενειακό τραπέζι · 3 ερωτήσεις",
+   "es": "Mesa familiar · 3 preguntas"
+  },
+  {
+   "en": "How well do you know the spoon sweet?",
+   "html": null,
+   "el": "Πόσο καλά ξέρετε το γλυκό του κουταλιού;",
+   "es": "¿Cuánto sabe del dulce de cuchara?"
+  },
+  {
+   "en": "Music · 3 questions",
+   "html": null,
+   "el": "Μουσική · 3 ερωτήσεις",
+   "es": "Música · 3 preguntas"
+  },
+  {
+   "en": "How well do you know rebetiko?",
+   "html": null,
+   "el": "Πόσο καλά ξέρετε το ρεμπέτικο;",
+   "es": "¿Cuánto sabe del rebético?"
+  },
+  {
+   "en": "Heroines · 3 questions",
+   "html": null,
+   "el": "Ηρωίδες · 3 ερωτήσεις",
+   "es": "Heroínas · 3 preguntas"
+  },
+  {
+   "en": "How well do you know Bouboulina?",
+   "html": null,
+   "el": "Πόσο καλά ξέρετε τη Μπουμπουλίνα;",
+   "es": "¿Cuánto sabe de Bubulina?"
+  },
+  {
+   "en": "Faith · 3 questions",
+   "html": null,
+   "el": "Πίστη · 3 ερωτήσεις",
+   "es": "Fe · 3 preguntas"
+  },
+  {
+   "en": "How well do you know the story of the hidden faith?",
+   "html": null,
+   "el": "Πόσο καλά ξέρετε την ιστορία της κρυφής πίστης;",
+   "es": "¿Cuánto sabe de la historia de la fe oculta?"
+  },
+  {
+   "en": "Heroes · 3 questions",
+   "html": null,
+   "el": "Ήρωες · 3 ερωτήσεις",
+   "es": "Héroes · 3 preguntas"
+  },
+  {
+   "en": "How well do you know Athanasios Diakos?",
+   "html": null,
+   "el": "Πόσο καλά ξέρετε τον Αθανάσιο Διάκο;",
+   "es": "¿Cuánto sabe de Athanasios Diakos?"
+  },
+  {
+   "en": "Where KRIOS began",
+   "html": null,
+   "el": "Εκεί όπου ξεκίνησε το KRIOS",
+   "es": "Donde empezó KRIOS"
+  },
+  {
+   "en": "Quizzes from the first films, which told the ancient stories.",
+   "html": null,
+   "el": "Κουίζ από τις πρώτες ταινίες, που αφηγούνταν τις αρχαίες ιστορίες.",
+   "es": "Cuestionarios de las primeras películas, que contaban las historias antiguas."
+  },
+  {
+   "en": "5 questions",
+   "html": null,
+   "el": "5 ερωτήσεις",
+   "es": "5 preguntas"
+  },
+  {
+   "en": "How Well Do You Know Achilles?",
+   "html": null,
+   "el": "Πόσο καλά ξέρετε τον Αχιλλέα;",
+   "es": "¿Cuánto sabe de Aquiles?"
+  },
+  {
+   "en": "How Well Do You Know Odysseus?",
+   "html": null,
+   "el": "Πόσο καλά ξέρετε τον Οδυσσέα;",
+   "es": "¿Cuánto sabe de Odiseo?"
+  },
+  {
+   "en": "How Well Do You Know Thermopylae?",
+   "html": null,
+   "el": "Πόσο καλά ξέρετε τις Θερμοπύλες;",
+   "es": "¿Cuánto sabe de las Termópilas?"
+  },
+  {
+   "en": "How Well Do You Know Heracles?",
+   "html": null,
+   "el": "Πόσο καλά ξέρετε τον Ηρακλή;",
+   "es": "¿Cuánto sabe de Heracles?"
+  },
+  {
+   "en": "How Well Do You Know Medusa?",
+   "html": null,
+   "el": "Πόσο καλά ξέρετε τη Μέδουσα;",
+   "es": "¿Cuánto sabe de Medusa?"
+  },
+  {
+   "en": "How Well Do You Know Troy?",
+   "html": null,
+   "el": "Πόσο καλά ξέρετε την Τροία;",
+   "es": "¿Cuánto sabe de Troya?"
+  },
+  {
+   "en": "How Well Do You Know Theseus?",
+   "html": null,
+   "el": "Πόσο καλά ξέρετε τον Θησέα;",
+   "es": "¿Cuánto sabe de Teseo?"
+  },
+  {
+   "en": "A new quiz is added as each new film is released. Subscribe on YouTube to see them first.",
+   "html": "A new quiz is added as each new film is released. <a href=\"https://www.youtube.com/@KriosGreece?sub_confirmation=1\" rel=\"noopener\">Subscribe on YouTube</a> to see them first.",
+   "el_html": "Ένα νέο κουίζ προστίθεται με κάθε νέα ταινία. <a href=\"https://www.youtube.com/@KriosGreece?sub_confirmation=1\" rel=\"noopener\">Γίνετε συνδρομητές στο YouTube</a> για να τα βλέπετε πρώτοι.",
+   "es_html": "Se añade un cuestionario nuevo con cada película nueva. <a href=\"https://www.youtube.com/@KriosGreece?sub_confirmation=1\" rel=\"noopener\">Suscríbase en YouTube</a> para verlos primero.",
+   "el": "Ένα νέο κουίζ προστίθεται με κάθε νέα ταινία. Γίνετε συνδρομητές στο YouTube για να τα βλέπετε πρώτοι.",
+   "es": "Se añade un cuestionario nuevo con cada película nueva. Suscríbase en YouTube para verlos primero."
+  },
+  {
+   "en": "kriosgreece.com",
+   "html": null,
+   "el": "kriosgreece.com",
+   "es": "kriosgreece.com"
+  },
+  {
+   "en": "© 2026 KRIOS · kriosgreece.com · YouTube ↗",
+   "html": "© 2026 KRIOS · <a href=\"/\">kriosgreece.com</a> · <a href=\"https://www.youtube.com/@KriosGreece\" rel=\"noopener\">YouTube ↗</a>",
+   "el_html": "© 2026 KRIOS · <a href=\"/\">kriosgreece.com</a> · <a href=\"https://www.youtube.com/@KriosGreece\" rel=\"noopener\">YouTube ↗</a>",
+   "es_html": "© 2026 KRIOS · <a href=\"/\">kriosgreece.com</a> · <a href=\"https://www.youtube.com/@KriosGreece\" rel=\"noopener\">YouTube ↗</a>",
+   "el": "© 2026 KRIOS · kriosgreece.com · YouTube ↗",
+   "es": "© 2026 KRIOS · kriosgreece.com · YouTube ↗"
+  },
+  {
+   "en": "© 2026 KRIOS · kriosgreece.com · YouTube ↗For my father, Peter (Πέτρος).",
+   "html": "<span>© 2026 KRIOS · <a href=\"/\">kriosgreece.com</a> · <a href=\"https://www.youtube.com/@KriosGreece\" rel=\"noopener\">YouTube ↗</a></span><i>For my father, Peter (Πέτρος).</i>",
+   "el_html": "<span>© 2026 KRIOS · <a href=\"/\">kriosgreece.com</a> · <a href=\"https://www.youtube.com/@KriosGreece\" rel=\"noopener\">YouTube ↗</a></span><i>For my father, Peter (Πέτρος).</i>",
+   "es_html": "<span>© 2026 KRIOS · <a href=\"/\">kriosgreece.com</a> · <a href=\"https://www.youtube.com/@KriosGreece\" rel=\"noopener\">YouTube ↗</a></span><i>For my father, Peter (Πέτρος).</i>",
+   "el": "© 2026 KRIOS · kriosgreece.com · YouTube ↗For my father, Peter (Πέτρος).",
+   "es": "© 2026 KRIOS · kriosgreece.com · YouTube ↗For my father, Peter (Πέτρος)."
+  }
+ ],
+ "attrs": [
+  {
+   "en": "Site",
+   "el": "Ιστότοπος",
+   "es": "Sitio"
+  }
+ ]
+}

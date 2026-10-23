@@ -3,7 +3,7 @@ import html
 
 YT = "https://www.youtube.com/@KriosGreece"
 SUB = YT + "?sub_confirmation=1"
-NAV = [("/films/", "Films"), ("/sacred-days/", "Sacred Days"), ("/blog/", "Articles"), ("/answers/", "Q&amp;A"), ("/tools/", "Quizzes")]
+NAV = [("/films/", "Films"), ("/sacred/", "Sacred"), ("/blog/", "Articles"), ("/answers/", "Q&amp;A"), ("/tools/", "Quizzes")]
 DEDICATION_FOOTER = "For my father, Peter (Πέτρος)."
 FONTS = ('<link rel="preconnect" href="https://fonts.googleapis.com">\n'
          '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\n'

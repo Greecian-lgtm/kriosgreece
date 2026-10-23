@@ -13,7 +13,7 @@ G, W, FT = load("data/universe/gateways.json"), load("data/universe/why.json"), 
 TAG = " · proposed"
 PROTO = True   # prototype-only labels and banner; set False when the page is promoted
 
-NAVP = [("/films/", "Films"), ("/sacred-days/", "Sacred Days"), ("#gateways", "Themes"), ("#memory-room", "Memory Room"), ("/answers/", "Q&amp;A")]
+NAVP = [("/films/", "Films"), ("/sacred/", "Sacred"), ("#gateways", "Themes"), ("#memory-room", "Memory Room"), ("/answers/", "Q&amp;A")]
 
 
 def film_by_slug(slug):
@@ -243,7 +243,7 @@ def know():
       <li><b>Illustration is labelled</b><span>Where no photograph exists, some everyday scenes are illustrated. They are marked and never stand in for sacred or historical evidence.</span></li>
       <li><b>A human voice</b><span>Every film is narrated by a human voice.</span></li>
     </ul>
-    <p class="u-more"><a class="u-btn u-btn-ink" href="/how-we-work/">Read how we work</a></p>
+    <p class="u-more"><a class="u-btn u-btn-ink" href="/how-we-work/">Read how we work</a> <a class="u-btn u-btn-ink" href="/guide/">Open the Page Guide</a></p>
   </div>
 </section>'''
 

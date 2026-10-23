@@ -1,0 +1,521 @@
+{
+ "review": {
+  "en": "source",
+  "el": "unreviewed",
+  "es": "unreviewed"
+ },
+ "ui": {
+  "en": {
+   "lang_label": "Language",
+   "kick": "Page Guide",
+   "h1": "Questions we can answer from published pages",
+   "intro": null,
+   "ask_label": "Ask about Greece, the films or KRIOS",
+   "ask_ph": "For example: When is the feast of Saint Demetrios?",
+   "ask_btn": "Ask",
+   "ask_note": "Answers come only from KRIOS's published films and articles. Your question stays on this device. Please do not enter personal information.",
+   "best": "Best match",
+   "more": "Also on KRIOS",
+   "read": "Read on KRIOS",
+   "source": "Source",
+   "follow": "You might also ask",
+   "nc_h": "KRIOS has not covered that yet",
+   "nc_p": "The Guide only answers from published KRIOS pages. Try the questions below, or browse the films.",
+   "only_en": "This answer is available in English.",
+   "sg_btn": "Suggest this topic to KRIOS",
+   "sg_what": "Only your question, the page language and today's date will be sent. No name, address or device details.",
+   "sg_off": "Topic suggestions open when the Guide launches.",
+   "sg_sent": "Thank you. Your topic was sent to KRIOS.",
+   "sg_fail": "The suggestion could not be sent. Please try again later.",
+   "curated_h": "Questions with prepared answers",
+   "draft": "Draft translation for review. Not yet approved.",
+   "how": "How to read the labels",
+   "privacy": "Nothing you open or type here is saved or sent anywhere, unless you choose to suggest a topic. The Guide uses no tracking.",
+   "foot_how": "How KRIOS checks its sources",
+   "foot_films": "All films",
+   "quote_from": "From"
+  },
+  "el": {
+   "lang_label": "Γλώσσα",
+   "kick": "Οδηγός KRIOS",
+   "h1": "Ερωτήσεις που απαντάμε από δημοσιευμένες σελίδες",
+   "intro": "Σύντομες απαντήσεις σε συχνές ερωτήσεις, η καθεμία συνδεδεμένη με δημοσιευμένη σελίδα του KRIOS και με κατονομαζόμενη πηγή. Ο Οδηγός δεν απαντά ποτέ από πρόχειρα κείμενα. Αν μια ερώτηση δεν έχει ακόμη επαρκή τεκμηρίωση, το λέει και σας παραπέμπει στη δημοσιευμένη ταινία.",
+   "ask_label": "Ρωτήστε για την Ελλάδα, τις ταινίες ή το KRIOS",
+   "ask_ph": "Για παράδειγμα: Πότε είναι η γιορτή του Αγίου Δημητρίου;",
+   "ask_btn": "Ερώτηση",
+   "ask_note": "Οι απαντήσεις προέρχονται μόνο από τις δημοσιευμένες ταινίες και τα άρθρα του KRIOS. Η ερώτησή σας μένει σε αυτή τη συσκευή. Παρακαλούμε μη γράφετε προσωπικά στοιχεία.",
+   "best": "Πιο σχετική απάντηση",
+   "more": "Επίσης στο KRIOS",
+   "read": "Δείτε στο KRIOS",
+   "source": "Πηγή",
+   "follow": "Μπορείτε επίσης να ρωτήσετε",
+   "nc_h": "Το KRIOS δεν έχει καλύψει ακόμη αυτό το θέμα",
+   "nc_p": "Ο Οδηγός απαντά μόνο από δημοσιευμένες σελίδες του KRIOS. Δοκιμάστε τις ερωτήσεις παρακάτω ή δείτε τις ταινίες.",
+   "only_en": "Αυτή η απάντηση είναι διαθέσιμη στα αγγλικά.",
+   "sg_btn": "Προτείνετε αυτό το θέμα στο KRIOS",
+   "sg_what": "Θα σταλούν μόνο η ερώτησή σας, η γλώσσα της σελίδας και η σημερινή ημερομηνία. Χωρίς όνομα, διεύθυνση ή στοιχεία συσκευής.",
+   "sg_off": "Οι προτάσεις θεμάτων θα ανοίξουν όταν ξεκινήσει ο Οδηγός.",
+   "sg_sent": "Ευχαριστούμε. Το θέμα σας στάλθηκε στο KRIOS.",
+   "sg_fail": "Η πρόταση δεν στάλθηκε. Δοκιμάστε ξανά αργότερα.",
+   "curated_h": "Ερωτήσεις με έτοιμες απαντήσεις",
+   "draft": "Πρόχειρη μετάφραση για έλεγχο. Δεν έχει εγκριθεί ακόμη.",
+   "how": "Πώς διαβάζονται οι ετικέτες",
+   "privacy": "Τίποτα από όσα ανοίγετε ή γράφετε εδώ δεν αποθηκεύεται ούτε στέλνεται, εκτός αν επιλέξετε να προτείνετε ένα θέμα. Ο Οδηγός δεν χρησιμοποιεί παρακολούθηση.",
+   "foot_how": "Πώς ελέγχει το KRIOS τις πηγές του",
+   "foot_films": "Όλες οι ταινίες",
+   "quote_from": "Από"
+  },
+  "es": {
+   "lang_label": "Idioma",
+   "kick": "Guía KRIOS",
+   "h1": "Preguntas que respondemos con páginas publicadas",
+   "intro": "Respuestas breves a preguntas frecuentes, cada una vinculada a una página publicada de KRIOS y a una fuente identificada. La Guía nunca responde a partir de borradores. Si una pregunta aún no está bien documentada, lo dice y le remite a la película publicada.",
+   "ask_label": "Pregunte sobre Grecia, las películas o KRIOS",
+   "ask_ph": "Por ejemplo: ¿Cuándo es la fiesta de san Demetrio?",
+   "ask_btn": "Preguntar",
+   "ask_note": "Las respuestas provienen solo de las películas y los artículos publicados de KRIOS. Su pregunta se queda en este dispositivo. Por favor, no escriba datos personales.",
+   "best": "Respuesta más cercana",
+   "more": "También en KRIOS",
+   "read": "Ver en KRIOS",
+   "source": "Fuente",
+   "follow": "También puede preguntar",
+   "nc_h": "KRIOS todavía no ha tratado este tema",
+   "nc_p": "La Guía solo responde con páginas publicadas de KRIOS. Pruebe con las preguntas de abajo o vea las películas.",
+   "only_en": "Esta respuesta está disponible en inglés.",
+   "sg_btn": "Sugerir este tema a KRIOS",
+   "sg_what": "Solo se enviarán su pregunta, el idioma de la página y la fecha de hoy. Sin nombre, dirección ni datos del dispositivo.",
+   "sg_off": "Las sugerencias de temas se abrirán cuando se publique la Guía.",
+   "sg_sent": "Gracias. Su tema se envió a KRIOS.",
+   "sg_fail": "No se pudo enviar la sugerencia. Inténtelo de nuevo más tarde.",
+   "curated_h": "Preguntas con respuestas preparadas",
+   "draft": "Traducción en borrador para revisión. Aún no aprobada.",
+   "how": "Cómo leer las etiquetas",
+   "privacy": "Nada de lo que abra o escriba aquí se guarda ni se envía, salvo que decida sugerir un tema. La Guía no usa seguimiento.",
+   "foot_how": "Cómo verifica KRIOS sus fuentes",
+   "foot_films": "Todas las películas",
+   "quote_from": "De"
+  }
+ },
+ "labels": {
+  "en": {
+   "HISTORY": [
+    "HISTORY",
+    "documented in sources"
+   ],
+   "TRADITION": [
+    "TRADITION",
+    "handed down in communities"
+   ],
+   "BELIEF": [
+    "BELIEF",
+    "what a community holds to be true"
+   ],
+   "PRACTICE": [
+    "PRACTICE",
+    "what families and communities do"
+   ]
+  },
+  "el": {
+   "HISTORY": [
+    "ΙΣΤΟΡΙΑ",
+    "τεκμηριωμένο σε πηγές"
+   ],
+   "TRADITION": [
+    "ΠΑΡΑΔΟΣΗ",
+    "παραδίδεται μέσα στις κοινότητες"
+   ],
+   "BELIEF": [
+    "ΠΙΣΤΗ",
+    "ό,τι μια κοινότητα πιστεύει ως αληθινό"
+   ],
+   "PRACTICE": [
+    "ΠΡΑΚΤΙΚΗ",
+    "ό,τι κάνουν οι οικογένειες και οι κοινότητες"
+   ]
+  },
+  "es": {
+   "HISTORY": [
+    "HISTORIA",
+    "documentado en fuentes"
+   ],
+   "TRADITION": [
+    "TRADICIÓN",
+    "transmitido en las comunidades"
+   ],
+   "BELIEF": [
+    "CREENCIA",
+    "lo que una comunidad considera verdadero"
+   ],
+   "PRACTICE": [
+    "PRÁCTICA",
+    "lo que hacen las familias y las comunidades"
+   ]
+  }
+ },
+ "status": {
+  "en": null,
+  "el": {
+   "answered": "Απάντηση από κατονομαζόμενη πηγή",
+   "attributed": "Από τη δημοσιευμένη σελίδα του KRIOS",
+   "routed": "Δεν απαντάται εδώ"
+  },
+  "es": {
+   "answered": "Respondida con una fuente identificada",
+   "attributed": "Según la página publicada de KRIOS",
+   "routed": "No se responde aquí"
+  }
+ },
+ "groups": {
+  "el": {
+   "about": "Σχετικά με το KRIOS",
+   "find": "Βρείτε κάτι να δείτε ή να διαβάσετε",
+   "films": "Απαντήσεις από τις ταινίες",
+   "missing": "Αν η ερώτησή σας δεν είναι εδώ"
+  },
+  "es": {
+   "about": "Sobre KRIOS",
+   "find": "Encuentre algo para ver o leer",
+   "films": "Respuestas de las películas",
+   "missing": "Si su pregunta no está aquí"
+  }
+ },
+ "items": {
+  "what-is-krios": {
+   "el": [
+    "Τι είναι το KRIOS;",
+    "Το KRIOS φτιάχνει σύντομα ντοκιμαντέρ για την ελληνική ιστορία, την πίστη και τη μνήμη της οικογένειας, για τους Έλληνες στην Ελλάδα και σε όλο τον κόσμο. Περιγράφει τον εαυτό του ως τη ζωντανή ιστορία του ελληνικού πολιτισμού, με πέντε στόχους: να διαφυλάσσει, να διδάσκει, να κατανοεί, να συνδέει, να παραδίδει στους επόμενους."
+   ],
+   "es": [
+    "¿Qué es KRIOS?",
+    "KRIOS hace documentales breves sobre la historia, la fe y la memoria familiar griegas, para los griegos de Grecia y de todo el mundo. Se describe como la historia viva de la civilización griega, con cinco objetivos: preservar, enseñar, comprender, conectar y transmitir."
+   ]
+  },
+  "what-goes-in-a-film": {
+   "el": [
+    "Πώς αποφασίζει το KRIOS τι μπαίνει σε μια ταινία;",
+    "Το KRIOS λέει ότι αν ένας ισχυρισμός δεν μπορεί να εντοπιστεί σε πηγή, δεν μπαίνει στην ταινία, και όταν τα στοιχεία τελειώνουν, η ταινία το λέει. Προτιμά την παλαιότερη πηγή από την πιο γνωστή, με πρωτογενείς πηγές και κατονομαζόμενη έρευνα για τους ιστορικούς ισχυρισμούς, που ελέγχονται πριν από την ηχογράφηση και ξανά στην τελική ταινία."
+   ],
+   "es": [
+    "¿Cómo decide KRIOS qué entra en una película?",
+    "KRIOS dice que, si una afirmación no puede rastrearse hasta una fuente, no entra en la película, y que cuando se acaban las pruebas, la película lo dice. Prefiere la fuente más antigua a la más famosa, con fuentes primarias e investigación identificada para las afirmaciones históricas, verificadas antes de grabar y de nuevo en la película terminada."
+   ]
+  },
+  "history-tradition-belief": {
+   "el": [
+    "Πώς ξεχωρίζει το KRIOS την ιστορία, την παράδοση και την πίστη;",
+    "Το KRIOS λέει ότι ξεχωρίζει τι είναι τεκμηριωμένο, τι διδάσκει η Εκκλησία, τι κάνουν οι οικογένειες και πού διαφέρουν οι κοινότητες. Σε αυτόν τον Οδηγό, οι απαντήσεις για αμφιλεγόμενα ή κληρονομημένα θέματα φέρουν τις ετικέτες ΙΣΤΟΡΙΑ, ΠΑΡΑΔΟΣΗ, ΠΙΣΤΗ ή ΠΡΑΚΤΙΚΗ, ώστε να βλέπετε τι είδους δήλωση διαβάζετε."
+   ],
+   "es": [
+    "¿Cómo separa KRIOS la historia, la tradición y la creencia?",
+    "KRIOS dice que separa lo que está documentado, lo que enseña la Iglesia, lo que practican las familias y en qué difieren las comunidades. En esta Guía, las respuestas sobre temas discutidos o heredados llevan las etiquetas HISTORIA, TRADICIÓN, CREENCIA o PRÁCTICA, para que vea qué tipo de afirmación está leyendo."
+   ]
+  },
+  "real-or-illustrated": {
+   "el": [
+    "Είναι οι εικόνες πραγματικές φωτογραφίες;",
+    "Το KRIOS λέει ότι χρησιμοποιεί πρώτα πραγματικά αρχεία, με αναφορά στην άδειά τους. Όπου δεν υπάρχει φωτογραφία, κάποιες καθημερινές σκηνές είναι εικονογραφήσεις. Αυτές επισημαίνονται, όπως η εικονογράφηση με ετικέτα στην αρχική σελίδα, και δεν αντικαθιστούν ποτέ ιερά ή ιστορικά τεκμήρια."
+   ],
+   "es": [
+    "¿Las imágenes son fotografías reales?",
+    "KRIOS dice que usa primero archivos reales, con el crédito y la licencia correspondientes. Donde no existe una fotografía, algunas escenas cotidianas están ilustradas. Esas escenas se señalan, como la ilustración etiquetada de la página de inicio, y nunca sustituyen pruebas sagradas o históricas."
+   ]
+  },
+  "voice-and-captions": {
+   "el": [
+    "Ποιος αφηγείται τις ταινίες και υπάρχουν υπότιτλοι;",
+    "Το KRIOS λέει ότι κάθε ντοκιμαντέρ σήμερα έχει αφήγηση από ανθρώπινη φωνή και ότι οι νέες ταινίες έχουν αγγλικούς και ελληνικούς υπότιτλους, ελεγμένους από ανθρώπους."
+   ],
+   "es": [
+    "¿Quién narra las películas y tienen subtítulos?",
+    "KRIOS dice que hoy todos sus documentales están narrados por una voz humana y que las películas nuevas tienen subtítulos en inglés y en griego revisados por personas."
+   ]
+  },
+  "where-to-start": {
+   "el": [
+    "Από πού να ξεκινήσω;",
+    "Η νεότερη ταινία είναι η «The Greeks Who Left, and the Greece They Carried» (9 λεπτά, κυκλοφόρησε στις 18 Οκτωβρίου 2026, Living Roots), για οικογένειες που έφυγαν από την Ελλάδα και ό,τι πήραν μαζί τους. Η προηγούμενη ταινία, «The Greek Dance That Wasn't Real… Until It Was» (11 λεπτά, 11 Οκτωβρίου 2026), μιλά για τον χορό, τη μνήμη και το τι κάνει μια παράδοση να επιβιώνει."
+   ],
+   "es": [
+    "¿Por dónde empiezo?",
+    "La película más reciente es «The Greeks Who Left, and the Greece They Carried» (9 minutos, estrenada el 18 de octubre de 2026, Living Roots), sobre las familias que dejaron Grecia y lo que llevaron consigo. La anterior, «The Greek Dance That Wasn't Real… Until It Was» (11 minutos, 11 de octubre de 2026), trata del baile, la memoria y lo que hace que una tradición sobreviva."
+   ]
+  },
+  "sacred-days": {
+   "el": [
+    "Τι είναι τα Sacred Days;",
+    "Τα Sacred Days είναι ταινίες του KRIOS που κυκλοφορούν την ημέρα μιας γιορτής ή ονομαστικής γιορτής, για την πίστη, τα έθιμα και τις παραδόσεις που μεταδίδουν οι οικογένειες. Η σελίδα Sacred Days παρουσιάζει ένα επιλεγμένο ημερολόγιο γιορτών και αναφέρει ότι η ταινία για τον Άγιο Δημήτριο κάνει πρεμιέρα στο YouTube τη Δευτέρα 26 Οκτωβρίου 2026, ανήμερα της γιορτής."
+   ],
+   "es": [
+    "¿Qué son los Sacred Days?",
+    "Los Sacred Days son películas de KRIOS que se estrenan el día de una fiesta o de una onomástica, sobre la fe, las costumbres y las tradiciones que las familias transmiten. La página Sacred Days presenta un calendario seleccionado de fiestas e indica que la película sobre san Demetrio se estrena en YouTube el lunes 26 de octubre de 2026, el día de la fiesta."
+   ]
+  },
+  "name-day": {
+   "el": [
+    "Πότε είναι η γιορτή του Αγίου Δημητρίου, όταν γιορτάζουν όσοι λέγονται Δημήτρης και Δήμητρα;",
+    "Η δημοσιευμένη σελίδα του KRIOS αναφέρει την 26η Οκτωβρίου ως γιορτή του Αγίου Δημητρίου στο ημερολόγιο που ακολουθεί η Εκκλησία της Ελλάδος, όταν γιορτάζουν όσοι λέγονται Δημήτρης, Δημήτριος και Δήμητρα. Προσθέτει ότι οι εκκλησίες του παλαιού ημερολογίου γιορτάζουν 13 ημέρες αργότερα, στις 8 Νοεμβρίου του πολιτικού ημερολογίου. Η σελίδα παραθέτει μία πηγή, τη Μονή του Αγίου Ιωάννη (Saint John's Monastery)."
+   ],
+   "es": [
+    "¿Cuándo es la fiesta de san Demetrio, el día del santo de Dimitris y Dimitra?",
+    "La página publicada de KRIOS indica el 26 de octubre como fiesta de san Demetrio en el calendario que sigue la Iglesia de Grecia. Ese día es la onomástica (el día del santo) de quienes se llaman Dimitris, Dimitrios y Dimitra. La página añade que las iglesias del calendario antiguo lo celebran 13 días después, el 8 de noviembre del calendario civil. La página cita una fuente, el Monasterio de San Juan (Saint John's Monastery)."
+   ]
+  },
+  "older-films": {
+   "el": [
+    "Πού βρίσκω παλαιότερες ταινίες, άρθρα και απαντήσεις;",
+    "Η σελίδα Films παρουσιάζει όλες τις ταινίες του KRIOS, από τη νεότερη έως την παλαιότερη. Οι ενότητες Articles, Q&A και Quizzes περιέχουν το παλαιότερο γραπτό υλικό."
+   ],
+   "es": [
+    "¿Dónde encuentro películas, artículos y respuestas anteriores?",
+    "La página Films presenta todas las películas de KRIOS, de la más reciente a la más antigua. Las secciones Articles, Q&A y Quizzes reúnen el material escrito anterior."
+   ]
+  },
+  "memory-room": {
+   "el": [
+    "Τι είναι ο Χώρος Μνήμης (Memory Room);",
+    "Ο Χώρος Μνήμης στην αρχική σελίδα προτείνει ερωτήσεις για να κάνετε σε κάποιον από την οικογένειά σας, από τις σελίδες των ταινιών. Η αρχική σελίδα λέει ότι τίποτα εκεί δεν αποθηκεύεται ούτε στέλνεται."
+   ],
+   "es": [
+    "¿Qué es la Sala de la Memoria (Memory Room)?",
+    "La Sala de la Memoria de la página de inicio propone preguntas para hacer a alguien de su familia, tomadas de las páginas de las películas. La página de inicio dice que allí nada se guarda ni se envía."
+   ]
+  },
+  "first-wave": {
+   "el": [
+    "Γιατί έφυγαν Έλληνες από την Ελλάδα μεταξύ 1890 και 1914;",
+    "Το Migration Policy Institute αναφέρει ότι το πρώτο κύμα μετανάστευσης πυροδοτήθηκε από την οικονομική κρίση του 1893, μετά από απότομη πτώση της τιμής της σταφίδας. Από το 1890 έως το 1914 σχεδόν το ένα έκτο του πληθυσμού της Ελλάδας μετανάστευσε, κυρίως στις Ηνωμένες Πολιτείες και στην Αίγυπτο."
+   ],
+   "es": [
+    "¿Por qué los griegos dejaron Grecia entre 1890 y 1914?",
+    "El Migration Policy Institute dice que la primera ola de emigración fue impulsada por la crisis económica de 1893, tras una rápida caída del precio de la pasa de Corinto. De 1890 a 1914 emigró casi una sexta parte de la población de Grecia, sobre todo a los Estados Unidos y a Egipto."
+   ]
+  },
+  "second-wave": {
+   "el": [
+    "Ποιο ήταν το δεύτερο κύμα ελληνικής μετανάστευσης;",
+    "Σύμφωνα με το Migration Policy Institute, περισσότεροι από ένα εκατομμύριο Έλληνες μετανάστευσαν σε ένα δεύτερο κύμα, κυρίως μεταξύ 1950 και 1974, στη Δυτική Ευρώπη, τις Ηνωμένες Πολιτείες, τον Καναδά και την Αυστραλία. Αναφέρει επίσης ότι σχεδόν οι μισοί από τους μεταπολεμικούς μετανάστες επέστρεψαν στην Ελλάδα."
+   ],
+   "es": [
+    "¿Cuál fue la segunda ola de emigración griega?",
+    "Según el Migration Policy Institute, más de un millón de griegos emigraron en una segunda ola, sobre todo entre 1950 y 1974, a Europa occidental, los Estados Unidos, Canadá y Australia. También dice que casi la mitad de los emigrantes de la posguerra regresó a Grecia."
+   ]
+  },
+  "how-many-to-us": {
+   "el": [
+    "Πόσοι Έλληνες έφτασαν στις Ηνωμένες Πολιτείες στο πρώτο κύμα;",
+    "Αυτό παραμένει ανοιχτό ερώτημα στη σελίδα της ταινίας. Σημειώνει ότι οι δημοσιευμένες ιστορίες δίνουν αριθμούς από περίπου 430.000 έως πάνω από 600.000, γι' αυτό η ταινία λέει μόνο «εκατοντάδες χιλιάδες». Καμία μεμονωμένη εγκεκριμένη πηγή δεν δίνει οριστικό αριθμό, οπότε ο Οδηγός δεν δίνει αριθμό."
+   ],
+   "es": [
+    "¿Cuántos griegos llegaron a los Estados Unidos en la primera ola?",
+    "Esta sigue siendo una pregunta abierta en la página de la película. Señala que las historias publicadas dan cifras de unos 430 000 a más de 600 000, por lo que la película dice solo «cientos de miles». Ninguna fuente aprobada por sí sola fija la cifra, así que la Guía no da ninguna."
+   ]
+  },
+  "xenitia": {
+   "el": [
+    "Τι σημαίνει ξενιτιά;",
+    "Η ταινία και η σελίδα ερωτήσεων την περιγράφουν ως την ελληνική λέξη για τη ζωή μακριά από τον τόπο σου και ως την απόσταση ανάμεσα σε αυτόν που φεύγει και σε όσους μένουν. Καμία από τις δύο σελίδες δεν παραθέτει λεξικό ή επιστημονική πηγή γι' αυτό, οπότε πρόκειται για την περιγραφή του KRIOS."
+   ],
+   "es": [
+    "¿Qué significa ξενιτιά (xenitiá)?",
+    "La película y su página de preguntas la describen como la palabra griega para la vida lejos de la patria, y como la distancia entre quien se va y quienes se quedan. Ninguna de las dos páginas cita un diccionario o una fuente académica, así que tómelo como la descripción de KRIOS."
+   ]
+  },
+  "greek-dance-chicago": {
+   "el": [
+    "Υπάρχει ομάδα ελληνικών χορών στην περιοχή του Σικάγου;",
+    "Η ταινία για τον ελληνικό χορό αναφέρει το Orpheus Hellenic Folklore Society. Η σελίδα About του συλλόγου λέει ότι το ρεπερτόριό του περιλαμβάνει χορούς από κάθε περιοχή της Ελλάδας, με ομάδα νέων ενηλίκων από την περιοχή του Σικάγου και παιδική ομάδα για παιδιά 9 έως 15 ετών, και ότι τους μοιράζεται μέσα από παραστάσεις, εργαστήρια και διαλέξεις."
+   ],
+   "es": [
+    "¿Hay un grupo de baile griego en la zona de Chicago?",
+    "La película sobre el baile griego menciona la Orpheus Hellenic Folklore Society. Su página About dice que su repertorio incluye bailes de todas las regiones de Grecia, con un grupo de adultos jóvenes de la zona de Chicago y un grupo juvenil para niños de 9 a 15 años, y que los comparte en actuaciones, talleres y conferencias."
+   ]
+  },
+  "sirtaki": {
+   "el": [
+    "Είναι το συρτάκι αρχαίος ελληνικός χορός;",
+    "Ο Οδηγός δεν απαντά ακόμη σε αυτό. Η ταινία του KRIOS για το συρτάκι στηρίζεται σε γενικές αναφορές που δεν έχουν ακόμη αντικατασταθεί από επιστημονική έρευνα, και η σελίδα της ταινίας σημειώνει μια δημοφιλή ιστορία ως ερμηνεία, όχι ως τεκμηριωμένο γεγονός. Δείτε την ταινία και διαβάστε τις πηγές της για μια πιο ολοκληρωμένη εικόνα."
+   ],
+   "es": [
+    "¿El sirtaki es un baile griego antiguo?",
+    "La Guía todavía no responde a esta pregunta. La película de KRIOS sobre el sirtaki se apoya en referencias generales que aún no se han sustituido por investigación académica, y la página de la película marca una historia popular como interpretación, no como hecho establecido. Vea la película y consulte sus fuentes para tener una visión completa."
+   ]
+  },
+  "music-censorship": {
+   "el": [
+    "Λογοκρίθηκε η ελληνική μουσική επί δικτατορίας;",
+    "Ο Οδηγός δεν απαντά ακόμη σε αυτό. Η ταινία το συζητά, αλλά οι πηγές που αναφέρει δεν είναι ακόμη εγκεκριμένη επιστημονική έρευνα, οπότε ο Οδηγός δεν επαναλαμβάνει τους ισχυρισμούς. Η σελίδα της ταινίας τις παραθέτει."
+   ],
+   "es": [
+    "¿Se censuró la música griega bajo una dictadura?",
+    "La Guía todavía no responde a esta pregunta. La película lo trata, pero las fuentes que cita aún no son investigación académica aprobada, así que la Guía no repite esas afirmaciones. La página de la película las enumera."
+   ]
+  },
+  "not-found": {
+   "el": [
+    "Δεν βρίσκω την ερώτησή μου.",
+    "Ο Οδηγός απαντά μόνο από δημοσιευμένες σελίδες με κατονομαζόμενη πηγή, οπότε κάποιες ερωτήσεις δεν έχουν απάντηση εδώ. Δοκιμάστε τις σελίδες ερωτήσεων και τις σελίδες των ταινιών, που δείχνουν τις πηγές τους."
+   ],
+   "es": [
+    "No encuentro mi pregunta.",
+    "La Guía solo responde con páginas publicadas que tienen una fuente identificada, así que algunas preguntas no tienen respuesta aquí. Pruebe con las páginas de preguntas y las de las películas, que muestran sus fuentes."
+   ]
+  }
+ },
+ "bridge": {
+  "el": {
+   "ονομαστικη": "name day",
+   "γιορτη": "feast name day",
+   "αγιος": "saint",
+   "αγιου": "saint",
+   "δημητριος": "demetrios",
+   "δημητριου": "demetrios",
+   "δημητρης": "demetrios dimitris",
+   "μεταναστευση": "emigration emigrate",
+   "μεταναστες": "emigrants emigration",
+   "εφυγαν": "left leave emigration",
+   "αμερικη": "america united states",
+   "ηπα": "united states",
+   "χορος": "dance",
+   "χοροι": "dance",
+   "χορου": "dance",
+   "σικαγο": "chicago",
+   "ξενιτια": "xenitia",
+   "εκκλησια": "church",
+   "πιστη": "faith belief",
+   "παραδοση": "tradition",
+   "ιστορια": "history",
+   "ταινια": "film",
+   "ταινιες": "films",
+   "υποτιτλοι": "captions",
+   "αφηγηση": "narrates narrated voice",
+   "φωτογραφιες": "photographs pictures",
+   "οχι": "ohi",
+   "γλυκο": "spoon sweet",
+   "κουταλιου": "spoon sweet",
+   "διακος": "diakos",
+   "μπουμπουλινα": "bouboulina",
+   "βαλαχαδες": "vallahades",
+   "ταρπον": "tarpon springs",
+   "σφουγγαρ": "sponge",
+   "ημερολογιο": "calendar",
+   "κυμα": "wave",
+   "krios": "krios",
+   "ποτε": "when date",
+   "γιορταζει": "feast name day celebrate",
+   "γιορταζουν": "feast name day celebrate",
+   "γιορταζουμε": "feast name day celebrate",
+   "σημαινει": "mean meaning",
+   "σημασια": "meaning",
+   "ξενιτεια": "xenitia",
+   "γιατι": "why"
+  },
+  "es": {
+   "onomastica": "name day",
+   "santo": "saint name day",
+   "san": "saint",
+   "demetrio": "demetrios",
+   "fiesta": "feast",
+   "emigracion": "emigration",
+   "emigraron": "emigrated emigration",
+   "emigrar": "emigrate",
+   "inmigrantes": "emigrants",
+   "baile": "dance",
+   "bailes": "dance",
+   "danza": "dance",
+   "chicago": "chicago",
+   "iglesia": "church",
+   "fe": "faith",
+   "creencia": "belief",
+   "tradicion": "tradition",
+   "historia": "history",
+   "pelicula": "film",
+   "peliculas": "films",
+   "subtitulos": "captions",
+   "narra": "narrates",
+   "fotografias": "photographs pictures",
+   "fotos": "photographs pictures",
+   "dulce": "spoon sweet",
+   "cuchara": "spoon",
+   "calendario": "calendar",
+   "ola": "wave",
+   "grecia": "greece",
+   "griegos": "greeks",
+   "estados": "united states",
+   "unidos": "united states",
+   "dia": "day",
+   "sagrados": "sacred",
+   "significa": "mean meaning",
+   "significado": "meaning",
+   "cuando": "when date",
+   "celebra": "celebrate feast",
+   "celebran": "celebrate feast",
+   "celebramos": "celebrate feast",
+   "xenitia": "xenitia",
+   "porque": "why"
+  },
+  "en": {
+   "photo": "photograph picture",
+   "photos": "photograph picture",
+   "images": "photograph picture illustrated",
+   "image": "photograph picture",
+   "pictures": "photograph picture",
+   "documentaries": "documentary film",
+   "documentary": "documentary film",
+   "movie": "film",
+   "movies": "films",
+   "leave": "left emigration",
+   "left": "emigration",
+   "america": "united states",
+   "usa": "united states"
+  }
+ },
+ "alias": {
+  "first-wave": "why did greeks emigrate why did greeks leave greece por qué emigraron los griegos γιατί έφυγαν οι Έλληνες",
+  "second-wave": "after the war emigration 1950s 1960s 1970s",
+  "voice-and-captions": "subtitles narrator voice",
+  "real-or-illustrated": "are the images ai generated",
+  "how-many-to-us": "number of greek immigrants to the united states america",
+  "what-goes-in-a-film": "choose decide select claims sources included",
+  "name-day": "when is saint demetrios name day πότε γιορτάζει ο Άγιος Δημήτριος γιορτή Δημήτρη cuándo es la onomástica de san Demetrio"
+ },
+ "terms": {
+  "es": {
+   "Films": "Películas",
+   "Articles": "Artículos",
+   "Q&A": "Preguntas y respuestas",
+   "Quizzes": "Cuestionarios de conocimientos",
+   "Sacred Days": "Días Sagrados",
+   "Memory Room": "Sala de la Memoria",
+   "How we work": "Cómo trabajamos",
+   "All films": "Todas las películas",
+   "Sources": "Fuentes",
+   "The Greeks Who Left": "Película: Los griegos que se fueron",
+   "Sources for The Greeks Who Left": "Fuentes de la película Los griegos que se fueron",
+   "Image credits for The Greeks Who Left": "Créditos de las imágenes de la película Los griegos que se fueron",
+   "The Greek Dance": "Película: La danza griega",
+   "The Greek Dance, sources": "Fuentes de la película La danza griega",
+   "The Greek Dance That Wasn't Real… Until It Was": "Película: La danza griega que no era real… hasta que lo fue",
+   "When is Saint Demetrios name day?": "¿Cuándo es la fiesta de san Demetrio, el día del santo de Dimitris y Dimitra?",
+   "What does xenitia mean?": "¿Qué significa xenitiá?"
+  },
+  "el": {
+   "Films": "Ταινίες",
+   "Articles": "Άρθρα",
+   "Q&A": "Ερωτήσεις και απαντήσεις",
+   "Quizzes": "Κουίζ",
+   "Sacred Days": "Ιερές Ημέρες",
+   "Memory Room": "Χώρος Μνήμης",
+   "How we work": "Πώς δουλεύουμε",
+   "All films": "Όλες οι ταινίες",
+   "Sources": "Πηγές",
+   "The Greeks Who Left": "Ταινία: Οι Έλληνες που έφυγαν",
+   "Sources for The Greeks Who Left": "Πηγές της ταινίας «Οι Έλληνες που έφυγαν»",
+   "Image credits for The Greeks Who Left": "Πηγές των εικόνων της ταινίας «Οι Έλληνες που έφυγαν»",
+   "The Greek Dance": "Ταινία: Ο ελληνικός χορός",
+   "The Greek Dance, sources": "Πηγές της ταινίας «Ο ελληνικός χορός»",
+   "The Greek Dance That Wasn't Real… Until It Was": "Ταινία: Ο ελληνικός χορός που δεν ήταν αληθινός… μέχρι που έγινε",
+   "When is Saint Demetrios name day?": "Πότε είναι η γιορτή του Αγίου Δημητρίου, όταν γιορτάζουν όσοι λέγονται Δημήτρης και Δήμητρα;",
+   "What does xenitia mean?": "Τι σημαίνει ξενιτιά;"
+  }
+ }
+}

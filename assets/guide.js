@@ -297,6 +297,8 @@
       var want = new URLSearchParams(location.search).get("lang");
       if (!want) { try { want = localStorage.getItem("krios-guide-lang"); } catch (e) {} }
       setLang(want || "en", false);
+      /* a question typed in the floating "Ask KRIOS" box on another page arrives through session storage */
+      try { var q0 = sessionStorage.getItem("krios-guide-q"); if (q0) { sessionStorage.removeItem("krios-guide-q"); ask(q0); } } catch (e) {}
       window.__kriosGuideSearch = search; /* for automated tests only */
     })
     .catch(function () { /* the curated list keeps working without the search box */ });

@@ -87,7 +87,8 @@
   }
 
   /* ---------- language ---------- */
-  function allowed(l) { return l === "en" || CFG.preview || I18N.review[l] === "reviewed"; }
+  /* "published_draft": live by director decision (Oct 23, 2026) while the named human review is pending; a draft notice stays visible */
+  function allowed(l) { return l === "en" || CFG.preview || I18N.review[l] === "reviewed" || I18N.review[l] === "published_draft"; }
   function T(k) { var u = I18N.ui[LANG] || {}; return (u[k] != null ? u[k] : I18N.ui.en[k]) || ""; }
   function itemText(c) {
     var tr = (I18N.items[c.id] || {})[LANG];
@@ -104,7 +105,7 @@
     root.querySelectorAll("[data-t]").forEach(function (el) { var v = T(el.getAttribute("data-t")); if (v) el.textContent = v; });
     var inp = document.getElementById("g-ask-input"); if (inp) inp.placeholder = T("ask_ph");
     root.querySelectorAll(".g-langs button").forEach(function (b) { b.setAttribute("aria-pressed", b.value === l ? "true" : "false"); });
-    var dr = document.getElementById("g-draft"); if (dr) dr.hidden = !(CFG.preview && l !== "en" && I18N.review[l] !== "reviewed");
+    var dr = document.getElementById("g-draft"); if (dr) dr.hidden = !(l !== "en" && I18N.review[l] !== "reviewed");
     root.querySelectorAll(".g-item").forEach(function (li) {
       var c = byId[li.id]; if (!c) return;
       var it = itemText(c);

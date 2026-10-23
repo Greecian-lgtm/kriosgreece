@@ -1,8 +1,8 @@
 {
  "review": {
   "en": "source",
-  "el": "unreviewed",
-  "es": "unreviewed"
+  "el": "published_draft",
+  "es": "published_draft"
  },
  "ui": {
   "en": {

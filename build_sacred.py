@@ -26,8 +26,8 @@ GI = json.load(open(os.path.join(ROOT, "data/guide_i18n.json"), encoding="utf-8"
 
 
 def langs_allowed():
-    """English plus each language marked reviewed (or every drafted language in a staging preview)."""
-    return ["en"] + [l for l in ("el", "es") if PREVIEW or GI["review"].get(l) == "reviewed"]
+    """English plus each language marked reviewed or published_draft (director decision Oct 23, 2026: live with a draft notice while review is pending)."""
+    return ["en"] + [l for l in ("el", "es") if PREVIEW or GI["review"].get(l) in ("reviewed", "published_draft")]
 
 
 def lang_picker():

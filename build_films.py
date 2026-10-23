@@ -119,7 +119,7 @@ sacred_body = f'''<section class="m-sdhero"><div class="wrap">
 </div></section>
 <div class="wrap m-page">
   {feat_html}
-  <section class="m-calendar"><div class="m-head reveal"><div><span class="label m-kick">The year ahead</span><h2>Sacred Days calendar</h2></div></div>
+  <section class="m-calendar" id="calendar"><div class="m-head reveal"><div><span class="label m-kick">The year ahead</span><h2>Sacred Days calendar</h2></div></div>
     <p class="m-note-sm reveal">A curated selection of feast days. Each feast date is listed separately from any KRIOS film release.</p>
     <ol class="m-feasts">{rows}</ol>
     <p class="m-note-sm reveal">{e(SD["calendar_note"])}</p></section>

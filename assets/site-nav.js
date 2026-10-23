@@ -22,3 +22,5 @@
   });
   window.matchMedia('(min-width: 861px)').addEventListener('change', function (m) { if (m.matches) set(false, false); });
 })();
+/* Site-wide language layer (English, Greek, Spanish); loads once on every page that has the menu script. */
+(function () { if (document.querySelector('script[src="/assets/site-i18n.js"]')) return; var sc = document.createElement("script"); sc.src = "/assets/site-i18n.js"; sc.defer = true; document.head.appendChild(sc); })();

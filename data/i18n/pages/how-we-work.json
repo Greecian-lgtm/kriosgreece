@@ -1,0 +1,145 @@
+{
+ "_page": "how-we-work",
+ "_status": "draft",
+ "strings": [
+  {
+   "en": "Built on evidence, told by people",
+   "html": null,
+   "el": "Χτισμένο σε τεκμήρια, με αφήγηση από ανθρώπους",
+   "es": "Basado en pruebas, contado por personas"
+  },
+  {
+   "en": "If a claim can't be traced to a source, it doesn't go in the film. When the evidence runs out, we say so.",
+   "html": null,
+   "el": "Αν ένας ισχυρισμός δεν μπορεί να αναχθεί σε μια πηγή, δεν μπαίνει στην ταινία. Όταν τα τεκμήρια τελειώνουν, το λέμε.",
+   "es": "Si una afirmación no puede rastrearse hasta una fuente, no entra en la película. Cuando las pruebas se acaban, lo decimos."
+  },
+  {
+   "en": "The oldest source, not the most famous",
+   "html": null,
+   "el": "Η παλαιότερη πηγή, όχι η πιο διάσημη",
+   "es": "La fuente más antigua, no la más famosa"
+  },
+  {
+   "en": "Primary sources and named scholarship for every historical claim, checked before recording and again on the finished film.",
+   "html": null,
+   "el": "Πρωτογενείς πηγές και κατονομαζόμενη επιστημονική έρευνα για κάθε ιστορικό ισχυρισμό, ελεγμένες πριν από την ηχογράφηση και ξανά στην ολοκληρωμένη ταινία.",
+   "es": "Fuentes primarias e investigación académica con nombre para cada afirmación histórica, verificadas antes de la grabación y otra vez en la película terminada."
+  },
+  {
+   "en": "The oldest source, not the most famousPrimary sources and named scholarship for every historical claim, checked before recording and again on the finished film.",
+   "html": "<b>The oldest source, not the most famous</b><span>Primary sources and named scholarship for every historical claim, checked before recording and again on the finished film.</span>",
+   "el_html": "<b>Η παλαιότερη πηγή, όχι η πιο διάσημη</b><span>Πρωτογενείς πηγές και κατονομαζόμενη επιστημονική έρευνα για κάθε ιστορικό ισχυρισμό, ελεγμένες πριν από την ηχογράφηση και ξανά στην ολοκληρωμένη ταινία.</span>",
+   "es_html": "<b>La fuente más antigua, no la más famosa</b><span>Fuentes primarias e investigación académica con nombre para cada afirmación histórica, verificadas antes de la grabación y otra vez en la película terminada.</span>",
+   "el": "Η παλαιότερη πηγή, όχι η πιο διάσημηΠρωτογενείς πηγές και κατονομαζόμενη επιστημονική έρευνα για κάθε ιστορικό ισχυρισμό, ελεγμένες πριν από την ηχογράφηση και ξανά στην ολοκληρωμένη ταινία.",
+   "es": "La fuente más antigua, no la más famosaFuentes primarias e investigación académica con nombre para cada afirmación histórica, verificadas antes de la grabación y otra vez en la película terminada."
+  },
+  {
+   "en": "Real archives first",
+   "html": null,
+   "el": "Πρώτα τα πραγματικά αρχεία",
+   "es": "Primero, archivos reales"
+  },
+  {
+   "en": "Historical photographs, documents, icons and maps, credited with their licence. Low-resolution archives are shown as framed prints, never stretched or AI-enhanced.",
+   "html": null,
+   "el": "Ιστορικές φωτογραφίες, έγγραφα, εικόνες και χάρτες, με αναφορά προέλευσης και άδειας. Τα αρχεία χαμηλής ανάλυσης παρουσιάζονται ως κορνιζαρισμένες εκτυπώσεις, ποτέ τεντωμένα ή βελτιωμένα με τεχνητή νοημοσύνη.",
+   "es": "Fotografías históricas, documentos, íconos y mapas, con su crédito y su licencia. Los archivos de baja resolución se muestran como impresiones enmarcadas, nunca estirados ni mejorados con IA."
+  },
+  {
+   "en": "Real archives firstHistorical photographs, documents, icons and maps, credited with their licence. Low-resolution archives are shown as framed prints, never stretched or AI-enhanced.",
+   "html": "<b>Real archives first</b><span>Historical photographs, documents, icons and maps, credited with their licence. Low-resolution archives are shown as framed prints, never stretched or AI-enhanced.</span>",
+   "el_html": "<b>Πρώτα τα πραγματικά αρχεία</b><span>Ιστορικές φωτογραφίες, έγγραφα, εικόνες και χάρτες, με αναφορά προέλευσης και άδειας. Τα αρχεία χαμηλής ανάλυσης παρουσιάζονται ως κορνιζαρισμένες εκτυπώσεις, ποτέ τεντωμένα ή βελτιωμένα με τεχνητή νοημοσύνη.</span>",
+   "es_html": "<b>Primero, archivos reales</b><span>Fotografías históricas, documentos, íconos y mapas, con su crédito y su licencia. Los archivos de baja resolución se muestran como impresiones enmarcadas, nunca estirados ni mejorados con IA.</span>",
+   "el": "Πρώτα τα πραγματικά αρχείαΙστορικές φωτογραφίες, έγγραφα, εικόνες και χάρτες, με αναφορά προέλευσης και άδειας. Τα αρχεία χαμηλής ανάλυσης παρουσιάζονται ως κορνιζαρισμένες εκτυπώσεις, ποτέ τεντωμένα ή βελτιωμένα με τεχνητή νοημοσύνη.",
+   "es": "Primero, archivos realesFotografías históricas, documentos, íconos y mapas, con su crédito y su licencia. Los archivos de baja resolución se muestran como impresiones enmarcadas, nunca estirados ni mejorados con IA."
+  },
+  {
+   "en": "Illustration is labelled",
+   "html": null,
+   "el": "Η εικονογράφηση επισημαίνεται",
+   "es": "La ilustración se señala"
+  },
+  {
+   "en": "Where no photograph exists, some everyday scenes are illustrated. They are marked on screen and never stand in for sacred or historical evidence.",
+   "html": null,
+   "el": "Όπου δεν υπάρχει φωτογραφία, ορισμένες καθημερινές σκηνές είναι εικονογραφημένες. Επισημαίνονται στην οθόνη και δεν αντικαθιστούν ποτέ ιερές ή ιστορικές μαρτυρίες.",
+   "es": "Donde no existe una fotografía, algunas escenas cotidianas están ilustradas. Se señalan en pantalla y nunca sustituyen testimonios sagrados o históricos."
+  },
+  {
+   "en": "Illustration is labelledWhere no photograph exists, some everyday scenes are illustrated. They are marked on screen and never stand in for sacred or historical evidence.",
+   "html": "<b>Illustration is labelled</b><span>Where no photograph exists, some everyday scenes are illustrated. They are marked on screen and never stand in for sacred or historical evidence.</span>",
+   "el_html": "<b>Η εικονογράφηση επισημαίνεται</b><span>Όπου δεν υπάρχει φωτογραφία, ορισμένες καθημερινές σκηνές είναι εικονογραφημένες. Επισημαίνονται στην οθόνη και δεν αντικαθιστούν ποτέ ιερές ή ιστορικές μαρτυρίες.</span>",
+   "es_html": "<b>La ilustración se señala</b><span>Donde no existe una fotografía, algunas escenas cotidianas están ilustradas. Se señalan en pantalla y nunca sustituyen testimonios sagrados o históricos.</span>",
+   "el": "Η εικονογράφηση επισημαίνεταιΌπου δεν υπάρχει φωτογραφία, ορισμένες καθημερινές σκηνές είναι εικονογραφημένες. Επισημαίνονται στην οθόνη και δεν αντικαθιστούν ποτέ ιερές ή ιστορικές μαρτυρίες.",
+   "es": "La ilustración se señalaDonde no existe una fotografía, algunas escenas cotidianas están ilustradas. Se señalan en pantalla y nunca sustituyen testimonios sagrados o históricos."
+  },
+  {
+   "en": "History, tradition and belief kept apart",
+   "html": null,
+   "el": "Ιστορία, παράδοση και πίστη χωριστά",
+   "es": "Historia, tradición y creencia, por separado"
+  },
+  {
+   "en": "We say which is which: what is documented, what the Church teaches, what families practice, and where communities differ.",
+   "html": null,
+   "el": "Λέμε τι είναι τι: τι είναι τεκμηριωμένο, τι διδάσκει η Εκκλησία, τι κάνουν οι οικογένειες και πού διαφέρουν οι κοινότητες.",
+   "es": "Decimos qué es qué: lo que está documentado, lo que enseña la Iglesia, lo que practican las familias y en qué difieren las comunidades."
+  },
+  {
+   "en": "History, tradition and belief kept apartWe say which is which: what is documented, what the Church teaches, what families practice, and where communities differ.",
+   "html": "<b>History, tradition and belief kept apart</b><span>We say which is which: what is documented, what the Church teaches, what families practice, and where communities differ.</span>",
+   "el_html": "<b>Ιστορία, παράδοση και πίστη χωριστά</b><span>Λέμε τι είναι τι: τι είναι τεκμηριωμένο, τι διδάσκει η Εκκλησία, τι κάνουν οι οικογένειες και πού διαφέρουν οι κοινότητες.</span>",
+   "es_html": "<b>Historia, tradición y creencia, por separado</b><span>Decimos qué es qué: lo que está documentado, lo que enseña la Iglesia, lo que practican las familias y en qué difieren las comunidades.</span>",
+   "el": "Ιστορία, παράδοση και πίστη χωριστάΛέμε τι είναι τι: τι είναι τεκμηριωμένο, τι διδάσκει η Εκκλησία, τι κάνουν οι οικογένειες και πού διαφέρουν οι κοινότητες.",
+   "es": "Historia, tradición y creencia, por separadoDecimos qué es qué: lo que está documentado, lo que enseña la Iglesia, lo que practican las familias y en qué difieren las comunidades."
+  },
+  {
+   "en": "A human voice",
+   "html": null,
+   "el": "Μια ανθρώπινη φωνή",
+   "es": "Una voz humana"
+  },
+  {
+   "en": "Every documentary today is narrated in a human voice.",
+   "html": null,
+   "el": "Κάθε ντοκιμαντέρ σήμερα έχει αφήγηση από ανθρώπινη φωνή.",
+   "es": "Hoy cada documental está narrado con una voz humana."
+  },
+  {
+   "en": "A human voiceEvery documentary today is narrated in a human voice.",
+   "html": "<b>A human voice</b><span>Every documentary today is narrated in a human voice.</span>",
+   "el_html": "<b>Μια ανθρώπινη φωνή</b><span>Κάθε ντοκιμαντέρ σήμερα έχει αφήγηση από ανθρώπινη φωνή.</span>",
+   "es_html": "<b>Una voz humana</b><span>Hoy cada documental está narrado con una voz humana.</span>",
+   "el": "Μια ανθρώπινη φωνήΚάθε ντοκιμαντέρ σήμερα έχει αφήγηση από ανθρώπινη φωνή.",
+   "es": "Una voz humanaHoy cada documental está narrado con una voz humana."
+  },
+  {
+   "en": "English and Greek",
+   "html": null,
+   "el": "Αγγλικά και ελληνικά",
+   "es": "Inglés y griego"
+  },
+  {
+   "en": "New films get English and Greek captions reviewed by people, so the story reaches every generation of the family.",
+   "html": null,
+   "el": "Οι νέες ταινίες έχουν αγγλικούς και ελληνικούς υπότιτλους ελεγμένους από ανθρώπους, ώστε η ιστορία να φτάνει σε κάθε γενιά της οικογένειας.",
+   "es": "Las películas nuevas tienen subtítulos en inglés y en griego revisados por personas, para que la historia llegue a cada generación de la familia."
+  },
+  {
+   "en": "English and GreekNew films get English and Greek captions reviewed by people, so the story reaches every generation of the family.",
+   "html": "<b>English and Greek</b><span>New films get English and Greek captions reviewed by people, so the story reaches every generation of the family.</span>",
+   "el_html": "<b>Αγγλικά και ελληνικά</b><span>Οι νέες ταινίες έχουν αγγλικούς και ελληνικούς υπότιτλους ελεγμένους από ανθρώπους, ώστε η ιστορία να φτάνει σε κάθε γενιά της οικογένειας.</span>",
+   "es_html": "<b>Inglés y griego</b><span>Las películas nuevas tienen subtítulos en inglés y en griego revisados por personas, para que la historia llegue a cada generación de la familia.</span>",
+   "el": "Αγγλικά και ελληνικάΟι νέες ταινίες έχουν αγγλικούς και ελληνικούς υπότιτλους ελεγμένους από ανθρώπους, ώστε η ιστορία να φτάνει σε κάθε γενιά της οικογένειας.",
+   "es": "Inglés y griegoLas películas nuevas tienen subtítulos en inglés y en griego revisados por personas, para que la historia llegue a cada generación de la familia."
+  }
+ ],
+ "attrs": [
+  {
+   "en": "Main",
+   "el": "Κύριο",
+   "es": "Principal"
+  }
+ ]
+}

@@ -1,0 +1,608 @@
+{
+ "_page": "films",
+ "_status": "draft",
+ "strings": [
+  {
+   "en": "The documentaries",
+   "html": null,
+   "el": "Τα ντοκιμαντέρ",
+   "es": "Los documentales"
+  },
+  {
+   "en": "Every KRIOS film",
+   "html": null,
+   "el": "Όλες οι ταινίες του KRIOS",
+   "es": "Todas las películas de KRIOS"
+  },
+  {
+   "en": "Greek history, faith, music and family memory. 21 films, newest first.",
+   "html": null,
+   "el": "Ελληνική ιστορία, πίστη, μουσική και μνήμη της οικογένειας. 21 ταινίες, πρώτα οι νεότερες.",
+   "es": "Historia, fe, música y memoria familiar griegas. 21 películas, de la más reciente a la más antigua."
+  },
+  {
+   "en": "▶ 9 min",
+   "html": null,
+   "el": "▶ 9 λεπ.",
+   "es": "▶ 9 min"
+  },
+  {
+   "en": "Featured · Living Roots · October 18, 2026",
+   "html": null,
+   "el": "Προτεινόμενη · Living Roots · 18 Οκτωβρίου 2026",
+   "es": "Destacada · Living Roots · 18 de octubre de 2026"
+  },
+  {
+   "en": "The Greeks Who Left, and the Greece They Carried",
+   "html": null,
+   "el": "The Greeks Who Left, and the Greece They Carried",
+   "es": "The Greeks Who Left, and the Greece They Carried"
+  },
+  {
+   "en": "A suitcase can carry clothes and photographs. How do you pack a language, a song, or a church bell?",
+   "html": null,
+   "el": "Μια βαλίτσα χωράει ρούχα και φωτογραφίες. Πώς όμως πακετάρεις μια γλώσσα, ένα τραγούδι ή μια καμπάνα εκκλησίας;",
+   "es": "Una maleta puede llevar ropa y fotografías. ¿Pero cómo se empaca un idioma, una canción o la campana de una iglesia?"
+  },
+  {
+   "en": "Watch the film →",
+   "html": null,
+   "el": "Δείτε την ταινία →",
+   "es": "Ver la película →"
+  },
+  {
+   "en": "Featured · Living Roots · October 18, 2026The Greeks Who Left, and the Greece They CarriedA suitcase can carry clothes and photographs. How do you pack a language, a song, or a church bell?Watch the film →",
+   "html": "<span>Featured · Living Roots · October 18, 2026</span><span>The Greeks Who Left, and the Greece They Carried</span><span>A suitcase can carry clothes and photographs. How do you pack a language, a song, or a church bell?</span><span>Watch the film →</span>",
+   "el_html": "<span>Προτεινόμενη · Living Roots · 18 Οκτωβρίου 2026</span><span>The Greeks Who Left, and the Greece They Carried</span><span>Μια βαλίτσα χωράει ρούχα και φωτογραφίες. Πώς όμως πακετάρεις μια γλώσσα, ένα τραγούδι ή μια καμπάνα εκκλησίας;</span><span>Δείτε την ταινία →</span>",
+   "es_html": "<span>Destacada · Living Roots · 18 de octubre de 2026</span><span>The Greeks Who Left, and the Greece They Carried</span><span>Una maleta puede llevar ropa y fotografías. ¿Pero cómo se empaca un idioma, una canción o la campana de una iglesia?</span><span>Ver la película →</span>",
+   "el": "Προτεινόμενη · Living Roots · 18 Οκτωβρίου 2026The Greeks Who Left, and the Greece They CarriedΜια βαλίτσα χωράει ρούχα και φωτογραφίες. Πώς όμως πακετάρεις μια γλώσσα, ένα τραγούδι ή μια καμπάνα εκκλησίας;Δείτε την ταινία →",
+   "es": "Destacada · Living Roots · 18 de octubre de 2026The Greeks Who Left, and the Greece They CarriedUna maleta puede llevar ropa y fotografías. ¿Pero cómo se empaca un idioma, una canción o la campana de una iglesia?Ver la película →"
+  },
+  {
+   "en": "▶ 9 minFeatured · Living Roots · October 18, 2026The Greeks Who Left, and the Greece They CarriedA suitcase can carry clothes and photographs. How do you pack a language, a song, or a church bell?Watch the film →",
+   "html": "<span><span>▶ 9 min</span></span><span><span>Featured · Living Roots · October 18, 2026</span><span>The Greeks Who Left, and the Greece They Carried</span><span>A suitcase can carry clothes and photographs. How do you pack a language, a song, or a church bell?</span><span>Watch the film →</span></span>",
+   "el_html": "<span><span>▶ 9 λεπ.</span></span><span><span>Προτεινόμενη · Living Roots · 18 Οκτωβρίου 2026</span><span>The Greeks Who Left, and the Greece They Carried</span><span>Μια βαλίτσα χωράει ρούχα και φωτογραφίες. Πώς όμως πακετάρεις μια γλώσσα, ένα τραγούδι ή μια καμπάνα εκκλησίας;</span><span>Δείτε την ταινία →</span></span>",
+   "es_html": "<span><span>▶ 9 min</span></span><span><span>Destacada · Living Roots · 18 de octubre de 2026</span><span>The Greeks Who Left, and the Greece They Carried</span><span>Una maleta puede llevar ropa y fotografías. ¿Pero cómo se empaca un idioma, una canción o la campana de una iglesia?</span><span>Ver la película →</span></span>",
+   "el": "▶ 9 λεπ.Προτεινόμενη · Living Roots · 18 Οκτωβρίου 2026The Greeks Who Left, and the Greece They CarriedΜια βαλίτσα χωράει ρούχα και φωτογραφίες. Πώς όμως πακετάρεις μια γλώσσα, ένα τραγούδι ή μια καμπάνα εκκλησίας;Δείτε την ταινία →",
+   "es": "▶ 9 minDestacada · Living Roots · 18 de octubre de 2026The Greeks Who Left, and the Greece They CarriedUna maleta puede llevar ropa y fotografías. ¿Pero cómo se empaca un idioma, una canción o la campana de una iglesia?Ver la película →"
+  },
+  {
+   "en": "All films",
+   "html": null,
+   "el": "Όλες οι ταινίες",
+   "es": "Todas las películas"
+  },
+  {
+   "en": "Living Roots",
+   "html": null,
+   "el": "Living Roots",
+   "es": "Living Roots"
+  },
+  {
+   "en": "Growing Up Greek",
+   "html": null,
+   "el": "Growing Up Greek",
+   "es": "Growing Up Greek"
+  },
+  {
+   "en": "History and heroes",
+   "html": null,
+   "el": "Ιστορία και ήρωες",
+   "es": "Historia y héroes"
+  },
+  {
+   "en": "Faith",
+   "html": null,
+   "el": "Πίστη",
+   "es": "Fe"
+  },
+  {
+   "en": "Music and memory",
+   "html": null,
+   "el": "Μουσική και μνήμη",
+   "es": "Música y memoria"
+  },
+  {
+   "en": "Family, food and diaspora",
+   "html": null,
+   "el": "Οικογένεια, φαγητό και διασπορά",
+   "es": "Familia, comida y diáspora"
+  },
+  {
+   "en": "Where KRIOS began",
+   "html": null,
+   "el": "Εκεί όπου ξεκίνησε το KRIOS",
+   "es": "Donde empezó KRIOS"
+  },
+  {
+   "en": "Childhood memories that connect generations. The things many of us remember: Sunday in church, the icon on the wall, Greek school after school. Stories that start with \"I remember that\" and lead to the history behind it.",
+   "html": null,
+   "el": "Παιδικές αναμνήσεις που ενώνουν τις γενιές. Όσα θυμόμαστε πολλοί από εμάς: την Κυριακή στην εκκλησία, την εικόνα στον τοίχο, το ελληνικό σχολείο μετά το σχολείο. Ιστορίες που ξεκινούν με το «θυμάμαι ότι» και οδηγούν στην ιστορία που κρύβεται πίσω τους.",
+   "es": "Recuerdos de infancia que unen generaciones. Lo que muchos recordamos: el domingo en la iglesia, el ícono en la pared, la escuela griega después de la escuela. Historias que empiezan con «recuerdo que» y llevan a la historia que hay detrás."
+  },
+  {
+   "en": "New series. No films yet. Subscribe on YouTube to see the first one.",
+   "html": "<span></span>New series. No films yet. <a href=\"https://www.youtube.com/@KriosGreece?sub_confirmation=1\" rel=\"noopener\">Subscribe on YouTube</a> to see the first one.",
+   "el_html": "<span></span>Νέα σειρά. Δεν υπάρχουν ακόμη ταινίες. <a href=\"https://www.youtube.com/@KriosGreece?sub_confirmation=1\" rel=\"noopener\">Γίνετε συνδρομητές στο YouTube</a> για να δείτε την πρώτη.",
+   "es_html": "<span></span>Nueva serie. Todavía no hay películas. <a href=\"https://www.youtube.com/@KriosGreece?sub_confirmation=1\" rel=\"noopener\">Suscríbase en YouTube</a> para ver la primera.",
+   "el": "Νέα σειρά. Δεν υπάρχουν ακόμη ταινίες. Γίνετε συνδρομητές στο YouTube για να δείτε την πρώτη.",
+   "es": "Nueva serie. Todavía no hay películas. Suscríbase en YouTube para ver la primera."
+  },
+  {
+   "en": "The living story",
+   "html": null,
+   "el": "Η ζωντανή ιστορία",
+   "es": "La historia viva"
+  },
+  {
+   "en": "Greek life as it is lived now, and how it survives.",
+   "html": null,
+   "el": "Η ελληνική ζωή όπως τη ζούμε σήμερα, και πώς επιβιώνει.",
+   "es": "La vida griega tal como se vive hoy, y cómo sobrevive."
+  },
+  {
+   "en": "Premieres Oct 26",
+   "html": null,
+   "el": "Πρεμιέρα 26 Οκτ.",
+   "es": "Estreno el 26 de oct."
+  },
+  {
+   "en": "Sacred Days · October 26, 2026",
+   "html": null,
+   "el": "Sacred Days · 26 Οκτωβρίου 2026",
+   "es": "Sacred Days · 26 de octubre de 2026"
+  },
+  {
+   "en": "Saint Demetrios: More Than a Name Day",
+   "html": null,
+   "el": "Saint Demetrios: More Than a Name Day",
+   "es": "Saint Demetrios: More Than a Name Day"
+  },
+  {
+   "en": "The saint of Thessaloniki, and the name day so many Greek families celebrate.",
+   "html": null,
+   "el": "Ο άγιος της Θεσσαλονίκης και η ονομαστική γιορτή που γιορτάζουν τόσες ελληνικές οικογένειες.",
+   "es": "El santo de Tesalónica y el día del santo que celebran tantas familias griegas."
+  },
+  {
+   "en": "Sacred Days · October 26, 2026Saint Demetrios: More Than a Name DayThe saint of Thessaloniki, and the name day so many Greek families celebrate.",
+   "html": "<span>Sacred Days · October 26, 2026</span><span>Saint Demetrios: More Than a Name Day</span><span>The saint of Thessaloniki, and the name day so many Greek families celebrate.</span>",
+   "el_html": "<span>Sacred Days · 26 Οκτωβρίου 2026</span><span>Saint Demetrios: More Than a Name Day</span><span>Ο άγιος της Θεσσαλονίκης και η ονομαστική γιορτή που γιορτάζουν τόσες ελληνικές οικογένειες.</span>",
+   "es_html": "<span>Sacred Days · 26 de octubre de 2026</span><span>Saint Demetrios: More Than a Name Day</span><span>El santo de Tesalónica y el día del santo que celebran tantas familias griegas.</span>",
+   "el": "Sacred Days · 26 Οκτωβρίου 2026Saint Demetrios: More Than a Name DayΟ άγιος της Θεσσαλονίκης και η ονομαστική γιορτή που γιορτάζουν τόσες ελληνικές οικογένειες.",
+   "es": "Sacred Days · 26 de octubre de 2026Saint Demetrios: More Than a Name DayEl santo de Tesalónica y el día del santo que celebran tantas familias griegas."
+  },
+  {
+   "en": "Premieres Oct 26Sacred Days · October 26, 2026Saint Demetrios: More Than a Name DayThe saint of Thessaloniki, and the name day so many Greek families celebrate.",
+   "html": "<span><span>Premieres Oct 26</span></span><span><span>Sacred Days · October 26, 2026</span><span>Saint Demetrios: More Than a Name Day</span><span>The saint of Thessaloniki, and the name day so many Greek families celebrate.</span></span>",
+   "el_html": "<span><span>Πρεμιέρα 26 Οκτ.</span></span><span><span>Sacred Days · 26 Οκτωβρίου 2026</span><span>Saint Demetrios: More Than a Name Day</span><span>Ο άγιος της Θεσσαλονίκης και η ονομαστική γιορτή που γιορτάζουν τόσες ελληνικές οικογένειες.</span></span>",
+   "es_html": "<span><span>Estreno el 26 de oct.</span></span><span><span>Sacred Days · 26 de octubre de 2026</span><span>Saint Demetrios: More Than a Name Day</span><span>El santo de Tesalónica y el día del santo que celebran tantas familias griegas.</span></span>",
+   "el": "Πρεμιέρα 26 Οκτ.Sacred Days · 26 Οκτωβρίου 2026Saint Demetrios: More Than a Name DayΟ άγιος της Θεσσαλονίκης και η ονομαστική γιορτή που γιορτάζουν τόσες ελληνικές οικογένειες.",
+   "es": "Estreno el 26 de oct.Sacred Days · 26 de octubre de 2026Saint Demetrios: More Than a Name DayEl santo de Tesalónica y el día del santo que celebran tantas familias griegas."
+  },
+  {
+   "en": "Living Roots · Oct 11 · 11 min",
+   "html": null,
+   "el": "Living Roots · 11 Οκτ. · 11 λεπ.",
+   "es": "Living Roots · 11 de oct. · 11 min"
+  },
+  {
+   "en": "The Greek Dance That Wasn't Real… Until It Was",
+   "html": null,
+   "el": "The Greek Dance That Wasn't Real… Until It Was",
+   "es": "The Greek Dance That Wasn't Real… Until It Was"
+  },
+  {
+   "en": "Sirtaki was created for a film. So what makes a tradition real, and who keeps it alive?",
+   "html": null,
+   "el": "Το συρτάκι δημιουργήθηκε για μια ταινία. Τι κάνει λοιπόν μια παράδοση αληθινή, και ποιος την κρατά ζωντανή;",
+   "es": "El sirtaki se creó para una película. Entonces, ¿qué hace que una tradición sea real, y quién la mantiene viva?"
+  },
+  {
+   "en": "Living Roots · Oct 11 · 11 minThe Greek Dance That Wasn't Real… Until It WasSirtaki was created for a film. So what makes a tradition real, and who keeps it alive?",
+   "html": "<span>Living Roots · Oct 11 · 11 min</span><span>The Greek Dance That Wasn't Real… Until It Was</span><span>Sirtaki was created for a film. So what makes a tradition real, and who keeps it alive?</span>",
+   "el_html": "<span>Living Roots · 11 Οκτ. · 11 λεπ.</span><span>The Greek Dance That Wasn't Real… Until It Was</span><span>Το συρτάκι δημιουργήθηκε για μια ταινία. Τι κάνει λοιπόν μια παράδοση αληθινή, και ποιος την κρατά ζωντανή;</span>",
+   "es_html": "<span>Living Roots · 11 de oct. · 11 min</span><span>The Greek Dance That Wasn't Real… Until It Was</span><span>El sirtaki se creó para una película. Entonces, ¿qué hace que una tradición sea real, y quién la mantiene viva?</span>",
+   "el": "Living Roots · 11 Οκτ. · 11 λεπ.The Greek Dance That Wasn't Real… Until It WasΤο συρτάκι δημιουργήθηκε για μια ταινία. Τι κάνει λοιπόν μια παράδοση αληθινή, και ποιος την κρατά ζωντανή;",
+   "es": "Living Roots · 11 de oct. · 11 minThe Greek Dance That Wasn't Real… Until It WasEl sirtaki se creó para una película. Entonces, ¿qué hace que una tradición sea real, y quién la mantiene viva?"
+  },
+  {
+   "en": "Heroes, heroines and forgotten history",
+   "html": null,
+   "el": "Ήρωες, ηρωίδες και ξεχασμένη ιστορία",
+   "es": "Héroes, heroínas e historia olvidada"
+  },
+  {
+   "en": "Music & memory · Jul 29 · 10 min",
+   "html": null,
+   "el": "Μουσική και μνήμη · 29 Ιουλ. · 10 λεπ.",
+   "es": "Música y memoria · 29 de jul. · 10 min"
+  },
+  {
+   "en": "The Man Who Smuggled a Puppet Out of a Dictatorship",
+   "html": null,
+   "el": "The Man Who Smuggled a Puppet Out of a Dictatorship",
+   "es": "The Man Who Smuggled a Puppet Out of a Dictatorship"
+  },
+  {
+   "en": "You've heard the song. You've never heard the man.",
+   "html": null,
+   "el": "Έχετε ακούσει το τραγούδι. Δεν έχετε ακούσει ποτέ τον άνθρωπο.",
+   "es": "Ha oído la canción. Nunca ha oído al hombre."
+  },
+  {
+   "en": "Music & memory · Jul 29 · 10 minThe Man Who Smuggled a Puppet Out of a DictatorshipYou've heard the song. You've never heard the man.",
+   "html": "<span>Music & memory · Jul 29 · 10 min</span><span>The Man Who Smuggled a Puppet Out of a Dictatorship</span><span>You've heard the song. You've never heard the man.</span>",
+   "el_html": "<span>Μουσική και μνήμη · 29 Ιουλ. · 10 λεπ.</span><span>The Man Who Smuggled a Puppet Out of a Dictatorship</span><span>Έχετε ακούσει το τραγούδι. Δεν έχετε ακούσει ποτέ τον άνθρωπο.</span>",
+   "es_html": "<span>Música y memoria · 29 de jul. · 10 min</span><span>The Man Who Smuggled a Puppet Out of a Dictatorship</span><span>Ha oído la canción. Nunca ha oído al hombre.</span>",
+   "el": "Μουσική και μνήμη · 29 Ιουλ. · 10 λεπ.The Man Who Smuggled a Puppet Out of a DictatorshipΈχετε ακούσει το τραγούδι. Δεν έχετε ακούσει ποτέ τον άνθρωπο.",
+   "es": "Música y memoria · 29 de jul. · 10 minThe Man Who Smuggled a Puppet Out of a DictatorshipHa oído la canción. Nunca ha oído al hombre."
+  },
+  {
+   "en": "Diaspora · Jul 22 · 13 min",
+   "html": null,
+   "el": "Διασπορά · 22 Ιουλ. · 13 λεπ.",
+   "es": "Diáspora · 22 de jul. · 13 min"
+  },
+  {
+   "en": "Why a Greek Sponge Diver Built a Town in Florida",
+   "html": null,
+   "el": "Why a Greek Sponge Diver Built a Town in Florida",
+   "es": "Why a Greek Sponge Diver Built a Town in Florida"
+  },
+  {
+   "en": "How divers from the Aegean turned Tarpon Springs into a Greek town.",
+   "html": null,
+   "el": "Πώς δύτες από το Αιγαίο έκαναν το Tarpon Springs μια ελληνική πόλη.",
+   "es": "Cómo buceadores del Egeo convirtieron Tarpon Springs en un pueblo griego."
+  },
+  {
+   "en": "Diaspora · Jul 22 · 13 minWhy a Greek Sponge Diver Built a Town in FloridaHow divers from the Aegean turned Tarpon Springs into a Greek town.",
+   "html": "<span>Diaspora · Jul 22 · 13 min</span><span>Why a Greek Sponge Diver Built a Town in Florida</span><span>How divers from the Aegean turned Tarpon Springs into a Greek town.</span>",
+   "el_html": "<span>Διασπορά · 22 Ιουλ. · 13 λεπ.</span><span>Why a Greek Sponge Diver Built a Town in Florida</span><span>Πώς δύτες από το Αιγαίο έκαναν το Tarpon Springs μια ελληνική πόλη.</span>",
+   "es_html": "<span>Diáspora · 22 de jul. · 13 min</span><span>Why a Greek Sponge Diver Built a Town in Florida</span><span>Cómo buceadores del Egeo convirtieron Tarpon Springs en un pueblo griego.</span>",
+   "el": "Διασπορά · 22 Ιουλ. · 13 λεπ.Why a Greek Sponge Diver Built a Town in FloridaΠώς δύτες από το Αιγαίο έκαναν το Tarpon Springs μια ελληνική πόλη.",
+   "es": "Diáspora · 22 de jul. · 13 minWhy a Greek Sponge Diver Built a Town in FloridaCómo buceadores del Egeo convirtieron Tarpon Springs en un pueblo griego."
+  },
+  {
+   "en": "Family table · Jul 15 · 10 min",
+   "html": null,
+   "el": "Οικογενειακό τραπέζι · 15 Ιουλ. · 10 λεπ.",
+   "es": "Mesa familiar · 15 de jul. · 10 min"
+  },
+  {
+   "en": "I Ate This My Whole Childhood and Never Knew the Real Reason",
+   "html": null,
+   "el": "I Ate This My Whole Childhood and Never Knew the Real Reason",
+   "es": "I Ate This My Whole Childhood and Never Knew the Real Reason"
+  },
+  {
+   "en": "The spoon sweet, served to every guest at a Greek door, was never just dessert.",
+   "html": null,
+   "el": "Το γλυκό του κουταλιού, που προσφέρεται σε κάθε επισκέπτη σε ένα ελληνικό σπίτι, δεν ήταν ποτέ απλώς ένα γλυκό.",
+   "es": "El dulce de cuchara, que se ofrece a cada visita en una casa griega, nunca fue solo un postre."
+  },
+  {
+   "en": "Family table · Jul 15 · 10 minI Ate This My Whole Childhood and Never Knew the Real ReasonThe spoon sweet, served to every guest at a Greek door, was never just dessert.",
+   "html": "<span>Family table · Jul 15 · 10 min</span><span>I Ate This My Whole Childhood and Never Knew the Real Reason</span><span>The spoon sweet, served to every guest at a Greek door, was never just dessert.</span>",
+   "el_html": "<span>Οικογενειακό τραπέζι · 15 Ιουλ. · 10 λεπ.</span><span>I Ate This My Whole Childhood and Never Knew the Real Reason</span><span>Το γλυκό του κουταλιού, που προσφέρεται σε κάθε επισκέπτη σε ένα ελληνικό σπίτι, δεν ήταν ποτέ απλώς ένα γλυκό.</span>",
+   "es_html": "<span>Mesa familiar · 15 de jul. · 10 min</span><span>I Ate This My Whole Childhood and Never Knew the Real Reason</span><span>El dulce de cuchara, que se ofrece a cada visita en una casa griega, nunca fue solo un postre.</span>",
+   "el": "Οικογενειακό τραπέζι · 15 Ιουλ. · 10 λεπ.I Ate This My Whole Childhood and Never Knew the Real ReasonΤο γλυκό του κουταλιού, που προσφέρεται σε κάθε επισκέπτη σε ένα ελληνικό σπίτι, δεν ήταν ποτέ απλώς ένα γλυκό.",
+   "es": "Mesa familiar · 15 de jul. · 10 minI Ate This My Whole Childhood and Never Knew the Real ReasonEl dulce de cuchara, que se ofrece a cada visita en una casa griega, nunca fue solo un postre."
+  },
+  {
+   "en": "Occupation · Jul 9 · 9 min",
+   "html": null,
+   "el": "Κατοχή · 9 Ιουλ. · 9 λεπ.",
+   "es": "Ocupación · 9 de jul. · 9 min"
+  },
+  {
+   "en": "The Neutral Country That Broke a Blockade to Save Greece",
+   "html": null,
+   "el": "The Neutral Country That Broke a Blockade to Save Greece",
+   "es": "The Neutral Country That Broke a Blockade to Save Greece"
+  },
+  {
+   "en": "The famine under Axis occupation, and the neutral country whose ships broke the blockade.",
+   "html": null,
+   "el": "Η πείνα στα χρόνια της Κατοχής από τον Άξονα, και η ουδέτερη χώρα της οποίας τα πλοία έσπασαν τον αποκλεισμό.",
+   "es": "La hambruna bajo la ocupación del Eje y el país neutral cuyos barcos rompieron el bloqueo."
+  },
+  {
+   "en": "Occupation · Jul 9 · 9 minThe Neutral Country That Broke a Blockade to Save GreeceThe famine under Axis occupation, and the neutral country whose ships broke the blockade.",
+   "html": "<span>Occupation · Jul 9 · 9 min</span><span>The Neutral Country That Broke a Blockade to Save Greece</span><span>The famine under Axis occupation, and the neutral country whose ships broke the blockade.</span>",
+   "el_html": "<span>Κατοχή · 9 Ιουλ. · 9 λεπ.</span><span>The Neutral Country That Broke a Blockade to Save Greece</span><span>Η πείνα στα χρόνια της Κατοχής από τον Άξονα, και η ουδέτερη χώρα της οποίας τα πλοία έσπασαν τον αποκλεισμό.</span>",
+   "es_html": "<span>Ocupación · 9 de jul. · 9 min</span><span>The Neutral Country That Broke a Blockade to Save Greece</span><span>La hambruna bajo la ocupación del Eje y el país neutral cuyos barcos rompieron el bloqueo.</span>",
+   "el": "Κατοχή · 9 Ιουλ. · 9 λεπ.The Neutral Country That Broke a Blockade to Save GreeceΗ πείνα στα χρόνια της Κατοχής από τον Άξονα, και η ουδέτερη χώρα της οποίας τα πλοία έσπασαν τον αποκλεισμό.",
+   "es": "Ocupación · 9 de jul. · 9 minThe Neutral Country That Broke a Blockade to Save GreeceLa hambruna bajo la ocupación del Eje y el país neutral cuyos barcos rompieron el bloqueo."
+  },
+  {
+   "en": "Heroines · Jul 3 · 10 min",
+   "html": null,
+   "el": "Ηρωίδες · 3 Ιουλ. · 10 λεπ.",
+   "es": "Heroínas · 3 de jul. · 10 min"
+  },
+  {
+   "en": "Why Did Greece Forget the Greek Woman Who Bought Their Freedom?",
+   "html": null,
+   "el": "Why Did Greece Forget the Greek Woman Who Bought Their Freedom?",
+   "es": "Why Did Greece Forget the Greek Woman Who Bought Their Freedom?"
+  },
+  {
+   "en": "Manto Mavrogenous spent her fortune on the Revolution and was never repaid.",
+   "html": null,
+   "el": "Η Μαντώ Μαυρογένους ξόδεψε την περιουσία της για την Επανάσταση και δεν αποζημιώθηκε ποτέ.",
+   "es": "Manto Mavrogenous gastó su fortuna en la Revolución y nunca se le devolvió."
+  },
+  {
+   "en": "Heroines · Jul 3 · 10 minWhy Did Greece Forget the Greek Woman Who Bought Their Freedom?Manto Mavrogenous spent her fortune on the Revolution and was never repaid.",
+   "html": "<span>Heroines · Jul 3 · 10 min</span><span>Why Did Greece Forget the Greek Woman Who Bought Their Freedom?</span><span>Manto Mavrogenous spent her fortune on the Revolution and was never repaid.</span>",
+   "el_html": "<span>Ηρωίδες · 3 Ιουλ. · 10 λεπ.</span><span>Why Did Greece Forget the Greek Woman Who Bought Their Freedom?</span><span>Η Μαντώ Μαυρογένους ξόδεψε την περιουσία της για την Επανάσταση και δεν αποζημιώθηκε ποτέ.</span>",
+   "es_html": "<span>Heroínas · 3 de jul. · 10 min</span><span>Why Did Greece Forget the Greek Woman Who Bought Their Freedom?</span><span>Manto Mavrogenous gastó su fortuna en la Revolución y nunca se le devolvió.</span>",
+   "el": "Ηρωίδες · 3 Ιουλ. · 10 λεπ.Why Did Greece Forget the Greek Woman Who Bought Their Freedom?Η Μαντώ Μαυρογένους ξόδεψε την περιουσία της για την Επανάσταση και δεν αποζημιώθηκε ποτέ.",
+   "es": "Heroínas · 3 de jul. · 10 minWhy Did Greece Forget the Greek Woman Who Bought Their Freedom?Manto Mavrogenous gastó su fortuna en la Revolución y nunca se le devolvió."
+  },
+  {
+   "en": "Music · Jun 18 · 12 min",
+   "html": null,
+   "el": "Μουσική · 18 Ιουν. · 12 λεπ.",
+   "es": "Música · 18 de jun. · 12 min"
+  },
+  {
+   "en": "The Music Your Greek Family Played at Every Party Was Illegal",
+   "html": null,
+   "el": "The Music Your Greek Family Played at Every Party Was Illegal",
+   "es": "The Music Your Greek Family Played at Every Party Was Illegal"
+  },
+  {
+   "en": "Rebetiko: the music the state tried to silence, and the families who kept playing it.",
+   "html": null,
+   "el": "Ρεμπέτικο: η μουσική που το κράτος προσπάθησε να φιμώσει, και οι οικογένειες που συνέχισαν να την παίζουν.",
+   "es": "El rebético: la música que el Estado intentó silenciar, y las familias que siguieron tocándola."
+  },
+  {
+   "en": "Music · Jun 18 · 12 minThe Music Your Greek Family Played at Every Party Was IllegalRebetiko: the music the state tried to silence, and the families who kept playing it.",
+   "html": "<span>Music · Jun 18 · 12 min</span><span>The Music Your Greek Family Played at Every Party Was Illegal</span><span>Rebetiko: the music the state tried to silence, and the families who kept playing it.</span>",
+   "el_html": "<span>Μουσική · 18 Ιουν. · 12 λεπ.</span><span>The Music Your Greek Family Played at Every Party Was Illegal</span><span>Ρεμπέτικο: η μουσική που το κράτος προσπάθησε να φιμώσει, και οι οικογένειες που συνέχισαν να την παίζουν.</span>",
+   "es_html": "<span>Música · 18 de jun. · 12 min</span><span>The Music Your Greek Family Played at Every Party Was Illegal</span><span>El rebético: la música que el Estado intentó silenciar, y las familias que siguieron tocándola.</span>",
+   "el": "Μουσική · 18 Ιουν. · 12 λεπ.The Music Your Greek Family Played at Every Party Was IllegalΡεμπέτικο: η μουσική που το κράτος προσπάθησε να φιμώσει, και οι οικογένειες που συνέχισαν να την παίζουν.",
+   "es": "Música · 18 de jun. · 12 minThe Music Your Greek Family Played at Every Party Was IllegalEl rebético: la música que el Estado intentó silenciar, y las familias que siguieron tocándola."
+  },
+  {
+   "en": "Heroines · Jun 4 · 12 min",
+   "html": null,
+   "el": "Ηρωίδες · 4 Ιουν. · 12 λεπ.",
+   "es": "Heroínas · 4 de jun. · 12 min"
+  },
+  {
+   "en": "The Greek Captain Who Built Her Own Warship to Fight the Empire That Took Everything",
+   "html": null,
+   "el": "The Greek Captain Who Built Her Own Warship to Fight the Empire That Took Everything",
+   "es": "The Greek Captain Who Built Her Own Warship to Fight the Empire That Took Everything"
+  },
+  {
+   "en": "Laskarina Bouboulina, who paid for her own warships in the Revolution of 1821.",
+   "html": null,
+   "el": "Η Λασκαρίνα Μπουμπουλίνα, που πλήρωσε η ίδια τα πολεμικά της πλοία στην Επανάσταση του 1821.",
+   "es": "Laskarina Bubulina, que pagó sus propios barcos de guerra en la Revolución de 1821."
+  },
+  {
+   "en": "Heroines · Jun 4 · 12 minThe Greek Captain Who Built Her Own Warship to Fight the Empire That Took EverythingLaskarina Bouboulina, who paid for her own warships in the Revolution of 1821.",
+   "html": "<span>Heroines · Jun 4 · 12 min</span><span>The Greek Captain Who Built Her Own Warship to Fight the Empire That Took Everything</span><span>Laskarina Bouboulina, who paid for her own warships in the Revolution of 1821.</span>",
+   "el_html": "<span>Ηρωίδες · 4 Ιουν. · 12 λεπ.</span><span>The Greek Captain Who Built Her Own Warship to Fight the Empire That Took Everything</span><span>Η Λασκαρίνα Μπουμπουλίνα, που πλήρωσε η ίδια τα πολεμικά της πλοία στην Επανάσταση του 1821.</span>",
+   "es_html": "<span>Heroínas · 4 de jun. · 12 min</span><span>The Greek Captain Who Built Her Own Warship to Fight the Empire That Took Everything</span><span>Laskarina Bubulina, que pagó sus propios barcos de guerra en la Revolución de 1821.</span>",
+   "el": "Ηρωίδες · 4 Ιουν. · 12 λεπ.The Greek Captain Who Built Her Own Warship to Fight the Empire That Took EverythingΗ Λασκαρίνα Μπουμπουλίνα, που πλήρωσε η ίδια τα πολεμικά της πλοία στην Επανάσταση του 1821.",
+   "es": "Heroínas · 4 de jun. · 12 minThe Greek Captain Who Built Her Own Warship to Fight the Empire That Took EverythingLaskarina Bubulina, que pagó sus propios barcos de guerra en la Revolución de 1821."
+  },
+  {
+   "en": "Faith · May 28 · 13 min",
+   "html": null,
+   "el": "Πίστη · 28 Μαΐου · 13 λεπ.",
+   "es": "Fe · 28 de may. · 13 min"
+  },
+  {
+   "en": "The Greek Christians Who Hid Their Faith Inside the Ottoman Empire for 400 Years",
+   "html": null,
+   "el": "The Greek Christians Who Hid Their Faith Inside the Ottoman Empire for 400 Years",
+   "es": "The Greek Christians Who Hid Their Faith Inside the Ottoman Empire for 400 Years"
+  },
+  {
+   "en": "Families who kept their Orthodox faith hidden for generations under Ottoman rule.",
+   "html": null,
+   "el": "Οικογένειες που κράτησαν κρυφή την ορθόδοξη πίστη τους για γενιές υπό οθωμανική κυριαρχία.",
+   "es": "Familias que mantuvieron oculta su fe ortodoxa durante generaciones bajo el dominio otomano."
+  },
+  {
+   "en": "Faith · May 28 · 13 minThe Greek Christians Who Hid Their Faith Inside the Ottoman Empire for 400 YearsFamilies who kept their Orthodox faith hidden for generations under Ottoman rule.",
+   "html": "<span>Faith · May 28 · 13 min</span><span>The Greek Christians Who Hid Their Faith Inside the Ottoman Empire for 400 Years</span><span>Families who kept their Orthodox faith hidden for generations under Ottoman rule.</span>",
+   "el_html": "<span>Πίστη · 28 Μαΐου · 13 λεπ.</span><span>The Greek Christians Who Hid Their Faith Inside the Ottoman Empire for 400 Years</span><span>Οικογένειες που κράτησαν κρυφή την ορθόδοξη πίστη τους για γενιές υπό οθωμανική κυριαρχία.</span>",
+   "es_html": "<span>Fe · 28 de may. · 13 min</span><span>The Greek Christians Who Hid Their Faith Inside the Ottoman Empire for 400 Years</span><span>Familias que mantuvieron oculta su fe ortodoxa durante generaciones bajo el dominio otomano.</span>",
+   "el": "Πίστη · 28 Μαΐου · 13 λεπ.The Greek Christians Who Hid Their Faith Inside the Ottoman Empire for 400 YearsΟικογένειες που κράτησαν κρυφή την ορθόδοξη πίστη τους για γενιές υπό οθωμανική κυριαρχία.",
+   "es": "Fe · 28 de may. · 13 minThe Greek Christians Who Hid Their Faith Inside the Ottoman Empire for 400 YearsFamilias que mantuvieron oculta su fe ortodoxa durante generaciones bajo el dominio otomano."
+  },
+  {
+   "en": "Heroes · May 1 · 9 min",
+   "html": null,
+   "el": "Ήρωες · 1 Μαΐου · 9 λεπ.",
+   "es": "Héroes · 1 de may. · 9 min"
+  },
+  {
+   "en": "The Greek Soldier Who Chose to Die at Thermopylae Rather Than Surrender to Persia",
+   "html": null,
+   "el": "The Greek Soldier Who Chose to Die at Thermopylae Rather Than Surrender to Persia",
+   "es": "The Greek Soldier Who Chose to Die at Thermopylae Rather Than Surrender to Persia"
+  },
+  {
+   "en": "Thermopylae, 1821: the second monument at the pass, and the soldier it remembers.",
+   "html": null,
+   "el": "Θερμοπύλες, 1821: το δεύτερο μνημείο στο πέρασμα, και ο στρατιώτης που θυμίζει.",
+   "es": "Termópilas, 1821: el segundo monumento en el paso, y el soldado al que recuerda."
+  },
+  {
+   "en": "Heroes · May 1 · 9 minThe Greek Soldier Who Chose to Die at Thermopylae Rather Than Surrender to PersiaThermopylae, 1821: the second monument at the pass, and the soldier it remembers.",
+   "html": "<span>Heroes · May 1 · 9 min</span><span>The Greek Soldier Who Chose to Die at Thermopylae Rather Than Surrender to Persia</span><span>Thermopylae, 1821: the second monument at the pass, and the soldier it remembers.</span>",
+   "el_html": "<span>Ήρωες · 1 Μαΐου · 9 λεπ.</span><span>The Greek Soldier Who Chose to Die at Thermopylae Rather Than Surrender to Persia</span><span>Θερμοπύλες, 1821: το δεύτερο μνημείο στο πέρασμα, και ο στρατιώτης που θυμίζει.</span>",
+   "es_html": "<span>Héroes · 1 de may. · 9 min</span><span>The Greek Soldier Who Chose to Die at Thermopylae Rather Than Surrender to Persia</span><span>Termópilas, 1821: el segundo monumento en el paso, y el soldado al que recuerda.</span>",
+   "el": "Ήρωες · 1 Μαΐου · 9 λεπ.The Greek Soldier Who Chose to Die at Thermopylae Rather Than Surrender to PersiaΘερμοπύλες, 1821: το δεύτερο μνημείο στο πέρασμα, και ο στρατιώτης που θυμίζει.",
+   "es": "Héroes · 1 de may. · 9 minThe Greek Soldier Who Chose to Die at Thermopylae Rather Than Surrender to PersiaTermópilas, 1821: el segundo monumento en el paso, y el soldado al que recuerda."
+  },
+  {
+   "en": "The first films told the ancient stories.",
+   "html": null,
+   "el": "Οι πρώτες ταινίες αφηγούνταν τις αρχαίες ιστορίες.",
+   "es": "Las primeras películas contaban las historias antiguas."
+  },
+  {
+   "en": "Achilles",
+   "html": null,
+   "el": "Achilles",
+   "es": "Achilles"
+  },
+  {
+   "en": "Where KRIOS beganAchilles",
+   "html": "<span>Where KRIOS began</span><span>Achilles</span>",
+   "el_html": "<span>Εκεί όπου ξεκίνησε το KRIOS</span><span>Achilles</span>",
+   "es_html": "<span>Donde empezó KRIOS</span><span>Achilles</span>",
+   "el": "Εκεί όπου ξεκίνησε το KRIOSAchilles",
+   "es": "Donde empezó KRIOSAchilles"
+  },
+  {
+   "en": "Odysseus",
+   "html": null,
+   "el": "Odysseus",
+   "es": "Odysseus"
+  },
+  {
+   "en": "Where KRIOS beganOdysseus",
+   "html": "<span>Where KRIOS began</span><span>Odysseus</span>",
+   "el_html": "<span>Εκεί όπου ξεκίνησε το KRIOS</span><span>Odysseus</span>",
+   "es_html": "<span>Donde empezó KRIOS</span><span>Odysseus</span>",
+   "el": "Εκεί όπου ξεκίνησε το KRIOSOdysseus",
+   "es": "Donde empezó KRIOSOdysseus"
+  },
+  {
+   "en": "Thermopylae",
+   "html": null,
+   "el": "Thermopylae",
+   "es": "Thermopylae"
+  },
+  {
+   "en": "Where KRIOS beganThermopylae",
+   "html": "<span>Where KRIOS began</span><span>Thermopylae</span>",
+   "el_html": "<span>Εκεί όπου ξεκίνησε το KRIOS</span><span>Thermopylae</span>",
+   "es_html": "<span>Donde empezó KRIOS</span><span>Thermopylae</span>",
+   "el": "Εκεί όπου ξεκίνησε το KRIOSThermopylae",
+   "es": "Donde empezó KRIOSThermopylae"
+  },
+  {
+   "en": "Heracles",
+   "html": null,
+   "el": "Heracles",
+   "es": "Heracles"
+  },
+  {
+   "en": "Where KRIOS beganHeracles",
+   "html": "<span>Where KRIOS began</span><span>Heracles</span>",
+   "el_html": "<span>Εκεί όπου ξεκίνησε το KRIOS</span><span>Heracles</span>",
+   "es_html": "<span>Donde empezó KRIOS</span><span>Heracles</span>",
+   "el": "Εκεί όπου ξεκίνησε το KRIOSHeracles",
+   "es": "Donde empezó KRIOSHeracles"
+  },
+  {
+   "en": "Perseus",
+   "html": null,
+   "el": "Perseus",
+   "es": "Perseus"
+  },
+  {
+   "en": "Where KRIOS beganPerseus",
+   "html": "<span>Where KRIOS began</span><span>Perseus</span>",
+   "el_html": "<span>Εκεί όπου ξεκίνησε το KRIOS</span><span>Perseus</span>",
+   "es_html": "<span>Donde empezó KRIOS</span><span>Perseus</span>",
+   "el": "Εκεί όπου ξεκίνησε το KRIOSPerseus",
+   "es": "Donde empezó KRIOSPerseus"
+  },
+  {
+   "en": "Troy",
+   "html": null,
+   "el": "Troy",
+   "es": "Troy"
+  },
+  {
+   "en": "Where KRIOS beganTroy",
+   "html": "<span>Where KRIOS began</span><span>Troy</span>",
+   "el_html": "<span>Εκεί όπου ξεκίνησε το KRIOS</span><span>Troy</span>",
+   "es_html": "<span>Donde empezó KRIOS</span><span>Troy</span>",
+   "el": "Εκεί όπου ξεκίνησε το KRIOSTroy",
+   "es": "Donde empezó KRIOSTroy"
+  },
+  {
+   "en": "Theseus",
+   "html": null,
+   "el": "Theseus",
+   "es": "Theseus"
+  },
+  {
+   "en": "Where KRIOS beganTheseus",
+   "html": "<span>Where KRIOS began</span><span>Theseus</span>",
+   "el_html": "<span>Εκεί όπου ξεκίνησε το KRIOS</span><span>Theseus</span>",
+   "es_html": "<span>Donde empezó KRIOS</span><span>Theseus</span>",
+   "el": "Εκεί όπου ξεκίνησε το KRIOSTheseus",
+   "es": "Donde empezó KRIOSTheseus"
+  },
+  {
+   "en": "The Cyclades",
+   "html": null,
+   "el": "The Cyclades",
+   "es": "The Cyclades"
+  },
+  {
+   "en": "Where KRIOS beganThe Cyclades",
+   "html": "<span>Where KRIOS began</span><span>The Cyclades</span>",
+   "el_html": "<span>Εκεί όπου ξεκίνησε το KRIOS</span><span>The Cyclades</span>",
+   "es_html": "<span>Donde empezó KRIOS</span><span>The Cyclades</span>",
+   "el": "Εκεί όπου ξεκίνησε το KRIOSThe Cyclades",
+   "es": "Donde empezó KRIOSThe Cyclades"
+  },
+  {
+   "en": "Parian marble",
+   "html": null,
+   "el": "Parian marble",
+   "es": "Parian marble"
+  },
+  {
+   "en": "Where KRIOS beganParian marble",
+   "html": "<span>Where KRIOS began</span><span>Parian marble</span>",
+   "el_html": "<span>Εκεί όπου ξεκίνησε το KRIOS</span><span>Parian marble</span>",
+   "es_html": "<span>Donde empezó KRIOS</span><span>Parian marble</span>",
+   "el": "Εκεί όπου ξεκίνησε το KRIOSParian marble",
+   "es": "Donde empezó KRIOSParian marble"
+  },
+  {
+   "en": "The Acropolis",
+   "html": null,
+   "el": "The Acropolis",
+   "es": "The Acropolis"
+  },
+  {
+   "en": "Where KRIOS beganThe Acropolis",
+   "html": "<span>Where KRIOS began</span><span>The Acropolis</span>",
+   "el_html": "<span>Εκεί όπου ξεκίνησε το KRIOS</span><span>The Acropolis</span>",
+   "es_html": "<span>Donde empezó KRIOS</span><span>The Acropolis</span>",
+   "el": "Εκεί όπου ξεκίνησε το KRIOSThe Acropolis",
+   "es": "Donde empezó KRIOSThe Acropolis"
+  }
+ ],
+ "attrs": [
+  {
+   "en": "Filter films by subject",
+   "el": "Φιλτράρισμα ταινιών ανά θέμα",
+   "es": "Filtrar películas por tema"
+  },
+  {
+   "en": "Main",
+   "el": "Κύριο",
+   "es": "Principal"
+  }
+ ]
+}

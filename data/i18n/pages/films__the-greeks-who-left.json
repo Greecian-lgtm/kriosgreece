@@ -1,0 +1,446 @@
+{
+ "_page": "films__the-greeks-who-left",
+ "_status": "draft",
+ "strings": [
+  {
+   "en": "Living Roots · Documentary",
+   "html": null,
+   "el": "Living Roots · Ντοκιμαντέρ",
+   "es": "Living Roots · Documental"
+  },
+  {
+   "en": "The Greeks Who Left, and the Greece They Carried",
+   "html": null,
+   "el": "The Greeks Who Left, and the Greece They Carried",
+   "es": "The Greeks Who Left, and the Greece They Carried"
+  },
+  {
+   "en": "October 18, 2026 · 9 min",
+   "html": null,
+   "el": "18 Οκτωβρίου 2026 · 9 λεπ.",
+   "es": "18 de octubre de 2026 · 9 min"
+  },
+  {
+   "en": "A suitcase can carry clothes and photographs. How do you pack a language, a song, or a church bell?",
+   "html": null,
+   "el": "Μια βαλίτσα χωράει ρούχα και φωτογραφίες. Πώς βάζεις σε μια βαλίτσα μια γλώσσα, ένα τραγούδι ή μια καμπάνα εκκλησίας;",
+   "es": "Una maleta puede llevar ropa y fotografías. ¿Cómo se empaca un idioma, una canción o la campana de una iglesia?"
+  },
+  {
+   "en": "Watch on YouTube",
+   "html": null,
+   "el": "Δείτε στο YouTube",
+   "es": "Ver en YouTube"
+  },
+  {
+   "en": "Illustration from the film.",
+   "html": null,
+   "el": "Εικονογράφηση από την ταινία.",
+   "es": "Ilustración de la película."
+  },
+  {
+   "en": "Watch the film",
+   "html": null,
+   "el": "Δείτε την ταινία",
+   "es": "Ver la película"
+  },
+  {
+   "en": "The story",
+   "html": null,
+   "el": "Η ιστορία",
+   "es": "La historia"
+  },
+  {
+   "en": "Read the film",
+   "html": null,
+   "el": "Η ταινία σε κείμενο",
+   "es": "La película en texto"
+  },
+  {
+   "en": "Ask someone in your family",
+   "html": null,
+   "el": "Ρωτήστε κάποιον στην οικογένειά σας",
+   "es": "Pregunte a alguien de su familia"
+  },
+  {
+   "en": "What the sources tell us",
+   "html": null,
+   "el": "Τι μας λένε οι πηγές",
+   "es": "Lo que dicen las fuentes"
+  },
+  {
+   "en": "Historical images and credits",
+   "html": null,
+   "el": "Ιστορικές εικόνες και πηγές τους",
+   "es": "Imágenes históricas y créditos"
+  },
+  {
+   "en": "Test what you remember",
+   "html": null,
+   "el": "Δοκιμάστε τι θυμάστε",
+   "es": "Ponga a prueba lo que recuerda"
+  },
+  {
+   "en": "Have you ever heard someone in your family mention a village in Greece, or an island, and realized you never asked what life there was really like?",
+   "html": null,
+   "el": "Έχετε ακούσει ποτέ κάποιον στην οικογένειά σας να αναφέρει ένα χωριό στην Ελλάδα ή ένα νησί, και καταλάβατε ότι δεν ρωτήσατε ποτέ πώς ήταν πραγματικά η ζωή εκεί;",
+   "es": "¿Alguna vez escuchó a alguien de su familia mencionar un pueblo de Grecia, o una isla, y se dio cuenta de que nunca preguntó cómo era realmente la vida allí?"
+  },
+  {
+   "en": "Maybe you were young. Maybe you thought there would always be time.",
+   "html": null,
+   "el": "Ίσως ήσασταν μικροί. Ίσως νομίζατε ότι πάντα θα υπήρχε χρόνος.",
+   "es": "Quizá usted era joven. Quizá pensó que siempre habría tiempo."
+  },
+  {
+   "en": "And then one day, there wasn't.",
+   "html": null,
+   "el": "Και μια μέρα δεν υπήρχε.",
+   "es": "Y un día, ya no lo hubo."
+  },
+  {
+   "en": "The video loads from YouTube only when you press play.",
+   "html": null,
+   "el": "Το βίντεο φορτώνεται από το YouTube μόνο όταν πατήσετε αναπαραγωγή.",
+   "es": "El video se carga desde YouTube solo cuando usted presiona reproducir."
+  },
+  {
+   "en": "In the late nineteenth and early twentieth centuries, many Greeks left because work was scarce and they hoped to build a more secure future. Some crossed the Atlantic to the United States, planning to earn money and return.",
+   "html": null,
+   "el": "Στα τέλη του 19ου και στις αρχές του 20ού αιώνα, πολλοί Έλληνες έφυγαν επειδή η δουλειά ήταν λίγη και ήλπιζαν να χτίσουν ένα πιο σίγουρο μέλλον. Κάποιοι πέρασαν τον Ατλαντικό για τις Ηνωμένες Πολιτείες, με σκοπό να βγάλουν χρήματα και να γυρίσουν.",
+   "es": "A finales del siglo XIX y principios del XX, muchos griegos se fueron porque el trabajo escaseaba y esperaban construir un futuro más seguro. Algunos cruzaron el Atlántico hacia los Estados Unidos con la idea de ganar dinero y regresar."
+  },
+  {
+   "en": "In Greek, there's a word for life far from home: ξενιτιά. It's more than a destination on a map. It's the distance between the person who leaves and the people who stay.",
+   "html": null,
+   "el": "Στα ελληνικά υπάρχει μια λέξη για τη ζωή μακριά από την πατρίδα: ξενιτιά. Είναι κάτι περισσότερο από έναν προορισμό στον χάρτη. Είναι η απόσταση ανάμεσα σε αυτόν που φεύγει και σε όσους μένουν.",
+   "es": "En griego hay una palabra para la vida lejos de casa: ξενιτιά (xenitiá). Es más que un destino en un mapa. Es la distancia entre quien se va y quienes se quedan."
+  },
+  {
+   "en": "The Greece people remembered didn't stay frozen exactly as they'd left it. It changed with their new lives.",
+   "html": null,
+   "el": "Η Ελλάδα που θυμούνταν οι άνθρωποι δεν έμεινε παγωμένη ακριβώς όπως την είχαν αφήσει. Άλλαζε μαζί με τη νέα τους ζωή.",
+   "es": "La Grecia que la gente recordaba no se quedó congelada exactamente como la habían dejado. Cambió junto con sus nuevas vidas."
+  },
+  {
+   "en": "The people who left Greece didn't carry an entire country with them in a suitcase. They carried pieces of a life, and built something new from them.",
+   "html": null,
+   "el": "Οι άνθρωποι που έφυγαν από την Ελλάδα δεν κουβάλησαν μια ολόκληρη χώρα μέσα σε μια βαλίτσα. Κουβάλησαν κομμάτια μιας ζωής και έφτιαξαν κάτι καινούργιο από αυτά.",
+   "es": "Las personas que se fueron de Grecia no se llevaron un país entero en una maleta. Se llevaron pedazos de una vida y con ellos construyeron algo nuevo."
+  },
+  {
+   "en": "Quoted from the film's approved narration.",
+   "html": null,
+   "el": "Παράθεμα από την εγκεκριμένη αφήγηση της ταινίας.",
+   "es": "Cita de la narración aprobada de la película."
+  },
+  {
+   "en": "The full narration, for anyone who would rather read, or wants to find a line again. About 1,323 words, 6 minutes to read.",
+   "html": null,
+   "el": "Ολόκληρη η αφήγηση, για όποιον προτιμά να διαβάσει ή θέλει να ξαναβρεί μια φράση. Περίπου 1.323 λέξεις, 6 λεπτά ανάγνωσης.",
+   "es": "La narración completa, para quien prefiera leer o quiera volver a encontrar una frase. Unas 1323 palabras, 6 minutos de lectura."
+  },
+  {
+   "en": "Read the full narration",
+   "html": null,
+   "el": "Διαβάστε ολόκληρη την αφήγηση",
+   "es": "Leer la narración completa"
+  },
+  {
+   "en": "The Greece they left",
+   "html": null,
+   "el": "Η Ελλάδα που άφησαν",
+   "es": "La Grecia que dejaron"
+  },
+  {
+   "en": "Have you ever heard someone in your family mention a village in Greece, or an island, and realized you never asked what life there was really like? Maybe you were young. Maybe you thought there would always be time. And then one day, there wasn't. You remember the name of the place. Maybe you even know where it is on a map. But what was an ordinary day like there?",
+   "html": null,
+   "el": "Έχετε ακούσει ποτέ κάποιον στην οικογένειά σας να αναφέρει ένα χωριό στην Ελλάδα ή ένα νησί, και καταλάβατε ότι δεν ρωτήσατε ποτέ πώς ήταν πραγματικά η ζωή εκεί; Ίσως ήσασταν μικροί. Ίσως νομίζατε ότι πάντα θα υπήρχε χρόνος. Και μια μέρα δεν υπήρχε. Θυμάστε το όνομα του τόπου. Ίσως ξέρετε και πού βρίσκεται στον χάρτη. Πώς ήταν όμως μια συνηθισμένη μέρα εκεί;",
+   "es": "¿Alguna vez escuchó a alguien de su familia mencionar un pueblo de Grecia, o una isla, y se dio cuenta de que nunca preguntó cómo era realmente la vida allí? Quizá usted era joven. Quizá pensó que siempre habría tiempo. Y un día, ya no lo hubo. Recuerda el nombre del lugar. Quizá incluso sabe dónde está en el mapa. Pero ¿cómo era un día común allí?"
+  },
+  {
+   "en": "Who lived next door? Where did everyone gather? What did home mean to them? We don't always think to ask those questions when the people who know the answers are sitting right beside us. And for so many Greek families, there's another question underneath all of them. Why did they leave? There isn't one answer. In the late nineteenth and early twentieth centuries, many Greeks left because work was scarce and they hoped to build a more secure future.",
+   "html": null,
+   "el": "Ποιος έμενε δίπλα; Πού μαζεύονταν όλοι; Τι σήμαινε γι' αυτούς το σπίτι; Δεν σκεφτόμαστε πάντα να κάνουμε αυτές τις ερωτήσεις όταν οι άνθρωποι που ξέρουν τις απαντήσεις κάθονται ακριβώς δίπλα μας. Και για τόσες ελληνικές οικογένειες, κάτω από όλες αυτές υπάρχει μια άλλη ερώτηση. Γιατί έφυγαν; Δεν υπάρχει μία απάντηση. Στα τέλη του 19ου και στις αρχές του 20ού αιώνα, πολλοί Έλληνες έφυγαν επειδή η δουλειά ήταν λίγη και ήλπιζαν να χτίσουν ένα πιο σίγουρο μέλλον.",
+   "es": "¿Quién vivía al lado? ¿Dónde se reunían todos? ¿Qué significaba para ellos el hogar? No siempre se nos ocurre hacer esas preguntas cuando las personas que saben las respuestas están sentadas a nuestro lado. Y para tantas familias griegas, debajo de todas ellas hay otra pregunta. ¿Por qué se fueron? No hay una sola respuesta. A finales del siglo XIX y principios del XX, muchos griegos se fueron porque el trabajo escaseaba y esperaban construir un futuro más seguro."
+  },
+  {
+   "en": "Some crossed the Atlantic to the United States, planning to earn money and return. Later, the hardship and upheaval surrounding the Second World War and the Greek Civil War shaped another generation's decisions. Greeks also made new lives in Australia, Canada, Germany, and elsewhere. Different years. Different destinations. Different reasons. And not everyone who left had the same experience. Some traveled alone. Some followed relatives who had already gone. Some returned to Greece.",
+   "html": null,
+   "el": "Κάποιοι πέρασαν τον Ατλαντικό για τις Ηνωμένες Πολιτείες, με σκοπό να βγάλουν χρήματα και να γυρίσουν. Αργότερα, οι δυσκολίες και η αναστάτωση γύρω από τον Δεύτερο Παγκόσμιο Πόλεμο και τον Εμφύλιο διαμόρφωσαν τις αποφάσεις μιας άλλης γενιάς. Έλληνες έφτιαξαν επίσης νέες ζωές στην Αυστραλία, στον Καναδά, στη Γερμανία και αλλού. Διαφορετικά χρόνια. Διαφορετικοί προορισμοί. Διαφορετικοί λόγοι. Και δεν είχαν όλοι όσοι έφυγαν την ίδια εμπειρία. Κάποιοι ταξίδεψαν μόνοι. Κάποιοι ακολούθησαν συγγενείς που είχαν ήδη φύγει. Κάποιοι γύρισαν στην Ελλάδα.",
+   "es": "Algunos cruzaron el Atlántico hacia los Estados Unidos con la idea de ganar dinero y regresar. Más tarde, las dificultades y la agitación en torno a la Segunda Guerra Mundial y la guerra civil griega marcaron las decisiones de otra generación. Los griegos también rehicieron su vida en Australia, Canadá, Alemania y otros lugares. Años distintos. Destinos distintos. Razones distintas. Y no todos los que se fueron vivieron lo mismo. Algunos viajaron solos. Algunos siguieron a parientes que ya se habían ido. Algunos regresaron a Grecia."
+  },
+  {
+   "en": "Others expected to. They never did. Imagine making that decision without knowing how long you'd be away. What would you take? Clothes. Papers. An address written down carefully. Maybe a photograph. But the hardest things to leave weren't always things you could pack. The voices you heard every day. The familiar walk through your neighborhood. The people who knew your family before you were born. In Greek, there's a word for life far from home: ξενιτιά.",
+   "html": null,
+   "el": "Άλλοι περίμεναν ότι θα γύριζαν. Δεν γύρισαν ποτέ. Φανταστείτε να παίρνετε αυτή την απόφαση χωρίς να ξέρετε πόσο καιρό θα λείπετε. Τι θα παίρνατε μαζί σας; Ρούχα. Χαρτιά. Μια διεύθυνση γραμμένη προσεκτικά. Ίσως μια φωτογραφία. Όμως τα πιο δύσκολα να τα αφήσεις δεν ήταν πάντα πράγματα που χωρούσαν σε βαλίτσα. Οι φωνές που άκουγες κάθε μέρα. Η γνώριμη βόλτα στη γειτονιά σου. Οι άνθρωποι που ήξεραν την οικογένειά σου πριν γεννηθείς. Στα ελληνικά υπάρχει μια λέξη για τη ζωή μακριά από την πατρίδα: ξενιτιά.",
+   "es": "Otros pensaban hacerlo. Nunca regresaron. Imagine tomar esa decisión sin saber cuánto tiempo estaría lejos. ¿Qué se llevaría? Ropa. Documentos. Una dirección escrita con cuidado. Quizá una fotografía. Pero lo más difícil de dejar no siempre eran cosas que se podían empacar. Las voces que uno oía todos los días. El paseo conocido por el barrio. Las personas que conocían a su familia antes de que usted naciera. En griego hay una palabra para la vida lejos de casa: ξενιτιά (xenitiá)."
+  },
+  {
+   "en": "It's more than a destination on a map. It's the distance between the person who leaves and the people who stay. In Epirus, traditional songs spoke of that separation. One is called Ξενιτεμένο μου πουλί. It means, roughly, my bird, far from home. And that part of the story matters, too. For every person beginning again somewhere else, there could be people back home waiting for news, a letter, or the next visit.",
+   "html": null,
+   "el": "Είναι κάτι περισσότερο από έναν προορισμό στον χάρτη. Είναι η απόσταση ανάμεσα σε αυτόν που φεύγει και σε όσους μένουν. Στην Ήπειρο, παραδοσιακά τραγούδια μιλούσαν γι' αυτόν τον χωρισμό. Ένα από αυτά λέγεται «Ξενιτεμένο μου πουλί». Και αυτό το κομμάτι της ιστορίας μετράει κι αυτό. Για κάθε άνθρωπο που ξεκινούσε από την αρχή κάπου αλλού, μπορεί να υπήρχαν άνθρωποι πίσω στην πατρίδα που περίμεναν νέα, ένα γράμμα ή την επόμενη επίσκεψη.",
+   "es": "Es más que un destino en un mapa. Es la distancia entre quien se va y quienes se quedan. En el Epiro, canciones tradicionales hablaban de esa separación. Una se llama «Ξενιτεμένο μου πουλί». Significa, más o menos, «mi pájaro, lejos de casa». Y esa parte de la historia también importa. Por cada persona que empezaba de nuevo en otro lugar, podía haber gente en casa esperando noticias, una carta o la próxima visita."
+  },
+  {
+   "en": "The life they built",
+   "html": null,
+   "el": "Η ζωή που έχτισαν",
+   "es": "La vida que construyeron"
+  },
+  {
+   "en": "Today, we might find a trace of that journey in an old passenger list. A name. An age. A place of origin. A destination. At first, it's just a document. Until you recognize the name. Maybe the spelling is different. Maybe there's a village nobody ever mentioned. Maybe an address points to a relative who arrived earlier. One small detail can bring you closer to someone you thought you knew only through family stories.",
+   "html": null,
+   "el": "Σήμερα μπορεί να βρούμε ένα ίχνος εκείνου του ταξιδιού σε έναν παλιό κατάλογο επιβατών. Ένα όνομα. Μια ηλικία. Έναν τόπο καταγωγής. Έναν προορισμό. Στην αρχή είναι απλώς ένα έγγραφο. Μέχρι να αναγνωρίσετε το όνομα. Ίσως η ορθογραφία είναι διαφορετική. Ίσως υπάρχει ένα χωριό που κανείς δεν ανέφερε ποτέ. Ίσως μια διεύθυνση οδηγεί σε έναν συγγενή που είχε φτάσει νωρίτερα. Μια μικρή λεπτομέρεια μπορεί να σας φέρει πιο κοντά σε κάποιον που νομίζατε ότι ξέρατε μόνο από τις οικογενειακές ιστορίες.",
+   "es": "Hoy podríamos encontrar una huella de ese viaje en una vieja lista de pasajeros. Un nombre. Una edad. Un lugar de origen. Un destino. Al principio, es solo un documento. Hasta que usted reconoce el nombre. Quizá la ortografía es distinta. Quizá aparece un pueblo que nadie mencionó nunca. Quizá una dirección lleva a un pariente que llegó antes. Un pequeño detalle puede acercarlo a alguien que creía conocer solo por las historias de la familia."
+  },
+  {
+   "en": "But a passenger list tells you where a person was going. It doesn't tell you what happened when they got there. Think about arriving in a place where the language is unfamiliar. You need work. Somewhere to live. You have to learn how things are done. Even the little things nobody explains. And you still have people back home wondering how you're getting along. For many newcomers, other Greeks helped make that first step less lonely.",
+   "html": null,
+   "el": "Ένας κατάλογος επιβατών όμως σας λέει πού πήγαινε ένας άνθρωπος. Δεν σας λέει τι έγινε όταν έφτασε εκεί. Σκεφτείτε να φτάνετε σε έναν τόπο όπου η γλώσσα είναι άγνωστη. Χρειάζεστε δουλειά. Ένα μέρος να μείνετε. Πρέπει να μάθετε πώς γίνονται τα πράγματα. Ακόμη και τα μικρά που κανείς δεν εξηγεί. Και έχετε ακόμη ανθρώπους πίσω στην πατρίδα που αναρωτιούνται πώς τα πάτε. Για πολλούς νεοφερμένους, άλλοι Έλληνες βοήθησαν να γίνει εκείνο το πρώτο βήμα λιγότερο μοναχικό.",
+   "es": "Pero una lista de pasajeros le dice adónde iba una persona. No le dice qué pasó cuando llegó. Piense en llegar a un lugar donde el idioma le es desconocido. Necesita trabajo. Un lugar donde vivir. Tiene que aprender cómo se hacen las cosas. Hasta las pequeñas que nadie explica. Y todavía hay gente en casa preguntándose cómo le va. Para muchos recién llegados, otros griegos ayudaron a que ese primer paso fuera menos solitario."
+  },
+  {
+   "en": "Someone might know about a job. Someone might offer a place to stay or introduce you to a neighborhood, a church, or a familiar shop. Over time, communities took shape. In Chicago, and in cities across the world, Greeks opened businesses, formed associations, built churches, and found ways to gather. Those places weren't just reminders of home. They were part of making a new home. And something interesting happened along the way.",
+   "html": null,
+   "el": "Κάποιος μπορεί να ήξερε για μια δουλειά. Κάποιος μπορεί να πρόσφερε ένα μέρος να μείνετε ή να σας γνώριζε σε μια γειτονιά, μια εκκλησία ή ένα γνώριμο μαγαζί. Με τον καιρό σχηματίστηκαν κοινότητες. Στο Σικάγο, και σε πόλεις σε όλο τον κόσμο, Έλληνες άνοιξαν επιχειρήσεις, ίδρυσαν συλλόγους, έχτισαν εκκλησίες και βρήκαν τρόπους να μαζεύονται. Εκείνοι οι τόποι δεν ήταν απλώς υπενθυμίσεις της πατρίδας. Ήταν μέρος του να φτιάξουν ένα νέο σπίτι. Και στην πορεία συνέβη κάτι ενδιαφέρον.",
+   "es": "Alguien podía saber de un trabajo. Alguien podía ofrecerle un lugar donde quedarse o presentarle un barrio, una iglesia o una tienda conocida. Con el tiempo se formaron comunidades. En Chicago, y en ciudades de todo el mundo, los griegos abrieron negocios, fundaron asociaciones, construyeron iglesias y encontraron maneras de reunirse. Esos lugares no eran solo recuerdos de casa. Eran parte de construir un nuevo hogar. Y en el camino pasó algo interesante."
+  },
+  {
+   "en": "The Greece people remembered didn't stay frozen exactly as they'd left it. It changed with their new lives. A family might speak Greek at home and English at work. Children might grow up with customs their classmates didn't know. Holidays and celebrations might look familiar, but take place thousands of miles from the village where their parents grew up. It wasn't always easy to balance those worlds. But you could hear that connection in a greeting.",
+   "html": null,
+   "el": "Η Ελλάδα που θυμούνταν οι άνθρωποι δεν έμεινε παγωμένη ακριβώς όπως την είχαν αφήσει. Άλλαζε μαζί με τη νέα τους ζωή. Μια οικογένεια μπορεί να μιλούσε ελληνικά στο σπίτι και αγγλικά στη δουλειά. Τα παιδιά μπορεί να μεγάλωναν με έθιμα που οι συμμαθητές τους δεν ήξεραν. Οι γιορτές μπορεί να έμοιαζαν γνώριμες, αλλά να γίνονταν χιλιάδες χιλιόμετρα μακριά από το χωριό όπου μεγάλωσαν οι γονείς τους. Δεν ήταν πάντα εύκολο να ισορροπείς ανάμεσα σε αυτούς τους κόσμους. Όμως μπορούσες να ακούσεις εκείνη τη σύνδεση σε έναν χαιρετισμό.",
+   "es": "La Grecia que la gente recordaba no se quedó congelada exactamente como la habían dejado. Cambió junto con sus nuevas vidas. Una familia podía hablar griego en casa e inglés en el trabajo. Los niños podían crecer con costumbres que sus compañeros de clase no conocían. Las fiestas y celebraciones podían parecer conocidas, pero ocurrir a miles de millas del pueblo donde crecieron sus padres. No siempre era fácil equilibrar esos mundos. Pero esa conexión se podía oír en un saludo."
+  },
+  {
+   "en": "See it in an icon on the wall. Taste it in something made for a family gathering. And before long, those ordinary details became part of someone else's childhood.",
+   "html": null,
+   "el": "Να τη δεις σε μια εικόνα στον τοίχο. Να τη γευτείς σε κάτι που φτιάχτηκε για ένα οικογενειακό τραπέζι. Και πριν το καταλάβεις, εκείνες οι καθημερινές λεπτομέρειες έγιναν μέρος της παιδικής ηλικίας κάποιου άλλου.",
+   "es": "Verla en un ícono en la pared. Probarla en algo hecho para una reunión familiar. Y en poco tiempo, esos detalles cotidianos pasaron a formar parte de la infancia de alguien más."
+  },
+  {
+   "en": "The Greece that stayed",
+   "html": null,
+   "el": "Η Ελλάδα που έμεινε",
+   "es": "La Grecia que se quedó"
+  },
+  {
+   "en": "Maybe that's the part of this story you recognize. The next generation didn't necessarily remember the journey. They remembered the people who made a life after it. A grandparent calling them by a nickname nobody else used. Tavli dice hitting the table. A komboloi clicking in someone's hand. The smell of coffee in the kitchen. A familiar expression in Greek that everybody understood, even if nobody could explain it in English.",
+   "html": null,
+   "el": "Ίσως αυτό είναι το κομμάτι της ιστορίας που αναγνωρίζετε. Η επόμενη γενιά δεν θυμόταν απαραίτητα το ταξίδι. Θυμόταν τους ανθρώπους που έφτιαξαν μια ζωή μετά από αυτό. Έναν παππού ή μια γιαγιά που τους φώναζε με ένα παρατσούκλι που δεν χρησιμοποιούσε κανείς άλλος. Τα ζάρια του τάβλι να χτυπούν στο τραπέζι. Ένα κομπολόι να κροταλίζει στο χέρι κάποιου. Τη μυρωδιά του καφέ στην κουζίνα. Μια γνώριμη ελληνική έκφραση που την καταλάβαιναν όλοι, ακόμη κι αν κανείς δεν μπορούσε να την εξηγήσει στα αγγλικά.",
+   "es": "Quizá esa es la parte de la historia que usted reconoce. La siguiente generación no recordaba necesariamente el viaje. Recordaba a las personas que construyeron una vida después de él. Un abuelo o una abuela que los llamaba con un apodo que nadie más usaba. Los dados del tavli golpeando la mesa. Un komboloi sonando en la mano de alguien. El olor del café en la cocina. Una expresión griega conocida que todos entendían, aunque nadie pudiera explicarla en inglés."
+  },
+  {
+   "en": "Maybe there was an icon in the corner of the room. A name-day call. A meal that appeared every time the family came together. Or a song that made everyone stop talking for a moment, and then start singing. If you've watched My Big Fat Greek Wedding, you know the exaggerated version of Greek family life: the relatives, the food, everyone having an opinion. It's a comedy. But for some people, there was something recognizable underneath the jokes.",
+   "html": null,
+   "el": "Ίσως υπήρχε μια εικόνα στη γωνιά του δωματίου. Ένα τηλεφώνημα για τη γιορτή. Ένα φαγητό που εμφανιζόταν κάθε φορά που μαζευόταν η οικογένεια. Ή ένα τραγούδι που έκανε όλους να σταματήσουν να μιλούν για μια στιγμή, και μετά να αρχίσουν να τραγουδούν. Αν έχετε δει το «My Big Fat Greek Wedding», ξέρετε την υπερβολική εκδοχή της ελληνικής οικογενειακής ζωής: οι συγγενείς, το φαγητό, όλοι να έχουν γνώμη. Είναι κωμωδία. Για κάποιους όμως υπήρχε κάτι αναγνωρίσιμο κάτω από τα αστεία.",
+   "es": "Quizá había un ícono en una esquina del cuarto. Una llamada por el día del santo. Una comida que aparecía cada vez que la familia se reunía. O una canción que hacía que todos dejaran de hablar un momento y luego empezaran a cantar. Si usted vio «My Big Fat Greek Wedding», conoce la versión exagerada de la vida familiar griega: los parientes, la comida, todos con una opinión. Es una comedia. Pero para algunas personas había algo reconocible detrás de los chistes."
+  },
+  {
+   "en": "Of course, no two families were the same. Some children learned Greek. Others understood more than they could speak. Some families were deeply involved in church and community life. Others kept only a few customs, or made entirely new ones. And that doesn't make one family's story more Greek than another's. What stayed was often what fit into everyday life. A recipe learned by watching, not measuring. A story told at the table.",
+   "html": null,
+   "el": "Φυσικά, καμία οικογένεια δεν ήταν ίδια με την άλλη. Κάποια παιδιά έμαθαν ελληνικά. Άλλα καταλάβαιναν περισσότερα απ' όσα μπορούσαν να μιλήσουν. Κάποιες οικογένειες συμμετείχαν βαθιά στη ζωή της εκκλησίας και της κοινότητας. Άλλες κράτησαν μόνο λίγα έθιμα ή έφτιαξαν εντελώς καινούργια. Και αυτό δεν κάνει την ιστορία μιας οικογένειας πιο ελληνική από μιας άλλης. Αυτό που έμεινε ήταν συχνά ό,τι χωρούσε στην καθημερινή ζωή. Μια συνταγή που τη μάθαινες βλέποντας, όχι μετρώντας. Μια ιστορία που λεγόταν στο τραπέζι.",
+   "es": "Por supuesto, no había dos familias iguales. Algunos niños aprendieron griego. Otros entendían más de lo que podían hablar. Algunas familias participaban de lleno en la vida de la iglesia y de la comunidad. Otras conservaron solo algunas costumbres o crearon otras completamente nuevas. Y eso no hace que la historia de una familia sea más griega que la de otra. Lo que quedó fue muchas veces lo que cabía en la vida diaria. Una receta aprendida mirando, no midiendo. Una historia contada en la mesa."
+  },
+  {
+   "en": "A place name mentioned so often you felt you knew it, even if you'd never been there. When we're young, these things can seem so ordinary that we barely notice them. Then years pass. We get older. We begin asking different questions. Who were our parents and grandparents before they became the people we knew? What did they give up? What did they hope for? What was their home like before ours?",
+   "html": null,
+   "el": "Ένα τοπωνύμιο που ακουγόταν τόσο συχνά ώστε ένιωθες ότι το ήξερες, ακόμη κι αν δεν είχες πάει ποτέ εκεί. Όταν είμαστε μικροί, αυτά μπορεί να φαίνονται τόσο συνηθισμένα που μόλις τα προσέχουμε. Μετά περνούν τα χρόνια. Μεγαλώνουμε. Αρχίζουμε να κάνουμε άλλες ερωτήσεις. Ποιοι ήταν οι γονείς και οι παππούδες μας πριν γίνουν οι άνθρωποι που γνωρίσαμε; Τι άφησαν πίσω; Τι ήλπιζαν; Πώς ήταν το σπίτι τους πριν από το δικό μας;",
+   "es": "El nombre de un lugar mencionado tantas veces que uno sentía conocerlo, aunque nunca hubiera ido. Cuando somos jóvenes, estas cosas pueden parecer tan comunes que apenas las notamos. Luego pasan los años. Envejecemos. Empezamos a hacer otras preguntas. ¿Quiénes eran nuestros padres y abuelos antes de ser las personas que conocimos? ¿A qué renunciaron? ¿Qué esperaban? ¿Cómo era su hogar antes del nuestro?"
+  },
+  {
+   "en": "Maybe you know the island, but not the village. Maybe there's a face in an old photograph and nobody remembers the name. Maybe you can make the dish, but you don't know who taught it to the person who taught you. And suddenly, something familiar becomes a mystery. That feeling isn't limited to Greek families. It's one of the ways we discover that our own lives are part of a much longer story.",
+   "html": null,
+   "el": "Ίσως ξέρετε το νησί, αλλά όχι το χωριό. Ίσως υπάρχει ένα πρόσωπο σε μια παλιά φωτογραφία και κανείς δεν θυμάται το όνομα. Ίσως μπορείτε να φτιάξετε το φαγητό, αλλά δεν ξέρετε ποιος το έμαθε στον άνθρωπο που το έμαθε σε εσάς. Και ξαφνικά, κάτι γνώριμο γίνεται μυστήριο. Αυτό το συναίσθημα δεν αφορά μόνο τις ελληνικές οικογένειες. Είναι ένας από τους τρόπους με τους οποίους ανακαλύπτουμε ότι η ζωή μας είναι μέρος μιας πολύ μεγαλύτερης ιστορίας.",
+   "es": "Quizá conoce la isla, pero no el pueblo. Quizá hay una cara en una foto vieja y nadie recuerda el nombre. Quizá sabe preparar el plato, pero no sabe quién se lo enseñó a la persona que se lo enseñó a usted. Y de pronto, algo conocido se vuelve un misterio. Ese sentimiento no es solo de las familias griegas. Es una de las maneras en que descubrimos que nuestra propia vida es parte de una historia mucho más larga."
+  },
+  {
+   "en": "What we carry forward",
+   "html": null,
+   "el": "Αυτό που συνεχίζουμε",
+   "es": "Lo que llevamos adelante"
+  },
+  {
+   "en": "The good news is, we don't need every answer to begin. We can start with one question. Ask someone where the family came from. Not just Greece. Which town, which village, which neighborhood? Ask who left first. Who stayed behind. Whether anyone went back. Look through photographs together. Write down the names while someone still remembers them. And ask about the little things. The words people used. The games they played.",
+   "html": null,
+   "el": "Τα καλά νέα είναι ότι δεν χρειαζόμαστε όλες τις απαντήσεις για να ξεκινήσουμε. Μπορούμε να ξεκινήσουμε με μία ερώτηση. Ρωτήστε κάποιον από πού κατάγεται η οικογένεια. Όχι απλώς «από την Ελλάδα». Ποια πόλη, ποιο χωριό, ποια γειτονιά; Ρωτήστε ποιος έφυγε πρώτος. Ποιος έμεινε πίσω. Αν γύρισε κανείς. Κοιτάξτε μαζί φωτογραφίες. Γράψτε τα ονόματα όσο κάποιος ακόμη τα θυμάται. Και ρωτήστε για τα μικρά πράγματα. Τις λέξεις που χρησιμοποιούσαν. Τα παιχνίδια που έπαιζαν.",
+   "es": "La buena noticia es que no necesitamos todas las respuestas para empezar. Podemos empezar con una pregunta. Pregunte a alguien de dónde viene la familia. No solo Grecia. ¿Qué ciudad, qué pueblo, qué barrio? Pregunte quién se fue primero. Quién se quedó. Si alguien regresó. Miren juntos las fotografías. Escriba los nombres mientras alguien todavía los recuerde. Y pregunte por las cosas pequeñas. Las palabras que usaban. Los juegos que jugaban."
+  },
+  {
+   "en": "The meals they made without recipes. Sometimes a memory leads to a document. Sometimes a document leads to another question. And sometimes we won't find the answer. We shouldn't invent one. The people who left Greece didn't carry an entire country with them in a suitcase. They carried pieces of a life, and built something new from them. Their children carried different pieces. And so did the generations after that.",
+   "html": null,
+   "el": "Τα φαγητά που έφτιαχναν χωρίς συνταγές. Μερικές φορές μια ανάμνηση οδηγεί σε ένα έγγραφο. Μερικές φορές ένα έγγραφο οδηγεί σε μια άλλη ερώτηση. Και μερικές φορές δεν θα βρούμε την απάντηση. Δεν πρέπει να επινοήσουμε μία. Οι άνθρωποι που έφυγαν από την Ελλάδα δεν κουβάλησαν μια ολόκληρη χώρα μέσα σε μια βαλίτσα. Κουβάλησαν κομμάτια μιας ζωής και έφτιαξαν κάτι καινούργιο από αυτά. Τα παιδιά τους κουβάλησαν άλλα κομμάτια. Το ίδιο και οι επόμενες γενιές.",
+   "es": "Las comidas que hacían sin recetas. A veces un recuerdo lleva a un documento. A veces un documento lleva a otra pregunta. Y a veces no encontraremos la respuesta. No debemos inventarla. Las personas que se fueron de Grecia no se llevaron un país entero en una maleta. Se llevaron pedazos de una vida y con ellos construyeron algo nuevo. Sus hijos llevaron otros pedazos. Y también las generaciones que vinieron después."
+  },
+  {
+   "en": "Some traditions survived. Some changed. Others faded. But Greek culture didn't end when people crossed a border. It continued in the homes they made, the communities they built, and the things they passed on, sometimes without even realizing it. We don't have to recreate the past to feel connected to it. We can listen. We can ask. We can learn where those familiar pieces came from. Maybe for you it begins with a photograph.",
+   "html": null,
+   "el": "Κάποιες παραδόσεις επέζησαν. Κάποιες άλλαξαν. Άλλες έσβησαν. Όμως ο ελληνικός πολιτισμός δεν τελείωσε όταν οι άνθρωποι πέρασαν ένα σύνορο. Συνεχίστηκε στα σπίτια που έφτιαξαν, στις κοινότητες που έχτισαν και σε όσα παρέδωσαν, μερικές φορές χωρίς καν να το καταλάβουν. Δεν χρειάζεται να αναπαραστήσουμε το παρελθόν για να νιώσουμε συνδεδεμένοι μαζί του. Μπορούμε να ακούσουμε. Μπορούμε να ρωτήσουμε. Μπορούμε να μάθουμε από πού ήρθαν εκείνα τα γνώριμα κομμάτια. Ίσως για εσάς όλα ξεκινούν με μια φωτογραφία.",
+   "es": "Algunas tradiciones sobrevivieron. Algunas cambiaron. Otras se desvanecieron. Pero la cultura griega no terminó cuando la gente cruzó una frontera. Continuó en los hogares que formaron, en las comunidades que construyeron y en lo que transmitieron, a veces sin siquiera darse cuenta. No tenemos que recrear el pasado para sentirnos unidos a él. Podemos escuchar. Podemos preguntar. Podemos aprender de dónde vienen esos pedazos conocidos. Quizá para usted todo empieza con una fotografía."
+  },
+  {
+   "en": "Or a village name you've heard all your life. Or maybe it's something simpler. A meal at the family table. You know the taste. You remember who made it. But have you ever asked where that recipe began? That's where we'll go next.",
+   "html": null,
+   "el": "Ή με ένα όνομα χωριού που ακούτε όλη σας τη ζωή. Ή ίσως με κάτι πιο απλό. Ένα φαγητό στο οικογενειακό τραπέζι. Ξέρετε τη γεύση. Θυμάστε ποιος το έφτιαχνε. Έχετε ρωτήσει ποτέ όμως από πού ξεκίνησε εκείνη η συνταγή; Εκεί θα πάμε στη συνέχεια.",
+   "es": "O con el nombre de un pueblo que ha oído toda su vida. O quizá con algo más simple. Una comida en la mesa familiar. Conoce el sabor. Recuerda quién la preparaba. Pero ¿alguna vez preguntó dónde empezó esa receta? Ahí es adonde iremos después."
+  },
+  {
+   "en": "The narration as approved for recording (script v0.14). A few lines are phrased slightly differently in the film.",
+   "html": null,
+   "el": "Η αφήγηση όπως εγκρίθηκε για ηχογράφηση (σενάριο v0.14). Μερικές φράσεις διατυπώνονται λίγο διαφορετικά στην ταινία.",
+   "es": "La narración tal como se aprobó para la grabación (guion v0.14). Algunas frases aparecen con una redacción un poco distinta en la película."
+  },
+  {
+   "en": "Questions to start a conversation at your own table.",
+   "html": null,
+   "el": "Ερωτήσεις για να ξεκινήσει μια κουβέντα στο δικό σας τραπέζι.",
+   "es": "Preguntas para empezar una conversación en su propia mesa."
+  },
+  {
+   "en": "What did our family bring with them when they left Greece?",
+   "html": null,
+   "el": "Τι έφερε μαζί της η οικογένειά μας όταν έφυγε από την Ελλάδα;",
+   "es": "¿Qué trajo nuestra familia consigo cuando se fue de Grecia?"
+  },
+  {
+   "en": "What did our grandparents miss most about home?",
+   "html": null,
+   "el": "Τι τους έλειπε περισσότερο από την πατρίδα στους παππούδες μας;",
+   "es": "¿Qué era lo que más extrañaban nuestros abuelos de su tierra?"
+  },
+  {
+   "en": "Which traditions did our family keep after arriving in a new country?",
+   "html": null,
+   "el": "Ποιες παραδόσεις κράτησε η οικογένειά μας όταν έφτασε σε μια νέα χώρα;",
+   "es": "¿Qué tradiciones conservó nuestra familia al llegar a un nuevo país?"
+  },
+  {
+   "en": "Established",
+   "html": null,
+   "el": "Τεκμηριωμένο",
+   "es": "Establecido"
+  },
+  {
+   "en": "The first wave of emigration followed the economic crisis of 1893, when currant export prices collapsed. From 1890 to 1914 almost a sixth of Greece's population emigrated, mostly to the United States and Egypt.",
+   "html": null,
+   "el": "Το πρώτο κύμα μετανάστευσης ακολούθησε την οικονομική κρίση του 1893, όταν κατέρρευσαν οι τιμές εξαγωγής της σταφίδας. Από το 1890 έως το 1914 σχεδόν το ένα έκτο του πληθυσμού της Ελλάδας μετανάστευσε, κυρίως στις Ηνωμένες Πολιτείες και στην Αίγυπτο.",
+   "es": "La primera ola de emigración siguió a la crisis económica de 1893, cuando se desplomaron los precios de exportación de las uvas pasas de Corinto. De 1890 a 1914 emigró casi una sexta parte de la población de Grecia, sobre todo a los Estados Unidos y a Egipto."
+  },
+  {
+   "en": "Migration Policy Institute, Greece: A History of Migration (Kasimis and Kassimi, 2004)",
+   "html": null,
+   "el": "Migration Policy Institute, Greece: A History of Migration (Kasimis και Kassimi, 2004)",
+   "es": "Migration Policy Institute, Greece: A History of Migration (Kasimis y Kassimi, 2004)"
+  },
+  {
+   "en": "More than one million Greeks emigrated in a second wave, mainly between 1950 and 1974, most to Western Europe, the United States, Canada and Australia. Between 1974 and 1985 almost half of them returned to Greece.",
+   "html": null,
+   "el": "Πάνω από ένα εκατομμύριο Έλληνες μετανάστευσαν σε ένα δεύτερο κύμα, κυρίως μεταξύ 1950 και 1974, οι περισσότεροι στη Δυτική Ευρώπη, στις Ηνωμένες Πολιτείες, στον Καναδά και στην Αυστραλία. Μεταξύ 1974 και 1985 σχεδόν οι μισοί από αυτούς επέστρεψαν στην Ελλάδα.",
+   "es": "Más de un millón de griegos emigraron en una segunda ola, principalmente entre 1950 y 1974, la mayoría a Europa occidental, los Estados Unidos, Canadá y Australia. Entre 1974 y 1985, casi la mitad de ellos regresó a Grecia."
+  },
+  {
+   "en": "Still open",
+   "html": null,
+   "el": "Ακόμη ανοιχτό",
+   "es": "Todavía abierto"
+  },
+  {
+   "en": "How many Greeks reached the United States in the first wave. Published histories give figures from about 430,000 to more than 600,000, so the film says \"hundreds of thousands\".",
+   "html": null,
+   "el": "Πόσοι Έλληνες έφτασαν στις Ηνωμένες Πολιτείες στο πρώτο κύμα. Οι δημοσιευμένες ιστορίες δίνουν αριθμούς από περίπου 430.000 έως πάνω από 600.000, γι' αυτό η ταινία λέει «εκατοντάδες χιλιάδες».",
+   "es": "Cuántos griegos llegaron a los Estados Unidos en la primera ola. Las historias publicadas dan cifras de unos 430 000 a más de 600 000, por eso la película dice «cientos de miles»."
+  },
+  {
+   "en": "KRIOS research notes",
+   "html": null,
+   "el": "Ερευνητικές σημειώσεις του KRIOS",
+   "es": "Notas de investigación de KRIOS"
+  },
+  {
+   "en": "Most images in this film are illustrations made for KRIOS and labelled as illustrations. Archival photographs are credited on screen.",
+   "html": null,
+   "el": "Οι περισσότερες εικόνες της ταινίας είναι εικονογραφήσεις φτιαγμένες για το KRIOS και σημειώνονται ως εικονογραφήσεις. Οι αρχειακές φωτογραφίες αναφέρουν την πηγή τους στην οθόνη.",
+   "es": "La mayoría de las imágenes de esta película son ilustraciones hechas para KRIOS y están marcadas como ilustraciones. Las fotografías de archivo llevan su crédito en pantalla."
+  },
+  {
+   "en": "The song Ξενιτεμένο μου πουλί is mentioned in the narration only. No recording is used.",
+   "html": null,
+   "el": "Το τραγούδι «Ξενιτεμένο μου πουλί» αναφέρεται μόνο στην αφήγηση. Δεν χρησιμοποιείται ηχογράφηση.",
+   "es": "La canción «Ξενιτεμένο μου πουλί» solo se menciona en la narración. No se usa ninguna grabación."
+  },
+  {
+   "en": "Take the quiz on this film →",
+   "html": null,
+   "el": "Κάντε το κουίζ για αυτή την ταινία →",
+   "es": "Haga el cuestionario sobre esta película →"
+  },
+  {
+   "en": "Continue exploring",
+   "html": null,
+   "el": "Συνεχίστε την εξερεύνηση",
+   "es": "Siga explorando"
+  },
+  {
+   "en": "Living Roots · Oct 11 · 11 min",
+   "html": null,
+   "el": "Living Roots · 11 Οκτ · 11 λεπ.",
+   "es": "Living Roots · 11 oct · 11 min"
+  },
+  {
+   "en": "The Greek Dance That Wasn't Real… Until It Was",
+   "html": null,
+   "el": "The Greek Dance That Wasn't Real… Until It Was",
+   "es": "The Greek Dance That Wasn't Real… Until It Was"
+  },
+  {
+   "en": "Living Roots · Oct 11 · 11 minThe Greek Dance That Wasn't Real… Until It Was",
+   "html": "<span>Living Roots · Oct 11 · 11 min</span><span>The Greek Dance That Wasn't Real… Until It Was</span>",
+   "el": "Living Roots · 11 Οκτ · 11 λεπ.The Greek Dance That Wasn't Real… Until It Was",
+   "es": "Living Roots · 11 oct · 11 minThe Greek Dance That Wasn't Real… Until It Was",
+   "el_html": "<span>Living Roots · 11 Οκτ · 11 λεπ.</span><span>The Greek Dance That Wasn't Real… Until It Was</span>",
+   "es_html": "<span>Living Roots · 11 oct · 11 min</span><span>The Greek Dance That Wasn't Real… Until It Was</span>"
+  },
+  {
+   "en": "Diaspora · Jul 22 · 13 min",
+   "html": null,
+   "el": "Διασπορά · 22 Ιουλ · 13 λεπ.",
+   "es": "Diáspora · 22 jul · 13 min"
+  },
+  {
+   "en": "Why a Greek Sponge Diver Built a Town in Florida",
+   "html": null,
+   "el": "Why a Greek Sponge Diver Built a Town in Florida",
+   "es": "Why a Greek Sponge Diver Built a Town in Florida"
+  },
+  {
+   "en": "Diaspora · Jul 22 · 13 minWhy a Greek Sponge Diver Built a Town in Florida",
+   "html": "<span>Diaspora · Jul 22 · 13 min</span><span>Why a Greek Sponge Diver Built a Town in Florida</span>",
+   "el": "Διασπορά · 22 Ιουλ · 13 λεπ.Why a Greek Sponge Diver Built a Town in Florida",
+   "es": "Diáspora · 22 jul · 13 minWhy a Greek Sponge Diver Built a Town in Florida",
+   "el_html": "<span>Διασπορά · 22 Ιουλ · 13 λεπ.</span><span>Why a Greek Sponge Diver Built a Town in Florida</span>",
+   "es_html": "<span>Diáspora · 22 jul · 13 min</span><span>Why a Greek Sponge Diver Built a Town in Florida</span>"
+  }
+ ],
+ "attrs": [
+  {
+   "en": "A man in a long coat stands at a harbour railing beside his suitcases.",
+   "el": "Ένας άνδρας με μακρύ παλτό στέκεται στο κάγκελο ενός λιμανιού δίπλα στις βαλίτσες του.",
+   "es": "Un hombre con abrigo largo está de pie junto a la baranda de un puerto, al lado de sus maletas."
+  },
+  {
+   "en": "Main",
+   "el": "Κύριο μενού",
+   "es": "Principal"
+  },
+  {
+   "en": "On this page",
+   "el": "Σε αυτή τη σελίδα",
+   "es": "En esta página"
+  },
+  {
+   "en": "Play The Greeks Who Left, and the Greece They Carried",
+   "el": "Αναπαραγωγή: The Greeks Who Left, and the Greece They Carried",
+   "es": "Reproducir The Greeks Who Left, and the Greece They Carried"
+  }
+ ]
+}

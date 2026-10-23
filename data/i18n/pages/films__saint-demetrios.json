@@ -1,0 +1,174 @@
+{
+ "_page": "films__saint-demetrios",
+ "_status": "draft",
+ "strings": [
+  {
+   "en": "Sacred Days · Documentary",
+   "html": null,
+   "es": "Sacred Days · Documental",
+   "el": "Sacred Days · Ντοκιμαντέρ"
+  },
+  {
+   "en": "Saint Demetrios: More Than a Name Day",
+   "html": null,
+   "es": "Saint Demetrios: More Than a Name Day",
+   "el": "Saint Demetrios: More Than a Name Day"
+  },
+  {
+   "en": "Premieres Monday, October 26, 2026 on YouTube",
+   "html": null,
+   "es": "Estreno el lunes 26 de octubre de 2026 en YouTube",
+   "el": "Πρεμιέρα τη Δευτέρα 26 Οκτωβρίου 2026 στο YouTube"
+  },
+  {
+   "en": "The saint of Thessaloniki, and the name day so many Greek families celebrate. On YouTube on his feast day.",
+   "html": null,
+   "es": "El santo de Tesalónica, y el día del santo que celebran tantas familias griegas. En YouTube el día de su fiesta.",
+   "el": "Ο άγιος της Θεσσαλονίκης και η ονομαστική γιορτή που γιορτάζουν τόσες ελληνικές οικογένειες. Στο YouTube ανήμερα της γιορτής του."
+  },
+  {
+   "en": "Subscribe on YouTube to see it first",
+   "html": null,
+   "es": "Suscríbase en YouTube para verla primero",
+   "el": "Κάντε εγγραφή στο YouTube για να τη δείτε πρώτοι"
+  },
+  {
+   "en": "Premieres Oct 26",
+   "html": null,
+   "es": "Estreno el 26 de oct.",
+   "el": "Πρεμιέρα 26 Οκτ."
+  },
+  {
+   "en": "Thumbnail artwork is an illustration, not a historical image.",
+   "html": null,
+   "es": "La imagen de miniatura es una ilustración, no una imagen histórica.",
+   "el": "Η εικόνα προεπισκόπησης είναι εικονογράφηση, όχι ιστορική εικόνα."
+  },
+  {
+   "en": "The story",
+   "html": null,
+   "es": "La historia",
+   "el": "Η ιστορία"
+  },
+  {
+   "en": "Ask someone in your family",
+   "html": null,
+   "es": "Pregunte a alguien de su familia",
+   "el": "Ρωτήστε κάποιον στην οικογένειά σας"
+  },
+  {
+   "en": "Historical images and credits",
+   "html": null,
+   "es": "Imágenes históricas y créditos",
+   "el": "Ιστορικές εικόνες και πηγές τους"
+  },
+  {
+   "en": "Opens with the film on its premiere day.",
+   "html": null,
+   "es": "Se publica con la película el día de su estreno.",
+   "el": "Ανοίγει μαζί με την ταινία την ημέρα της πρεμιέρας."
+  },
+  {
+   "en": "Opens with the film on its premiere day. The story, sources and credits are published when the film is public, so nothing appears before it.",
+   "html": "<b>Opens with the film on its premiere day.</b> The story, sources and credits are published when the film is public, so nothing appears before it.",
+   "es": "Se publica con la película el día de su estreno. La historia, las fuentes y los créditos se publican cuando la película es pública, así que nada aparece antes.",
+   "el": "Ανοίγει μαζί με την ταινία την ημέρα της πρεμιέρας. Η ιστορία, οι πηγές και οι πιστώσεις δημοσιεύονται όταν η ταινία γίνει δημόσια, οπότε τίποτα δεν εμφανίζεται νωρίτερα.",
+   "es_html": "<b>Se publica con la película el día de su estreno.</b> La historia, las fuentes y los créditos se publican cuando la película es pública, así que nada aparece antes.",
+   "el_html": "<b>Ανοίγει μαζί με την ταινία την ημέρα της πρεμιέρας.</b> Η ιστορία, οι πηγές και οι πιστώσεις δημοσιεύονται όταν η ταινία γίνει δημόσια, οπότε τίποτα δεν εμφανίζεται νωρίτερα."
+  },
+  {
+   "en": "Questions to start a conversation at your own table.",
+   "html": null,
+   "es": "Preguntas para iniciar una conversación en su propia mesa.",
+   "el": "Ερωτήσεις για να ξεκινήσει μια κουβέντα στο δικό σας τραπέζι."
+  },
+  {
+   "en": "Whose name day did our family celebrate, and what did we do?",
+   "html": null,
+   "es": "¿El día del santo de quién celebraba nuestra familia, y qué hacíamos?",
+   "el": "Ποιανού την ονομαστική γιορτή γιορτάζαμε στην οικογένεια και τι κάναμε;"
+  },
+  {
+   "en": "Did our parents or grandparents tell us stories about Saint Demetrios?",
+   "html": null,
+   "es": "¿Nuestros padres o abuelos nos contaban historias sobre san Demetrio?",
+   "el": "Μας έλεγαν οι γονείς ή οι παππούδες μας ιστορίες για τον Άγιο Δημήτριο;"
+  },
+  {
+   "en": "How did celebrating a name day differ from celebrating a birthday?",
+   "html": null,
+   "es": "¿En qué se diferenciaba celebrar el día del santo de celebrar un cumpleaños?",
+   "el": "Σε τι διέφερε η ονομαστική γιορτή από τα γενέθλια;"
+  },
+  {
+   "en": "Full per-image credits publish with the film.",
+   "html": null,
+   "es": "Los créditos completos de cada imagen se publican con la película.",
+   "el": "Οι πλήρεις πιστώσεις για κάθε εικόνα δημοσιεύονται μαζί με την ταινία."
+  },
+  {
+   "en": "Continue exploring",
+   "html": null,
+   "es": "Siga explorando",
+   "el": "Συνεχίστε την εξερεύνηση"
+  },
+  {
+   "en": "Series",
+   "html": null,
+   "es": "Serie",
+   "el": "Σειρά"
+  },
+  {
+   "en": "Sacred Days calendar",
+   "html": null,
+   "es": "Calendario de Sacred Days",
+   "el": "Ημερολόγιο Sacred Days"
+  },
+  {
+   "en": "See the year ahead →",
+   "html": null,
+   "es": "Ver el año que viene →",
+   "el": "Δείτε τη χρονιά που έρχεται →"
+  },
+  {
+   "en": "SeriesSacred Days calendarSee the year ahead →",
+   "html": "<span>Series</span><span>Sacred Days calendar</span><span>See the year ahead →</span>",
+   "es": "SerieCalendario de Sacred DaysVer el año que viene →",
+   "el": "ΣειράΗμερολόγιο Sacred DaysΔείτε τη χρονιά που έρχεται →",
+   "es_html": "<span>Serie</span><span>Calendario de Sacred Days</span><span>Ver el año que viene →</span>",
+   "el_html": "<span>Σειρά</span><span>Ημερολόγιο Sacred Days</span><span>Δείτε τη χρονιά που έρχεται →</span>"
+  },
+  {
+   "en": "Faith · May 28 · 13 min",
+   "html": null,
+   "es": "Fe · 28 de mayo · 13 min",
+   "el": "Πίστη · 28 Μαΐ. · 13 λεπ."
+  },
+  {
+   "en": "The Greek Christians Who Hid Their Faith Inside the Ottoman Empire for 400 Years",
+   "html": null,
+   "es": "The Greek Christians Who Hid Their Faith Inside the Ottoman Empire for 400 Years",
+   "el": "The Greek Christians Who Hid Their Faith Inside the Ottoman Empire for 400 Years"
+  },
+  {
+   "en": "Faith · May 28 · 13 minThe Greek Christians Who Hid Their Faith Inside the Ottoman Empire for 400 Years",
+   "html": "<span>Faith · May 28 · 13 min</span><span>The Greek Christians Who Hid Their Faith Inside the Ottoman Empire for 400 Years</span>",
+   "es": "Fe · 28 de mayo · 13 minThe Greek Christians Who Hid Their Faith Inside the Ottoman Empire for 400 Years",
+   "el": "Πίστη · 28 Μαΐ. · 13 λεπ.The Greek Christians Who Hid Their Faith Inside the Ottoman Empire for 400 Years",
+   "es_html": "<span>Fe · 28 de mayo · 13 min</span><span>The Greek Christians Who Hid Their Faith Inside the Ottoman Empire for 400 Years</span>",
+   "el_html": "<span>Πίστη · 28 Μαΐ. · 13 λεπ.</span><span>The Greek Christians Who Hid Their Faith Inside the Ottoman Empire for 400 Years</span>"
+  }
+ ],
+ "attrs": [
+  {
+   "en": "Main",
+   "es": "Principal",
+   "el": "Κύρια"
+  },
+  {
+   "en": "On this page",
+   "es": "En esta página",
+   "el": "Σε αυτή τη σελίδα"
+  }
+ ]
+}

@@ -1,0 +1,146 @@
+{
+ "_page": "sacred-days__saint-demetrios-name-day",
+ "_status": "draft",
+ "strings": [
+  {
+   "en": "Sacred Days · Name day",
+   "html": null,
+   "el": "Sacred Days · Ονομαστική γιορτή",
+   "es": "Sacred Days · Día del santo"
+  },
+  {
+   "en": "When is Saint Demetrios name day?",
+   "html": null,
+   "el": "Πότε γιορτάζει ο Άγιος Δημήτριος;",
+   "es": "¿Cuándo es el día de san Demetrio?"
+  },
+  {
+   "en": "This year: Monday, October 26, 2026",
+   "html": null,
+   "el": "Φέτος: Δευτέρα 26 Οκτωβρίου 2026",
+   "es": "Este año: lunes 26 de octubre de 2026"
+  },
+  {
+   "en": "October 26. On the calendar followed by the Church of Greece, the feast of Saint Demetrios (Άγιος Δημήτριος), the saint of Thessaloniki, falls on October 26 every year.",
+   "html": null,
+   "el": "26 Οκτωβρίου. Σύμφωνα με το ημερολόγιο που ακολουθεί η Εκκλησία της Ελλάδος, η γιορτή του Αγίου Δημητρίου, του αγίου της Θεσσαλονίκης, πέφτει στις 26 Οκτωβρίου κάθε χρόνο.",
+   "es": "26 de octubre. Según el calendario que sigue la Iglesia de Grecia, la fiesta de san Demetrio (Άγιος Δημήτριος), el santo de Tesalónica, cae el 26 de octubre de cada año."
+  },
+  {
+   "en": "Who celebrates",
+   "html": null,
+   "el": "Ποιοι γιορτάζουν",
+   "es": "Quiénes celebran"
+  },
+  {
+   "en": "People named Dimitris (Δημήτρης), Dimitrios (Δημήτριος) and Dimitra (Δήμητρα) celebrate their name day on the feast of Saint Demetrios.",
+   "html": null,
+   "el": "Όσοι λέγονται Δημήτρης, Δημήτριος και Δήμητρα γιορτάζουν την ονομαστική τους γιορτή ανήμερα του Αγίου Δημητρίου.",
+   "es": "Las personas llamadas Dimitris (Δημήτρης), Dimitrios (Δημήτριος) y Dimitra (Δήμητρα) celebran su día del santo en la fiesta de san Demetrio."
+  },
+  {
+   "en": "Old Calendar communities",
+   "html": null,
+   "el": "Κοινότητες του παλαιού ημερολογίου",
+   "es": "Comunidades del calendario antiguo"
+  },
+  {
+   "en": "Churches that keep the Old (Julian) Calendar celebrate the same feast 13 days later, on November 8 of the civil calendar.",
+   "html": null,
+   "el": "Οι εκκλησίες που τηρούν το παλαιό (Ιουλιανό) ημερολόγιο γιορτάζουν την ίδια γιορτή 13 ημέρες αργότερα, στις 8 Νοεμβρίου του πολιτικού ημερολογίου.",
+   "es": "Las iglesias que siguen el calendario antiguo (juliano) celebran la misma fiesta 13 días después, el 8 de noviembre del calendario civil."
+  },
+  {
+   "en": "What to say",
+   "html": null,
+   "el": "Τι λέμε",
+   "es": "Qué se dice"
+  },
+  {
+   "en": "The usual wish on a name day is Χρόνια πολλά (Chronia polla), “many years”.",
+   "html": null,
+   "el": "Η συνηθισμένη ευχή στην ονομαστική γιορτή είναι «Χρόνια πολλά».",
+   "es": "El saludo habitual en el día del santo es Χρόνια πολλά (Chronia polla), «muchos años»."
+  },
+  {
+   "en": "The KRIOS film",
+   "html": null,
+   "el": "Η ταινία του KRIOS",
+   "es": "La película de KRIOS"
+  },
+  {
+   "en": "Saint Demetrios: More Than a Name Day",
+   "html": null,
+   "el": "Saint Demetrios: More Than a Name Day",
+   "es": "Saint Demetrios: More Than a Name Day"
+  },
+  {
+   "en": "Saint Demetrios: More Than a Name Day premieres on YouTube on Monday, October 26, 2026, the feast day.",
+   "html": "<b>Saint Demetrios: More Than a Name Day</b> premieres on YouTube on Monday, October 26, 2026, the feast day.",
+   "el": "Saint Demetrios: More Than a Name Day: πρεμιέρα στο YouTube τη Δευτέρα 26 Οκτωβρίου 2026, ανήμερα της γιορτής.",
+   "es": "«Saint Demetrios: More Than a Name Day» se estrena en YouTube el lunes 26 de octubre de 2026, el día de la fiesta.",
+   "el_html": "<b>Saint Demetrios: More Than a Name Day</b>: πρεμιέρα στο YouTube τη Δευτέρα 26 Οκτωβρίου 2026, ανήμερα της γιορτής.",
+   "es_html": "<b>Saint Demetrios: More Than a Name Day</b> se estrena en YouTube el lunes 26 de octubre de 2026, el día de la fiesta."
+  },
+  {
+   "en": "Subscribe to see it first",
+   "html": null,
+   "el": "Εγγραφείτε για να τη δείτε πρώτοι",
+   "es": "Suscríbase para verla primero"
+  },
+  {
+   "en": "About the film →",
+   "html": null,
+   "el": "Για την ταινία →",
+   "es": "Sobre la película →"
+  },
+  {
+   "en": "Ask someone in your family",
+   "html": null,
+   "el": "Ρωτήστε κάποιον στην οικογένειά σας",
+   "es": "Pregunte a alguien de su familia"
+  },
+  {
+   "en": "Who in your family is named Dimitris, Dimitrios or Dimitra?",
+   "html": null,
+   "el": "Ποιος στην οικογένειά σας λέγεται Δημήτρης, Δημήτριος ή Δήμητρα;",
+   "es": "¿Quién en su familia se llama Dimitris, Dimitrios o Dimitra?"
+  },
+  {
+   "en": "Who were they named after?",
+   "html": null,
+   "el": "Από ποιον πήραν το όνομά τους;",
+   "es": "¿En honor de quién recibieron ese nombre?"
+  },
+  {
+   "en": "How did your family celebrate the name day when you were young?",
+   "html": null,
+   "el": "Πώς γιόρταζε η οικογένειά σας την ονομαστική γιορτή όταν ήσασταν μικροί;",
+   "es": "¿Cómo celebraba su familia el día del santo cuando usted era joven?"
+  },
+  {
+   "en": "Sources",
+   "html": null,
+   "el": "Πηγές",
+   "es": "Fuentes"
+  },
+  {
+   "en": "Saint John's Monastery: Saint Demetrius the Myrrh-streamer (feast October 26; Old Calendar November 8)",
+   "html": null,
+   "el": "Saint John's Monastery: Saint Demetrius the Myrrh-streamer (γιορτή 26 Οκτωβρίου· παλαιό ημερολόγιο 8 Νοεμβρίου)",
+   "es": "Saint John's Monastery: Saint Demetrius the Myrrh-streamer (fiesta el 26 de octubre; calendario antiguo, 8 de noviembre)"
+  }
+ ],
+ "attrs": [
+  {
+   "en": "Breadcrumb",
+   "el": "Διαδρομή πλοήγησης",
+   "es": "Ruta de navegación"
+  },
+  {
+   "en": "Main",
+   "el": "Κύριο μενού",
+   "es": "Principal"
+  }
+ ]
+}

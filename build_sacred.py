@@ -17,6 +17,9 @@ PATHS = [
     ("Icons &amp; Art", "The meaning, symbolism and stories behind sacred art.", "sacred_icons_v01", None),
     ("Faith in Daily Life", "How traditions continue today, at home, in the village and around the world.", "sacred_daily_v02", None),
 ]
+# Fix 1 (director, Oct 24, 2026): the chapel, pigment and chair cards are AI illustrations and carry the chip;
+# the Theotokos and both Archangels are the director's own photographs of painted icons ("Photographed by KRIOS").
+# Alt text strings live in data/sacred_i18n.json (alt_c1..alt_c4, alt_michael, alt_gabriel); rights in data/rights_ledger.csv.
 CARD_W = {"sacred_icon_theotokos": [380, 600, 940], "sacred_churches_v02": [700, 878], "sacred_icons_v01": [700, 888], "sacred_daily_v02": [700, 899]}
 
 
@@ -58,24 +61,39 @@ def header():
             '  </div>\n</header>')
 
 
+def chip():
+    return '<span class="s-ai" data-t="ai_chip">AI illustration &middot; not a photograph</span>'
+
+
+def photo_credit(tag="span"):
+    return f'<{tag} class="s-cap" data-t="photo_credit">{e(SI["ui"]["en"]["photo_credit"])}</{tag}>'
+
+
+def alt_attr(key):
+    return f'alt="{e(SI["ui"]["en"][key])}" data-talt="{key}"'
+
+
 def path_card(t, d, img, href, n=0):
-    """Pathway card image: decorative (alt=""), sRGB web copies, never enlarged; the page carries one illustration note."""
+    """Pathway card image with alt text (data/sacred_i18n.json alt_c<n>), sRGB web copies, never enlarged.
+    AI illustrations carry the chip; the real icon carries the photo credit."""
     base = "/assets/sacred/"
+    alt = alt_attr(f"alt_c{n}")
     if img and img.startswith("ICON:"):
         # a real icon from the director's photograph (Track B): shown whole, never cropped, on the card's dark ground
         name = img[5:]; ws = CARD_W[name]; sz = "(max-width: 760px) 36vw, (max-width: 1100px) 18vw, 9vw"
         webp = ", ".join(f"{base}{name}_{w}.webp {w}w" for w in ws); jpg = ", ".join(f"{base}{name}_{w}.jpg {w}w" for w in ws)
         media = (f'<picture class="s-icon"><source type="image/webp" srcset="{webp}" sizes="{sz}">'
-                 f'<img src="{base}{name}_{ws[1]}.jpg" srcset="{jpg}" sizes="{sz}" alt="" width="940" height="1264" loading="lazy" decoding="async"></picture>')
+                 f'<img src="{base}{name}_{ws[1]}.jpg" srcset="{jpg}" sizes="{sz}" {alt} width="940" height="1264" loading="lazy" decoding="async"></picture>'
+                 + photo_credit())
     elif img and img.startswith("HOLD:"):
-        media = f'<img src="{img[5:]}" alt="" width="350" height="167" loading="lazy" decoding="async">'
+        media = f'<img src="{img[5:]}" {alt} width="350" height="167" loading="lazy" decoding="async">'
     elif img:
         ws = CARD_W[img]
         webp = ", ".join(f"{base}{img}_{w}.webp {w}w" for w in ws)
         jpg = ", ".join(f"{base}{img}_{w}.jpg {w}w" for w in ws)
         media = (f'<picture><source type="image/webp" srcset="{webp}" sizes="(max-width: 760px) 100vw, (max-width: 1100px) 50vw, 25vw">'
                  f'<img src="{base}{img}_{ws[-1]}.jpg" srcset="{jpg}" sizes="(max-width: 760px) 100vw, (max-width: 1100px) 50vw, 25vw" '
-                 f'alt="" width="350" height="167" loading="lazy" decoding="async"></picture>')
+                 f'{alt} width="350" height="167" loading="lazy" decoding="async"></picture>' + chip())
     else:
         media = '<span class="s-ground" aria-hidden="true"></span>'
     inner = f'<span class="s-pmedia">{media}</span><span class="s-ptext"><h3 data-t="c{n}_t">{t}</h3><p data-t="c{n}_d">{d}</p></span>'
@@ -124,9 +142,9 @@ def hero_pair():
                 f'sizes="(max-width: 900px) 100vw, 62vw"><img src="{base}hero_{k}_1600.jpg" '
                 f'srcset="{base}hero_{k}_800.jpg 800w, {base}hero_{k}_1600.jpg 1600w" sizes="(max-width: 900px) 100vw, 62vw" '
                 f'width="1600" height="900" {extra_img}></picture>')
-    return (pic("night", "s-hn", 'alt="" aria-hidden="true" loading="lazy" decoding="async"')
+    return (pic("night", "s-hn", f'{alt_attr("alt_hero_night")} aria-hidden="true" loading="lazy" decoding="async"')
             + pic("morning", "s-hm", f'alt="{HERO_ALT}" data-talt="hero_alt" fetchpriority="high" decoding="async"')
-            + '<span class="s-ai" data-t="ai_chip">AI illustration &middot; not a photograph</span>')
+            + chip())
 
 
 def build():
@@ -155,8 +173,8 @@ def build():
   </section>
   <section class="s-paths" aria-labelledby="s-ph"><h2 id="s-ph" class="s-sr" data-t="four_ways">Four ways in</h2><ul class="s-grid">{cards}</ul><p class="s-illus" data-t="page_note">Sacred Days, and the Archangels Michael and Gabriel beside the closing words: photographs of icons in a Greek Orthodox home (KRIOS). The other images on this page are AI illustrations of imagined places and objects, not photographs.</p></section>
   {calendar_band()}
-  <section class="s-quote" aria-label="Closing"><div class="s-qwrap"><picture class="s-angel"><source type="image/webp" srcset="/assets/sacred/sacred_archangel_michael_360.webp 1x, /assets/sacred/sacred_archangel_michael_720.webp 2x"><img src="/assets/sacred/sacred_archangel_michael_360.png" srcset="/assets/sacred/sacred_archangel_michael_720.png 2x" alt="" width="196" height="360" loading="lazy" decoding="async"></picture><div class="s-qbox"><blockquote><p data-t="quote">These traditions are not just history. They are a part of who we are, carried through generations, and still alive today.</p></blockquote>
-    <p class="s-mission"><span data-t="mission1">Preserve &middot; Teach &middot; Understand</span><span data-t="mission2">Connect &middot; Pass Forward</span></p></div><picture class="s-angel"><source type="image/webp" srcset="/assets/sacred/sacred_archangel_gabriel_360.webp 1x, /assets/sacred/sacred_archangel_gabriel_720.webp 2x"><img src="/assets/sacred/sacred_archangel_gabriel_360.png" srcset="/assets/sacred/sacred_archangel_gabriel_720.png 2x" alt="" width="196" height="360" loading="lazy" decoding="async"></picture></div></section>
+  <section class="s-quote" aria-label="Closing"><div class="s-qwrap"><figure class="s-angel"><picture><source type="image/webp" srcset="/assets/sacred/sacred_archangel_michael_360.webp 1x, /assets/sacred/sacred_archangel_michael_720.webp 2x"><img src="/assets/sacred/sacred_archangel_michael_360.png" srcset="/assets/sacred/sacred_archangel_michael_720.png 2x" {alt_attr("alt_michael")} width="196" height="360" loading="lazy" decoding="async"></picture>{photo_credit("figcaption")}</figure><div class="s-qbox"><blockquote><p data-t="quote">These traditions are not just history. They are a part of who we are, carried through generations, and still alive today.</p></blockquote>
+    <p class="s-mission"><span data-t="mission1">Preserve &middot; Teach &middot; Understand</span><span data-t="mission2">Connect &middot; Pass Forward</span></p></div><figure class="s-angel"><picture><source type="image/webp" srcset="/assets/sacred/sacred_archangel_gabriel_360.webp 1x, /assets/sacred/sacred_archangel_gabriel_720.webp 2x"><img src="/assets/sacred/sacred_archangel_gabriel_360.png" srcset="/assets/sacred/sacred_archangel_gabriel_720.png 2x" {alt_attr("alt_gabriel")} width="196" height="360" loading="lazy" decoding="async"></picture>{photo_credit("figcaption")}</figure></div></section>
   <section class="s-guidebox" id="guide" aria-labelledby="s-gh">
     <h2 id="s-gh" data-t="guide_h">Page Guide</h2>
     <p data-t="guide_p">Questions about this page, answered from published KRIOS pages with their sources.</p>

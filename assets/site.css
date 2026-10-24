@@ -1,7 +1,7 @@
 :root {
   --blue-900:#101a2e; --blue-800:#14213a; --blue-700:#1c2d4d; --blue-500:#3a5a8c;
   --ivory:#f5edd8; --ivory-2:#ebe1c7; --paper:#faf6ec;
-  --gold:#c9a35e; --gold-ink:#8a6a2c; --red:#7e2418;
+  --gold:#c9a35e; --gold-ink:#664c16; --red:#7e2418;
   --ink:#1d1a14; --ink-2:#4a4336; --line:#d9cdb0;
   --serif:"EB Garamond", Georgia, "Times New Roman", serif;
   --w:1160px;
@@ -214,7 +214,7 @@ footer a{text-decoration:none} footer a:hover{color:var(--gold)}
 .m-cal{width:92px;border:1px solid var(--gold);background:var(--paper);text-align:center;line-height:1}
 .m-cal span{display:block;background:var(--red);color:var(--ivory);font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;padding:6px 0}
 .m-cal b{display:block;font-weight:500;font-size:2.6rem;color:var(--blue-800);padding:10px 0 12px}
-.m-cal--sm{width:66px} .m-cal--sm b{font-size:1.7rem;padding:7px 0 8px} .m-cal--sm span{font-size:.68rem}
+.m-cal--sm{width:66px} .m-cal--sm b{font-size:1.7rem;padding:7px 0 8px} .m-cal--sm span{font-size:.8rem}
 .m-sd-body h2{font-weight:500;font-size:clamp(1.6rem,3vw,2.2rem);color:var(--blue-800);margin:.2em 0 .25em;line-height:1.15}
 .m-sd-body p{margin:0 0 8px;color:var(--ink-2)}
 .m-links{display:flex;gap:20px;align-items:center;flex-wrap:wrap;margin-top:12px}
@@ -353,7 +353,7 @@ a.m-feast:hover b{color:var(--red)}
 }
 .m-sd-img img,.m-sdfeat img{width:100%;height:auto}
 @media (max-width:600px){.m-hide-sm{display:none}.brand span{display:none}.top .nav .btn{min-height:40px}}
-@media (max-width:600px){.m-sd-in{grid-template-columns:1fr}.m-cal{width:64px}.m-cal b{font-size:1.6rem;padding:6px 0 8px}.m-cal span{font-size:.68rem}}
+@media (max-width:600px){.m-sd-in{grid-template-columns:1fr}.m-cal{width:64px}.m-cal b{font-size:1.6rem;padding:6px 0 8px}.m-cal span{font-size:.8rem}}
 .m-draft{color:#6b4f12!important;background:#f3e3b8!important}
 .top .nav .btn{gap:0}
 

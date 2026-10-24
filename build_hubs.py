@@ -259,7 +259,7 @@ page("tools/index.html", "Greek history quizzes · KRIOS",
 QMARK = "data-k=\"quiz-v1\""
 QCSS = """<style>
 body.k-quizpage{background:#faf6ec!important;color:#1d1a14!important}
-.k-quiz{--bg:#faf6ec;--text:#1d1a14;--white:#14213a;--dim:#4a4336;--gold:#8a6a2c;--correct:#2f6b45;--wrong:#8c2a2a;
+.k-quiz{--bg:#faf6ec;--text:#1d1a14;--white:#14213a;--dim:#4a4336;--gold:#664c16;--correct:#2f6b45;--wrong:#8c2a2a;
 --muted:#4a4336;--card:#f5edd8;--border:#d9cdb0;--terracotta:#7e2418;--green:#2f6b45;--red:#8c2a2a}
 body.k-quizpage{max-width:none!important;padding:0!important;margin:0!important;display:block!important;min-height:0!important}
 .k-quiz{max-width:720px;margin:0 auto;padding:40px 24px 0;line-height:1.65}
@@ -277,9 +277,15 @@ body.k-quizpage{max-width:none!important;padding:0!important;margin:0!important;
 </style>"""
 
 
+QCSS_PREV = QCSS.replace("--gold:#664c16;", "--gold:#8a6a2c;")   # fix 7: gold-ink now passes 4.5:1 on the quiz card ivory
+
+
 def quiz_restyle(f):
     s = open(f, encoding="utf-8").read()
     if QMARK in s:
+        if QCSS_PREV in s:                                           # refresh pages restyled before the token change
+            open(f, "w", encoding="utf-8").write(s.replace(QCSS_PREV, QCSS))
+            return True
         return False
     s = s.replace("https://youtube.com/@KriosMythology", YT).replace("youtube.com/@KriosMythology", "youtube.com/@KriosGreece")
     s = s.replace("@KriosMythology", "@KriosGreece").replace("Krios Mythology", "KRIOS")

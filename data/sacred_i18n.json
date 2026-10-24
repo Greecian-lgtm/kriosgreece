@@ -29,7 +29,15 @@
    "mission2": "Connect · Pass Forward",
    "guide_h": "Page Guide",
    "guide_p": "Questions about this page, answered from published KRIOS pages with their sources.",
-   "guide_more": "Open the full Page Guide"
+   "guide_more": "Open the full Page Guide",
+   "photo_credit": "Photographed by KRIOS",
+   "alt_c1": "Illustration of a whitewashed chapel with a bell gable and a wooden door above the sea, with islands in the distance.",
+   "alt_c2": "Photograph of an icon of the Panagia Prousiotissa: the Virgin Mary holding the Christ Child.",
+   "alt_c3": "Illustration of an icon painter's worktable with bowls of blue, red and ochre pigment, brushes and gold leaf.",
+   "alt_c4": "Illustration of a wooden chair with a woven rush seat and an embroidered towel, beside a small table with a brass censer and a potted plant.",
+   "alt_michael": "Photograph of an icon of the Archangel Michael.",
+   "alt_gabriel": "Photograph of an icon of the Archangel Gabriel.",
+   "alt_hero_night": "Illustration of the same chapel lane at night, under a full moon, with lit lanterns."
   },
   "es": {
    "lang_legend": "Idioma",
@@ -59,7 +67,15 @@
    "mission2": "Conectar · Transmitir",
    "guide_h": "Guía KRIOS",
    "guide_p": "Preguntas sobre esta página, respondidas a partir de páginas publicadas de KRIOS, con sus fuentes.",
-   "guide_more": "Abrir la Guía KRIOS completa"
+   "guide_more": "Abrir la Guía KRIOS completa",
+   "photo_credit": "Fotografía: KRIOS",
+   "alt_c1": "Ilustración de una capilla encalada con espadaña y puerta de madera sobre el mar, con islas al fondo.",
+   "alt_c2": "Fotografía de un icono de la Panagia Prousiotissa: la Virgen María con el Niño Jesús en brazos.",
+   "alt_c3": "Ilustración de la mesa de trabajo de un iconógrafo con cuencos de pigmento azul, rojo y ocre, pinceles y pan de oro.",
+   "alt_c4": "Ilustración de una silla de madera con asiento de enea y una toalla bordada, junto a una mesita con un incensario de latón y una maceta.",
+   "alt_michael": "Fotografía de un icono del arcángel Miguel.",
+   "alt_gabriel": "Fotografía de un icono del arcángel Gabriel.",
+   "alt_hero_night": "Ilustración del mismo callejón con la capilla de noche, bajo la luna llena, con faroles encendidos."
   },
   "el": {
    "lang_legend": "Γλώσσα",
@@ -89,7 +105,15 @@
    "mission2": "Συνδέουμε · Παραδίδουμε στους επόμενους",
    "guide_h": "Οδηγός KRIOS",
    "guide_p": "Ερωτήσεις για αυτή τη σελίδα, με απαντήσεις από δημοσιευμένες σελίδες του KRIOS και τις πηγές τους.",
-   "guide_more": "Άνοιγμα ολόκληρου του Οδηγού KRIOS"
+   "guide_more": "Άνοιγμα ολόκληρου του Οδηγού KRIOS",
+   "photo_credit": "Φωτογραφία: KRIOS",
+   "alt_c1": "Εικονογράφηση: ασβεστωμένο εκκλησάκι με καμπαναριό και ξύλινη πόρτα πάνω από τη θάλασσα, με νησιά στο βάθος.",
+   "alt_c2": "Φωτογραφία εικόνας της Παναγίας Προυσιώτισσας: η Παναγία κρατά τον Χριστό βρέφος.",
+   "alt_c3": "Εικονογράφηση: τραπέζι εργασίας αγιογράφου με μπολ με μπλε, κόκκινη και ώχρα χρωστική, πινέλα και φύλλα χρυσού.",
+   "alt_c4": "Εικονογράφηση: ξύλινη καρέκλα με ψάθινο κάθισμα και κεντημένη πετσέτα, δίπλα σε τραπεζάκι με μπρούντζινο θυμιατό και γλάστρα.",
+   "alt_michael": "Φωτογραφία εικόνας του Αρχαγγέλου Μιχαήλ.",
+   "alt_gabriel": "Φωτογραφία εικόνας του Αρχαγγέλου Γαβριήλ.",
+   "alt_hero_night": "Εικονογράφηση: το ίδιο σοκάκι με το εκκλησάκι τη νύχτα, με πανσέληνο και αναμμένα φανάρια."
   }
  },
  "feasts_es": {

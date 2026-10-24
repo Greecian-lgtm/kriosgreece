@@ -8,6 +8,7 @@
      explanation (director decision, Oct 23, 2026). Pages with their own picker (Sacred, Page Guide) keep it; this script
      then only follows their choice for the menu and footer. No tracking, no outside services. */
 (function () {
+  try { if (localStorage.getItem("krios-theme") === "dark") document.documentElement.setAttribute("data-theme", "dark"); } catch (e) {}
   var KEY = "krios-guide-lang", LANGS = ["en", "el", "es"], NAMES = { en: "English", el: "Ελληνικά", es: "Español" };
   var ownPicker = !!(document.getElementById("s-i18n") || document.querySelector(".g-langs"));
   var path = location.pathname.replace(/index\.html$/, "");
@@ -59,7 +60,7 @@
     var els = (root || document.body).querySelectorAll("*");
     for (var i = 0; i < els.length; i++) {
       var el = els[i];
-      if (done.has(el) || /^(SCRIPT|STYLE|NOSCRIPT|SVG|TEMPLATE|CODE)$/.test(el.tagName) || el.closest("[data-k-tip],.k-langbar,.k-dock,.g-tip")) continue;
+      if (done.has(el) || /^(SCRIPT|STYLE|NOSCRIPT|SVG|TEMPLATE|CODE)$/.test(el.tagName) || el.closest("[data-k-tip],.k-langbar,.k-dock,.k-backbar,.g-tip")) continue;
       if (skipMain && el.closest("main")) continue;
       ["alt", "aria-label", "placeholder", "title"].forEach(function (k) {
         var v = el.getAttribute(k); if (!v) return; var tr = T.a[norm(v)];
@@ -92,7 +93,7 @@
     var load = l === "en" || ownPicker ? Promise.resolve(null) : (PAGE ? Promise.resolve(PAGE) : ((SITE.pages || []).indexOf(page) < 0 ? Promise.resolve(null) : getJSON("/data/i18n/pages/" + page + ".json")));
     return load.then(function (p) {
       if (p) PAGE = p;
-      translate(); drafts(); askText();
+      translate(); drafts(); askText(); uiText();
       document.querySelectorAll('input[name="k-lang"]').forEach(function (r) { r.checked = r.value === l; });
       if (save) { try { localStorage.setItem(KEY, l); } catch (e) {} try { var u = new URL(location.href); if (l === "en") u.searchParams.delete("lang"); else u.searchParams.set("lang", l); history.replaceState(null, "", u); } catch (e) {} }
       applying = false;
@@ -101,6 +102,38 @@
   var ASK = { en: ["Ask KRIOS", "Ask about Greece, the films or KRIOS", "Ask", "Answers come only from published KRIOS pages. Your question stays on this device.", "Close"],
     el: ["Ρωτήστε το KRIOS", "Ρωτήστε για την Ελλάδα, τις ταινίες ή το KRIOS", "Ερώτηση", "Οι απαντήσεις προέρχονται μόνο από δημοσιευμένες σελίδες του KRIOS. Η ερώτησή σας μένει σε αυτή τη συσκευή.", "Κλείσιμο"],
     es: ["Pregunte a KRIOS", "Pregunte sobre Grecia, las películas o KRIOS", "Preguntar", "Las respuestas provienen solo de páginas publicadas de KRIOS. Su pregunta se queda en este dispositivo.", "Cerrar"] };
+  var UI = { en: { dark: "Dark mode", light: "Light mode", back: "Back" },
+    el: { dark: "Σκούρο θέμα", light: "Ανοιχτό θέμα", back: "Πίσω" },
+    es: { dark: "Modo oscuro", light: "Modo claro", back: "Volver" } };
+  function isDark() { return document.documentElement.getAttribute("data-theme") === "dark"; }
+  function uiText() {
+    var u = UI[LANG] || UI.en, tb = document.getElementById("k-theme"), bk = document.getElementById("k-back");
+    if (tb) { tb.setAttribute("aria-label", u.dark); tb.setAttribute("aria-pressed", String(isDark())); tb.title = isDark() ? u.light : u.dark; tb.lang = LANG; }
+    if (bk) { bk.querySelector("span").textContent = u.back; bk.lang = LANG; }
+  }
+  function setTheme(dark) {
+    if (dark) document.documentElement.setAttribute("data-theme", "dark"); else document.documentElement.removeAttribute("data-theme");
+    try { localStorage.setItem("krios-theme", dark ? "dark" : "light"); } catch (e) {}
+    var mc = document.querySelector('meta[name="color-scheme"]'); if (mc) mc.content = dark ? "dark" : "light";
+    uiText();
+  }
+  function backHref() {
+    var parts = location.pathname.replace(/index\.html$/, "").split("/").filter(Boolean);
+    parts.pop(); return "/" + (parts.length ? parts.join("/") + "/" : "");
+  }
+  function backLink(after) {
+    if (location.pathname === "/" || location.pathname === "/index.html") return;
+    var wrap = document.createElement("div"); wrap.className = "k-backbar";
+    var a = document.createElement("a"); a.id = "k-back"; a.className = "k-back"; a.href = backHref();
+    a.innerHTML = '<svg aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M15 5l-7 7 7 7"/></svg><span>Back</span>';
+    a.addEventListener("click", function (ev) {
+      var same = false; try { same = !!document.referrer && new URL(document.referrer).origin === location.origin; } catch (e) {}
+      if (same && history.length > 1) { ev.preventDefault(); history.back(); }
+    });
+    wrap.appendChild(a); after.insertAdjacentElement("afterend", wrap);
+    var bg = getComputedStyle(document.body).backgroundColor.match(/\d+(\.\d+)?/g);
+    if (bg && bg.length >= 3 && (0.2126 * bg[0] + 0.7152 * bg[1] + 0.0722 * bg[2]) / 255 < 0.4 && (bg.length < 4 || +bg[3] > 0)) a.classList.add("on-dark");
+  }
   function askText() {
     var t = ASK[LANG] || ASK.en, d = document.getElementById("k-dock"); if (!d) return;
     var set = function (sel, v, attr) { var e = d.querySelector(sel); if (e) { if (attr) e.setAttribute(attr, v); else e.textContent = v; } };
@@ -111,13 +144,18 @@
     var hdr = document.querySelector("header"); if (!hdr) return;
     var onGuide = !!document.querySelector(".g-page");
     var langs = LANGS.filter(allowed);
+    var after = hdr;
     if (!ownPicker) {                                           /* draft notice stays under the header */
       var bar = document.createElement("div"); bar.className = "k-langbar";
       var dr = document.createElement("p"); dr.className = "k-draft"; dr.id = "k-draft"; dr.hidden = true;
-      bar.appendChild(dr); hdr.insertAdjacentElement("afterend", bar);
+      bar.appendChild(dr); hdr.insertAdjacentElement("afterend", bar); after = bar;
     }
-    if (onGuide) return;                                        /* the Guide page is the bot itself */
+    backLink(after);
     var dock = document.createElement("div"); dock.className = "k-dock"; dock.id = "k-dock";
+    var tb = document.createElement("button"); tb.type = "button"; tb.id = "k-theme"; tb.className = "k-theme";
+    tb.innerHTML = '<svg class="k-moon" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><path fill="currentColor" d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7Z"/></svg><svg class="k-sun" aria-hidden="true" viewBox="0 0 24 24" width="20" height="20"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><path stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>';
+    tb.addEventListener("click", function () { setTheme(!isDark()); });
+    if (onGuide) { dock.appendChild(tb); document.body.appendChild(dock); uiText(); return; }   /* the Guide page is the bot itself */
     if (!ownPicker && langs.length > 1) {
       var fs = document.createElement("fieldset"); fs.className = "k-lang";
       var lg = document.createElement("legend"); lg.className = "k-sr"; lg.textContent = "Language · Γλώσσα · Idioma"; fs.appendChild(lg);
@@ -145,8 +183,8 @@
       try { sessionStorage.setItem("krios-guide-q", q); } catch (e) {}
       location.href = "/guide/" + (LANG !== "en" ? "?lang=" + LANG : "");
     });
-    dock.appendChild(panel); dock.appendChild(btn);
-    document.body.appendChild(dock); askText();
+    dock.appendChild(panel); dock.appendChild(tb); dock.appendChild(btn);
+    document.body.appendChild(dock); askText(); uiText();
   }
   function css() {
     var s = document.createElement("style");
@@ -164,11 +202,18 @@
       + ".k-ask-go{min-height:44px;padding:0 14px;border-radius:6px;border:0;background:#c0a05c;color:#14110a;font-weight:600;cursor:pointer}"
       + ".k-ask-note{margin:8px 0 0;font-size:.8rem;opacity:.85;line-height:1.35}.k-ask-x{position:absolute;top:6px;right:6px;width:36px;height:36px;border:0;background:none;color:#f1e8d2;font-size:1.5rem;cursor:pointer}"
       + "@media (max-width:600px){.k-dock{right:12px;bottom:12px}.k-ask-btn span{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.k-ask-btn{padding:0 14px}.k-lang span{min-width:40px}}"
+      + ".k-theme{display:inline-flex;align-items:center;justify-content:center;width:50px;height:50px;border-radius:50%;border:1px solid #c0a05c;background:#0b1424;color:#f1e8d2;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.28);padding:0}"
+      + ".k-theme .k-sun{display:none}html[data-theme=dark] .k-theme .k-sun{display:block}html[data-theme=dark] .k-theme .k-moon{display:none}html[data-theme=dark] .k-theme{background:#f1e8d2;color:#0b1424}"
+      + ".k-theme:focus-visible,.k-back:focus-visible{outline:3px solid #8fb3d9;outline-offset:2px}"
+      + ".k-backbar{max-width:1200px;margin:0 auto;padding:6px 20px 0;box-sizing:border-box}"
+      + ".k-back{display:inline-flex;align-items:center;gap:6px;min-height:44px;padding:0 10px 0 4px;font:500 1rem Inter,system-ui,sans-serif;color:#14213a;text-decoration:none;border-radius:4px}"
+      + ".k-back:hover span{text-decoration:underline;text-underline-offset:3px}.k-back.on-dark,html[data-theme=dark] .k-back{color:#f1e8d2}"
+      + "@media (max-width:600px){.k-theme{width:46px;height:46px}.k-backbar{padding:4px 12px 0}}"
       + ".k-draft{margin:0;font-size:.9rem;background:#fff3cd;color:#5c4400;border-left:3px solid #8a6a1f;padding:6px 10px}"
       + ".k-sr,.g-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}"
       + "a.g-has-tip{position:relative}[data-k-tip]{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}"
       + ".g-has-tip:hover>[data-k-tip],.g-has-tip:focus>[data-k-tip]{width:max-content;max-width:min(80vw,320px);height:auto;overflow:visible;clip-path:none;white-space:normal;left:0;top:100%;margin-top:6px;z-index:50;background:#1b1b1b;color:#fff;font-size:.875rem;line-height:1.35;font-weight:400;font-style:normal;letter-spacing:normal;text-transform:none;padding:5px 9px;border-radius:4px;box-shadow:0 2px 8px rgba(0,0,0,.3)}"
-      + ".g-hide>[data-k-tip]{width:1px!important;height:1px!important;overflow:hidden!important;clip-path:inset(50%)!important;padding:0!important}@media print{.k-langbar,.k-dock,[data-k-tip]{display:none}}";
+      + ".g-hide>[data-k-tip]{width:1px!important;height:1px!important;overflow:hidden!important;clip-path:inset(50%)!important;padding:0!important}@media print{.k-langbar,.k-dock,.k-backbar,[data-k-tip]{display:none}}";
     document.head.appendChild(s);
   }
   getJSON("/data/i18n/site.json").then(function (s) {
@@ -183,7 +228,7 @@
       setLang(document.documentElement.lang || "en", false);
     } else if (want && want !== "en") setLang(want, false);
     /* text added later (quizzes, interactive parts) is translated as it appears */
-    new MutationObserver(function (ms) { if (LANG === "en" || applying) return; ms.forEach(function (m) { m.addedNodes.forEach(function (n) { if (n.nodeType === 1 && !n.closest(".k-langbar,.k-dock")) translate(n.parentNode || n); }); }); })
+    new MutationObserver(function (ms) { if (LANG === "en" || applying) return; ms.forEach(function (m) { m.addedNodes.forEach(function (n) { if (n.nodeType === 1 && !n.closest(".k-langbar,.k-dock,.k-backbar")) translate(n.parentNode || n); }); }); })
       .observe(document.body, { childList: true, subtree: true });
     document.addEventListener("keydown", function (ev) { if (ev.key === "Escape") document.querySelectorAll(".g-has-tip:hover,.g-has-tip:focus").forEach(function (n) { n.classList.add("g-hide"); }); });
   });

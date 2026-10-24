@@ -63,6 +63,7 @@ def page(path, title, desc, canonical, active, body, extra_js=""):
 <html lang="en">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<script>document.documentElement.classList.add("js");try{{if(localStorage.getItem("krios-theme")==="dark")document.documentElement.setAttribute("data-theme","dark")}}catch(e){{}}</script>
 <title>{e(title)}</title>
 <meta name="description" content="{e(desc)}">
 <link rel="canonical" href="https://kriosgreece.com{canonical}">
@@ -310,7 +311,7 @@ for f in sorted(set(glob.glob("blog/**/*.html", recursive=True) + glob.glob("ans
     if "/assets/site-nav.js" not in s1:
         s1 = s1.replace("</body>", '<script src="/assets/site-nav.js" defer></script>\n</body>', 1)
     if '<script>document.documentElement.classList.add("js")' not in s1 and "d.className+=' js'" not in s1:
-        s1 = s1.replace("</head>", '<script>document.documentElement.classList.add("js")</script>\n</head>', 1)
+        s1 = s1.replace("</head>", '<script>document.documentElement.classList.add("js");try{if(localStorage.getItem("krios-theme")==="dark")document.documentElement.setAttribute("data-theme","dark")}catch(e){}</script>\n</head>', 1)
     if s1 != s0:
         open(f, "w", encoding="utf-8").write(s1); hdr_done += 1
 print("headers updated", hdr_done)

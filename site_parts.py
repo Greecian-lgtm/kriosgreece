@@ -109,7 +109,7 @@ def head(title, desc, canonical, extra="", image=None, ld=None, og_type="website
 <meta property="og:description" content="{e(desc)}">
 <meta property="og:url" content="https://kriosgreece.com{canonical}">
 {share}{lds}<meta name="theme-color" content="#14213a">
-<script>document.documentElement.classList.add("js")</script>
+<script>document.documentElement.classList.add("js");try{{if(localStorage.getItem("krios-theme")==="dark")document.documentElement.setAttribute("data-theme","dark")}}catch(e){{}}</script>
 {FONTS}
 <link rel="stylesheet" href="/assets/site.css">
 {extra}
